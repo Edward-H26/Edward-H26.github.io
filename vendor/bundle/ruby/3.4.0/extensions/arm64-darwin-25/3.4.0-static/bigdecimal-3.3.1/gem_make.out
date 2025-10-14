@@ -20,18 +20,18 @@ checking for RB_WARN_CATEGORY_DEPRECATED in ruby.h... yes
 creating Makefile
 
 current directory: /Users/edwardhu/Desktop/IS445/Edward-H26.github.io/vendor/bundle/ruby/3.4.0/gems/bigdecimal-3.3.1/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20251013-55923-r46q7e sitelibdir\=./.gem.20251013-55923-r46q7e clean
+make DESTDIR\= sitearchdir\=./.gem.20251013-58145-1hnkv3 sitelibdir\=./.gem.20251013-58145-1hnkv3 clean
 
 current directory: /Users/edwardhu/Desktop/IS445/Edward-H26.github.io/vendor/bundle/ruby/3.4.0/gems/bigdecimal-3.3.1/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20251013-55923-r46q7e sitelibdir\=./.gem.20251013-55923-r46q7e
+make DESTDIR\= sitearchdir\=./.gem.20251013-58145-1hnkv3 sitelibdir\=./.gem.20251013-58145-1hnkv3
 compiling bigdecimal.c
 compiling missing.c
 linking shared-object bigdecimal.bundle
 ld: warning: search path '/opt/homebrew/opt/gdbm/lib' not found
 
 current directory: /Users/edwardhu/Desktop/IS445/Edward-H26.github.io/vendor/bundle/ruby/3.4.0/gems/bigdecimal-3.3.1/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20251013-55923-r46q7e sitelibdir\=./.gem.20251013-55923-r46q7e install
-/usr/bin/install -c -m 0755 bigdecimal.bundle ./.gem.20251013-55923-r46q7e
+make DESTDIR\= sitearchdir\=./.gem.20251013-58145-1hnkv3 sitelibdir\=./.gem.20251013-58145-1hnkv3 install
+/usr/bin/install -c -m 0755 bigdecimal.bundle ./.gem.20251013-58145-1hnkv3
 
 current directory: /Users/edwardhu/Desktop/IS445/Edward-H26.github.io/vendor/bundle/ruby/3.4.0/gems/bigdecimal-3.3.1/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20251013-55923-r46q7e sitelibdir\=./.gem.20251013-55923-r46q7e clean
+make DESTDIR\= sitearchdir\=./.gem.20251013-58145-1hnkv3 sitelibdir\=./.gem.20251013-58145-1hnkv3 clean

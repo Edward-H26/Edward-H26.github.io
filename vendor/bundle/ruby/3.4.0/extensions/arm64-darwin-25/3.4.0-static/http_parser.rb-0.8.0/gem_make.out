@@ -3,10 +3,10 @@ current directory: /Users/edwardhu/Desktop/IS445/Edward-H26.github.io/vendor/bun
 creating Makefile
 
 current directory: /Users/edwardhu/Desktop/IS445/Edward-H26.github.io/vendor/bundle/ruby/3.4.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
-make DESTDIR\= sitearchdir\=./.gem.20251013-55923-gdmpac sitelibdir\=./.gem.20251013-55923-gdmpac clean
+make DESTDIR\= sitearchdir\=./.gem.20251013-58145-ue0qcg sitelibdir\=./.gem.20251013-58145-ue0qcg clean
 
 current directory: /Users/edwardhu/Desktop/IS445/Edward-H26.github.io/vendor/bundle/ruby/3.4.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
-make DESTDIR\= sitearchdir\=./.gem.20251013-55923-gdmpac sitelibdir\=./.gem.20251013-55923-gdmpac
+make DESTDIR\= sitearchdir\=./.gem.20251013-58145-ue0qcg sitelibdir\=./.gem.20251013-58145-ue0qcg
 compiling ruby_http_parser.c
 ruby_http_parser.c:296:10: warning: 'rb_data_object_wrap_warning' is deprecated: by TypedData [-Wdeprecated-declarations]
   296 |   return Data_Wrap_Struct(klass, ParserWrapper_mark, ParserWrapper_free, wrapper);
@@ -667,8 +667,8 @@ linking shared-object ruby_http_parser.bundle
 ld: warning: search path '/opt/homebrew/opt/gdbm/lib' not found
 
 current directory: /Users/edwardhu/Desktop/IS445/Edward-H26.github.io/vendor/bundle/ruby/3.4.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
-make DESTDIR\= sitearchdir\=./.gem.20251013-55923-gdmpac sitelibdir\=./.gem.20251013-55923-gdmpac install
-/usr/bin/install -c -m 0755 ruby_http_parser.bundle ./.gem.20251013-55923-gdmpac
+make DESTDIR\= sitearchdir\=./.gem.20251013-58145-ue0qcg sitelibdir\=./.gem.20251013-58145-ue0qcg install
+/usr/bin/install -c -m 0755 ruby_http_parser.bundle ./.gem.20251013-58145-ue0qcg
 
 current directory: /Users/edwardhu/Desktop/IS445/Edward-H26.github.io/vendor/bundle/ruby/3.4.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
-make DESTDIR\= sitearchdir\=./.gem.20251013-55923-gdmpac sitelibdir\=./.gem.20251013-55923-gdmpac clean
+make DESTDIR\= sitearchdir\=./.gem.20251013-58145-ue0qcg sitelibdir\=./.gem.20251013-58145-ue0qcg clean

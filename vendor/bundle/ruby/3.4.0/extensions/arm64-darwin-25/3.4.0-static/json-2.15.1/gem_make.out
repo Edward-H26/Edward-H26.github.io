@@ -10,17 +10,17 @@ checking for cpuid.h... no
 creating Makefile
 
 current directory: /Users/edwardhu/Desktop/IS445/Edward-H26.github.io/vendor/bundle/ruby/3.4.0/gems/json-2.15.1/ext/json/ext/parser
-make DESTDIR\= sitearchdir\=./.gem.20251013-55923-9cl6ks sitelibdir\=./.gem.20251013-55923-9cl6ks clean
+make DESTDIR\= sitearchdir\=./.gem.20251013-58145-fs0qwe sitelibdir\=./.gem.20251013-58145-fs0qwe clean
 
 current directory: /Users/edwardhu/Desktop/IS445/Edward-H26.github.io/vendor/bundle/ruby/3.4.0/gems/json-2.15.1/ext/json/ext/parser
-make DESTDIR\= sitearchdir\=./.gem.20251013-55923-9cl6ks sitelibdir\=./.gem.20251013-55923-9cl6ks
+make DESTDIR\= sitearchdir\=./.gem.20251013-58145-fs0qwe sitelibdir\=./.gem.20251013-58145-fs0qwe
 compiling parser.c
 linking shared-object json/ext/parser.bundle
 ld: warning: search path '/opt/homebrew/opt/gdbm/lib' not found
 
 current directory: /Users/edwardhu/Desktop/IS445/Edward-H26.github.io/vendor/bundle/ruby/3.4.0/gems/json-2.15.1/ext/json/ext/parser
-make DESTDIR\= sitearchdir\=./.gem.20251013-55923-9cl6ks sitelibdir\=./.gem.20251013-55923-9cl6ks install
-/usr/bin/install -c -m 0755 parser.bundle ./.gem.20251013-55923-9cl6ks/json/ext
+make DESTDIR\= sitearchdir\=./.gem.20251013-58145-fs0qwe sitelibdir\=./.gem.20251013-58145-fs0qwe install
+/usr/bin/install -c -m 0755 parser.bundle ./.gem.20251013-58145-fs0qwe/json/ext
 
 current directory: /Users/edwardhu/Desktop/IS445/Edward-H26.github.io/vendor/bundle/ruby/3.4.0/gems/json-2.15.1/ext/json/ext/parser
-make DESTDIR\= sitearchdir\=./.gem.20251013-55923-9cl6ks sitelibdir\=./.gem.20251013-55923-9cl6ks clean
+make DESTDIR\= sitearchdir\=./.gem.20251013-58145-fs0qwe sitelibdir\=./.gem.20251013-58145-fs0qwe clean

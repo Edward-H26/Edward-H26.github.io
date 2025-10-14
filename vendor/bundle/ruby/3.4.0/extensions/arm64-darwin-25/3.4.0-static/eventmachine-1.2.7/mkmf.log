@@ -153,7 +153,7 @@ ld: warning: ignoring duplicate libraries: '-lcrypto', '-lpthread', '-lssl'
 ld: warning: search path '/opt/homebrew/opt/gdbm/lib' not found
 Undefined symbols for architecture arm64:
   "_rb_thread_blocking_region", referenced from:
-      _t in conftest-466a7b.o
+      _t in conftest-12dc8f.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:
@@ -324,7 +324,7 @@ ld: warning: ignoring duplicate libraries: '-lcrypto', '-lpthread', '-lssl'
 ld: warning: search path '/opt/homebrew/opt/gdbm/lib' not found
 Undefined symbols for architecture arm64:
   "_rb_enable_interrupt", referenced from:
-      _t in conftest-8ab17d.o
+      _t in conftest-931995.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:
@@ -511,7 +511,7 @@ ld: warning: ignoring duplicate libraries: '-lcrypto', '-lpthread', '-lssl'
 ld: warning: search path '/opt/homebrew/opt/gdbm/lib' not found
 Undefined symbols for architecture arm64:
   "_pipe2", referenced from:
-      _t in conftest-012c9d.o
+      _t in conftest-845e64.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:
@@ -569,7 +569,7 @@ ld: warning: ignoring duplicate libraries: '-lcrypto', '-lpthread', '-lssl'
 ld: warning: search path '/opt/homebrew/opt/gdbm/lib' not found
 Undefined symbols for architecture arm64:
   "_accept4", referenced from:
-      _t in conftest-ca8ec3.o
+      _t in conftest-bb4f38.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:

@@ -4,10 +4,10 @@ checking for whether -std=c99 is accepted as CFLAGS... yes
 creating Makefile
 
 current directory: /Users/edwardhu/Desktop/IS445/Edward-H26.github.io/vendor/bundle/ruby/3.4.0/gems/commonmarker-0.23.12/ext/commonmarker
-make DESTDIR\= sitearchdir\=./.gem.20251013-55923-pnmr7x sitelibdir\=./.gem.20251013-55923-pnmr7x clean
+make DESTDIR\= sitearchdir\=./.gem.20251013-58145-3llf9u sitelibdir\=./.gem.20251013-58145-3llf9u clean
 
 current directory: /Users/edwardhu/Desktop/IS445/Edward-H26.github.io/vendor/bundle/ruby/3.4.0/gems/commonmarker-0.23.12/ext/commonmarker
-make DESTDIR\= sitearchdir\=./.gem.20251013-55923-pnmr7x sitelibdir\=./.gem.20251013-55923-pnmr7x
+make DESTDIR\= sitearchdir\=./.gem.20251013-58145-3llf9u sitelibdir\=./.gem.20251013-58145-3llf9u
 compiling arena.c
 compiling autolink.c
 compiling blocks.c
@@ -1405,8 +1405,8 @@ linking shared-object commonmarker/commonmarker.bundle
 ld: warning: search path '/opt/homebrew/opt/gdbm/lib' not found
 
 current directory: /Users/edwardhu/Desktop/IS445/Edward-H26.github.io/vendor/bundle/ruby/3.4.0/gems/commonmarker-0.23.12/ext/commonmarker
-make DESTDIR\= sitearchdir\=./.gem.20251013-55923-pnmr7x sitelibdir\=./.gem.20251013-55923-pnmr7x install
-/usr/bin/install -c -m 0755 commonmarker.bundle ./.gem.20251013-55923-pnmr7x/commonmarker
+make DESTDIR\= sitearchdir\=./.gem.20251013-58145-3llf9u sitelibdir\=./.gem.20251013-58145-3llf9u install
+/usr/bin/install -c -m 0755 commonmarker.bundle ./.gem.20251013-58145-3llf9u/commonmarker
 
 current directory: /Users/edwardhu/Desktop/IS445/Edward-H26.github.io/vendor/bundle/ruby/3.4.0/gems/commonmarker-0.23.12/ext/commonmarker
-make DESTDIR\= sitearchdir\=./.gem.20251013-55923-pnmr7x sitelibdir\=./.gem.20251013-55923-pnmr7x clean
+make DESTDIR\= sitearchdir\=./.gem.20251013-58145-3llf9u sitelibdir\=./.gem.20251013-58145-3llf9u clean
