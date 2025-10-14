@@ -1,0 +1,19 @@
+current directory: /Users/edwardhu/Desktop/IS445/Edward-H26.github.io/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+/Users/edwardhu/.rubies/ruby-3.4.1/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/edwardhu/Desktop/IS445/Edward-H26.github.io/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20251013-55923-6svvn0 sitelibdir\=./.gem.20251013-55923-6svvn0 clean
+
+current directory: /Users/edwardhu/Desktop/IS445/Edward-H26.github.io/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20251013-55923-6svvn0 sitelibdir\=./.gem.20251013-55923-6svvn0
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+ld: warning: search path '/opt/homebrew/opt/gdbm/lib' not found
+
+current directory: /Users/edwardhu/Desktop/IS445/Edward-H26.github.io/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20251013-55923-6svvn0 sitelibdir\=./.gem.20251013-55923-6svvn0 install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20251013-55923-6svvn0/racc
+
+current directory: /Users/edwardhu/Desktop/IS445/Edward-H26.github.io/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20251013-55923-6svvn0 sitelibdir\=./.gem.20251013-55923-6svvn0 clean

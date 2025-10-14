@@ -1,0 +1,28 @@
+append_cflags: checking for whether -std=c99 is accepted as CFLAGS... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:/Users/edwardhu/.rubies/ruby-3.4.1/lib ASAN_OPTIONS=detect_leaks=0 "clang -o conftest -I/Users/edwardhu/.rubies/ruby-3.4.1/include/ruby-3.4.0/arm64-darwin25 -I/Users/edwardhu/.rubies/ruby-3.4.1/include/ruby-3.4.0/ruby/backward -I/Users/edwardhu/.rubies/ruby-3.4.1/include/ruby-3.4.0 -I. -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/libyaml/include -I/opt/homebrew/opt/gdbm/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fstack-protector-strong -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -fdeclspec  -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe conftest.c -L. -L/Users/edwardhu/.rubies/ruby-3.4.1/lib -L/opt/homebrew/opt/readline/lib -L/opt/homebrew/opt/libyaml/lib -L/opt/homebrew/opt/gdbm/lib -L. -fstack-protector-strong -L/opt/homebrew/Cellar/readline/8.3.1/lib -L/opt/homebrew/Cellar/libyaml/0.2.5/lib  -arch arm64   -lruby.3.4-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+ld: warning: search path '/opt/homebrew/opt/gdbm/lib' not found
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+DYLD_LIBRARY_PATH=.:/Users/edwardhu/.rubies/ruby-3.4.1/lib ASAN_OPTIONS=detect_leaks=0 "clang -I/Users/edwardhu/.rubies/ruby-3.4.1/include/ruby-3.4.0/arm64-darwin25 -I/Users/edwardhu/.rubies/ruby-3.4.1/include/ruby-3.4.0/ruby/backward -I/Users/edwardhu/.rubies/ruby-3.4.1/include/ruby-3.4.0 -I. -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/libyaml/include -I/opt/homebrew/opt/gdbm/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fstack-protector-strong -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -fdeclspec  -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -arch arm64 -std=c99 -Werror -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+--------------------
+
