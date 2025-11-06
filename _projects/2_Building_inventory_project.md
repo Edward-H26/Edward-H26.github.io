@@ -43,6 +43,6 @@ The analysis uses the Illinois state building inventory dataset, which includes 
 </div>
 
 <div class="right">
-{% include elements/button.html link="" text="The Analysis" %}
+{% include elements/button.html link="https://github.com/Edward-H26/Edward-H26.github.io/blob/main/python_notebooks/Building_inventory_project.ipynb" text="The Analysis" %}
 </div>
 
