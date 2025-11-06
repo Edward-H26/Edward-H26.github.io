@@ -12,7 +12,7 @@ custom_js:
 
 # Illinois State Buildings Interactive Analysis
 
-This project presents an interactive exploration of Illinois state building inventory data, analyzing over 8,500 buildings across temporal, spatial, and categorical dimensions.
+
 
 ## Visualization 1: Temporal-Size Analysis with Category Distribution
 
