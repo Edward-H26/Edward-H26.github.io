@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+  Updates for JPN Fall 2024
+  FALL2024ID44512
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Illinois State Buildings Analysis">
+  <meta property="og:description" content="Interactive analysis of Illinois state building inventory with temporal-size patterns and usage distribution across counties">
+  <meta property="og:image" content="assets/pngs/building.png">
+
+  <title>Illinois State Buildings Analysis</title>
+  <meta name="description" content="Interactive analysis of Illinois state building inventory with temporal-size patterns and usage distribution across counties">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <a class="navbar-brand" href="/"><h5><b>IS445 Jekyll Template</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="/myenv/lib/python3.13/site-packages/altair/jupyter/js/">JupyterChart</a>
+
+      <a class="nav-item nav-link " href="/myenv/lib/python3.13/site-packages/zmq/backend/cffi/"></a>
+
+      <a class="nav-item nav-link " href="/python_notebooks/"></a>
+
+      <a class="nav-item nav-link active" href="/projects/">Projects</a>
+
+      <a class="nav-item nav-link " href="/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/about/">About</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <h1 id="illinois-state-buildings-interactive-analysis">Illinois State Buildings Interactive Analysis</h1>
+
+<h2 id="the-comprehensive-analysis-of-illinois-state-buildings-based-on-the-year-constructed-and-square-footage-by-category-distribution">The Comprehensive Analysis of Illinois State Buildings Based on the Year Constructed and Square Footage by Category Distribution</h2>
+
+<vegachart schema-url="/assets/json/buildingAgeAndSizeAnalysis.json" style="width:60%"></vegachart>
+
+<h3 id="summary">Summary</h3>
+
+<h4 id="description">Description</h4>
+<p>This visualization presents a comprehensive analysis of Illinois state buildings through <code class="language-plaintext highlighter-rouge">buildingAgeAndSizeAnalysis</code> that consists of<code class="language-plaintext highlighter-rouge">buildingYearAndAreaScatterPlot</code> and <code class="language-plaintext highlighter-rouge">agencyCategoryHistogramPlot</code>.  By plotting <code class="language-plaintext highlighter-rouge">Year Constructed</code> against <code class="language-plaintext highlighter-rouge">Square Footage</code> on a <code class="language-plaintext highlighter-rouge">log</code> scale, the scatter plot highlights patterns over time in terms of differences in building size. Each point represents an individual building from the <code class="language-plaintext highlighter-rouge">buildingDatasetCleaned</code> dataframe, which contains filtered records without any missing data in <code class="language-plaintext highlighter-rouge">Year Constructed</code>, <code class="language-plaintext highlighter-rouge">Year Acquired</code>, and <code class="language-plaintext highlighter-rouge">Square Footage</code> by applying <code class="language-plaintext highlighter-rouge">Year Constructed &gt; 0</code>, <code class="language-plaintext highlighter-rouge">Year Acquired &gt; 0</code>, and <code class="language-plaintext highlighter-rouge">Square Footage &gt; 0</code> to the preprocessed dataframe.</p>
+
+<p>The visualization incorporates the customized <code class="language-plaintext highlighter-rouge">Agency Category</code> field that is created from the <code class="language-plaintext highlighter-rouge">agencyCategories</code> through unique mapping strategy, which combines 38 distinct agency names from <code class="language-plaintext highlighter-rouge">buildingDatasetRaw["Agency Name"].unique()</code> into 10 general categories. The histogram displays the count distribution across these agency categories, which dynamically updates based on the brush selection from the scatter plot. The visualization concatenates the two plots in order to create a side by side layout with widths of 300 pixels each in order to create a holistic view of the dataset.</p>
+
+<p>This visualization delineates the historical development of state buildings over more than two centuries. By connecting the <code class="language-plaintext highlighter-rouge">Year Constructed</code>, <code class="language-plaintext highlighter-rouge">Square Footage</code>, and Agency Category, users can uncover how the infrastructure of these state buildings have evolved 18th century to 21st century. By examining small rural houses and massive urban buildings,users can explore the resource allocation through different time period such as whether the state invest more in higher education or healthcare facilities during specific decades or when was the shift from industrial to service based buildings. The interactive brush selection transforms these abstract questions into visualizations where users can identify construction patterns during different economic periods, trace the expansion of specific state services building, and recognize how different administrative priorities have shaped the physical footprint of state government. The histogram further helps the user to visualize which agency categories dominated at the selected time period, which reveals whether the government was focusing on a specific sector of agency categories or various agency categories. As one can see, this design helps policymakers, researchers, and citizens to understand how past infrastructure decisions created the current the public facilities in Illinois and plan for future developments.</p>
+
+<h4 id="encodings">Encodings</h4>
+<p>By carefully choosing appropriate encodings for each category, the scatter plot <code class="language-plaintext highlighter-rouge">buildingYearAndAreaScatterPlot</code> utilizes these encodings to effectively represent the multidimensional building data. The x-axis utilizes <code class="language-plaintext highlighter-rouge">alt.X("Year Constructed:Q")</code> with the descriptive title “The Year of the Building Being Constructed” and a scale of <code class="language-plaintext highlighter-rouge">[1700, 2025]</code> to better display buildings at the early stage as well as most recent buildings. The y-axis utilizes <code class="language-plaintext highlighter-rouge">alt.Y("Square Footage:Q")</code> with the title “The Area of the Building in Square Footage” and a logarithmic scale through <code class="language-plaintext highlighter-rouge">scale = alt.Scale(type = "log")</code> in order to help users to better visualize different building sizes from small utility structures to massive institutional facilities.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">mark_circle()</code> function generates circular marks with <code class="language-plaintext highlighter-rouge">size = 40</code> to ensure visibility across the plot; it also has <code class="language-plaintext highlighter-rouge">opacity = 0.6</code> to indicate overlapping points. The tooltips include <code class="language-plaintext highlighter-rouge">Location Name:N</code>, <code class="language-plaintext highlighter-rouge">Agency Name:N</code>, <code class="language-plaintext highlighter-rouge">Agency Category:N</code>, <code class="language-plaintext highlighter-rouge">City:N</code>, <code class="language-plaintext highlighter-rouge">Year Constructed:Q</code>, <code class="language-plaintext highlighter-rouge">Square Footage:Q</code> formatted with comma separators, <code class="language-plaintext highlighter-rouge">Total Floors:Q</code>, <code class="language-plaintext highlighter-rouge">Usage Description:N</code>, and <code class="language-plaintext highlighter-rouge">Bldg Status:N</code> provide users with detailed contextual information during exploration.</p>
+
+<p>The histogram <code class="language-plaintext highlighter-rouge">agencyCategoryHistogramPlot</code> employs <code class="language-plaintext highlighter-rouge">mark_bar()</code> with <code class="language-plaintext highlighter-rouge">alt.X("Agency Category:N")</code> on the x-axis with <code class="language-plaintext highlighter-rouge">axis = alt.Axis(labelAngle = -45)</code> to ensure category names remain readable despite of the differences in their lengths. The y-axis uses <code class="language-plaintext highlighter-rouge">alt.Y("count():Q")</code> with the title “The Number of Buildings” to display the frequency distribution across categories through the count aggregation. Both visualizations are 400x400 pixels with <code class="language-plaintext highlighter-rouge">anchor = "middle"</code> for title alignment.</p>
+
+<h4 id="colormaps">Colormaps</h4>
+<p>The colormaps are based on <code class="language-plaintext highlighter-rouge">alt.Color("Agency Category:N")</code> with <code class="language-plaintext highlighter-rouge">scale = alt.Scale(scheme = "category10")</code> for both visualizations to establish visual coherence throughout the interactive experience. The <code class="language-plaintext highlighter-rouge">category10</code> palette was deliberately selected because it provides exactly 10 distinct colors that align perfectly with the 10 agency categories defined in the <code class="language-plaintext highlighter-rouge">agencyCategories</code> dictionary, including <code class="language-plaintext highlighter-rouge">Higher Education Institutions</code>, <code class="language-plaintext highlighter-rouge">Education Administration</code>, <code class="language-plaintext highlighter-rouge">Corrections &amp; Justice</code>, <code class="language-plaintext highlighter-rouge">Public Safety &amp; Emergency</code>, <code class="language-plaintext highlighter-rouge">Health &amp; Human Services</code>, <code class="language-plaintext highlighter-rouge">Natural Resources &amp; Environment</code>, <code class="language-plaintext highlighter-rouge">Infrastructure &amp; Operations</code>, <code class="language-plaintext highlighter-rouge">Legal &amp; Judicial</code>, and <code class="language-plaintext highlighter-rouge">Executive &amp; Administrative</code>. This categorical scheme makes sure that each agency type receives equal visual prominence without implying any hierarchical relationships, which is crucial for analyzing of the how resources are being allocated to different agencies. The 0.6 opacity setting in the scatter plot allows these colors to blend naturally where overlapping points reveal specific patterns and maintain the ability to identify individual buildings. In the histogram, the legend is intentionally suppressed through <code class="language-plaintext highlighter-rouge">legend = None</code> to eliminate redundancy as the x-axis labels already provide category identification and the color serves primarily to maintain visual continuity with the scatter plot selections rather than convey additional information.</p>
+
+<h4 id="transformations">Transformations</h4>
+<p>Through systematic transformation of the <code class="language-plaintext highlighter-rouge">agencyCategories</code> . this mapping transforms 38 unique values from <code class="language-plaintext highlighter-rouge">buildingDatasetRaw["Agency Name"]</code> into 10 general categories that reflect the major organizations in state government, such as combining all state universities under “Higher Education” and grouping related law enforcement agencies under “Public Safety &amp; Emergency”. The transformation is applied through <code class="language-plaintext highlighter-rouge">buildingDatasetRaw["Agency Category"] = buildingDatasetRaw["Agency Name"].map(agencyCategories)</code> to construct a new category for pattern recognition across related agencies.</p>
+
+<p>The data was cleaned through <code class="language-plaintext highlighter-rouge">buildingDatasetCleaned = buildingDatasetRaw[(buildingDatasetRaw["Year Constructed"] &gt; 0) &amp; (buildingDatasetRaw["Year Acquired"] &gt; 0) &amp; (buildingDatasetRaw["Square Footage"] &gt; 0)]</code> to remove invalid records with zero or negative values that represent data entry errors or missing information. The logarithmic transformation applied to the <code class="language-plaintext highlighter-rouge">Square Footage</code> axis through <code class="language-plaintext highlighter-rouge">scale = alt.Scale(type = "log")</code> to reveal hidden patterns across multiple dimensions of the data of magnitude, which makes it possible to simultaneously visualize small administrative offices and massive institutional buildings on the same plot. The brush selection mechanism creates a dynamic transformation through <code class="language-plaintext highlighter-rouge">transform_filter(brushSelection)</code> that filters the histogram data in real time based on the user’s selection area and the count aggregation continuously recalculates category frequencies to reflect only the selected subset of buildings.</p>
+
+<h4 id="interactivity">Interactivity</h4>
+<p>The interval brush selection through <code class="language-plaintext highlighter-rouge">brushSelection = alt.selection_interval(encodings = ["x", "y"])</code> transforms the visualization from a static display into a powerful analytical tool that responds to user’s selection in real time. By enabling click and drag selection across both x-axis and y-axis, users can investigate about state buildings in a specific time period, such as examining what types of agencies constructed large facilities during particular historical periods. The selection is integrated into the scatter plot via <code class="language-plaintext highlighter-rouge">.add_params(brushSelection)</code> and connected to the histogram through <code class="language-plaintext highlighter-rouge">.transform_filter(brushSelection)</code> so that user’s selection can be updated in real time to reflect the selected subset of buildings.</p>
+
+<p>The comprehensive tooltip also provides detailed information to demonstrate the exact locations, managing agencies, construction dates, and current status whenever users hover over individual points. The formatted Square Footage values utilizes <code class="language-plaintext highlighter-rouge">format = ","</code> to ensure that large numbers remain readable and enhance the user experience during their exploration. The 0.6 opacity setting ensures that brush selections remain visible even in densely populated regions of the plot and the logarithmic scale maintains consistent  across the entire range of building sizes from the smallest to the largest facilities in the state inventory.</p>
+
+<h2 id="the-comprehensive-analysis-of-illinois-state-buildings-based-on-the-building-usage-types-and-location-by-county-distribution">The Comprehensive Analysis of Illinois State Buildings Based on the Building Usage Types and Location by County Distribution</h2>
+
+<vegachart schema-url="/assets/json/buildingUsageTypeAndLocationAnalysis.json" style="width:70%"></vegachart>
+
+<h3 id="summary-1">Summary</h3>
+
+<h4 id="description-1">Description</h4>
+<p>This visualization combines <code class="language-plaintext highlighter-rouge">usageTypeBarChart</code> and <code class="language-plaintext highlighter-rouge">countyDistributionBarChart</code> into <code class="language-plaintext highlighter-rouge">buildingUsageTypeAndLocationAnalysis</code> to analyze the usage patterns and geographic distribution of Illinois state buildings. The <code class="language-plaintext highlighter-rouge">usageTypeBarChart</code> displays all unique values from <code class="language-plaintext highlighter-rouge">buildingDatasetCleaned["Usage Description"]</code> as x-axis sorted by frequency to reveal the variety of purposes these state facilities serve across Illinois. The right chart presents the geographic distribution across the state’s most significant counties through <code class="language-plaintext highlighter-rouge">buildingDatasetCleaned["County"].value_counts().head(20).index.tolist()</code> which identifies the top 20 counties by building count and stores them in the <code class="language-plaintext highlighter-rouge">topCounties</code> list. This subset creates <code class="language-plaintext highlighter-rouge">topCountyBuildings = buildingDatasetCleaned[buildingDatasetCleaned["County"].isin(topCounties)]</code> to maintain interpretability while capturing the majority of state building infrastructure. The visualization utilizes <code class="language-plaintext highlighter-rouge">clickSelection = alt.selection_point(fields = ["Usage Description"])</code> to establish an interactive connection between building purposes and geographic patterns to explore whether certain facility types cluster in specific regions or distribute evenly across the state. Through the pipe operator (<code class="language-plaintext highlighter-rouge">|</code>) layout with widths of 300 and 350 pixels, the combined visualization provides complementary perspectives on the state’s building infrastructure.</p>
+
+<p>This visualization delineates how Illinois strategically positions governmental functions across its diverse geography from the densely populated Chicago metropolitan area to rural agricultural regions. By connecting functional purpose with geographic location, users can uncover patterns that reveal state policy decisions, historical development trajectories, and service delivery realities across Illinois’ varied landscape. The interactive design enables users to investigate spatial equity and functional specialization: whether essential government services are accessible across the state or concentrate in urban centers, whether research facilities cluster around university towns while correctional facilities appear in remote locations. The visualization reveals the logic behind state infrastructure placement and how geography, population density, institutional presence, and historical circumstances shape where different building types exist. For policymakers and researchers, this tool reveals potential service gaps where certain building types concentrate heavily in specific counties while residents of other regions face access challenges. For urban planners and economic development professionals, the geographic clustering patterns indicate how state facilities influence local economies and community character. Citizens can discover whether their county receives proportionate state infrastructure investment compared to similarly sized regions. The frequency ranking immediately highlights dominant usage types and building-rich counties while the interactive filtering enables investigation into specific facilities and transforms administrative data into insights about how state government physically manifests across Illinois’ landscape and how effectively infrastructure distribution serves the state’s geographically dispersed population.</p>
+
+<h4 id="encodings-1">Encodings</h4>
+<p>By carefully choosing appropriate encodings for each dimension, the <code class="language-plaintext highlighter-rouge">usageTypeBarChart</code> utilizes a horizontal bar design with <code class="language-plaintext highlighter-rouge">alt.X("count():Q", title = "Number of Buildings")</code> representing the quantitative frequency of each usage type and <code class="language-plaintext highlighter-rouge">alt.Y("Usage Description:N", title = "Usage Type", sort = "-x")</code> displaying the categorical usage descriptions in descending order of frequency to ensure the most common building types appear at the top. The conditional color encoding <code class="language-plaintext highlighter-rouge">alt.condition(clickSelection, alt.Color("Usage Description:N", scale = alt.Scale(scheme = "category20"), legend = None), alt.value("lightgray"))</code> creates a dynamic visual response where selected usage types display in distinctive colors from the category20 palette while unselected types display in neutral gray. This visual hierarchy utilizes the opacity encoding <code class="language-plaintext highlighter-rouge">alt.condition(clickSelection, alt.value(1.0), alt.value(0.3))</code> which applies full opacity to selected items and reduces unselected items to 30% opacity to guide user attention.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">countyDistributionBarChart</code> employs a similar horizontal structure with <code class="language-plaintext highlighter-rouge">alt.X("count():Q", title = "Number of Buildings")</code> for the building count and <code class="language-plaintext highlighter-rouge">alt.Y("County:N", title = "County (Top 20)", sort = "-x")</code> for county names to maintain the descending frequency arrangement. The static color <code class="language-plaintext highlighter-rouge">alt.value("steelblue")</code> provides visual stability while avoiding color competition with the usage type selections. Both charts incorporate formatted tooltips through <code class="language-plaintext highlighter-rouge">alt.Tooltip("count():Q", title = "Number of Buildings", format = ",")</code> to ensure precise counts display with thousand separators for improved readability.</p>
+
+<h4 id="colormaps-1">Colormaps</h4>
+<p>The colormaps are based on a dual-strategy color system. The <code class="language-plaintext highlighter-rouge">usageTypeBarChart</code> utilizes the <code class="language-plaintext highlighter-rouge">category20</code> color scheme which provides 20 distinct colors to accommodate the diverse array of usage types from <code class="language-plaintext highlighter-rouge">buildingDatasetCleaned["Usage Description"].unique()</code> including offices, laboratories, storage facilities, warehouses, classrooms, dormitories, and specialized facilities unique to state operations. This extended palette ensures that each usage type receives a visually distinct color when selected to facilitate clear identification and comparison across selections. The unselected state employs <code class="language-plaintext highlighter-rouge">lightgray</code> (#D3D3D3), which maintains visibility while clearly indicating inactive status and creates an effective visual hierarchy without overwhelming users when exploring individual usage types.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">countyDistributionBarChart</code> adopts a monochromatic approach using <code class="language-plaintext highlighter-rouge">steelblue</code> (#4682B4) to reflect the fundamental difference between categorical usage types and geographic counties. This single-color strategy prevents visual confusion between the two chart types and emphasizes that counties represent spatial rather than categorical distinctions. The steelblue provides professional aesthetics with sufficient contrast against the white background to ensure readability. By maintaining constant color regardless of selection state and relying on data filtering rather than color changes, the visualization creates a clear mental model where multicolor represents functional categories and monochrome represents geographic distribution to help users maintain orientation during analytical exploration.</p>
+
+<h4 id="transformations-1">Transformations</h4>
+<p>Through strategic transformation to balance comprehensive coverage with visual clarity, the geographic data creates the <code class="language-plaintext highlighter-rouge">topCounties</code> subset. The operation <code class="language-plaintext highlighter-rouge">buildingDatasetCleaned["County"].value_counts().head(20).index.tolist()</code> performs a multi-step transformation by counting the frequency of buildings in each county, sorting these counts in descending order, selecting the top 20 counties, and extracting the county names as a Python list. This list filters the full dataset through <code class="language-plaintext highlighter-rouge">topCountyBuildings = buildingDatasetCleaned[buildingDatasetCleaned["County"].isin(topCounties)]</code> to reduce Illinois’ 102 counties to the 20 most significant by building count which captures the majority of state building infrastructure while maintaining chart readability.</p>
+
+<p>The click selection mechanism creates dynamic data transformation through <code class="language-plaintext highlighter-rouge">.transform_filter(clickSelection)</code> applied to the county distribution chart. When users click a usage type bar, this transformation filters the <code class="language-plaintext highlighter-rouge">topCountyBuildings</code> dataset to include only buildings matching the selected <code class="language-plaintext highlighter-rouge">Usage Description</code> value and triggers recalculations where the count aggregation <code class="language-plaintext highlighter-rouge">count():Q</code> recomputes building frequencies for each county based solely on the selected usage type. The consistent <code class="language-plaintext highlighter-rouge">-x</code> sort transformation ensures that bars display in frequency order rather than alphabetical order to facilitate pattern recognition and make it easy to identify both the most common usage types and the counties with the highest concentrations of specific building types. The <code class="language-plaintext highlighter-rouge">.add_params(clickSelection)</code> transformation on the usage chart establishes it as the control element for the interactive system and creates a unidirectional data flow where user interactions trigger filtered transformations that propagate to the geographic display.</p>
+
+<h4 id="interactivity-1">Interactivity</h4>
+<p>The point selection mechanism through <code class="language-plaintext highlighter-rouge">clickSelection = alt.selection_point(fields = ["Usage Description"])</code> transforms static charts into a dynamic analytical system. When users click any bar in the <code class="language-plaintext highlighter-rouge">usageTypeBarChart</code>, the interaction triggers a coordinated visual response where the selected usage type transitions from subdued light gray to its assigned vibrant color from the category20 palette, its opacity increases from 30% to 100% to create a clear focal point, all other usage types simultaneously dim to maintain context while yielding visual prominence, and the <code class="language-plaintext highlighter-rouge">countyDistributionBarChart</code> instantly updates through <code class="language-plaintext highlighter-rouge">transform_filter(clickSelection)</code> to display only buildings of the selected type across the top 20 counties.</p>
+
+<p>This interactive design enables sophisticated comparative analysis workflows. Users can systematically click through different usage types to compare their geographic patterns where selecting “Laboratory” immediately reveals concentration in counties hosting major research universities like Champaign County (UIUC) and Jackson County (SIU) while selecting “Office” shows different patterns with concentrations in Sangamon County (Springfield’s state government complex) and Cook County (Chicago’s administrative centers). The persistent selection state allows users to study filtered distributions without maintaining mouse position while the tooltip functionality provides precise numerical counts when visual bar lengths are too similar for comparison. The widths of 300 and 350 pixels optimize the side-by-side layout for standard displays while ensuring all labels remain readable and the selection binding to the entire bar area improves usability by providing a larger click target.</p>
+
+<h2 id="data--methods">Data &amp; Methods</h2>
+
+<p>The analysis uses the Illinois state building inventory dataset from <code class="language-plaintext highlighter-rouge">https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/building_inventory.csv</code>, loaded through <code class="language-plaintext highlighter-rouge">pd.read_csv(datasetUrl)</code> into <code class="language-plaintext highlighter-rouge">buildingDatasetRaw</code>. The dataset contains comprehensive building attributes identified through <code class="language-plaintext highlighter-rouge">buildingDatasetRaw.columns</code> including Square Footage, Year Constructed, Year Acquired, Agency Name, Usage Description, County, City, Total Floors, and Building Status.</p>
+
+<p>Data quality assessment through <code class="language-plaintext highlighter-rouge">buildingDatasetRaw.isna().sum()</code> identified missing values that informed the cleaning strategy. The <code class="language-plaintext highlighter-rouge">numericFeatures</code> and <code class="language-plaintext highlighter-rouge">categoricalFeatures</code> were identified using <code class="language-plaintext highlighter-rouge">select_dtypes()</code> to guide encoding channel selections. The <code class="language-plaintext highlighter-rouge">agencyCategories</code> dictionary consolidates 38 distinct agency names into 10 categories, applied through <code class="language-plaintext highlighter-rouge">buildingDatasetRaw["Agency Category"] = buildingDatasetRaw["Agency Name"].map(agencyCategories)</code> to create a new analytical dimension. The data was cleaned through <code class="language-plaintext highlighter-rouge">buildingDatasetCleaned = buildingDatasetRaw[(buildingDatasetRaw["Year Constructed"] &gt; 0) &amp; (buildingDatasetRaw["Year Acquired"] &gt; 0) &amp; (buildingDatasetRaw["Square Footage"] &gt; 0)]</code> to remove invalid records with zero or negative values. The geographic subset <code class="language-plaintext highlighter-rouge">topCountyBuildings</code> was created through value counting and filtering operations to balance comprehensive coverage with visual clarity.</p>
+
+<p>Altair configuration through <code class="language-plaintext highlighter-rouge">alt.data_transformers.enable("default", max_rows = None)</code> enables processing of the complete dataset. The visualizations are exported as Vega-Lite JSON specifications using <code class="language-plaintext highlighter-rouge">.save("../assets/json/buildingAgeAndSizeAnalysis.json")</code> and <code class="language-plaintext highlighter-rouge">.save('../assets/json/buildingUsageTypeAndLocationAnalysis.json')</code> for web deployment through the Vega-Embed library.</p>
+
+<div class="left">
+<a class="m-1 btn btn-outline-primary btn-2 " href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/building_inventory.csv">
+  The Data
+</a>
+</div>
+
+<div class="right">
+<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/Edward-H26/Edward-H26.github.io/blob/main/python_notebooks/Building_inventory_project.ipynb">
+  The Analysis
+</a>
+</div>
+
+</div>
+  </main>
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>A. P. Corgi</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:username@domain.com"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/jnaiman"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.twitter.com/your_username"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#1da1f2'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-twitter fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.youtube.com/your_channel_name"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#ff0000'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-youtube fa-1x"></i>
+    </a>
+
+</div>
+
+  Theme by <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a> and <a href="https://github.com/4dcu-be/4dcu.be">4dcu.be</a>.
+
+  
+<!--<small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+-->
+
+</footer>
+
+
+<!-- Custom page specific js files -->
+  
+    <script src='/assets/js/vega.min.js' type="text/javascript"></script>
+  
+    <script src='/assets/js/vega-lite.min.js' type="text/javascript"></script>
+  
+    <script src='/assets/js/vega-embed.min.js' type="text/javascript"></script>
+  
+    <script src='/assets/js/justcharts.js' type="text/javascript"></script>
+  
+
+
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+<!--
+end of checks! JPN
+-->
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
