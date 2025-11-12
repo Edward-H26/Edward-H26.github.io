@@ -1,7 +1,7 @@
 ---
 name: Illinois State Buildings Analysis
 tools: [Python, Altair, vega-lite, Pandas]
-image: assets/pngs/buildings.png
+image: assets/pngs/building.png
 description: Interactive analysis of Illinois state building inventory with temporal-size patterns and usage distribution across counties
 custom_js:
   - vega.min
