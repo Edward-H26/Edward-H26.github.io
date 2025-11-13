@@ -14,7 +14,7 @@ custom_js:
 
 ## The Comprehensive Analysis of Illinois State Buildings Based on the Year Constructed and Square Footage by Category Distribution
 
-<vegachart schema-url="{{ site.baseurl }}/assets/json/buildingAgeAndSizeAnalysis.json" style="width:40%"></vegachart>
+<vegachart schema-url="{{ site.baseurl }}/assets/json/buildingAgeAndSizeAnalysis.json" style="width:30%"></vegachart>
 
 ### Summary
 
