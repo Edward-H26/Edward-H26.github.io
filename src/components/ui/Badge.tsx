@@ -6,7 +6,7 @@ interface BadgeProps {
 export function Badge({ children, variant = "default" }: BadgeProps) {
   const variants = {
     default: "badge",
-    accent: "badge bg-accent-light dark:bg-slate-700 text-accent dark:text-accent-dark",
+    accent: "badge bg-accent-light text-accent",
   }
 
   return <span className={variants[variant]}>{children}</span>

@@ -11,18 +11,18 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
   return (
     <div className="card group">
-      <h3 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-accent dark:group-hover:text-accent-dark transition-colors">
+      <h3 className="text-lg font-semibold text-gray-900 group-hover:text-accent transition-colors">
         {project.title}
       </h3>
 
       {project.subtitle && (
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+        <p className="text-sm text-gray-500 mt-1">
           {project.subtitle}
         </p>
       )}
 
       {project.bullets.length > 0 && (
-        <p className="text-sm text-gray-600 dark:text-gray-300 mt-3 leading-relaxed">
+        <p className="text-sm text-gray-600 mt-3 leading-relaxed">
           {project.bullets[0]}
         </p>
       )}
@@ -33,7 +33,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             href={githubLink.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-md hover:bg-gray-700 dark:hover:bg-gray-200 transition-colors"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium bg-gray-900 text-white rounded-md hover:bg-gray-700 transition-colors"
           >
             <Github size={14} />
             GitHub

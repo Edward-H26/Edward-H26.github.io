@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom"
-import { Menu, Sun, Moon } from "lucide-react"
-import { useTheme } from "@/hooks/useTheme"
+import { Menu } from "lucide-react"
 import { PROFILE } from "@/data/content"
 
 const NAV_ITEMS = [
@@ -17,13 +16,11 @@ interface NavigationProps {
 }
 
 export function Navigation({ onMenuClick }: NavigationProps) {
-  const { theme, toggleTheme } = useTheme()
-
   return (
-    <header className="fixed top-0 left-0 right-0 h-16 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-gray-200 dark:border-slate-700 z-50">
+    <header className="fixed top-0 left-0 right-0 h-16 bg-white/80 backdrop-blur-md border-b border-gray-200 z-50">
       <div className="h-full max-w-7xl mx-auto px-4 flex items-center justify-between">
         <div className="flex items-center gap-8">
-          <NavLink to="/" className="text-lg font-semibold text-primary dark:text-primary-dark">
+          <NavLink to="/" className="text-lg font-semibold text-primary">
             {PROFILE.name}
           </NavLink>
 
@@ -43,18 +40,10 @@ export function Navigation({ onMenuClick }: NavigationProps) {
           </nav>
         </div>
 
-        <div className="flex items-center gap-2">
-          <button
-            onClick={toggleTheme}
-            className="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
-            aria-label="Toggle theme"
-          >
-            {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-          </button>
-
+        <div className="flex items-center">
           <button
             onClick={onMenuClick}
-            className="md:hidden p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+            className="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors"
             aria-label="Open menu"
           >
             <Menu size={20} />

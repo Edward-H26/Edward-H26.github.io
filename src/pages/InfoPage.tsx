@@ -19,13 +19,13 @@ export function InfoPage() {
         </div>
 
         <section>
-          <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-lg font-semibold text-gray-900 mb-4">
             Technical Skills
           </h2>
           <div className="space-y-4">
             {Object.entries(SKILLS_CATEGORIES).map(([category, skills]) => (
               <div key={category}>
-                <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-2">
+                <h3 className="text-sm font-medium text-gray-500 mb-2">
                   {category}
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -40,7 +40,7 @@ export function InfoPage() {
 
         {languagesCard && (
           <section>
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-lg font-semibold text-gray-900 mb-4">
               Languages
             </h2>
             <div className="flex flex-wrap gap-2">
@@ -59,15 +59,15 @@ export function InfoPage() {
 
         {educationCard && (
           <section>
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-lg font-semibold text-gray-900 mb-4">
               Education
             </h2>
             <div className="card">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold text-gray-900">
                 {educationCard.bullets[0]}
               </h3>
               {educationCard.bullets.slice(1).map((line, index) => (
-                <p key={index} className="text-sm text-gray-600 dark:text-gray-300 mt-1">
+                <p key={index} className="text-sm text-gray-600 mt-1">
                   {line}
                 </p>
               ))}

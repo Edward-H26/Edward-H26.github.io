@@ -8,7 +8,7 @@ interface TimelineProps {
 export function Timeline({ items }: TimelineProps) {
   return (
     <div className="relative">
-      <div className="absolute left-4 top-2 bottom-2 w-0.5 bg-gray-200 dark:bg-slate-700" />
+      <div className="absolute left-4 top-2 bottom-2 w-0.5 bg-gray-200" />
 
       <div className="space-y-8">
         {items.map((item, index) => {
@@ -19,28 +19,28 @@ export function Timeline({ items }: TimelineProps) {
               <div
                 className={`absolute left-2.5 top-2 w-3 h-3 rounded-full border-2 ${
                   isPresent
-                    ? "bg-accent dark:bg-accent-dark border-accent dark:border-accent-dark animate-pulse-slow"
-                    : "bg-white dark:bg-slate-900 border-gray-300 dark:border-slate-600"
+                    ? "bg-accent border-accent animate-pulse-slow"
+                    : "bg-white border-gray-300"
                 }`}
               />
 
               <div className="card">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                    <h3 className="text-lg font-semibold text-gray-900">
                       {item.title}
                     </h3>
                     {item.subtitle && (
-                      <p className="text-sm text-accent dark:text-accent-dark mt-0.5">
+                      <p className="text-sm text-accent mt-0.5">
                         {item.subtitle}
                       </p>
                     )}
                   </div>
                   {(item.location || item.date) && (
-                    <div className="text-sm text-gray-500 dark:text-gray-400 text-right flex-shrink-0">
+                    <div className="text-sm text-gray-500 text-right flex-shrink-0">
                       {item.location && <div>{item.location}</div>}
                       {item.date && (
-                        <div className={`font-medium ${isPresent ? "text-accent dark:text-accent-dark" : ""}`}>
+                        <div className={`font-medium ${isPresent ? "text-accent" : ""}`}>
                           {item.date}
                         </div>
                       )}
@@ -49,10 +49,10 @@ export function Timeline({ items }: TimelineProps) {
                 </div>
 
                 {item.bullets.length > 0 && (
-                  <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                  <ul className="space-y-2 text-sm text-gray-600">
                     {item.bullets.map((bullet, bulletIndex) => (
                       <li key={bulletIndex} className="flex gap-2">
-                        <span className="text-accent dark:text-accent-dark mt-1.5 flex-shrink-0">
+                        <span className="text-accent mt-1.5 flex-shrink-0">
                           &bull;
                         </span>
                         <span>{bullet}</span>
