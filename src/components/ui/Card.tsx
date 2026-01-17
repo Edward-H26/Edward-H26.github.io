@@ -11,17 +11,17 @@ export function Card({ card, variant = "default" }: CardProps) {
     <div className="card">
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
         <div>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+          <h3 className="text-lg font-semibold text-gray-900">
             {card.title}
           </h3>
           {card.subtitle && (
-            <p className="text-sm text-accent dark:text-accent-dark mt-0.5">
+            <p className="text-sm text-accent mt-0.5">
               {card.subtitle}
             </p>
           )}
         </div>
         {(card.location || card.date) && (
-          <div className="text-sm text-gray-500 dark:text-gray-400 text-right flex-shrink-0">
+          <div className="text-sm text-gray-500 text-right flex-shrink-0">
             {card.location && <div>{card.location}</div>}
             {card.date && <div className="font-medium">{card.date}</div>}
           </div>
@@ -29,10 +29,10 @@ export function Card({ card, variant = "default" }: CardProps) {
       </div>
 
       {variant === "default" && card.bullets.length > 0 && (
-        <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+        <ul className="space-y-2 text-sm text-gray-600">
           {card.bullets.map((bullet, index) => (
             <li key={index} className="flex gap-2">
-              <span className="text-accent dark:text-accent-dark mt-1.5 flex-shrink-0">
+              <span className="text-accent mt-1.5 flex-shrink-0">
                 &bull;
               </span>
               <span>{bullet}</span>

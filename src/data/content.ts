@@ -21,7 +21,7 @@ export type ContentSection = {
 
 export const PROFILE = {
   name: "Qiran Hu",
-  title: "Undergraduate Researcher",
+  title: "Undergraduate Research Assistant",
   affiliation: "University of Illinois Urbana-Champaign",
   email: "qiranhu8@gmail.com",
   phone: "+1 (347)-957-9176",
@@ -33,23 +33,18 @@ export const PROFILE = {
   },
 }
 
-export const BIO = `I am an Undergraduate Researcher in the Computer Vision and Machine Learning Group and the Social Computing Systems Lab at the University of Illinois Urbana-Champaign. I am also affiliated with the National Center for Supercomputing Applications (NCSA).
-
-Previously, I conducted research at the Chinese Academy of Sciences. I am pursuing my B.S. in Data Science and Information Science with minors in Computer Science and Statistics at UIUC.
-
-My research lies at the intersection of computer vision and machine learning, with a focus on building intelligent visual systems. My research interests include generative world models, spatial intelligence, multi-agent architectures, embodied AI, multimodal reasoning, and self-evolving memory systems.`
-
 export const RESEARCH_INTERESTS = [
-  "Generative World Models & 3D Understanding",
-  "Spatial Intelligence & 3D Reasoning",
-  "Multi-agent Architectures & Agentic Systems",
-  "Embodied AI & Agent Planning",
-  "Multimodal AI (Vision-Language-Audio)",
-  "Human-AI Interaction & Novel Interfaces",
-  "Self-evolving Memory Systems",
-  "Real-time Interactive AI Experiences",
-  "Large-scale Model Training & Scaling",
-  "Affective Computing & Social Agents",
+  "Agentic Systems and Tool Use",
+  "Multi Agent Architectures and Coordination",
+  "Multimodal Language Models",
+  "World Models for 3D Environments",
+  "Spatial Intelligence and 3D Reasoning",
+  "Generative Video and Audio Models",
+  "Embodied AI and Simulation",
+  "Human AI Interaction and Interface Prototyping",
+  "Evaluation and Safety for Agentic Systems",
+  "Alignment, Interpretability, and Model Behavior",
+  "Large Scale Training and Data Systems",
 ]
 
 export const ANNOUNCEMENT = {
@@ -85,47 +80,6 @@ export const SECTIONS: Record<string, ContentSection> = {
         ],
         links: [
           { label: "Lab", url: "https://socialcomputing.web.illinois.edu/" }
-        ]
-      },
-      {
-        title: "Multi-agent HCI Research Synthesis Engine",
-        subtitle: "Systems Architect 2025.11-Present",
-        bullets: [
-          "Architected an 8-agent orchestration system for HCI literature synthesis, implementing specialized agents of Planner, Researcher, Writer, Critic, SafetyGuardian, ReflexionEngine, LLMJudge, and Evaluation across a 12-step reasoning workflow, achieving 0.955 overall evaluation score, 0.925 on relevance, safety, and clarity.",
-          "Designed Model Context Protocol integration for standardized tool interfaces, enabling seamless connection between LLM agents and external data sources, including academic databases, code repositories, and document management systems.",
-          "Constructed parallel tool-calling infrastructure integrating Semantic Scholar API and Tavily web search with ThreadPoolExecutor, reducing query latency by 40% from 8.2s to 4.9s production-ready approaches during API failures and other issues."
-        ],
-        links: [
-          { label: "Demo", url: "https://salt-lab-human-ai-assignment-3-buildi-srcuistreamlit-app-zweknl.streamlit.app/" }
-        ]
-      },
-      {
-        title: "Node Optimized Orchestration Design for Educational Intelligence Architecture",
-        subtitle: "Full Stack Developer 2025.08-Present",
-        bullets: [
-          "Built a K-12 intelligent tutoring platform integrating multi-agent orchestration with memory-enhanced GraphRAG and designed an adaptive learning system that personalizes responses beyond static Q&A.",
-          "Implemented a multi-agent workflow featuring a self-evolving Long-Term Memory Architecture that mimics human memory processes to enable personalized and accurate responses, overcoming limitations of traditional FIFO memory structures and ensuring critical information is retained and utilized effectively.",
-          "Deployed to 2 partner institutions and iterated through 6 development cycles incorporating user feedback to refine interface design and response quality based on student engagement data."
-        ],
-        links: [
-          { label: "GitHub", url: "https://github.com/SALT-Lab-Human-AI/project-check-point-1-NOODEIA" }
-        ]
-      },
-      {
-        title: "Technology and System of Spatial-Temporal Multi-Modal Large Language Model",
-        subtitle: "Project Researcher, Chinese Academy of Sciences 2024.06-2024.08",
-        bullets: [
-          "Designed data modeling algorithm for heterogeneous spatial-temporal data from multi-sensor sources, transforming multimodal understanding into unified global modeling framework with improved efficiency.",
-          "Participated in the research of ST-XFormer, the Spatial-Temporal Transformer system, including the extraction of semantic events from spatial-temporal data sequences, the feature alignment methods for spatial-temporal data, the spatial-temporal-based logical calculus methods and semantic reasoning methods."
-        ]
-      },
-      {
-        title: "A Spatial-Temporal Awareness Data-Oriented Model for Emergency Crowd Evaluation Route Planning",
-        subtitle: "Project Researcher, Chinese Academy of Sciences 2024.05-2024.06",
-        bullets: [
-          "Developed an emergency evacuation framework that integrates spatio-temporal perception data, streamlined the entire process of decision-making for the global optimal path planning by incorporating the real-time dynamic spatio-temporal perception data provided by drones.",
-          "Proposed and compared multiple algorithms, including the Individual-based Search Method (IBSM), the Global Optimal Sparse Route Planning Query Method (GOSRPQM), and the Improved GOSRPQM algorithm (IGOSRPQM) that incorporates pruning strategies and refinement operations. Implemented and verified these algorithms using tools such as Python and PostgreSQL on real road network data (San Joaquin County, New York, Beijing).",
-          "Revealed technical solution that shortened the global evacuation time by 40%, providing a reliable technical approach and overall solution for large-scale emergency evacuations under resource constraints."
         ]
       }
     ]
@@ -220,6 +174,47 @@ export const SECTIONS: Record<string, ContentSection> = {
     subheading: "Projects and Skills",
     cards: [
       {
+        title: "Multi-agent HCI Research Synthesis Engine",
+        subtitle: "Systems Architect 2025.11-Present",
+        bullets: [
+          "Architected an 8-agent orchestration system for HCI literature synthesis, implementing specialized agents of Planner, Researcher, Writer, Critic, SafetyGuardian, ReflexionEngine, LLMJudge, and Evaluation across a 12-step reasoning workflow, achieving 0.955 overall evaluation score, 0.925 on relevance, safety, and clarity.",
+          "Designed Model Context Protocol integration for standardized tool interfaces, enabling seamless connection between LLM agents and external data sources, including academic databases, code repositories, and document management systems.",
+          "Constructed parallel tool-calling infrastructure integrating Semantic Scholar API and Tavily web search with ThreadPoolExecutor, reducing query latency by 40% from 8.2s to 4.9s production-ready approaches during API failures and other issues."
+        ],
+        links: [
+          { label: "Demo", url: "https://salt-lab-human-ai-assignment-3-buildi-srcuistreamlit-app-zweknl.streamlit.app/" }
+        ]
+      },
+      {
+        title: "Node Optimized Orchestration Design for Educational Intelligence Architecture",
+        subtitle: "Full Stack Developer 2025.08-Present",
+        bullets: [
+          "Built a K-12 intelligent tutoring platform integrating multi-agent orchestration with memory-enhanced GraphRAG and designed an adaptive learning system that personalizes responses beyond static Q&A.",
+          "Implemented a multi-agent workflow featuring a self-evolving Long-Term Memory Architecture that mimics human memory processes to enable personalized and accurate responses, overcoming limitations of traditional FIFO memory structures and ensuring critical information is retained and utilized effectively.",
+          "Deployed to 2 partner institutions and iterated through 6 development cycles incorporating user feedback to refine interface design and response quality based on student engagement data."
+        ],
+        links: [
+          { label: "GitHub", url: "https://github.com/SALT-Lab-Human-AI/project-check-point-1-NOODEIA" }
+        ]
+      },
+      {
+        title: "Technology and System of Spatial-Temporal Multi-Modal Large Language Model",
+        subtitle: "Project Researcher, Chinese Academy of Sciences 2024.06-2024.08",
+        bullets: [
+          "Designed data modeling algorithm for heterogeneous spatial-temporal data from multi-sensor sources, transforming multimodal understanding into unified global modeling framework with improved efficiency.",
+          "Participated in the research of ST-XFormer, the Spatial-Temporal Transformer system, including the extraction of semantic events from spatial-temporal data sequences, the feature alignment methods for spatial-temporal data, the spatial-temporal-based logical calculus methods and semantic reasoning methods."
+        ]
+      },
+      {
+        title: "A Spatial-Temporal Awareness Data-Oriented Model for Emergency Crowd Evaluation Route Planning",
+        subtitle: "Project Researcher, Chinese Academy of Sciences 2024.05-2024.06",
+        bullets: [
+          "Developed an emergency evacuation framework that integrates spatio-temporal perception data, streamlined the entire process of decision-making for the global optimal path planning by incorporating the real-time dynamic spatio-temporal perception data provided by drones.",
+          "Proposed and compared multiple algorithms, including the Individual-based Search Method (IBSM), the Global Optimal Sparse Route Planning Query Method (GOSRPQM), and the Improved GOSRPQM algorithm (IGOSRPQM) that incorporates pruning strategies and refinement operations. Implemented and verified these algorithms using tools such as Python and PostgreSQL on real road network data (San Joaquin County, New York, Beijing).",
+          "Revealed technical solution that shortened the global evacuation time by 40%, providing a reliable technical approach and overall solution for large-scale emergency evacuations under resource constraints."
+        ]
+      },
+      {
         title: "Realistic Neural Style Transfer Architecture",
         subtitle: "Independent Researcher 2025.01-2025.08",
         bullets: [
@@ -236,7 +231,7 @@ export const SECTIONS: Record<string, ContentSection> = {
           "Built interactive analytics platform using anime data API for popularity trend visualization and predictive analysis of market opportunities."
         ],
         links: [
-          { label: "GitHub", url: "https://github.com/Edward-H26/Anime-Statistics-and-Analysis-Platform-ASAP" }
+          { label: "Demo", url: "https://qiranhu.shinyapps.io/AnimeStatisticsandAnalysisPlatform/" }
         ]
       }
     ]
@@ -250,14 +245,14 @@ export const SECTIONS: Record<string, ContentSection> = {
         title: "Technical Skills",
         bullets: [
           "Languages: Python, C++, Java, Go, R, Ruby, Kotlin, PHP",
-          "AI/ML Frameworks: PyTorch, JAX, TensorFlow, LangGraph, OpenCV, LangChain",
+          "AI/ML Frameworks: PyTorch, JAX, TensorFlow, OpenCV, LangChain, LangGraph, LangSmith",
           "Large Model Training: Distributed Training, RLHF, SFT, CUDA",
           "Computer Vision & 3D: Diffusion Models, NeRF, Spatial Representations, World Models, 3D Annotation Systems",
           "Multi-agent Systems: MCP (Model Context Protocol), Tool Calling, Function Chaining, Agent Orchestration, Multi-turn Reasoning",
           "Full-stack Development: React.js, Next.js, Vue.js, Angular.js, Node.js, TypeScript, JavaScript, HTML5, Tailwind CSS",
           "Databases: PostgreSQL, Neo4j, MongoDB",
           "Infrastructure: Docker, Kubernetes, AWS, Cloud DevOps",
-          "Design & Productivity: Figma, Canva, Microsoft Office Suites, Adobe Creative Suite",
+          "Design and Office Tools: Figma, Canva, Microsoft Office Suites, Adobe Creative Suite",
           "Other Tools: Unity, SAS, Arduino UNO"
         ]
       },
@@ -297,13 +292,13 @@ export const SECTIONS: Record<string, ContentSection> = {
 
 export const SKILLS_CATEGORIES = {
   "Programming Languages": ["Python", "C++", "Java", "Go", "R", "Ruby", "Kotlin", "PHP"],
-  "AI/ML Frameworks": ["PyTorch", "JAX", "TensorFlow", "LangGraph", "OpenCV", "LangChain"],
+  "AI/ML Frameworks": ["PyTorch", "JAX", "TensorFlow", "OpenCV", "LangChain", "LangGraph", "LangSmith"],
   "Large Model Training": ["Distributed Training", "RLHF", "SFT", "CUDA"],
   "3D & Vision": ["Diffusion Models", "NeRF", "Spatial Representations", "World Models", "3D Annotation Systems"],
   "Multi-agent & Agentic AI": ["MCP", "Tool Calling", "Function Chaining", "Agent Orchestration", "Memory Systems", "Multi-turn Reasoning"],
   "Full-stack Development": ["React.js", "Next.js", "Vue.js", "Angular.js", "Node.js", "TypeScript", "JavaScript", "HTML5", "Tailwind CSS"],
   "Databases": ["PostgreSQL", "Neo4j", "MongoDB"],
   "Infrastructure": ["Docker", "Kubernetes", "AWS", "Cloud DevOps"],
-  "Design & Productivity": ["Figma", "Canva", "Microsoft Office Suites", "Adobe Creative Suite"],
+  "Design and Office Tools": ["Figma", "Canva", "Microsoft Office Suites", "Adobe Creative Suite"],
   "Other Tools": ["Unity", "SAS", "Arduino UNO"],
 }
