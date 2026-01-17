@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #13294B;
+    --color-accent: #0455A4;
+    --color-accent-light: #E8F4FD;
+    --color-text: #1a1a1a;
+    --color-text-muted: #6b7280;
+    --color-background: #ffffff;
+    --color-surface: #f9fafb;
+    --color-border: #e5e7eb;
+  }
+
+  .dark {
+    --color-primary: #60a5fa;
+    --color-accent: #3b82f6;
+    --color-accent-light: #1e3a5f;
+    --color-text: #f3f4f6;
+    --color-text-muted: #9ca3af;
+    --color-background: #0f172a;
+    --color-surface: #1e293b;
+    --color-border: #334155;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white dark:bg-slate-900 text-gray-900 dark:text-gray-100 transition-colors duration-300;
+    font-family: "Inter", system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply relative px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary-dark transition-colors;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute bottom-0 left-3 right-3 h-0.5 bg-accent dark:bg-accent-dark scale-x-0 transition-transform duration-300 origin-left;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    @apply scale-x-100;
+  }
+
+  .nav-link.active {
+    @apply text-primary dark:text-primary-dark;
+  }
+
+  .card {
+    @apply bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 p-6 transition-all duration-200;
+  }
+
+  .card:hover {
+    @apply shadow-lg border-accent/30 dark:border-accent-dark/30 -translate-y-1;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 transition-all duration-200;
+  }
+
+  .badge:hover {
+    @apply bg-accent-light dark:bg-slate-600 text-accent dark:text-accent-dark scale-105;
+  }
+
+  .link-chip {
+    @apply inline-flex items-center gap-1 px-3 py-1 text-sm font-medium text-accent dark:text-accent-dark bg-accent-light dark:bg-slate-700 rounded-md hover:bg-accent/10 dark:hover:bg-slate-600 transition-all duration-200;
+  }
+
+  .announcement-box {
+    @apply border-l-4 border-accent dark:border-accent-dark bg-gradient-to-r from-accent-light dark:from-slate-800 to-transparent p-4 rounded-r-lg;
+  }
+
+  .section-title {
+    @apply text-2xl font-semibold text-primary dark:text-primary-dark mb-2;
+  }
+
+  .section-subtitle {
+    @apply text-sm text-gray-500 dark:text-gray-400 mb-6;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
