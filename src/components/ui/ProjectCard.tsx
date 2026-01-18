@@ -11,15 +11,23 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
   return (
     <div className="card group">
-      <h3 className="text-lg font-semibold text-gray-900 group-hover:text-accent transition-colors">
-        {project.title}
-      </h3>
-
-      {project.subtitle && (
-        <p className="text-sm text-gray-500 mt-1">
-          {project.subtitle}
-        </p>
-      )}
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <h3 className="text-lg font-semibold text-gray-900 group-hover:text-accent transition-colors">
+            {project.title}
+          </h3>
+          {project.subtitle && (
+            <p className="text-sm text-gray-500 mt-1">
+              {project.subtitle}
+            </p>
+          )}
+        </div>
+        {project.date && (
+          <div className="text-sm text-gray-500 text-right flex-shrink-0">
+            {project.date}
+          </div>
+        )}
+      </div>
 
       {project.bullets.length > 0 && (
         <p className="text-sm text-gray-600 mt-3 leading-relaxed">

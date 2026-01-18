@@ -175,7 +175,8 @@ export const SECTIONS: Record<string, ContentSection> = {
     cards: [
       {
         title: "Multi-agent HCI Research Synthesis Engine",
-        subtitle: "Systems Architect 2025.11-Present",
+        subtitle: "Systems Architect",
+        date: "2025.11-Present",
         bullets: [
           "Architected an 8-agent orchestration system for HCI literature synthesis, implementing specialized agents of Planner, Researcher, Writer, Critic, SafetyGuardian, ReflexionEngine, LLMJudge, and Evaluation across a 12-step reasoning workflow, achieving 0.955 overall evaluation score, 0.925 on relevance, safety, and clarity.",
           "Designed Model Context Protocol integration for standardized tool interfaces, enabling seamless connection between LLM agents and external data sources, including academic databases, code repositories, and document management systems.",
@@ -187,7 +188,8 @@ export const SECTIONS: Record<string, ContentSection> = {
       },
       {
         title: "Node Optimized Orchestration Design for Educational Intelligence Architecture",
-        subtitle: "Full Stack Developer 2025.08-Present",
+        subtitle: "Full Stack Developer",
+        date: "2025.08-Present",
         bullets: [
           "Built a K-12 intelligent tutoring platform integrating multi-agent orchestration with memory-enhanced GraphRAG and designed an adaptive learning system that personalizes responses beyond static Q&A.",
           "Implemented a multi-agent workflow featuring a self-evolving Long-Term Memory Architecture that mimics human memory processes to enable personalized and accurate responses, overcoming limitations of traditional FIFO memory structures and ensuring critical information is retained and utilized effectively.",
@@ -198,25 +200,20 @@ export const SECTIONS: Record<string, ContentSection> = {
         ]
       },
       {
-        title: "Technology and System of Spatial-Temporal Multi-Modal Large Language Model",
-        subtitle: "Project Researcher, Chinese Academy of Sciences 2024.06-2024.08",
+        title: "Anime Statistics and Analysis Platform",
+        subtitle: "Project Lead",
+        date: "2025.02-2025.06",
         bullets: [
-          "Designed data modeling algorithm for heterogeneous spatial-temporal data from multi-sensor sources, transforming multimodal understanding into unified global modeling framework with improved efficiency.",
-          "Participated in the research of ST-XFormer, the Spatial-Temporal Transformer system, including the extraction of semantic events from spatial-temporal data sequences, the feature alignment methods for spatial-temporal data, the spatial-temporal-based logical calculus methods and semantic reasoning methods."
-        ]
-      },
-      {
-        title: "A Spatial-Temporal Awareness Data-Oriented Model for Emergency Crowd Evaluation Route Planning",
-        subtitle: "Project Researcher, Chinese Academy of Sciences 2024.05-2024.06",
-        bullets: [
-          "Developed an emergency evacuation framework that integrates spatio-temporal perception data, streamlined the entire process of decision-making for the global optimal path planning by incorporating the real-time dynamic spatio-temporal perception data provided by drones.",
-          "Proposed and compared multiple algorithms, including the Individual-based Search Method (IBSM), the Global Optimal Sparse Route Planning Query Method (GOSRPQM), and the Improved GOSRPQM algorithm (IGOSRPQM) that incorporates pruning strategies and refinement operations. Implemented and verified these algorithms using tools such as Python and PostgreSQL on real road network data (San Joaquin County, New York, Beijing).",
-          "Revealed technical solution that shortened the global evacuation time by 40%, providing a reliable technical approach and overall solution for large-scale emergency evacuations under resource constraints."
+          "Built interactive analytics platform using anime data API for popularity trend visualization and predictive analysis of market opportunities."
+        ],
+        links: [
+          { label: "Demo", url: "https://qiranhu.shinyapps.io/AnimeStatisticsandAnalysisPlatform/" }
         ]
       },
       {
         title: "Realistic Neural Style Transfer Architecture",
-        subtitle: "Independent Researcher 2025.01-2025.08",
+        subtitle: "Independent Researcher",
+        date: "2025.01-2025.08",
         bullets: [
           "Proposed a refined neural style transfer architecture, particularly when applying abstract art styles to photographic content, which emphasizes preserving the global structure and edges of the content image, transferring the high-level artistic tone and color distribution of the style image, and reducing distortions common in patch-based or single-layer loss models."
         ],
@@ -225,13 +222,22 @@ export const SECTIONS: Record<string, ContentSection> = {
         ]
       },
       {
-        title: "Anime Statistics and Analysis Platform",
-        subtitle: "Project Lead 2025.02-2025.06",
+        title: "Technology and System of Spatial-Temporal Multi-Modal Large Language Model",
+        subtitle: "Project Researcher, Chinese Academy of Sciences",
+        date: "2024.06-2024.08",
         bullets: [
-          "Built interactive analytics platform using anime data API for popularity trend visualization and predictive analysis of market opportunities."
-        ],
-        links: [
-          { label: "Demo", url: "https://qiranhu.shinyapps.io/AnimeStatisticsandAnalysisPlatform/" }
+          "Designed data modeling algorithm for heterogeneous spatial-temporal data from multi-sensor sources, transforming multimodal understanding into unified global modeling framework with improved efficiency.",
+          "Participated in the research of ST-XFormer, the Spatial-Temporal Transformer system, including the extraction of semantic events from spatial-temporal data sequences, the feature alignment methods for spatial-temporal data, the spatial-temporal-based logical calculus methods and semantic reasoning methods."
+        ]
+      },
+      {
+        title: "A Spatial-Temporal Awareness Data-Oriented Model for Emergency Crowd Evaluation Route Planning",
+        subtitle: "Project Researcher, Chinese Academy of Sciences",
+        date: "2024.05-2024.06",
+        bullets: [
+          "Developed an emergency evacuation framework that integrates spatio-temporal perception data, streamlined the entire process of decision-making for the global optimal path planning by incorporating the real-time dynamic spatio-temporal perception data provided by drones.",
+          "Proposed and compared multiple algorithms, including the Individual-based Search Method (IBSM), the Global Optimal Sparse Route Planning Query Method (GOSRPQM), and the Improved GOSRPQM algorithm (IGOSRPQM) that incorporates pruning strategies and refinement operations. Implemented and verified these algorithms using tools such as Python and PostgreSQL on real road network data (San Joaquin County, New York, Beijing).",
+          "Revealed technical solution that shortened the global evacuation time by 40%, providing a reliable technical approach and overall solution for large-scale emergency evacuations under resource constraints."
         ]
       }
     ]
