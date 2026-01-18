@@ -38,12 +38,14 @@ export function Navigation({ onMenuClick }: NavigationProps) {
           ))}
         </nav>
 
-        <NavLink
-          to="/projects"
+        <a
+          href="https://edward-h26.github.io/PersonalWebsite/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden md:inline-flex items-center px-4 py-2 text-sm font-semibold rounded-md bg-accent text-white hover:bg-accent/90 transition-colors"
         >
           Explore through interactive journey
-        </NavLink>
+        </a>
 
         <button
           onClick={onMenuClick}
