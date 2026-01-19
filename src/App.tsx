@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom"
 
 import { Layout } from "@/components/layout/Layout"
 import { Navigation } from "@/components/layout/Navigation"
+import { usePageBoundaryScroll } from "@/hooks/usePageBoundaryScroll"
 import { HomePage } from "@/pages/HomePage"
 import { ResearchPage } from "@/pages/ResearchPage"
 import { PublicationsPage } from "@/pages/PublicationsPage"
@@ -13,6 +14,8 @@ import { InfoPage } from "@/pages/InfoPage"
 function App() {
   const location = useLocation()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  usePageBoundaryScroll({ enabled: true })
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" })

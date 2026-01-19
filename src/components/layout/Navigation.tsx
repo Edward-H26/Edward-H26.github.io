@@ -20,21 +20,84 @@ export function Navigation({ onMenuClick }: NavigationProps) {
   const prefersReducedMotion = useReducedMotion()
   const { scrollY } = useScroll()
 
-  const headerHeight = useTransform(scrollY, [0, 100], [64, 56])
-  const bgOpacity = useTransform(scrollY, [0, 50], [0.85, 0.95])
+  const bgOpacity = useTransform(scrollY, [0, 50], [0.02, 0.06])
 
   if (prefersReducedMotion) {
     return (
-      <header className="fixed top-0 left-0 right-0 h-16 glass-nav z-50">
-        <div className="h-full w-full px-6 lg:pl-80 lg:pr-8 flex items-center justify-between">
-          <nav className="hidden lg:flex items-center gap-10 ml-8">
+      <>
+        <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 hidden lg:block">
+          <div className="nav-pill px-2 py-2 flex items-center gap-1">
+            <nav className="flex items-center gap-1">
+              {NAV_ITEMS.map((item) => (
+                <NavLink
+                  key={item.path}
+                  to={item.path}
+                  end={item.path === "/"}
+                  className={({ isActive }) =>
+                    `nav-link-pill ${isActive ? "active" : ""}`
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              ))}
+            </nav>
+
+            <div className="w-px h-6 bg-gray-200/50 mx-2" />
+
+            <a
+              href="https://edward-h26.github.io/PersonalWebsite/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 text-sm font-semibold liquid-glass-button rounded-full"
+            >
+              <span className="liquid-glass-button-content">
+                <span>Explore My Journey</span>
+                <Sparkles size={14} className="liquid-glass-icon" />
+              </span>
+            </a>
+          </div>
+        </header>
+
+        <header className="fixed top-0 left-0 right-0 h-16 glass-nav z-50 lg:hidden">
+          <div className="h-full w-full px-6 flex items-center justify-end">
+            <button
+              onClick={onMenuClick}
+              className="p-2 rounded-lg text-gray-600 hover:bg-gray-100/80 transition-colors"
+              aria-label="Open menu"
+            >
+              <Menu size={20} />
+            </button>
+          </div>
+        </header>
+      </>
+    )
+  }
+
+  return (
+    <>
+      <motion.header
+        className="fixed top-4 left-1/2 -translate-x-1/2 z-50 hidden lg:block"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
+        <motion.div
+          className="nav-pill px-2 py-2 flex items-center gap-1"
+          style={{
+            backgroundColor: useTransform(
+              bgOpacity,
+              (v) => `rgba(255, 255, 255, ${v})`
+            ),
+          }}
+        >
+          <nav className="flex items-center gap-1">
             {NAV_ITEMS.map((item) => (
               <NavLink
                 key={item.path}
                 to={item.path}
                 end={item.path === "/"}
                 className={({ isActive }) =>
-                  `nav-link ${isActive ? "active" : ""}`
+                  `nav-link-pill ${isActive ? "active" : ""}`
                 }
               >
                 {item.label}
@@ -42,77 +105,33 @@ export function Navigation({ onMenuClick }: NavigationProps) {
             ))}
           </nav>
 
+          <div className="w-px h-6 bg-gray-200/50 mx-2" />
+
           <a
             href="https://edward-h26.github.io/PersonalWebsite/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden lg:inline-flex px-5 py-2.5 text-sm font-semibold liquid-glass-button"
+            className="px-4 py-2 text-sm font-semibold liquid-glass-button rounded-full"
           >
             <span className="liquid-glass-button-content">
               <span>Explore My Journey</span>
-              <Sparkles size={16} className="liquid-glass-icon" />
+              <Sparkles size={14} className="liquid-glass-icon" />
             </span>
           </a>
+        </motion.div>
+      </motion.header>
 
+      <header className="fixed top-0 left-0 right-0 h-16 glass-nav z-50 lg:hidden">
+        <div className="h-full w-full px-6 flex items-center justify-end">
           <button
             onClick={onMenuClick}
-            className="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100/80 transition-colors"
+            className="p-2 rounded-lg text-gray-600 hover:bg-gray-100/80 transition-colors"
             aria-label="Open menu"
           >
             <Menu size={20} />
           </button>
         </div>
       </header>
-    )
-  }
-
-  return (
-    <motion.header
-      className="fixed top-0 left-0 right-0 glass-nav z-50"
-      style={{
-        height: headerHeight,
-        backgroundColor: useTransform(
-          bgOpacity,
-          (v) => `rgba(255, 255, 255, ${v})`
-        ),
-      }}
-    >
-      <div className="h-full w-full px-6 lg:pl-80 lg:pr-8 flex items-center justify-between">
-        <nav className="hidden lg:flex items-center gap-10 ml-8">
-          {NAV_ITEMS.map((item) => (
-            <NavLink
-              key={item.path}
-              to={item.path}
-              end={item.path === "/"}
-              className={({ isActive }) =>
-                `nav-link ${isActive ? "active" : ""}`
-              }
-            >
-              {item.label}
-            </NavLink>
-          ))}
-        </nav>
-
-        <a
-          href="https://edward-h26.github.io/PersonalWebsite/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden lg:inline-flex px-5 py-2.5 text-sm font-semibold liquid-glass-button"
-        >
-          <span className="liquid-glass-button-content">
-            <span>Explore My Journey</span>
-            <Sparkles size={16} className="liquid-glass-icon" />
-          </span>
-        </a>
-
-        <button
-          onClick={onMenuClick}
-          className="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100/80 transition-colors"
-          aria-label="Open menu"
-        >
-          <Menu size={20} />
-        </button>
-      </div>
-    </motion.header>
+    </>
   )
 }
