@@ -27,7 +27,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 z-50 md:hidden"
+            className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 md:hidden"
             onClick={onClose}
           />
 
@@ -36,15 +36,15 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed top-0 right-0 bottom-0 w-80 bg-white z-50 md:hidden shadow-xl"
+            className="fixed top-0 right-0 bottom-0 w-80 glass-menu z-50 md:hidden shadow-2xl"
           >
-            <div className="flex items-center justify-between p-4 border-b border-gray-200">
-              <span className="text-lg font-semibold text-primary">
+            <div className="flex items-center justify-between p-4 border-b border-gray-200/50">
+              <span className="text-lg font-semibold text-gradient-subtle">
                 Menu
               </span>
               <button
                 onClick={onClose}
-                className="p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors"
+                className="p-2 rounded-lg text-gray-600 hover:bg-gray-100/80 transition-all duration-200"
                 aria-label="Close menu"
               >
                 <X size={20} />
@@ -53,11 +53,14 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
 
             <div className="p-4">
               <div className="flex flex-col items-center mb-6">
-                <img
-                  src={PROFILE.photo}
-                  alt={PROFILE.name}
-                  className="w-24 h-24 rounded-full object-cover border-2 border-gray-200"
-                />
+                <div className="relative">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/20 to-primary/20 blur-lg" />
+                  <img
+                    src={PROFILE.photo}
+                    alt={PROFILE.name}
+                    className="relative w-24 h-24 rounded-full object-cover border-2 border-white/80 shadow-lg"
+                  />
+                </div>
                 <h2 className="mt-3 text-lg font-semibold text-gray-900">
                   {PROFILE.name}
                 </h2>
@@ -67,32 +70,43 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
               </div>
 
               <nav className="space-y-1">
-                {NAV_ITEMS.map((item) => (
-                  <NavLink
+                {NAV_ITEMS.map((item, index) => (
+                  <motion.div
                     key={item.path}
-                    to={item.path}
-                    end={item.path === "/"}
-                    onClick={onClose}
-                    className={({ isActive }) =>
-                      `block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
-                        isActive
-                          ? "bg-accent-light text-accent"
-                          : "text-gray-600 hover:bg-gray-100"
-                      }`
-                    }
+                    initial={{ x: 20, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ delay: index * 0.05, duration: 0.3 }}
                   >
-                    {item.label}
-                  </NavLink>
+                    <NavLink
+                      to={item.path}
+                      end={item.path === "/"}
+                      onClick={onClose}
+                      className={({ isActive }) =>
+                        `block px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${
+                          isActive
+                            ? "bg-accent-light/80 text-accent backdrop-blur-sm"
+                            : "text-gray-600 hover:bg-gray-100/80"
+                        }`
+                      }
+                    >
+                      {item.label}
+                    </NavLink>
+                  </motion.div>
                 ))}
               </nav>
 
-              <div className="mt-8 pt-6 border-t border-gray-200">
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.3, duration: 0.4 }}
+                className="mt-8 pt-6 border-t border-gray-200/50"
+              >
                 <div className="flex justify-center gap-4">
                   <a
                     href={PROFILE.social.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-gray-100 text-gray-600 hover:text-accent transition-colors"
+                    className="p-3 rounded-full bg-gray-100/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:scale-110 transition-all duration-200"
                   >
                     <Github size={20} />
                   </a>
@@ -100,13 +114,13 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                     href={PROFILE.social.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-gray-100 text-gray-600 hover:text-accent transition-colors"
+                    className="p-3 rounded-full bg-gray-100/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:scale-110 transition-all duration-200"
                   >
                     <Linkedin size={20} />
                   </a>
                   <a
                     href={`mailto:${PROFILE.email}`}
-                    className="p-3 rounded-full bg-gray-100 text-gray-600 hover:text-accent transition-colors"
+                    className="p-3 rounded-full bg-gray-100/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:scale-110 transition-all duration-200"
                   >
                     <Mail size={20} />
                   </a>
@@ -114,12 +128,12 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                     href={PROFILE.social.x}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-gray-100 text-gray-600 hover:text-accent transition-colors"
+                    className="p-3 rounded-full bg-gray-100/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:scale-110 transition-all duration-200"
                   >
                     <XLogo size={20} />
                   </a>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         </>
