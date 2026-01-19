@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { Routes, Route, useLocation } from "react-router-dom"
+import { AnimatePresence } from "framer-motion"
 
 import { Layout } from "@/components/layout/Layout"
 import { Navigation } from "@/components/layout/Navigation"
@@ -17,31 +18,33 @@ function App() {
 
   usePageBoundaryScroll({ enabled: true })
 
-  useEffect(() => {
+  const handleExitComplete = () => {
     window.scrollTo({ top: 0, behavior: "instant" })
-  }, [location.pathname])
+  }
 
   return (
     <>
       <Navigation onMenuClick={() => setMobileMenuOpen(true)} />
-      <Routes location={location}>
-        <Route
-          path="/"
-          element={
-            <Layout
-              mobileMenuOpen={mobileMenuOpen}
-              onMobileMenuClose={() => setMobileMenuOpen(false)}
-            />
-          }
-        >
-          <Route index element={<HomePage />} />
-          <Route path="research" element={<ResearchPage />} />
-          <Route path="publications" element={<PublicationsPage />} />
-          <Route path="experience" element={<ExperiencePage />} />
-          <Route path="projects" element={<ProjectsPage />} />
-          <Route path="info" element={<InfoPage />} />
-        </Route>
-      </Routes>
+      <AnimatePresence mode="wait" onExitComplete={handleExitComplete}>
+        <Routes location={location} key={location.pathname}>
+          <Route
+            path="/"
+            element={
+              <Layout
+                mobileMenuOpen={mobileMenuOpen}
+                onMobileMenuClose={() => setMobileMenuOpen(false)}
+              />
+            }
+          >
+            <Route index element={<HomePage />} />
+            <Route path="research" element={<ResearchPage />} />
+            <Route path="publications" element={<PublicationsPage />} />
+            <Route path="experience" element={<ExperiencePage />} />
+            <Route path="projects" element={<ProjectsPage />} />
+            <Route path="info" element={<InfoPage />} />
+          </Route>
+        </Routes>
+      </AnimatePresence>
     </>
   )
 }
