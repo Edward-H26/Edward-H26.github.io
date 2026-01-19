@@ -87,6 +87,27 @@
     -webkit-backdrop-filter: blur(8px) saturate(200%);
   }
 
+  .nav-pill {
+    @apply backdrop-blur-md rounded-full;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+      0 4px 24px rgba(0, 0, 0, 0.06),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-link-pill {
+    @apply relative px-4 py-2 text-sm font-medium text-gray-500 rounded-full transition-all duration-300 no-underline hover:no-underline;
+  }
+
+  .nav-link-pill:hover {
+    @apply text-gray-900 bg-white/10;
+  }
+
+  .nav-link-pill.active {
+    @apply text-gray-900 bg-white/15 font-semibold;
+  }
+
   .nav-link {
     @apply relative px-4 py-2 text-sm font-medium text-gray-500 transition-all duration-300 no-underline hover:no-underline tracking-wide;
   }
@@ -285,7 +306,7 @@
     var(--color-primary) 100%
   );
   background-size: 300% 100%;
-  animation: hero-shimmer 2s ease-in-out infinite;
+  animation: hero-shimmer 1.2s ease-out forwards;
   box-shadow:
     0 0 12px rgba(4, 85, 164, 0.6),
     0 0 24px rgba(0, 212, 255, 0.4),
@@ -299,12 +320,9 @@
     background-position: 300% 0;
     filter: brightness(1.1);
   }
-  50% {
-    filter: brightness(1.2);
-  }
   100% {
-    background-position: -300% 0;
-    filter: brightness(1.1);
+    background-position: 0% 0;
+    filter: brightness(1.0);
   }
 }
 
@@ -317,17 +335,17 @@
   filter: blur(8px);
   opacity: 0.6;
   z-index: -1;
-  animation: glow-pulse 2s ease-in-out infinite alternate;
+  animation: glow-pulse 1.2s ease-out forwards;
 }
 
 @keyframes glow-pulse {
   0% {
-    opacity: 0.4;
-    transform: scale(1);
+    opacity: 0;
+    transform: scale(0.98);
   }
   100% {
-    opacity: 0.7;
-    transform: scale(1.02);
+    opacity: 0.6;
+    transform: scale(1);
   }
 }
 
@@ -648,12 +666,12 @@
    ═══════════════════════════════════════════════════════════════════════════ */
 
 .liquid-glass-button {
-  --glass-blur: 16px;
-  --glass-saturation: 180%;
-  --glass-bg: rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(255, 255, 255, 0.15);
-  --glass-highlight: rgba(255, 255, 255, 0.6);
-  --glass-shadow-color: rgba(31, 38, 135, 0.12);
+  --glass-blur: 20px;
+  --glass-saturation: 200%;
+  --glass-bg: rgba(255, 255, 255, 0.01);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-highlight: rgba(255, 255, 255, 0.4);
+  --glass-shadow-color: rgba(31, 38, 135, 0.06);
 
   position: relative;
   background: var(--glass-bg);
@@ -717,8 +735,8 @@
 
 /* Hover State - Enhanced glass effect */
 .liquid-glass-button:hover {
-  --glass-bg: rgba(255, 255, 255, 0.08);
-  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.15);
   transform: translateY(-2px) scale(1.02);
   box-shadow:
     0 12px 40px rgba(31, 38, 135, 0.18),
