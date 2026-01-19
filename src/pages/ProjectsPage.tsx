@@ -35,22 +35,22 @@ export function ProjectsPage() {
                 className={index === 0 ? "flex flex-col justify-between" : ""}
               >
                 <div>
-                  <div className="flex items-start justify-between gap-4 mb-3">
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900 group-hover:text-accent transition-colors">
-                        {project.title}
-                      </h3>
+                  <div className="mb-3">
+                    <h3 className="text-lg font-semibold text-gray-900 group-hover:text-accent transition-colors">
+                      {project.title}
+                    </h3>
+                    <div className="flex items-center justify-between gap-4 mt-1">
                       {project.subtitle && (
-                        <p className="text-sm text-gray-500 mt-1">
+                        <p className="text-sm text-gray-500">
                           {project.subtitle}
                         </p>
                       )}
+                      {project.date && (
+                        <div className="text-xs text-gray-400 flex-shrink-0 bg-gray-100/80 px-2 py-1 rounded-full ml-auto">
+                          {project.date}
+                        </div>
+                      )}
                     </div>
-                    {project.date && (
-                      <div className="text-xs text-gray-400 flex-shrink-0 bg-gray-100/80 px-2 py-1 rounded-full">
-                        {project.date}
-                      </div>
-                    )}
                   </div>
 
                   {project.bullets.length > 0 && (
