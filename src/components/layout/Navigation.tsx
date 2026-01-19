@@ -27,7 +27,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
     return (
       <header className="fixed top-0 left-0 right-0 h-16 glass-nav z-50">
         <div className="h-full w-full px-6 lg:pl-80 lg:pr-8 flex items-center justify-between">
-          <nav className="hidden lg:flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-10">
             {NAV_ITEMS.map((item) => (
               <NavLink
                 key={item.path}
@@ -76,7 +76,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
       }}
     >
       <div className="h-full w-full px-6 lg:pl-80 lg:pr-8 flex items-center justify-between">
-        <nav className="hidden lg:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-10">
           {NAV_ITEMS.map((item) => (
             <NavLink
               key={item.path}
