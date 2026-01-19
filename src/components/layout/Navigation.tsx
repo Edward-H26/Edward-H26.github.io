@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom"
 import { Menu, Sparkles } from "lucide-react"
-import { motion, useScroll, useTransform } from "framer-motion"
+import { motion } from "framer-motion"
 import { useReducedMotion } from "@/hooks/useReducedMotion"
 
 const NAV_ITEMS = [
@@ -18,15 +18,12 @@ interface NavigationProps {
 
 export function Navigation({ onMenuClick }: NavigationProps) {
   const prefersReducedMotion = useReducedMotion()
-  const { scrollY } = useScroll()
-
-  const bgOpacity = useTransform(scrollY, [0, 50], [0.02, 0.06])
 
   if (prefersReducedMotion) {
     return (
       <>
-        <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 hidden lg:block">
-          <div className="nav-pill px-2 py-2 flex items-center gap-1">
+        <header className="fixed top-0 left-0 right-0 h-16 glass-nav z-50 hidden lg:block lg:pl-80">
+          <div className="h-full max-w-4xl mx-auto px-6 flex items-center justify-between">
             <nav className="flex items-center gap-1">
               {NAV_ITEMS.map((item) => (
                 <NavLink
@@ -34,15 +31,13 @@ export function Navigation({ onMenuClick }: NavigationProps) {
                   to={item.path}
                   end={item.path === "/"}
                   className={({ isActive }) =>
-                    `nav-link-pill ${isActive ? "active" : ""}`
+                    `nav-link ${isActive ? "active" : ""}`
                   }
                 >
                   {item.label}
                 </NavLink>
               ))}
             </nav>
-
-            <div className="w-px h-6 bg-gray-200/50 mx-2" />
 
             <a
               href="https://edward-h26.github.io/PersonalWebsite/"
@@ -76,20 +71,12 @@ export function Navigation({ onMenuClick }: NavigationProps) {
   return (
     <>
       <motion.header
-        className="fixed top-4 left-1/2 -translate-x-1/2 z-50 hidden lg:block"
+        className="fixed top-0 left-0 right-0 h-16 glass-nav z-50 hidden lg:block lg:pl-80"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <motion.div
-          className="nav-pill px-2 py-2 flex items-center gap-1"
-          style={{
-            backgroundColor: useTransform(
-              bgOpacity,
-              (v) => `rgba(255, 255, 255, ${v})`
-            ),
-          }}
-        >
+        <div className="h-full max-w-4xl mx-auto px-6 flex items-center justify-between">
           <nav className="flex items-center gap-1">
             {NAV_ITEMS.map((item) => (
               <NavLink
@@ -97,15 +84,13 @@ export function Navigation({ onMenuClick }: NavigationProps) {
                 to={item.path}
                 end={item.path === "/"}
                 className={({ isActive }) =>
-                  `nav-link-pill ${isActive ? "active" : ""}`
+                  `nav-link ${isActive ? "active" : ""}`
                 }
               >
                 {item.label}
               </NavLink>
             ))}
           </nav>
-
-          <div className="w-px h-6 bg-gray-200/50 mx-2" />
 
           <a
             href="https://edward-h26.github.io/PersonalWebsite/"
@@ -118,7 +103,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
               <Sparkles size={14} className="liquid-glass-icon" />
             </span>
           </a>
-        </motion.div>
+        </div>
       </motion.header>
 
       <header className="fixed top-0 left-0 right-0 h-16 glass-nav z-50 lg:hidden">
