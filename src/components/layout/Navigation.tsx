@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom"
-import { Menu } from "lucide-react"
-import { PROFILE } from "@/data/content"
+import { Menu, Sparkles } from "lucide-react"
+import { motion, useScroll, useTransform } from "framer-motion"
+import { useReducedMotion } from "@/hooks/useReducedMotion"
 
 const NAV_ITEMS = [
   { path: "/", label: "Home" },
@@ -16,14 +17,66 @@ interface NavigationProps {
 }
 
 export function Navigation({ onMenuClick }: NavigationProps) {
-  return (
-    <header className="fixed top-0 left-0 right-0 h-16 bg-white/80 backdrop-blur-md border-b border-gray-200 z-50">
-      <div className="h-full max-w-7xl mx-auto px-4 flex items-center justify-end gap-8">
-        <NavLink to="/" className="text-lg font-semibold text-primary">
-          {PROFILE.name}
-        </NavLink>
+  const prefersReducedMotion = useReducedMotion()
+  const { scrollY } = useScroll()
 
-        <nav className="hidden md:flex items-center gap-1">
+  const headerHeight = useTransform(scrollY, [0, 100], [64, 56])
+  const bgOpacity = useTransform(scrollY, [0, 50], [0.85, 0.95])
+
+  if (prefersReducedMotion) {
+    return (
+      <header className="fixed top-0 left-0 right-0 h-16 glass-nav z-50">
+        <div className="h-full w-full px-6 lg:pl-80 lg:pr-8 flex items-center justify-between">
+          <nav className="hidden lg:flex items-center gap-2">
+            {NAV_ITEMS.map((item) => (
+              <NavLink
+                key={item.path}
+                to={item.path}
+                end={item.path === "/"}
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? "active" : ""}`
+                }
+              >
+                {item.label}
+              </NavLink>
+            ))}
+          </nav>
+
+          <a
+            href="https://edward-h26.github.io/PersonalWebsite/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-xl text-white relative overflow-hidden group transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] premium-cta-button"
+          >
+            <span>Explore interactive journey</span>
+            <Sparkles size={16} className="premium-cta-icon" />
+          </a>
+
+          <button
+            onClick={onMenuClick}
+            className="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100/80 transition-colors"
+            aria-label="Open menu"
+          >
+            <Menu size={20} />
+          </button>
+        </div>
+      </header>
+    )
+  }
+
+  return (
+    <motion.header
+      className="fixed top-0 left-0 right-0 glass-nav z-50"
+      style={{
+        height: headerHeight,
+        backgroundColor: useTransform(
+          bgOpacity,
+          (v) => `rgba(255, 255, 255, ${v})`
+        ),
+      }}
+    >
+      <div className="h-full w-full px-6 lg:pl-80 lg:pr-8 flex items-center justify-between">
+        <nav className="hidden lg:flex items-center gap-2">
           {NAV_ITEMS.map((item) => (
             <NavLink
               key={item.path}
@@ -42,19 +95,20 @@ export function Navigation({ onMenuClick }: NavigationProps) {
           href="https://edward-h26.github.io/PersonalWebsite/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:inline-flex items-center px-4 py-2 text-sm font-semibold rounded-md bg-accent text-white hover:bg-accent/90 transition-colors"
+          className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-xl text-white relative overflow-hidden group transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] premium-cta-button"
         >
-          Explore through interactive journey
+          <span>Explore interactive journey</span>
+          <Sparkles size={16} className="premium-cta-icon" />
         </a>
 
         <button
           onClick={onMenuClick}
-          className="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors"
+          className="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100/80 transition-colors"
           aria-label="Open menu"
         >
           <Menu size={20} />
         </button>
       </div>
-    </header>
+    </motion.header>
   )
 }

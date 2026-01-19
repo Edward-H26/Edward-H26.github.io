@@ -1,18 +1,25 @@
 import { Outlet } from "react-router-dom"
-import { Navigation } from "./Navigation"
 import { Sidebar } from "./Sidebar"
 import { MobileMenu } from "./MobileMenu"
-import { useState } from "react"
+import { MeshGradient } from "@/components/effects/MeshGradient"
+import { GrainOverlay } from "@/components/effects/GrainOverlay"
+import { ScrollProgress } from "@/components/effects/ScrollProgress"
 
-export function Layout() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+interface LayoutProps {
+  mobileMenuOpen: boolean
+  onMobileMenuClose: () => void
+}
 
+export function Layout({ mobileMenuOpen, onMobileMenuClose }: LayoutProps) {
   return (
-    <div className="min-h-screen bg-white">
-      <Navigation onMenuClick={() => setMobileMenuOpen(true)} />
-      <MobileMenu open={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} />
+    <div className="min-h-screen bg-white/50 relative">
+      <MeshGradient />
+      <GrainOverlay />
+      <ScrollProgress />
 
-      <div className="flex">
+      <MobileMenu open={mobileMenuOpen} onClose={onMobileMenuClose} />
+
+      <div className="flex relative">
         <Sidebar className="hidden lg:block" />
 
         <main className="flex-1 lg:ml-72 pt-16">

@@ -1,8 +1,8 @@
-import { Routes, Route } from "react-router-dom"
-import { AnimatePresence } from "framer-motion"
-import { useLocation } from "react-router-dom"
+import { useEffect, useState } from "react"
+import { Routes, Route, useLocation } from "react-router-dom"
 
 import { Layout } from "@/components/layout/Layout"
+import { Navigation } from "@/components/layout/Navigation"
 import { HomePage } from "@/pages/HomePage"
 import { ResearchPage } from "@/pages/ResearchPage"
 import { PublicationsPage } from "@/pages/PublicationsPage"
@@ -12,11 +12,25 @@ import { InfoPage } from "@/pages/InfoPage"
 
 function App() {
   const location = useLocation()
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" })
+  }, [location.pathname])
 
   return (
-    <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Layout />}>
+    <>
+      <Navigation onMenuClick={() => setMobileMenuOpen(true)} />
+      <Routes location={location}>
+        <Route
+          path="/"
+          element={
+            <Layout
+              mobileMenuOpen={mobileMenuOpen}
+              onMobileMenuClose={() => setMobileMenuOpen(false)}
+            />
+          }
+        >
           <Route index element={<HomePage />} />
           <Route path="research" element={<ResearchPage />} />
           <Route path="publications" element={<PublicationsPage />} />
@@ -25,7 +39,7 @@ function App() {
           <Route path="info" element={<InfoPage />} />
         </Route>
       </Routes>
-    </AnimatePresence>
+    </>
   )
 }
 

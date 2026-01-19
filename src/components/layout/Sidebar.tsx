@@ -8,13 +8,16 @@ interface SidebarProps {
 
 export function Sidebar({ className = "" }: SidebarProps) {
   return (
-    <aside className={`w-72 fixed left-0 top-16 h-[calc(100vh-4rem)] p-8 border-r border-gray-200 bg-gray-50 overflow-y-auto ${className}`}>
+    <aside className={`w-72 fixed left-0 top-16 h-[calc(100vh-4rem)] p-8 glass-sidebar overflow-y-auto ${className}`}>
       <div className="flex flex-col items-center">
-        <img
-          src={PROFILE.photo}
-          alt={PROFILE.name}
-          className="w-40 h-40 rounded-full object-cover border-4 border-white shadow-lg"
-        />
+        <div className="relative">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/20 to-primary/20 blur-xl animate-pulse-slow" />
+          <img
+            src={PROFILE.photo}
+            alt={PROFILE.name}
+            className="relative w-40 h-40 rounded-full object-cover border-4 border-white/80 shadow-xl"
+          />
+        </div>
 
         <h1 className="text-xl font-semibold text-gray-900 mt-4 text-center">
           {PROFILE.name}
@@ -41,7 +44,7 @@ export function Sidebar({ className = "" }: SidebarProps) {
           href={PROFILE.social.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 rounded-full bg-white text-gray-600 hover:text-accent hover:shadow-md transition-all"
+          className="p-2.5 rounded-full bg-white/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:shadow-md hover:scale-110 transition-all duration-200"
           aria-label="GitHub"
         >
           <Github size={20} />
@@ -50,7 +53,7 @@ export function Sidebar({ className = "" }: SidebarProps) {
           href={PROFILE.social.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 rounded-full bg-white text-gray-600 hover:text-accent hover:shadow-md transition-all"
+          className="p-2.5 rounded-full bg-white/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:shadow-md hover:scale-110 transition-all duration-200"
           aria-label="LinkedIn"
         >
           <Linkedin size={20} />
@@ -59,7 +62,7 @@ export function Sidebar({ className = "" }: SidebarProps) {
           href={PROFILE.social.x}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 rounded-full bg-white text-gray-600 hover:text-accent hover:shadow-md transition-all"
+          className="p-2.5 rounded-full bg-white/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:shadow-md hover:scale-110 transition-all duration-200"
           aria-label="X"
         >
           <XLogo size={20} />
