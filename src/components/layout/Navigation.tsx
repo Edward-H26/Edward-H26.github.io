@@ -27,7 +27,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
     return (
       <header className="fixed top-0 left-0 right-0 h-16 glass-nav z-50">
         <div className="h-full w-full px-6 lg:pl-80 lg:pr-8 flex items-center justify-between">
-          <nav className="hidden lg:flex items-center gap-8 ml-12">
+          <nav className="hidden lg:flex items-center gap-10 ml-8">
             {NAV_ITEMS.map((item) => (
               <NavLink
                 key={item.path}
@@ -46,10 +46,12 @@ export function Navigation({ onMenuClick }: NavigationProps) {
             href="https://edward-h26.github.io/PersonalWebsite/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-xl relative overflow-hidden group transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] liquid-glass-button"
+            className="hidden lg:inline-flex px-5 py-2.5 text-sm font-semibold liquid-glass-button"
           >
-            <span>Explore My Journey</span>
-            <Sparkles size={16} className="liquid-glass-icon" />
+            <span className="liquid-glass-button-content">
+              <span>Explore My Journey</span>
+              <Sparkles size={16} className="liquid-glass-icon" />
+            </span>
           </a>
 
           <button
@@ -76,7 +78,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
       }}
     >
       <div className="h-full w-full px-6 lg:pl-80 lg:pr-8 flex items-center justify-between">
-        <nav className="hidden lg:flex items-center gap-8 ml-12">
+        <nav className="hidden lg:flex items-center gap-10 ml-8">
           {NAV_ITEMS.map((item) => (
             <NavLink
               key={item.path}
@@ -95,10 +97,12 @@ export function Navigation({ onMenuClick }: NavigationProps) {
           href="https://edward-h26.github.io/PersonalWebsite/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-xl relative overflow-hidden group transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] liquid-glass-button"
+          className="hidden lg:inline-flex px-5 py-2.5 text-sm font-semibold liquid-glass-button"
         >
-          <span>Explore My Journey</span>
-          <Sparkles size={16} className="liquid-glass-icon" />
+          <span className="liquid-glass-button-content">
+            <span>Explore My Journey</span>
+            <Sparkles size={16} className="liquid-glass-icon" />
+          </span>
         </a>
 
         <button

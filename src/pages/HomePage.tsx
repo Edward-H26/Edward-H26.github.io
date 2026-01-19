@@ -40,16 +40,16 @@ export function HomePage() {
         <motion.section variants={itemVariants}>
           <div className="mb-6">
             <TextReveal
-              text="Building AI that Understands"
+              text="Advancing Human-Centered Intelligence"
               variant="word"
               className="text-3xl font-bold text-gray-900 block"
               staggerDelay={0.08}
             />
             <motion.span
-              initial={{ opacity: 0, width: 0 }}
-              animate={{ opacity: 1, width: "100%" }}
-              transition={{ delay: 0.8, duration: 0.6 }}
-              className="block h-1 bg-gradient-to-r from-accent via-primary to-accent/50 rounded-full mt-2 max-w-xs"
+              initial={{ opacity: 0, scaleX: 0 }}
+              animate={{ opacity: 1, scaleX: 1 }}
+              transition={{ delay: 0.8, duration: 0.8, ease: [0.34, 1.56, 0.64, 1] }}
+              className="block h-1.5 rounded-full mt-3 max-w-sm origin-left relative hero-underline"
             />
           </div>
           <div className="prose prose-gray max-w-none text-gray-600 leading-relaxed space-y-4">
