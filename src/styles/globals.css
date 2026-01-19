@@ -82,7 +82,7 @@
   }
 
   .nav-link {
-    @apply relative px-4 py-2.5 text-base font-medium text-gray-600 transition-all duration-200 no-underline hover:no-underline;
+    @apply relative px-5 py-2.5 text-base font-medium text-gray-600 transition-all duration-200 no-underline hover:no-underline;
   }
 
   .nav-link::after {
