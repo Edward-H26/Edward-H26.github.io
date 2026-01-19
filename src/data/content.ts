@@ -98,7 +98,7 @@ export const SECTIONS: Record<string, ContentSection> = {
       {
         title: "Realistic Neural Style Transfer Architecture",
         bullets: [
-          "[2] Qiran, Hu. (2025). Advancing Traditional Neural Style Transfer: Realistic Neural Style Transfer Architecture That Addresses Limitations With Abstract Art Styles And Photographic Input. Submitted to The IEEE International Conference on Image Processing (ICIP 2026)"
+          "[2] Qiran Hu. (2025). Advancing Traditional Neural Style Transfer: Realistic Neural Style Transfer Architecture That Addresses Limitations With Abstract Art Styles And Photographic Input. Submitted to The IEEE International Conference on Image Processing (ICIP 2026)."
         ]
       },
     ]
