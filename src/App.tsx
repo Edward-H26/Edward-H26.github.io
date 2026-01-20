@@ -5,6 +5,7 @@ import { AnimatePresence } from "framer-motion"
 import { Layout } from "@/components/layout/Layout"
 import { Navigation } from "@/components/layout/Navigation"
 import { usePageBoundaryScroll } from "@/hooks/usePageBoundaryScroll"
+import { useNavigationSource } from "@/contexts/NavigationContext"
 import { HomePage } from "@/pages/HomePage"
 import { ResearchPage } from "@/pages/ResearchPage"
 import { PublicationsPage } from "@/pages/PublicationsPage"
@@ -15,11 +16,13 @@ import { InfoPage } from "@/pages/InfoPage"
 function App() {
   const location = useLocation()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const { resetSource } = useNavigationSource()
 
   usePageBoundaryScroll({ enabled: true })
 
   const handleExitComplete = () => {
     window.scrollTo({ top: 0, behavior: "instant" })
+    resetSource()
   }
 
   return (

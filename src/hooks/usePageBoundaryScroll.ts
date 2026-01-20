@@ -1,5 +1,6 @@
 import { useEffect, useRef, useCallback } from "react"
 import { useNavigate, useLocation } from "react-router-dom"
+import { useNavigationSource } from "@/contexts/NavigationContext"
 
 const PAGE_ORDER = ["/", "/research", "/experience", "/projects", "/publications", "/info"]
 
@@ -16,6 +17,7 @@ export function usePageBoundaryScroll({
 }: UsePageBoundaryScrollOptions = {}) {
   const navigate = useNavigate()
   const location = useLocation()
+  const { setSource } = useNavigationSource()
   const lastNavigationTime = useRef(0)
   const accumulatedScroll = useRef(0)
 
@@ -49,6 +51,7 @@ export function usePageBoundaryScroll({
         if (accumulatedScroll.current >= scrollThreshold) {
           lastNavigationTime.current = now
           accumulatedScroll.current = 0
+          setSource("scroll-down")
           navigate(getNextPage(location.pathname))
         }
       } else if (isAtTop && e.deltaY < 0) {
@@ -56,6 +59,7 @@ export function usePageBoundaryScroll({
         if (accumulatedScroll.current >= scrollThreshold) {
           lastNavigationTime.current = now
           accumulatedScroll.current = 0
+          setSource("scroll-up")
           navigate(getPreviousPage(location.pathname))
         }
       } else {
@@ -65,5 +69,5 @@ export function usePageBoundaryScroll({
 
     window.addEventListener("wheel", handleWheel, { passive: true })
     return () => window.removeEventListener("wheel", handleWheel)
-  }, [enabled, cooldownMs, scrollThreshold, location.pathname, navigate, getNextPage, getPreviousPage])
+  }, [enabled, cooldownMs, scrollThreshold, location.pathname, navigate, getNextPage, getPreviousPage, setSource])
 }
