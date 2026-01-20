@@ -45,12 +45,6 @@ export function HomePage() {
               className="text-3xl font-bold text-gray-900 block"
               staggerDelay={0.08}
             />
-            <motion.span
-              initial={{ opacity: 0, scaleX: 0 }}
-              animate={{ opacity: 1, scaleX: 1 }}
-              transition={{ delay: 0.8, duration: 0.8, ease: [0.34, 1.56, 0.64, 1] }}
-              className="block h-1.5 rounded-full mt-3 max-w-sm origin-left relative hero-underline"
-            />
           </div>
           <div className="prose prose-gray max-w-none text-gray-600 leading-relaxed space-y-4">
             <motion.p variants={itemVariants} className="m-0">
