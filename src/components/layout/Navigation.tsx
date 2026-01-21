@@ -22,7 +22,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
   if (prefersReducedMotion) {
     return (
       <>
-        <header className="sticky top-0 h-16 glass-nav z-50 hidden lg:block lg:pl-80">
+        <header className="fixed top-0 left-0 right-0 h-16 glass-nav z-50 hidden lg:block lg:pl-80">
           <div className="h-full max-w-4xl mx-auto px-6 flex items-center justify-between">
             <nav className="flex items-center gap-1">
               {NAV_ITEMS.map((item) => (
@@ -53,7 +53,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
           </div>
         </header>
 
-        <header className="sticky top-0 h-16 glass-nav z-50 lg:hidden">
+        <header className="fixed top-0 left-0 right-0 h-16 glass-nav z-50 lg:hidden">
           <div className="h-full w-full px-6 flex items-center justify-end">
             <button
               onClick={onMenuClick}
@@ -71,7 +71,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
   return (
     <>
       <motion.header
-        className="sticky top-0 h-16 glass-nav z-50 hidden lg:block lg:pl-80"
+        className="fixed top-0 left-0 right-0 h-16 glass-nav z-50 hidden lg:block lg:pl-80"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
