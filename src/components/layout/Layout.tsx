@@ -24,8 +24,8 @@ export function Layout({ mobileMenuOpen, onMobileMenuClose }: LayoutProps) {
       <div className="flex relative">
         <Sidebar className="hidden lg:block" />
 
-        <main className="flex-1 lg:ml-72 pt-16">
-          <div className="max-w-4xl mx-auto px-6 py-12">
+        <main className="flex-1 lg:ml-72 pt-24">
+          <div className="max-w-4xl mx-auto px-6 pt-12 pb-24">
             <Outlet />
           </div>
         </main>
