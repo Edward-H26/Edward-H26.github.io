@@ -679,8 +679,8 @@
 
   position: relative;
   background:
-    linear-gradient(135deg, rgba(147, 112, 219, 0.08), rgba(64, 224, 208, 0.08)),
-    var(--glass-bg);
+    linear-gradient(135deg, rgba(167, 139, 250, 0.35), rgba(139, 92, 246, 0.25)),
+    rgba(237, 233, 254, 0.6);
   backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
   -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
   border: 1px solid var(--glass-border);
@@ -748,8 +748,8 @@
   --glass-bg: rgba(255, 255, 255, 0.22);
   --glass-border: rgba(255, 255, 255, 0.55);
   background:
-    linear-gradient(135deg, rgba(147, 112, 219, 0.12), rgba(64, 224, 208, 0.12)),
-    var(--glass-bg);
+    linear-gradient(135deg, rgba(167, 139, 250, 0.45), rgba(139, 92, 246, 0.35)),
+    rgba(237, 233, 254, 0.7);
   transform: translateY(-3px) scale(1.02);
   box-shadow:
     0 12px 40px rgba(31, 38, 135, 0.25),
