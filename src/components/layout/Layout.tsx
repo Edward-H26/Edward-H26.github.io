@@ -25,7 +25,7 @@ export function Layout({ mobileMenuOpen, onMobileMenuClose }: LayoutProps) {
         <Sidebar className="hidden lg:block" />
 
         <main className="flex-1 lg:ml-72 pt-24">
-          <div className="max-w-4xl mx-auto px-6 pt-8 pb-24">
+          <div className="max-w-4xl mx-auto px-6 pt-4 pb-24">
             <Outlet />
           </div>
         </main>
