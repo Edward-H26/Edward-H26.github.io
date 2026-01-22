@@ -28,9 +28,9 @@ export function Sidebar({ className = "" }: SidebarProps) {
           {PROFILE.title}
         </p>
 
-        <div className="text-sm text-gray-500 flex items-center justify-center gap-2 mt-2 w-full">
-          <UIUCLogo size={24} className="flex-shrink-0" />
+        <div className="text-sm text-gray-500 flex flex-col items-center mt-2">
           <span className="text-center">{PROFILE.affiliation}</span>
+          <UIUCLogo size={40} className="mt-2" />
         </div>
       </div>
 

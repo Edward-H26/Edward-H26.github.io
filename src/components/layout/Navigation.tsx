@@ -69,7 +69,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
                 <h1 className="text-sm font-bold text-gray-900">{PROFILE.name}</h1>
               </div>
 
-              <div className="flex items-center gap-2">
+              <div className="flex-1 flex justify-center gap-2">
                 <a href={PROFILE.social.github} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-orange-100 text-gray-600 hover:bg-orange-200 transition-colors" aria-label="GitHub">
                   <Github size={16} />
                 </a>
@@ -82,14 +82,14 @@ export function Navigation({ onMenuClick }: NavigationProps) {
                 <a href={PROFILE.social.x} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-orange-100 text-gray-600 hover:bg-orange-200 transition-colors" aria-label="X">
                   <XLogo size={16} />
                 </a>
-                <button
-                  onClick={onMenuClick}
-                  className="p-2 rounded-lg text-gray-600 hover:bg-gray-100/80 transition-colors"
-                  aria-label="Open menu"
-                >
-                  <Menu size={20} />
-                </button>
               </div>
+              <button
+                onClick={onMenuClick}
+                className="p-2 rounded-lg text-gray-600 hover:bg-gray-100/80 transition-colors"
+                aria-label="Open menu"
+              >
+                <Menu size={20} />
+              </button>
             </div>
           </div>
         </header>
@@ -149,7 +149,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
               <h1 className="text-sm font-bold text-gray-900">{PROFILE.name}</h1>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex-1 flex justify-center gap-2">
               <a href={PROFILE.social.github} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-orange-100 text-gray-600 hover:bg-orange-200 transition-colors" aria-label="GitHub">
                 <Github size={16} />
               </a>
@@ -162,14 +162,14 @@ export function Navigation({ onMenuClick }: NavigationProps) {
               <a href={PROFILE.social.x} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-orange-100 text-gray-600 hover:bg-orange-200 transition-colors" aria-label="X">
                 <XLogo size={16} />
               </a>
-              <button
-                onClick={onMenuClick}
-                className="p-2 rounded-lg text-gray-600 hover:bg-gray-100/80 transition-colors"
-                aria-label="Open menu"
-              >
-                <Menu size={20} />
-              </button>
             </div>
+            <button
+              onClick={onMenuClick}
+              className="p-2 rounded-lg text-gray-600 hover:bg-gray-100/80 transition-colors"
+              aria-label="Open menu"
+            >
+              <Menu size={20} />
+            </button>
           </div>
         </div>
       </header>

@@ -21,7 +21,7 @@ export function InfoPage() {
         </div>
 
         <div>
-          <h2 className="text-lg font-semibold text-blue-600 mb-4">
+          <h2 className="text-lg font-semibold text-primary mb-4">
             Technical Skills
           </h2>
           <BentoGrid className="lg:grid-cols-3 auto-rows-auto">
@@ -31,7 +31,7 @@ export function InfoPage() {
                 className="!p-4"
                 colSpan={categoryIndex < 2 ? 1 : 1}
               >
-                <h3 className="text-sm font-semibold text-accent-dark mb-3">
+                <h3 className="text-sm font-semibold text-blue-800 mb-3">
                   {category}
                 </h3>
                 <div className="flex flex-wrap gap-1.5">
