@@ -1,8 +1,7 @@
 import { PageTransition } from "@/components/ui/PageTransition"
 import { BentoGrid } from "@/components/ui/BentoGrid"
 import { BentoItem } from "@/components/ui/BentoItem"
-import { AnimatedSection } from "@/components/effects/AnimatedSection"
-import { ExternalLink, Github } from "lucide-react"
+import { ExternalLink, GithubIcon } from "lucide-react"
 import { SECTIONS } from "@/data/content"
 
 export function ProjectsPage() {
@@ -16,10 +15,8 @@ export function ProjectsPage() {
   return (
     <PageTransition>
       <div>
-        <AnimatedSection preset="fade-up">
-          <h1 className="section-title">{projects.heading}</h1>
-          <p className="section-subtitle">{projects.subheading}</p>
-        </AnimatedSection>
+        <h1 className="section-title">{projects.heading}</h1>
+        <p className="section-subtitle">{projects.subheading}</p>
 
         <BentoGrid className="lg:grid-cols-2">
           {projects.cards.map((project, index) => {
@@ -36,7 +33,7 @@ export function ProjectsPage() {
               >
                 <div>
                   <div className="mb-3">
-                    <h3 className="text-lg font-semibold text-gray-900 group-hover:text-accent transition-colors">
+                    <h3 className="text-lg font-semibold text-gray-900 group-hover:text-accent-dark transition-colors">
                       {project.title}
                     </h3>
                     <div className="flex items-center justify-between gap-4 mt-1">
@@ -68,7 +65,7 @@ export function ProjectsPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium bg-gray-900 text-white rounded-lg hover:bg-gray-700 transition-colors"
                     >
-                      <Github size={14} />
+                      <GithubIcon size={14} />
                       GitHub
                     </a>
                   )}

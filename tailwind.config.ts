@@ -8,12 +8,20 @@ export default {
         primary: {
           DEFAULT: "#13294B",
           light: "#1e3a5f",
-          dark: "#60a5fa",
+          dark: "#0a1628",
         },
         accent: {
-          DEFAULT: "#0455A4",
-          light: "#E8F4FD",
-          dark: "#3b82f6",
+          DEFAULT: "#FF5F05",
+          light: "#FFF4E6",
+          dark: "#C84113",
+        },
+        orange: {
+          DEFAULT: "#FF5F05",
+          accessible: "#C84113",
+          light: "#FFF4E6",
+          50: "#FFF7ED",
+          100: "#FFEDD5",
+          200: "#FED7AA",
         },
       },
       fontFamily: {
@@ -54,8 +62,8 @@ export default {
       boxShadow: {
         "glass": "0 8px 32px rgba(0, 0, 0, 0.08)",
         "glass-lg": "0 16px 48px rgba(0, 0, 0, 0.12)",
-        "glow": "0 0 20px rgba(4, 85, 164, 0.15)",
-        "glow-lg": "0 0 40px rgba(4, 85, 164, 0.2)",
+        "glow": "0 0 20px rgba(255, 95, 5, 0.15)",
+        "glow-lg": "0 0 40px rgba(255, 95, 5, 0.2)",
       },
       backdropBlur: {
         xs: "2px",

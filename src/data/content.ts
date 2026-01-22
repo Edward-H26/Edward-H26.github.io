@@ -308,3 +308,22 @@ export const SKILLS_CATEGORIES = {
   "Design and Office Tools": ["Figma", "Canva", "Microsoft Office Suites", "Adobe Creative Suite"],
   "Other Tools": ["Unity", "SAS", "Arduino UNO"],
 }
+
+export const PROFESSIONAL_SKILLS = [
+  "React.js",
+  "Next.js",
+  "Vue.js",
+  "Angular.js",
+  "Node.js",
+  "TypeScript",
+  "JavaScript",
+  "HTML5",
+  "Tailwind CSS",
+  "PostgreSQL",
+  "Neo4j",
+  "MongoDB",
+  "Docker",
+  "Kubernetes",
+  "AWS",
+  "Cloud DevOps",
+]

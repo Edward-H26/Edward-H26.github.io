@@ -13,7 +13,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
     <div className="card group">
       <div className="flex items-start justify-between gap-4">
         <div>
-          <h3 className="text-lg font-semibold text-gray-900 group-hover:text-accent transition-colors">
+          <h3 className="text-lg font-semibold text-gray-900 group-hover:text-accent-dark transition-colors">
             {project.title}
           </h3>
           {project.subtitle && (
