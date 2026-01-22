@@ -25,24 +25,28 @@ export function Timeline({ items }: TimelineProps) {
               />
 
               <div className="card">
-                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
-                  <div>
+                <div className="mb-3">
+                  <div className="flex justify-between items-start gap-4">
                     <h3 className="text-lg font-semibold text-gray-900">
                       {item.title}
                     </h3>
-                    {item.subtitle && (
-                      <p className="text-sm text-gray-600 mt-0.5 pl-2 border-l-2 border-gray-300">
-                        {item.subtitle}
-                      </p>
+                    {item.location && (
+                      <span className="text-sm text-gray-500 flex-shrink-0 text-right">
+                        {item.location}
+                      </span>
                     )}
                   </div>
-                  {(item.location || item.date) && (
-                    <div className="text-sm text-gray-500 text-right flex-shrink-0">
-                      {item.location && <div>{item.location}</div>}
+                  {(item.subtitle || item.date) && (
+                    <div className="flex justify-between items-start gap-4 mt-0.5">
+                      {item.subtitle && (
+                        <p className="text-sm text-gray-600">
+                          {item.subtitle}
+                        </p>
+                      )}
                       {item.date && (
-                        <div className={`font-medium ${isPresent ? "text-accent-dark" : ""}`}>
+                        <span className={`text-sm font-medium flex-shrink-0 text-right ${isPresent ? "text-accent-dark" : "text-gray-500"}`}>
                           {item.date}
-                        </div>
+                        </span>
                       )}
                     </div>
                   )}

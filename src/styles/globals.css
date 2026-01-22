@@ -684,9 +684,7 @@
   --glass-shadow-color: rgba(31, 38, 135, 0.15);
 
   position: relative;
-  background:
-    linear-gradient(135deg, rgba(167, 139, 250, 0.35), rgba(139, 92, 246, 0.25)),
-    rgba(237, 233, 254, 0.6);
+  background: rgba(219, 234, 254, 0.9);
   backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
   -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
   border: 1px solid var(--glass-border);
@@ -753,9 +751,7 @@
 .liquid-glass-button:hover {
   --glass-bg: rgba(255, 255, 255, 0.22);
   --glass-border: rgba(255, 255, 255, 0.55);
-  background:
-    linear-gradient(135deg, rgba(167, 139, 250, 0.45), rgba(139, 92, 246, 0.35)),
-    rgba(237, 233, 254, 0.7);
+  background: rgba(191, 219, 254, 0.95);
   transform: translateY(-3px) scale(1.02);
   box-shadow:
     0 12px 40px rgba(31, 38, 135, 0.25),

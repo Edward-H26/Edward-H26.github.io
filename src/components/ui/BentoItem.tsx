@@ -42,7 +42,7 @@ export function BentoItem({
   return (
     <motion.div
       className={cn(
-        "group relative overflow-hidden rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200/50 p-6 transition-shadow duration-300",
+        "group relative overflow-hidden rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200/50 p-6 transition-shadow duration-300 h-full",
         "hover:shadow-xl hover:shadow-accent/5 hover:border-accent/20",
         colSpanClasses[colSpan],
         rowSpanClasses[rowSpan],
@@ -54,7 +54,7 @@ export function BentoItem({
       transition={{ type: "spring", stiffness: 400, damping: 25 }}
     >
       <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      <div className="relative z-10">{children}</div>
+      <div className="relative z-10 h-full">{children}</div>
     </motion.div>
   )
 }
