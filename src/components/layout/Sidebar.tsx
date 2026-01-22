@@ -44,7 +44,7 @@ export function Sidebar({ className = "" }: SidebarProps) {
           href={PROFILE.social.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2.5 rounded-full bg-blue-50/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:shadow-md hover:scale-110 transition-all duration-200"
+          className="p-2.5 rounded-full bg-blue-100/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:shadow-md hover:scale-110 transition-all duration-200"
           aria-label="GitHub"
         >
           <Github size={20} />
@@ -53,7 +53,7 @@ export function Sidebar({ className = "" }: SidebarProps) {
           href={PROFILE.social.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2.5 rounded-full bg-blue-50/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:shadow-md hover:scale-110 transition-all duration-200"
+          className="p-2.5 rounded-full bg-blue-100/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:shadow-md hover:scale-110 transition-all duration-200"
           aria-label="LinkedIn"
         >
           <Linkedin size={20} />
@@ -62,7 +62,7 @@ export function Sidebar({ className = "" }: SidebarProps) {
           href={PROFILE.social.x}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2.5 rounded-full bg-blue-50/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:shadow-md hover:scale-110 transition-all duration-200"
+          className="p-2.5 rounded-full bg-blue-100/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:shadow-md hover:scale-110 transition-all duration-200"
           aria-label="X"
         >
           <XLogo size={20} />
