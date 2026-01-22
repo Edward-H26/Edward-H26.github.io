@@ -43,7 +43,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
               href="https://edward-h26.github.io/PersonalWebsite/"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 text-sm font-semibold liquid-glass-button rounded-full"
+              className="px-4 py-2 text-sm font-semibold liquid-glass-button rounded-full bg-blue-400 text-white"
             >
               <span className="liquid-glass-button-content">
                 <span>Explore My Journey</span>
@@ -96,7 +96,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
             href="https://edward-h26.github.io/PersonalWebsite/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 text-sm font-semibold liquid-glass-button rounded-full"
+            className="px-4 py-2 text-sm font-semibold liquid-glass-button rounded-full bg-blue-400 text-white"
           >
             <span className="liquid-glass-button-content">
               <span>Explore My Journey</span>
