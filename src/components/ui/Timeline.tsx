@@ -26,17 +26,14 @@ export function Timeline({ items }: TimelineProps) {
 
               <div className="card">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
-                  <div className="flex flex-wrap items-baseline gap-x-2">
-                    <h3 className="text-lg font-semibold text-primary">
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900">
                       {item.title}
                     </h3>
                     {item.subtitle && (
-                      <>
-                        <span className="text-gray-400">|</span>
-                        <p className="text-sm font-medium text-primary">
-                          {item.subtitle}
-                        </p>
-                      </>
+                      <p className="text-sm text-gray-600 mt-0.5 pl-2 border-l-2 border-gray-300">
+                        {item.subtitle}
+                      </p>
                     )}
                   </div>
                   {(item.location || item.date) && (
