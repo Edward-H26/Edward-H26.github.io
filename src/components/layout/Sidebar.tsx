@@ -1,4 +1,4 @@
-import { Github, Linkedin } from "lucide-react"
+import { Github, Linkedin, Mail } from "lucide-react"
 import { PROFILE } from "@/data/content"
 import { XLogo } from "@/components/ui/XLogo"
 import { UIUCLogo } from "@/components/ui/UIUCLogo"
@@ -28,17 +28,10 @@ export function Sidebar({ className = "" }: SidebarProps) {
           {PROFILE.title}
         </p>
 
-        <div className="text-sm text-gray-500 flex items-center justify-center gap-2 mt-2">
-          <UIUCLogo size={24} />
-          <span>{PROFILE.affiliation}</span>
+        <div className="text-sm text-gray-500 flex items-center justify-center gap-2 mt-2 w-full">
+          <UIUCLogo size={24} className="flex-shrink-0" />
+          <span className="text-center">{PROFILE.affiliation}</span>
         </div>
-
-        <a
-          href={`mailto:${PROFILE.email}`}
-          className="text-sm text-gray-600 hover:text-accent-dark transition-colors mt-2"
-        >
-          {PROFILE.email}
-        </a>
       </div>
 
       <div className="flex justify-center gap-4 mt-8">
@@ -59,6 +52,13 @@ export function Sidebar({ className = "" }: SidebarProps) {
           aria-label="LinkedIn"
         >
           <Linkedin size={20} />
+        </a>
+        <a
+          href={`mailto:${PROFILE.email}`}
+          className="p-2.5 rounded-full bg-orange-100 backdrop-blur-sm text-gray-600 hover:text-accent-dark hover:shadow-md hover:scale-110 transition-all duration-200"
+          aria-label="Email"
+        >
+          <Mail size={20} />
         </a>
         <a
           href={PROFILE.social.x}

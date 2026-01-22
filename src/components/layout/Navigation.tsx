@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom"
-import { Menu, Sparkles, GithubIcon, LinkedinIcon } from "lucide-react"
+import { Menu, Sparkles, Github, Linkedin, Mail } from "lucide-react"
 import { motion } from "framer-motion"
 import { useReducedMotion } from "@/hooks/useReducedMotion"
 import { PROFILE } from "@/data/content"
@@ -57,62 +57,39 @@ export function Navigation({ onMenuClick }: NavigationProps) {
 
         <header className="fixed top-0 left-0 right-0 glass-nav z-50 lg:hidden">
           <div className="px-4 py-3">
-            <div className="flex items-start justify-between">
-              <div className="flex items-center gap-4 flex-1 min-w-0">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
                 <div className="relative flex-shrink-0">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-400/30 to-purple-400/30 rounded-full blur-xl" />
                   <img
                     src={PROFILE.photo}
                     alt={PROFILE.name}
-                    className="w-16 h-16 rounded-full object-cover border-2 border-white/50 shadow-lg relative"
+                    className="w-10 h-10 rounded-full object-cover border-2 border-white/50 shadow-lg"
                   />
                 </div>
-
-                <div className="flex-1 min-w-0">
-                  <h1 className="text-base font-bold text-gray-900 truncate">{PROFILE.name}</h1>
-                  <p className="text-xs text-gray-600 truncate">{PROFILE.title}</p>
-                  <p className="text-xs text-gray-500 truncate">{PROFILE.affiliation}</p>
-                  <p className="text-xs text-gray-500 truncate">{PROFILE.email}</p>
-                </div>
+                <h1 className="text-sm font-bold text-gray-900">{PROFILE.name}</h1>
               </div>
 
-              <button
-                onClick={onMenuClick}
-                className="p-2 rounded-lg text-gray-600 hover:bg-gray-100/80 transition-colors flex-shrink-0"
-                aria-label="Open menu"
-              >
-                <Menu size={20} />
-              </button>
-            </div>
-
-            <div className="flex items-center gap-2 mt-3 ml-20">
-              <a
-                href={PROFILE.social.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-orange-100 text-gray-700 hover:bg-orange-200 transition-colors"
-                aria-label="GitHub"
-              >
-                <GithubIcon size={16} />
-              </a>
-              <a
-                href={PROFILE.social.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-orange-100 text-gray-700 hover:bg-orange-200 transition-colors"
-                aria-label="LinkedIn"
-              >
-                <LinkedinIcon size={16} />
-              </a>
-              <a
-                href={PROFILE.social.x}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-orange-100 text-gray-700 hover:bg-orange-200 transition-colors"
-                aria-label="X"
-              >
-                <XLogo size={16} />
-              </a>
+              <div className="flex items-center gap-2">
+                <a href={PROFILE.social.github} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-orange-100 text-gray-600 hover:bg-orange-200 transition-colors" aria-label="GitHub">
+                  <Github size={16} />
+                </a>
+                <a href={PROFILE.social.linkedin} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-orange-100 text-gray-600 hover:bg-orange-200 transition-colors" aria-label="LinkedIn">
+                  <Linkedin size={16} />
+                </a>
+                <a href={`mailto:${PROFILE.email}`} className="p-2 rounded-full bg-orange-100 text-gray-600 hover:bg-orange-200 transition-colors" aria-label="Email">
+                  <Mail size={16} />
+                </a>
+                <a href={PROFILE.social.x} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-orange-100 text-gray-600 hover:bg-orange-200 transition-colors" aria-label="X">
+                  <XLogo size={16} />
+                </a>
+                <button
+                  onClick={onMenuClick}
+                  className="p-2 rounded-lg text-gray-600 hover:bg-gray-100/80 transition-colors"
+                  aria-label="Open menu"
+                >
+                  <Menu size={20} />
+                </button>
+              </div>
             </div>
           </div>
         </header>
@@ -160,62 +137,39 @@ export function Navigation({ onMenuClick }: NavigationProps) {
 
       <header className="sticky top-0 glass-nav z-50 lg:hidden">
         <div className="px-4 py-3">
-          <div className="flex items-start justify-between">
-            <div className="flex items-center gap-4 flex-1 min-w-0">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
               <div className="relative flex-shrink-0">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/30 to-purple-400/30 rounded-full blur-xl" />
                 <img
                   src={PROFILE.photo}
                   alt={PROFILE.name}
-                  className="w-16 h-16 rounded-full object-cover border-2 border-white/50 shadow-lg relative"
+                  className="w-10 h-10 rounded-full object-cover border-2 border-white/50 shadow-lg"
                 />
               </div>
-
-              <div className="flex-1 min-w-0">
-                <h1 className="text-base font-bold text-gray-900 truncate">{PROFILE.name}</h1>
-                <p className="text-xs text-gray-600 truncate">{PROFILE.title}</p>
-                <p className="text-xs text-gray-500 truncate">{PROFILE.affiliation}</p>
-                <p className="text-xs text-gray-500 truncate">{PROFILE.email}</p>
-              </div>
+              <h1 className="text-sm font-bold text-gray-900">{PROFILE.name}</h1>
             </div>
 
-            <button
-              onClick={onMenuClick}
-              className="p-2 rounded-lg text-gray-600 hover:bg-gray-100/80 transition-colors flex-shrink-0"
-              aria-label="Open menu"
-            >
-              <Menu size={20} />
-            </button>
-          </div>
-
-          <div className="flex items-center gap-2 mt-3 ml-20">
-            <a
-              href={PROFILE.social.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-lg bg-orange-100 text-gray-700 hover:bg-orange-200 transition-colors"
-              aria-label="GitHub"
-            >
-              <GithubIcon size={16} />
-            </a>
-            <a
-              href={PROFILE.social.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-lg bg-orange-100 text-gray-700 hover:bg-orange-200 transition-colors"
-              aria-label="LinkedIn"
-            >
-              <LinkedinIcon size={16} />
-            </a>
-            <a
-              href={PROFILE.social.x}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-lg bg-orange-100 text-gray-700 hover:bg-orange-200 transition-colors"
-              aria-label="X"
-            >
-              <XLogo size={16} />
-            </a>
+            <div className="flex items-center gap-2">
+              <a href={PROFILE.social.github} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-orange-100 text-gray-600 hover:bg-orange-200 transition-colors" aria-label="GitHub">
+                <Github size={16} />
+              </a>
+              <a href={PROFILE.social.linkedin} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-orange-100 text-gray-600 hover:bg-orange-200 transition-colors" aria-label="LinkedIn">
+                <Linkedin size={16} />
+              </a>
+              <a href={`mailto:${PROFILE.email}`} className="p-2 rounded-full bg-orange-100 text-gray-600 hover:bg-orange-200 transition-colors" aria-label="Email">
+                <Mail size={16} />
+              </a>
+              <a href={PROFILE.social.x} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-orange-100 text-gray-600 hover:bg-orange-200 transition-colors" aria-label="X">
+                <XLogo size={16} />
+              </a>
+              <button
+                onClick={onMenuClick}
+                className="p-2 rounded-lg text-gray-600 hover:bg-gray-100/80 transition-colors"
+                aria-label="Open menu"
+              >
+                <Menu size={20} />
+              </button>
+            </div>
           </div>
         </div>
       </header>

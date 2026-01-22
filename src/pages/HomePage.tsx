@@ -67,7 +67,7 @@ export function HomePage() {
             </motion.p>
             <motion.p variants={itemVariants} className="m-0">
               Previously, I received my B.S. in Data Science and Information
-              Science at{" "}
+              Science with minors in Computer Science and Statistics at{" "}
               <a href="https://www.illinois.edu/" className="font-medium text-blue-500 hover:text-blue-600 hover:no-underline">
                 University of Illinois Urbana-Champaign
               </a>

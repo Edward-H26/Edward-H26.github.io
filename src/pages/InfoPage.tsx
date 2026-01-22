@@ -21,7 +21,7 @@ export function InfoPage() {
         </div>
 
         <div>
-          <h2 className="text-lg font-semibold text-primary mb-4">
+          <h2 className="text-lg font-semibold text-blue-600 mb-4">
             Technical Skills
           </h2>
           <BentoGrid className="lg:grid-cols-3 auto-rows-auto">
