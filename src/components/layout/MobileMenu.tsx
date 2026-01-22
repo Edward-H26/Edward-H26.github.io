@@ -1,8 +1,7 @@
 import { NavLink } from "react-router-dom"
-import { X, Github, Linkedin } from "lucide-react"
+import { X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { PROFILE } from "@/data/content"
-import { XLogo } from "@/components/ui/XLogo"
 import { UIUCLogo } from "@/components/ui/UIUCLogo"
 
 const NAV_ITEMS = [
@@ -72,12 +71,6 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                   <UIUCLogo size={24} className="flex-shrink-0" />
                   <span className="text-sm text-gray-500 text-center">{PROFILE.affiliation}</span>
                 </div>
-                <a
-                  href={`mailto:${PROFILE.email}`}
-                  className="text-sm text-gray-600 hover:text-accent-dark transition-colors mt-1"
-                >
-                  {PROFILE.email}
-                </a>
               </div>
 
               <nav className="space-y-1">
@@ -105,40 +98,6 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                   </motion.div>
                 ))}
               </nav>
-
-              <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.3, duration: 0.4 }}
-                className="mt-8 pt-6 border-t border-gray-200/50"
-              >
-                <div className="flex justify-center gap-4">
-                  <a
-                    href={PROFILE.social.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-orange-100 backdrop-blur-sm text-gray-600 hover:text-accent-dark hover:scale-110 transition-all duration-200"
-                  >
-                    <Github size={20} />
-                  </a>
-                  <a
-                    href={PROFILE.social.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-orange-100 backdrop-blur-sm text-gray-600 hover:text-accent-dark hover:scale-110 transition-all duration-200"
-                  >
-                    <Linkedin size={20} />
-                  </a>
-                  <a
-                    href={PROFILE.social.x}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-orange-100 backdrop-blur-sm text-gray-600 hover:text-accent-dark hover:scale-110 transition-all duration-200"
-                  >
-                    <XLogo size={20} />
-                  </a>
-                </div>
-              </motion.div>
             </div>
           </motion.div>
         </>
