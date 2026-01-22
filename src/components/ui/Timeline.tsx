@@ -31,7 +31,7 @@ export function Timeline({ items }: TimelineProps) {
                       {item.title}
                     </h3>
                     {item.subtitle && (
-                      <p className="text-sm text-accent mt-0.5">
+                      <p className="text-sm text-accent-dark mt-0.5">
                         {item.subtitle}
                       </p>
                     )}
@@ -40,7 +40,7 @@ export function Timeline({ items }: TimelineProps) {
                     <div className="text-sm text-gray-500 text-right flex-shrink-0">
                       {item.location && <div>{item.location}</div>}
                       {item.date && (
-                        <div className={`font-medium ${isPresent ? "text-accent" : ""}`}>
+                        <div className={`font-medium ${isPresent ? "text-accent-dark" : ""}`}>
                           {item.date}
                         </div>
                       )}
@@ -52,7 +52,7 @@ export function Timeline({ items }: TimelineProps) {
                   <ul className="space-y-2 text-sm text-gray-600">
                     {item.bullets.map((bullet, bulletIndex) => (
                       <li key={bulletIndex} className="flex gap-2">
-                        <span className="text-accent mt-1.5 flex-shrink-0">
+                        <span className="text-accent-dark mt-1.5 flex-shrink-0">
                           &bull;
                         </span>
                         <span>{bullet}</span>

@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 import { PageTransition } from "@/components/ui/PageTransition"
 import { AnnouncementBox } from "@/components/ui/AnnouncementBox"
 import { Badge } from "@/components/ui/Badge"
-import { TextReveal } from "@/components/effects/TextReveal"
+import { TypewriterText } from "@/components/effects/TypewriterText"
 import { RESEARCH_INTERESTS, ANNOUNCEMENT } from "@/data/content"
 
 const containerVariants = {
@@ -39,11 +39,10 @@ export function HomePage() {
       >
         <motion.section variants={itemVariants}>
           <div className="mb-6">
-            <TextReveal
+            <TypewriterText
               text="Advancing Human-Centered Intelligence"
-              variant="word"
               className="text-3xl font-bold text-gray-900 block"
-              staggerDelay={0.08}
+              speed={50}
             />
           </div>
           <div className="prose prose-gray max-w-none text-gray-600 leading-relaxed space-y-4">

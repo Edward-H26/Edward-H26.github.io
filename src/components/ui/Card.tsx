@@ -15,7 +15,7 @@ export function Card({ card, variant = "default" }: CardProps) {
             {card.title}
           </h3>
           {card.subtitle && (
-            <p className="text-sm text-accent mt-0.5">
+            <p className="text-sm text-accent-dark mt-0.5">
               {card.subtitle}
             </p>
           )}
@@ -32,7 +32,7 @@ export function Card({ card, variant = "default" }: CardProps) {
         <ul className="space-y-2 text-sm text-gray-600">
           {card.bullets.map((bullet, index) => (
             <li key={index} className="flex gap-2">
-              <span className="text-accent mt-1.5 flex-shrink-0">
+              <span className="text-accent-dark mt-1.5 flex-shrink-0">
                 &bull;
               </span>
               <span>{bullet}</span>

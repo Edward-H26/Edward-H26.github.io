@@ -84,7 +84,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                       className={({ isActive }) =>
                         `block px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${
                           isActive
-                            ? "bg-accent-light/80 text-accent backdrop-blur-sm"
+                            ? "bg-accent-light/80 text-accent-dark backdrop-blur-sm"
                             : "text-gray-600 hover:bg-gray-100/80"
                         }`
                       }
@@ -106,7 +106,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                     href={PROFILE.social.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-blue-100/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:scale-110 transition-all duration-200"
+                    className="p-3 rounded-full bg-orange-50/80 backdrop-blur-sm text-gray-600 hover:text-accent-dark hover:scale-110 transition-all duration-200"
                   >
                     <Github size={20} />
                   </a>
@@ -114,13 +114,13 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                     href={PROFILE.social.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-blue-100/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:scale-110 transition-all duration-200"
+                    className="p-3 rounded-full bg-orange-50/80 backdrop-blur-sm text-gray-600 hover:text-accent-dark hover:scale-110 transition-all duration-200"
                   >
                     <Linkedin size={20} />
                   </a>
                   <a
                     href={`mailto:${PROFILE.email}`}
-                    className="p-3 rounded-full bg-blue-100/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:scale-110 transition-all duration-200"
+                    className="p-3 rounded-full bg-orange-50/80 backdrop-blur-sm text-gray-600 hover:text-accent-dark hover:scale-110 transition-all duration-200"
                   >
                     <Mail size={20} />
                   </a>
@@ -128,7 +128,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                     href={PROFILE.social.x}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-blue-100/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:scale-110 transition-all duration-200"
+                    className="p-3 rounded-full bg-orange-50/80 backdrop-blur-sm text-gray-600 hover:text-accent-dark hover:scale-110 transition-all duration-200"
                   >
                     <XLogo size={20} />
                   </a>

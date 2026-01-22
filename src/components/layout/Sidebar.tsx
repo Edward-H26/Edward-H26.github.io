@@ -1,6 +1,7 @@
 import { Github, Linkedin } from "lucide-react"
 import { PROFILE } from "@/data/content"
 import { XLogo } from "@/components/ui/XLogo"
+import { UIUCLogo } from "@/components/ui/UIUCLogo"
 
 interface SidebarProps {
   className?: string
@@ -27,13 +28,14 @@ export function Sidebar({ className = "" }: SidebarProps) {
           {PROFILE.title}
         </p>
 
-        <p className="text-sm text-gray-500 text-center">
+        <p className="text-sm text-gray-500 text-center flex items-center justify-center gap-1.5">
+          <UIUCLogo size={14} />
           {PROFILE.affiliation}
         </p>
 
         <a
           href={`mailto:${PROFILE.email}`}
-          className="text-sm text-gray-600 hover:text-accent transition-colors mt-2"
+          className="text-sm text-gray-600 hover:text-accent-dark transition-colors mt-2"
         >
           {PROFILE.email}
         </a>
@@ -44,7 +46,7 @@ export function Sidebar({ className = "" }: SidebarProps) {
           href={PROFILE.social.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2.5 rounded-full bg-blue-100/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:shadow-md hover:scale-110 transition-all duration-200"
+          className="p-2.5 rounded-full bg-orange-50/80 backdrop-blur-sm text-gray-600 hover:text-accent-dark hover:shadow-md hover:scale-110 transition-all duration-200"
           aria-label="GitHub"
         >
           <Github size={20} />
@@ -53,7 +55,7 @@ export function Sidebar({ className = "" }: SidebarProps) {
           href={PROFILE.social.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2.5 rounded-full bg-blue-100/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:shadow-md hover:scale-110 transition-all duration-200"
+          className="p-2.5 rounded-full bg-orange-50/80 backdrop-blur-sm text-gray-600 hover:text-accent-dark hover:shadow-md hover:scale-110 transition-all duration-200"
           aria-label="LinkedIn"
         >
           <Linkedin size={20} />
@@ -62,7 +64,7 @@ export function Sidebar({ className = "" }: SidebarProps) {
           href={PROFILE.social.x}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2.5 rounded-full bg-blue-100/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:shadow-md hover:scale-110 transition-all duration-200"
+          className="p-2.5 rounded-full bg-orange-50/80 backdrop-blur-sm text-gray-600 hover:text-accent-dark hover:shadow-md hover:scale-110 transition-all duration-200"
           aria-label="X"
         >
           <XLogo size={20} />

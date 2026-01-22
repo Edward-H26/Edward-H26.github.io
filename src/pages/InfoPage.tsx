@@ -3,8 +3,7 @@ import { Badge } from "@/components/ui/Badge"
 import { Card } from "@/components/ui/Card"
 import { BentoGrid } from "@/components/ui/BentoGrid"
 import { BentoItem } from "@/components/ui/BentoItem"
-import { AnimatedSection } from "@/components/effects/AnimatedSection"
-import { SECTIONS, SKILLS_CATEGORIES } from "@/data/content"
+import { SECTIONS, SKILLS_CATEGORIES, PROFESSIONAL_SKILLS } from "@/data/content"
 
 export function InfoPage() {
   const info = SECTIONS.info
@@ -16,12 +15,12 @@ export function InfoPage() {
   return (
     <PageTransition>
       <div className="space-y-8">
-        <AnimatedSection preset="fade-up">
+        <div>
           <h1 className="section-title">{info.heading}</h1>
           <p className="section-subtitle">{info.subheading}</p>
-        </AnimatedSection>
+        </div>
 
-        <AnimatedSection preset="fade-up" delay={0.05}>
+        <div>
           <h2 className="text-lg font-semibold text-gray-900 mb-4">
             Technical Skills
           </h2>
@@ -32,21 +31,26 @@ export function InfoPage() {
                 className="!p-4"
                 colSpan={categoryIndex < 2 ? 1 : 1}
               >
-                <h3 className="text-sm font-semibold text-accent mb-3">
+                <h3 className="text-sm font-semibold text-accent-dark mb-3">
                   {category}
                 </h3>
                 <div className="flex flex-wrap gap-1.5">
                   {skills.map((skill, index) => (
-                    <Badge key={index}>{skill}</Badge>
+                    <Badge
+                      key={index}
+                      variant={PROFESSIONAL_SKILLS.includes(skill) ? "pro" : "default"}
+                    >
+                      {skill}
+                    </Badge>
                   ))}
                 </div>
               </BentoItem>
             ))}
           </BentoGrid>
-        </AnimatedSection>
+        </div>
 
         {languagesCard && (
-          <AnimatedSection preset="fade-up" delay={0.1}>
+          <div>
             <h2 className="text-lg font-semibold text-gray-900 mb-4">
               Languages
             </h2>
@@ -55,17 +59,15 @@ export function InfoPage() {
                 <Badge key={index} variant="accent">{lang}</Badge>
               ))}
             </div>
-          </AnimatedSection>
+          </div>
         )}
 
         {certificationsCard && (
-          <AnimatedSection preset="fade-up" delay={0.15}>
-            <Card card={certificationsCard} />
-          </AnimatedSection>
+          <Card card={certificationsCard} />
         )}
 
         {educationCard && (
-          <AnimatedSection preset="fade-up" delay={0.2}>
+          <div>
             <h2 className="text-lg font-semibold text-gray-900 mb-4">
               Education
             </h2>
@@ -79,7 +81,7 @@ export function InfoPage() {
                 </p>
               ))}
             </div>
-          </AnimatedSection>
+          </div>
         )}
       </div>
     </PageTransition>

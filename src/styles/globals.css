@@ -5,8 +5,9 @@
 @layer base {
   :root {
     --color-primary: #13294B;
-    --color-accent: #0455A4;
-    --color-accent-light: #E8F4FD;
+    --color-accent: #FF5F05;
+    --color-accent-light: #FFF4E6;
+    --color-accent-text: #C84113;
     --color-text: #1a1a1a;
     --color-text-muted: #6b7280;
     --color-background: #ffffff;
@@ -148,11 +149,19 @@
   }
 
   .badge:hover {
-    @apply bg-accent-light text-accent scale-105 shadow-sm;
+    @apply bg-accent-light text-accent-dark scale-105 shadow-sm;
+  }
+
+  .badge-pro {
+    @apply inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-orange-100 text-orange-accessible border border-orange-200 transition-all duration-200;
+  }
+
+  .badge-pro:hover {
+    @apply bg-accent-light scale-105 shadow-sm;
   }
 
   .link-chip {
-    @apply inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-accent bg-accent-light/80 rounded-lg hover:bg-accent/10 transition-all duration-200 backdrop-blur-sm;
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-accent-dark bg-accent-light/80 rounded-lg hover:bg-accent/10 transition-all duration-200 backdrop-blur-sm;
   }
 
   .announcement-box {
@@ -175,7 +184,7 @@
   }
 
   .text-gradient-subtle {
-    background: linear-gradient(135deg, #13294B 0%, #0455A4 100%);
+    background: linear-gradient(135deg, #13294B 0%, #C84113 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -300,19 +309,19 @@
   background: linear-gradient(
     90deg,
     var(--color-accent) 0%,
-    #00d4ff 20%,
+    #FCB316 20%,
     var(--color-primary) 40%,
-    #00d4ff 60%,
+    #FCB316 60%,
     var(--color-accent) 80%,
     var(--color-primary) 100%
   );
   background-size: 300% 100%;
   animation: hero-shimmer 1.2s ease-out forwards;
   box-shadow:
-    0 0 12px rgba(4, 85, 164, 0.6),
-    0 0 24px rgba(0, 212, 255, 0.4),
-    0 0 36px rgba(4, 85, 164, 0.3),
-    0 0 48px rgba(0, 212, 255, 0.2);
+    0 0 12px rgba(255, 95, 5, 0.6),
+    0 0 24px rgba(252, 179, 22, 0.4),
+    0 0 36px rgba(255, 95, 5, 0.3),
+    0 0 48px rgba(252, 179, 22, 0.2);
   filter: brightness(1.1);
 }
 
@@ -582,10 +591,10 @@
 
 /* Premium CTA Button */
 .premium-cta-button {
-  background: linear-gradient(135deg, #0455A4 0%, #13294B 100%);
+  background: linear-gradient(135deg, #FF5F05 0%, #C84113 100%);
   box-shadow:
     0 1px 2px rgba(0, 0, 0, 0.05),
-    0 4px 12px rgba(4, 85, 164, 0.15),
+    0 4px 12px rgba(255, 95, 5, 0.15),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
@@ -595,7 +604,7 @@
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(4, 85, 164, 0.3) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 95, 5, 0.3) 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -620,8 +629,8 @@
 .premium-cta-button:hover {
   box-shadow:
     0 1px 2px rgba(0, 0, 0, 0.05),
-    0 8px 24px rgba(4, 85, 164, 0.3),
-    0 0 0 1px rgba(4, 85, 164, 0.1),
+    0 8px 24px rgba(255, 95, 5, 0.3),
+    0 0 0 1px rgba(255, 95, 5, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
@@ -637,13 +646,13 @@
   0%, 100% {
     box-shadow:
       0 1px 2px rgba(0, 0, 0, 0.05),
-      0 4px 12px rgba(4, 85, 164, 0.15),
+      0 4px 12px rgba(255, 95, 5, 0.15),
       inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
   50% {
     box-shadow:
       0 1px 2px rgba(0, 0, 0, 0.05),
-      0 6px 18px rgba(4, 85, 164, 0.22),
+      0 6px 18px rgba(255, 95, 5, 0.22),
       inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
 }
