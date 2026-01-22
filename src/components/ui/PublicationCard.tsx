@@ -14,7 +14,7 @@ export function PublicationCard({ publication, index }: PublicationCardProps) {
         <div
           className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold ${
             isSubmitted
-              ? "bg-yellow-100 text-yellow-700"
+              ? "bg-blue-100 text-blue-700"
               : "bg-green-100 text-green-700"
           }`}
         >
@@ -29,7 +29,7 @@ export function PublicationCard({ publication, index }: PublicationCardProps) {
             <span
               className={`text-xs px-2 py-0.5 rounded-full font-medium ${
                 isSubmitted
-                  ? "bg-yellow-100 text-yellow-700"
+                  ? "bg-blue-100 text-blue-700"
                   : "bg-green-100 text-green-700"
               }`}
             >
