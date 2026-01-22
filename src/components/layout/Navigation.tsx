@@ -135,7 +135,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
         </div>
       </motion.header>
 
-      <header className="sticky top-0 glass-nav z-50 lg:hidden">
+      <header className="fixed top-0 left-0 right-0 glass-nav z-50 lg:hidden">
         <div className="px-4 py-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
