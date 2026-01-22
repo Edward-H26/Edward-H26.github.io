@@ -28,10 +28,10 @@ export function Sidebar({ className = "" }: SidebarProps) {
           {PROFILE.title}
         </p>
 
-        <p className="text-sm text-gray-500 text-center flex items-center justify-center gap-1.5">
-          <UIUCLogo size={14} />
-          {PROFILE.affiliation}
-        </p>
+        <div className="text-sm text-gray-500 text-center flex flex-col items-center gap-2 mt-2">
+          <UIUCLogo size={28} />
+          <span>{PROFILE.affiliation}</span>
+        </div>
 
         <a
           href={`mailto:${PROFILE.email}`}
