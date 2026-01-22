@@ -106,7 +106,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                     href={PROFILE.social.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-blue-50/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:scale-110 transition-all duration-200"
+                    className="p-3 rounded-full bg-blue-100/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:scale-110 transition-all duration-200"
                   >
                     <Github size={20} />
                   </a>
@@ -114,13 +114,13 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                     href={PROFILE.social.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-blue-50/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:scale-110 transition-all duration-200"
+                    className="p-3 rounded-full bg-blue-100/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:scale-110 transition-all duration-200"
                   >
                     <Linkedin size={20} />
                   </a>
                   <a
                     href={`mailto:${PROFILE.email}`}
-                    className="p-3 rounded-full bg-blue-50/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:scale-110 transition-all duration-200"
+                    className="p-3 rounded-full bg-blue-100/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:scale-110 transition-all duration-200"
                   >
                     <Mail size={20} />
                   </a>
@@ -128,7 +128,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                     href={PROFILE.social.x}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-blue-50/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:scale-110 transition-all duration-200"
+                    className="p-3 rounded-full bg-blue-100/80 backdrop-blur-sm text-gray-600 hover:text-accent hover:scale-110 transition-all duration-200"
                   >
                     <XLogo size={20} />
                   </a>

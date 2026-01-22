@@ -18,7 +18,7 @@ function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { resetSource } = useNavigationSource()
 
-  usePageBoundaryScroll({ enabled: true })
+  usePageBoundaryScroll({ enabled: false })
 
   const handleExitComplete = () => {
     window.scrollTo({ top: 0, behavior: "instant" })
