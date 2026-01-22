@@ -28,8 +28,8 @@ export function Sidebar({ className = "" }: SidebarProps) {
           {PROFILE.title}
         </p>
 
-        <div className="text-sm text-gray-500 text-center flex flex-col items-center gap-2 mt-2">
-          <UIUCLogo size={56} />
+        <div className="text-sm text-gray-500 flex items-center justify-center gap-2 mt-2">
+          <UIUCLogo size={24} />
           <span>{PROFILE.affiliation}</span>
         </div>
 

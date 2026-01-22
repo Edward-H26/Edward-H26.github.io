@@ -54,7 +54,7 @@ export function BentoItem({
       transition={{ type: "spring", stiffness: 400, damping: 25 }}
     >
       <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      <div className="relative z-10 h-full">{children}</div>
+      <div className="relative z-10 h-full flex flex-col">{children}</div>
     </motion.div>
   )
 }
