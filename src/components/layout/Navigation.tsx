@@ -57,15 +57,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
 
         <header className="fixed top-0 left-0 right-0 glass-nav z-50 lg:hidden">
           <div className="px-4 py-3">
-            <div className="flex items-start gap-4">
-              <button
-                onClick={onMenuClick}
-                className="p-2 rounded-lg text-gray-600 hover:bg-gray-100/80 transition-colors flex-shrink-0"
-                aria-label="Open menu"
-              >
-                <Menu size={20} />
-              </button>
-
+            <div className="flex items-start justify-between">
               <div className="flex items-center gap-4 flex-1 min-w-0">
                 <div className="relative flex-shrink-0">
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-400/30 to-purple-400/30 rounded-full blur-xl" />
@@ -83,9 +75,17 @@ export function Navigation({ onMenuClick }: NavigationProps) {
                   <p className="text-xs text-gray-500 truncate">{PROFILE.email}</p>
                 </div>
               </div>
+
+              <button
+                onClick={onMenuClick}
+                className="p-2 rounded-lg text-gray-600 hover:bg-gray-100/80 transition-colors flex-shrink-0"
+                aria-label="Open menu"
+              >
+                <Menu size={20} />
+              </button>
             </div>
 
-            <div className="flex items-center gap-2 mt-3 ml-10">
+            <div className="flex items-center gap-2 mt-3 ml-20">
               <a
                 href={PROFILE.social.github}
                 target="_blank"
@@ -160,15 +160,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
 
       <header className="sticky top-0 glass-nav z-50 lg:hidden">
         <div className="px-4 py-3">
-          <div className="flex items-start gap-4">
-            <button
-              onClick={onMenuClick}
-              className="p-2 rounded-lg text-gray-600 hover:bg-gray-100/80 transition-colors flex-shrink-0"
-              aria-label="Open menu"
-            >
-              <Menu size={20} />
-            </button>
-
+          <div className="flex items-start justify-between">
             <div className="flex items-center gap-4 flex-1 min-w-0">
               <div className="relative flex-shrink-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400/30 to-purple-400/30 rounded-full blur-xl" />
@@ -186,9 +178,17 @@ export function Navigation({ onMenuClick }: NavigationProps) {
                 <p className="text-xs text-gray-500 truncate">{PROFILE.email}</p>
               </div>
             </div>
+
+            <button
+              onClick={onMenuClick}
+              className="p-2 rounded-lg text-gray-600 hover:bg-gray-100/80 transition-colors flex-shrink-0"
+              aria-label="Open menu"
+            >
+              <Menu size={20} />
+            </button>
           </div>
 
-          <div className="flex items-center gap-2 mt-3 ml-10">
+          <div className="flex items-center gap-2 mt-3 ml-20">
             <a
               href={PROFILE.social.github}
               target="_blank"
