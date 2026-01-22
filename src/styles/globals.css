@@ -157,11 +157,11 @@
   }
 
   .badge-pro:hover {
-    @apply bg-accent-light scale-105 shadow-sm;
+    @apply bg-orange-200 scale-105 shadow-sm;
   }
 
   .link-chip {
-    @apply inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-accent-dark bg-accent-light/80 rounded-lg hover:bg-accent/10 transition-all duration-200 backdrop-blur-sm;
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-primary bg-blue-50 rounded-lg hover:bg-blue-100 transition-all duration-200 backdrop-blur-sm;
   }
 
   .announcement-box {

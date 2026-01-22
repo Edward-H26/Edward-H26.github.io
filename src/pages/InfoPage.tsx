@@ -21,7 +21,7 @@ export function InfoPage() {
         </div>
 
         <div>
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">
+          <h2 className="text-lg font-semibold text-primary mb-4">
             Technical Skills
           </h2>
           <BentoGrid className="lg:grid-cols-3 auto-rows-auto">
@@ -51,7 +51,7 @@ export function InfoPage() {
 
         {languagesCard && (
           <div>
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">
+            <h2 className="text-lg font-semibold text-primary mb-4">
               Languages
             </h2>
             <div className="flex flex-wrap gap-2">
@@ -68,7 +68,7 @@ export function InfoPage() {
 
         {educationCard && (
           <div>
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">
+            <h2 className="text-lg font-semibold text-primary mb-4">
               Education
             </h2>
             <div className="card">

@@ -45,11 +45,11 @@ export function Navigation({ onMenuClick }: NavigationProps) {
               href="https://edward-h26.github.io/PersonalWebsite/"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 text-sm font-semibold liquid-glass-button rounded-full bg-blue-100/80 text-gray-700"
+              className="px-4 py-2 text-sm font-semibold rounded-full bg-accent text-white hover:bg-accent/90 transition-colors"
             >
-              <span className="liquid-glass-button-content">
+              <span className="flex items-center gap-2">
                 <span>Explore My Journey</span>
-                <Sparkles size={14} className="liquid-glass-icon" />
+                <Sparkles size={14} className="text-primary" />
               </span>
             </a>
           </div>
@@ -90,7 +90,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
                 href={PROFILE.social.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-blue-100/80 text-gray-700 hover:bg-blue-200/80 transition-colors"
+                className="p-2 rounded-lg bg-orange-100 text-gray-700 hover:bg-orange-200 transition-colors"
                 aria-label="GitHub"
               >
                 <GithubIcon size={16} />
@@ -99,7 +99,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
                 href={PROFILE.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-blue-100/80 text-gray-700 hover:bg-blue-200/80 transition-colors"
+                className="p-2 rounded-lg bg-orange-100 text-gray-700 hover:bg-orange-200 transition-colors"
                 aria-label="LinkedIn"
               >
                 <LinkedinIcon size={16} />
@@ -108,7 +108,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
                 href={PROFILE.social.x}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-blue-100/80 text-gray-700 hover:bg-blue-200/80 transition-colors"
+                className="p-2 rounded-lg bg-orange-100 text-gray-700 hover:bg-orange-200 transition-colors"
                 aria-label="X"
               >
                 <XLogo size={16} />
@@ -193,7 +193,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
               href={PROFILE.social.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg bg-blue-100/80 text-gray-700 hover:bg-blue-200/80 transition-colors"
+              className="p-2 rounded-lg bg-orange-100 text-gray-700 hover:bg-orange-200 transition-colors"
               aria-label="GitHub"
             >
               <GithubIcon size={16} />
@@ -202,7 +202,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
               href={PROFILE.social.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg bg-blue-100/80 text-gray-700 hover:bg-blue-200/80 transition-colors"
+              className="p-2 rounded-lg bg-orange-100 text-gray-700 hover:bg-orange-200 transition-colors"
               aria-label="LinkedIn"
             >
               <LinkedinIcon size={16} />
@@ -211,7 +211,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
               href={PROFILE.social.x}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg bg-blue-100/80 text-gray-700 hover:bg-blue-200/80 transition-colors"
+              className="p-2 rounded-lg bg-orange-100 text-gray-700 hover:bg-orange-200 transition-colors"
               aria-label="X"
             >
               <XLogo size={16} />

@@ -48,7 +48,7 @@ export const RESEARCH_INTERESTS = [
 ]
 
 export const ANNOUNCEMENT = {
-  text: "I am actively looking for research opportunities and collaborations in computer vision and machine learning. Feel free to reach out if you are interested in working together!",
+  text: "I am actively looking for research opportunities and collaborations in agentic system and computer vision. Feel free to reach out if you are interested in working together!",
   highlight: true,
 }
 
@@ -298,18 +298,35 @@ export const SECTIONS: Record<string, ContentSection> = {
 
 export const SKILLS_CATEGORIES = {
   "Programming Languages": ["Python", "C++", "Java", "Go", "R", "Ruby", "Kotlin", "PHP"],
-  "AI/ML Frameworks": ["PyTorch", "JAX", "TensorFlow", "OpenCV", "LangChain", "LangGraph", "LangSmith"],
-  "Large Model Training": ["Distributed Training", "RLHF", "SFT", "CUDA"],
-  "3D & Vision": ["Diffusion Models", "NeRF", "Spatial Representations", "World Models", "3D Annotation Systems"],
-  "Multi-agent & Agentic AI": ["MCP", "Tool Calling", "Function Chaining", "Agent Orchestration", "Memory Systems", "Multi-turn Reasoning"],
+  "AI/ML Frameworks": ["PyTorch", "OpenCV", "LangChain", "LangGraph", "JAX", "TensorFlow", "LangSmith"],
+  "Large Model Training": ["Distributed Training", "SFT", "RLHF", "CUDA"],
+  "3D & Vision": ["Diffusion Models", "World Models", "NeRF", "Spatial Representations", "3D Annotation Systems"],
+  "Multi-agent & Agentic AI": ["Agent Orchestration", "Memory Systems", "Multi-turn Reasoning", "MCP", "Tool Calling", "Function Chaining"],
   "Full-stack Development": ["React.js", "Next.js", "Vue.js", "Angular.js", "Node.js", "TypeScript", "JavaScript", "HTML5", "Tailwind CSS"],
   "Databases": ["PostgreSQL", "Neo4j", "MongoDB"],
-  "Infrastructure": ["Docker", "Kubernetes", "AWS", "Cloud DevOps"],
+  "Infrastructure": ["Docker", "AWS", "Kubernetes", "Cloud DevOps"],
   "Design and Office Tools": ["Figma", "Canva", "Microsoft Office Suites", "Adobe Creative Suite"],
   "Other Tools": ["Unity", "SAS", "Arduino UNO"],
 }
 
 export const PROFESSIONAL_SKILLS = [
+  "Python",
+  "C++",
+  "Java",
+  "Go",
+  "R",
+  "Ruby",
+  "PyTorch",
+  "OpenCV",
+  "LangChain",
+  "LangGraph",
+  "Distributed Training",
+  "SFT",
+  "Diffusion Models",
+  "World Models",
+  "Agent Orchestration",
+  "Memory Systems",
+  "Multi-turn Reasoning",
   "React.js",
   "Next.js",
   "Vue.js",
@@ -323,7 +340,8 @@ export const PROFESSIONAL_SKILLS = [
   "Neo4j",
   "MongoDB",
   "Docker",
-  "Kubernetes",
   "AWS",
-  "Cloud DevOps",
+  "Figma",
+  "Canva",
+  "Unity",
 ]
