@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom"
-import { X, Github, Linkedin, Mail } from "lucide-react"
+import { X, Github, Linkedin } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { PROFILE } from "@/data/content"
 import { XLogo } from "@/components/ui/XLogo"
+import { UIUCLogo } from "@/components/ui/UIUCLogo"
 
 const NAV_ITEMS = [
   { path: "/", label: "Home" },
@@ -64,9 +65,19 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                 <h2 className="mt-3 text-lg font-semibold text-gray-900">
                   {PROFILE.name}
                 </h2>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-500 text-center">
                   {PROFILE.title}
                 </p>
+                <div className="flex items-center gap-2 mt-1">
+                  <UIUCLogo size={24} className="flex-shrink-0" />
+                  <span className="text-sm text-gray-500 text-center">{PROFILE.affiliation}</span>
+                </div>
+                <a
+                  href={`mailto:${PROFILE.email}`}
+                  className="text-sm text-gray-600 hover:text-accent-dark transition-colors mt-1"
+                >
+                  {PROFILE.email}
+                </a>
               </div>
 
               <nav className="space-y-1">
@@ -117,12 +128,6 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                     className="p-3 rounded-full bg-orange-100 backdrop-blur-sm text-gray-600 hover:text-accent-dark hover:scale-110 transition-all duration-200"
                   >
                     <Linkedin size={20} />
-                  </a>
-                  <a
-                    href={`mailto:${PROFILE.email}`}
-                    className="p-3 rounded-full bg-orange-100 backdrop-blur-sm text-gray-600 hover:text-accent-dark hover:scale-110 transition-all duration-200"
-                  >
-                    <Mail size={20} />
                   </a>
                   <a
                     href={PROFILE.social.x}
