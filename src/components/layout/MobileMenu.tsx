@@ -69,7 +69,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                 </p>
                 <div className="flex items-center gap-2 mt-1">
                   <UIUCLogo size={24} className="flex-shrink-0" />
-                  <span className="text-sm text-gray-500 text-center whitespace-nowrap">{PROFILE.affiliation}</span>
+                  <span className="text-sm text-gray-500 text-center">University of Illinois<br />Urbana-Champaign</span>
                 </div>
               </div>
 
