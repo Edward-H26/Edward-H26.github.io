@@ -48,19 +48,19 @@ export function HomePage() {
           <div className="prose prose-gray max-w-none text-gray-600 leading-relaxed space-y-4">
             <motion.p variants={itemVariants} className="m-0">
               I am an undergraduate research assistant in{" "}
-              <a href="https://vision.ischool.illinois.edu/index.html" className="font-medium hover:no-underline">
+              <a href="https://vision.ischool.illinois.edu/index.html" className="font-medium text-primary hover:text-primary/80 hover:no-underline">
                 Computer Vision and Machine Learning Group
               </a>{" "}
               at{" "}
-              <a href="https://www.illinois.edu/" className="font-medium hover:no-underline">
+              <a href="https://www.illinois.edu/" className="font-medium text-primary hover:text-primary/80 hover:no-underline">
                 University of Illinois Urbana-Champaign
               </a>
               . I am also affiliated with the{" "}
-              <a href="https://www.ncsa.illinois.edu/" className="font-medium hover:no-underline">
+              <a href="https://www.ncsa.illinois.edu/" className="font-medium text-primary hover:text-primary/80 hover:no-underline">
                 National Center for Supercomputing Applications
               </a>{" "}
               and{" "}
-              <a href="https://nairrpilot.org/" className="font-medium hover:no-underline">
+              <a href="https://nairrpilot.org/" className="font-medium text-primary hover:text-primary/80 hover:no-underline">
                 National Artificial Intelligence Research Resource Pilot
               </a>
               .
@@ -68,7 +68,7 @@ export function HomePage() {
             <motion.p variants={itemVariants} className="m-0">
               Previously, I received my B.S. in Data Science and Information
               Science at{" "}
-              <a href="https://www.illinois.edu/" className="font-medium hover:no-underline">
+              <a href="https://www.illinois.edu/" className="font-medium text-primary hover:text-primary/80 hover:no-underline">
                 University of Illinois Urbana-Champaign
               </a>
               .

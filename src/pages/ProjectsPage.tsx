@@ -29,11 +29,11 @@ export function ProjectsPage() {
                 key={index}
                 colSpan={colSpan}
                 rowSpan={index === 0 ? 2 : 1}
-                className={index === 0 ? "flex flex-col justify-between" : ""}
+                className="flex flex-col justify-between"
               >
                 <div>
                   <div className="mb-3">
-                    <h3 className="text-lg font-semibold text-gray-900 group-hover:text-accent-dark transition-colors">
+                    <h3 className="text-lg font-semibold text-gray-900 group-hover:text-primary transition-colors">
                       {project.title}
                     </h3>
                     <div className="flex items-center justify-between gap-4 mt-1">
@@ -63,9 +63,9 @@ export function ProjectsPage() {
                       href={githubLink.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium bg-gray-900 text-white rounded-lg hover:bg-gray-700 transition-colors"
+                      className="link-chip bg-gray-900 text-white hover:bg-gray-700"
                     >
-                      <GithubIcon size={14} />
+                      <GithubIcon size={12} />
                       GitHub
                     </a>
                   )}
