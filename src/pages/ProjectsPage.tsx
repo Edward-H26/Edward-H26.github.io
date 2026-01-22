@@ -57,7 +57,7 @@ export function ProjectsPage() {
                   )}
                 </div>
 
-                <div className="flex flex-wrap gap-2 mt-4">
+                <div className="flex flex-wrap gap-2 mt-auto pt-4">
                   {githubLink && (
                     <a
                       href={githubLink.url}

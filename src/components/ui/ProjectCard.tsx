@@ -10,7 +10,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const otherLinks = project.links?.filter((l) => l.label.toLowerCase() !== "github") || []
 
   return (
-    <div className="card group">
+    <div className="card group h-full flex flex-col">
       <div className="flex items-start justify-between gap-4">
         <div>
           <h3 className="text-lg font-semibold text-gray-900 group-hover:text-accent-dark transition-colors">
@@ -35,7 +35,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </p>
       )}
 
-      <div className="flex flex-wrap gap-2 mt-4">
+      <div className="flex flex-wrap gap-2 mt-auto pt-4">
         {githubLink && (
           <a
             href={githubLink.url}
