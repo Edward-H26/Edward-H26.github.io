@@ -2,6 +2,7 @@ import { Github, Linkedin, Mail } from "lucide-react"
 import { PROFILE } from "@/data/content"
 import { XLogo } from "@/components/ui/XLogo"
 import { UIUCLogo } from "@/components/ui/UIUCLogo"
+import { ColumbiaLogo } from "@/components/ui/ColumbiaLogo"
 
 interface SidebarProps {
   className?: string
@@ -28,9 +29,15 @@ export function Sidebar({ className = "" }: SidebarProps) {
           {PROFILE.title}
         </p>
 
-        <div className="text-sm text-gray-500 flex flex-col items-center mt-2">
-          <span className="text-center">University of Illinois<br />Urbana-Champaign</span>
-          <UIUCLogo size={40} className="mt-2" />
+        <div className="text-sm text-gray-500 flex flex-col items-center mt-2 gap-3">
+          <div className="flex flex-col items-center">
+            <ColumbiaLogo size={36} className="mb-1" />
+            <span className="text-center">Columbia University</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <UIUCLogo size={36} className="mb-1" />
+            <span className="text-center">University of Illinois<br />Urbana-Champaign</span>
+          </div>
         </div>
       </div>
 

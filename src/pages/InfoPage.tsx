@@ -10,7 +10,7 @@ export function InfoPage() {
 
   const languagesCard = info.cards.find((c) => c.title === "Languages")
   const certificationsCard = info.cards.find((c) => c.title === "Certifications and Honors")
-  const educationCard = info.cards.find((c) => c.title === "Education")
+  const educationCards = info.cards.filter((c) => c.title === "Education")
 
   return (
     <PageTransition>
@@ -66,19 +66,23 @@ export function InfoPage() {
           <Card card={certificationsCard} />
         )}
 
-        {educationCard && (
+        {educationCards.length > 0 && (
           <div>
             <h2 className="text-lg font-semibold text-primary mb-4">
               Education
             </h2>
-            <div className="card">
-              <h3 className="text-lg font-semibold text-gray-900">
-                {educationCard.bullets[0]}
-              </h3>
-              {educationCard.bullets.slice(1).map((line, index) => (
-                <p key={index} className="text-sm text-gray-600 mt-1">
-                  {line}
-                </p>
+            <div className="space-y-4">
+              {educationCards.map((eduCard, eduIndex) => (
+                <div key={eduIndex} className="card">
+                  <h3 className="text-lg font-semibold text-gray-900">
+                    {eduCard.bullets[0]}
+                  </h3>
+                  {eduCard.bullets.slice(1).map((line, index) => (
+                    <p key={index} className="text-sm text-gray-600 mt-1">
+                      {line}
+                    </p>
+                  ))}
+                </div>
               ))}
             </div>
           </div>
