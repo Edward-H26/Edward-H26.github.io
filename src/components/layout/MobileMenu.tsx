@@ -3,6 +3,7 @@ import { X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { PROFILE } from "@/data/content"
 import { UIUCLogo } from "@/components/ui/UIUCLogo"
+import { ColumbiaLogo } from "@/components/ui/ColumbiaLogo"
 
 const NAV_ITEMS = [
   { path: "/", label: "Home" },
@@ -67,9 +68,15 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                 <p className="text-sm text-gray-500 text-center">
                   {PROFILE.title}
                 </p>
-                <div className="flex items-center gap-2 mt-1">
-                  <UIUCLogo size={24} className="flex-shrink-0" />
-                  <span className="text-sm text-gray-500 text-center">University of Illinois<br />Urbana-Champaign</span>
+                <div className="flex flex-col gap-2 mt-1">
+                  <div className="flex items-center gap-2">
+                    <ColumbiaLogo size={24} className="flex-shrink-0" />
+                    <span className="text-sm text-gray-500">Columbia University</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <UIUCLogo size={24} className="flex-shrink-0" />
+                    <span className="text-sm text-gray-500">University of Illinois<br />Urbana-Champaign</span>
+                  </div>
                 </div>
               </div>
 

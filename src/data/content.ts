@@ -21,7 +21,7 @@ export type ContentSection = {
 
 export const PROFILE = {
   name: "Qiran Hu",
-  title: "Undergraduate Research Assistant",
+  title: "Research Assistant",
   affiliation: "University of Illinois Urbana-Champaign",
   email: "qiranhu8@gmail.com",
   phone: "+1 (347)-957-9176",
@@ -29,7 +29,7 @@ export const PROFILE = {
   social: {
     github: "https://github.com/Edward-H26",
     linkedin: "https://www.linkedin.com/in/qiranhu/",
-    x: "https://x.com/eduardohuuu",
+    x: "https://x.com/QiranHu",
   },
 }
 
@@ -286,8 +286,16 @@ export const SECTIONS: Record<string, ContentSection> = {
       {
         title: "Education",
         bullets: [
+          "Columbia University, New York, NY",
+          "Master of Science in Data Science",
+          "2026.09 - 2028.09"
+        ]
+      },
+      {
+        title: "Education",
+        bullets: [
           "University of Illinois at Urbana-Champaign, Champaign, IL",
-          "BS in Data Science and Information Science",
+          "Bachelor of Science in Data Science and Information Science",
           "Minors: Computer Science and Statistics",
           "2022.08 - 2026.05"
         ]
