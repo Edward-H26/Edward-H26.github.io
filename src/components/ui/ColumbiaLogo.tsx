@@ -8,8 +8,7 @@ export function ColumbiaLogo({ size = 40, className = "" }: ColumbiaLogoProps) {
     <img
       src="/images/columbia-logo.png"
       alt="Columbia University"
-      width={size}
-      height={size}
+      width={size * 2.5}
       className={className}
     />
   )
