@@ -10,7 +10,7 @@ export function ColumbiaLogo({ size = 40, className = "" }: ColumbiaLogoProps) {
       alt="Columbia Engineering"
       width={size}
       height={size}
-      className={`bg-white rounded p-1 object-contain ${className}`}
+      className={`object-contain ${className}`}
     />
   )
 }
