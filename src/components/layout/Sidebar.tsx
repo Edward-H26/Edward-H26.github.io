@@ -31,8 +31,8 @@ export function Sidebar({ className = "" }: SidebarProps) {
 
         <div className="text-sm text-gray-500 flex flex-col items-center mt-2 gap-4">
           <div className="flex flex-col items-center">
-            <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center mb-1">
-              <ColumbiaLogo size={56} />
+            <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center mb-1">
+              <ColumbiaLogo size={68} />
             </div>
             <span className="text-center">Columbia University</span>
           </div>
