@@ -31,14 +31,14 @@ export function Sidebar({ className = "" }: SidebarProps) {
 
         <div className="text-sm text-gray-500 flex flex-col items-center mt-2 gap-4">
           <div className="flex flex-col items-center">
-            <div className="w-[4.5rem] h-[4.5rem] bg-white rounded-lg flex items-center justify-center mb-1">
-              <ColumbiaLogo size={62} />
+            <div className="w-[5.5rem] h-[5.5rem] bg-white rounded-lg flex items-center justify-center mb-1">
+              <ColumbiaLogo size={76} />
             </div>
             <span className="text-center">Columbia University</span>
           </div>
           <div className="flex flex-col items-center">
-            <div className="w-16 h-16 rounded-lg overflow-hidden mb-1">
-              <UIUCLogo size={64} />
+            <div className="w-20 h-20 rounded-lg overflow-hidden mb-1">
+              <UIUCLogo size={80} />
             </div>
             <span className="text-center">University of Illinois<br />Urbana-Champaign</span>
           </div>
