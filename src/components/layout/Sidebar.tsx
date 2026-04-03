@@ -17,6 +17,7 @@ export function Sidebar({ className = "" }: SidebarProps) {
           <img
             src={PROFILE.photo}
             alt={PROFILE.name}
+            loading="eager"
             className="relative w-40 h-40 rounded-full object-cover border-4 border-white/80 shadow-xl"
           />
         </div>
