@@ -28,7 +28,7 @@ export function BentoItem({
   return (
     <div
       className={cn(
-        "group relative overflow-hidden rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200/50 p-6 transition-shadow duration-300 h-full",
+        "group relative overflow-hidden rounded-2xl bg-white border border-gray-200/50 p-6 h-full",
         "hover:shadow-xl hover:shadow-accent/5 hover:border-accent/20",
         colSpanClasses[colSpan],
         rowSpanClasses[rowSpan],

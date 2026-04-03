@@ -138,11 +138,11 @@
   }
 
   .card {
-    @apply bg-white/80 backdrop-blur-sm rounded-xl border border-gray-200/50 p-6 transition-all duration-300;
+    @apply bg-white rounded-xl border border-gray-200/50 p-6;
   }
 
   .card:hover {
-    @apply shadow-lg shadow-accent/5 border-accent/20 -translate-y-1;
+    @apply shadow-lg shadow-accent/5 border-accent/20;
   }
 
   .badge {
@@ -162,11 +162,11 @@
   }
 
   .link-chip {
-    @apply inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-white bg-primary rounded-lg hover:bg-primary/90 transition-all duration-200 backdrop-blur-sm;
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors duration-200;
   }
 
   .announcement-box {
-    @apply border-l-4 border-accent bg-gradient-to-r from-accent-light/80 to-transparent p-4 rounded-r-lg backdrop-blur-sm;
+    @apply border-l-4 border-accent bg-gradient-to-r from-accent-light/80 to-transparent p-4 rounded-r-lg;
   }
 
   .section-title {
