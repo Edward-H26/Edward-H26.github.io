@@ -1,52 +1,20 @@
-import { motion } from "framer-motion"
 import { PageTransition } from "@/components/ui/PageTransition"
 import { AnnouncementBox } from "@/components/ui/AnnouncementBox"
 import { Badge } from "@/components/ui/Badge"
-import { TypewriterText } from "@/components/effects/TypewriterText"
 import { RESEARCH_INTERESTS, ANNOUNCEMENT } from "@/data/content"
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.03,
-      delayChildren: 0.05,
-    },
-  },
-}
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 16 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.35,
-      ease: [0.25, 0.1, 0.25, 1],
-    },
-  },
-}
 
 export function HomePage() {
   return (
     <PageTransition>
-      <motion.div
-        className="space-y-8"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.section variants={itemVariants}>
+      <div className="space-y-8">
+        <section>
           <div className="mb-6">
-            <TypewriterText
-              text="Advancing Human-Centered Intelligence"
-              className="text-3xl font-bold text-gray-900 block"
-              speed={50}
-            />
+            <span className="text-3xl font-bold text-gray-900 block">
+              Advancing Human-Centered Intelligence
+            </span>
           </div>
           <div className="prose prose-gray max-w-none text-gray-600 leading-relaxed space-y-4">
-            <motion.p variants={itemVariants} className="m-0">
+            <p className="m-0">
               I am an undergraduate research assistant in{" "}
               <a href="https://vision.ischool.illinois.edu/index.html" className="font-medium text-blue-500 hover:text-blue-600 hover:no-underline">
                 Computer Vision and Machine Learning Group
@@ -64,16 +32,16 @@ export function HomePage() {
                 National Artificial Intelligence Research Resource Pilot
               </a>
               .
-            </motion.p>
-            <motion.p variants={itemVariants} className="m-0">
+            </p>
+            <p className="m-0">
               Previously, I received my B.S. in Data Science and Information
               Science with minors in Computer Science and Statistics at{" "}
               <a href="https://www.illinois.edu/" className="font-medium text-blue-500 hover:text-blue-600 hover:no-underline">
                 University of Illinois Urbana-Champaign
               </a>
               .
-            </motion.p>
-            <motion.p variants={itemVariants} className="m-0">
+            </p>
+            <p className="m-0">
               I am an applied AI researcher and full-stack software engineer
               working at the intersection of multi-agent systems and computer
               vision to build AI that understands, reasons, and coordinates
@@ -82,40 +50,27 @@ export function HomePage() {
               memory systems, multimodal AI reasoning abilities, novel human-AI
               interfaces, generative world models, spatial intelligence, and
               evaluation for agentic systems.
-            </motion.p>
+            </p>
           </div>
-        </motion.section>
+        </section>
 
-        <motion.section variants={itemVariants}>
+        <section>
           <h2 className="text-lg font-semibold text-gray-900 mb-3">
             Research Interests
           </h2>
-          <motion.div
-            className="flex flex-wrap gap-2"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-          >
+          <div className="flex flex-wrap gap-2">
             {RESEARCH_INTERESTS.map((interest, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                custom={index}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <Badge variant="accent">
-                  {interest}
-                </Badge>
-              </motion.div>
+              <Badge key={index} variant="accent">
+                {interest}
+              </Badge>
             ))}
-          </motion.div>
-        </motion.section>
+          </div>
+        </section>
 
-        <motion.section variants={itemVariants}>
+        <section>
           <AnnouncementBox text={ANNOUNCEMENT.text} />
-        </motion.section>
-      </motion.div>
+        </section>
+      </div>
     </PageTransition>
   )
 }
