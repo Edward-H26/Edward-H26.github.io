@@ -31,7 +31,7 @@ const getPageVariants = (source: NavigationSource) => {
         y: -20,
         willChange: "opacity, transform",
         transition: {
-          duration: 0.3,
+          duration: 0.15,
           ease: SCROLL_EASING,
         },
       },
@@ -59,7 +59,7 @@ const getPageVariants = (source: NavigationSource) => {
         y: 20,
         willChange: "opacity, transform",
         transition: {
-          duration: 0.3,
+          duration: 0.15,
           ease: SCROLL_EASING,
         },
       },

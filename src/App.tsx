@@ -1,4 +1,4 @@
-import { useState, lazy, Suspense } from "react"
+import { useState } from "react"
 import { Routes, Route, useLocation } from "react-router-dom"
 import { AnimatePresence } from "framer-motion"
 
@@ -7,12 +7,11 @@ import { Navigation } from "@/components/layout/Navigation"
 import { usePageBoundaryScroll } from "@/hooks/usePageBoundaryScroll"
 import { useNavigationSource } from "@/contexts/NavigationContext"
 import { HomePage } from "@/pages/HomePage"
-
-const ResearchPage = lazy(() => import("@/pages/ResearchPage").then(m => ({ default: m.ResearchPage })))
-const PublicationsPage = lazy(() => import("@/pages/PublicationsPage").then(m => ({ default: m.PublicationsPage })))
-const ExperiencePage = lazy(() => import("@/pages/ExperiencePage").then(m => ({ default: m.ExperiencePage })))
-const ProjectsPage = lazy(() => import("@/pages/ProjectsPage").then(m => ({ default: m.ProjectsPage })))
-const InfoPage = lazy(() => import("@/pages/InfoPage").then(m => ({ default: m.InfoPage })))
+import { ResearchPage } from "@/pages/ResearchPage"
+import { PublicationsPage } from "@/pages/PublicationsPage"
+import { ExperiencePage } from "@/pages/ExperiencePage"
+import { ProjectsPage } from "@/pages/ProjectsPage"
+import { InfoPage } from "@/pages/InfoPage"
 
 function App() {
   const location = useLocation()
@@ -41,11 +40,11 @@ function App() {
             }
           >
             <Route index element={<HomePage />} />
-            <Route path="research" element={<Suspense fallback={null}><ResearchPage /></Suspense>} />
-            <Route path="publications" element={<Suspense fallback={null}><PublicationsPage /></Suspense>} />
-            <Route path="experience" element={<Suspense fallback={null}><ExperiencePage /></Suspense>} />
-            <Route path="projects" element={<Suspense fallback={null}><ProjectsPage /></Suspense>} />
-            <Route path="info" element={<Suspense fallback={null}><InfoPage /></Suspense>} />
+            <Route path="research" element={<ResearchPage />} />
+            <Route path="publications" element={<PublicationsPage />} />
+            <Route path="experience" element={<ExperiencePage />} />
+            <Route path="projects" element={<ProjectsPage />} />
+            <Route path="info" element={<InfoPage />} />
           </Route>
         </Routes>
       </AnimatePresence>
