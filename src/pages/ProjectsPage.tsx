@@ -1,4 +1,3 @@
-import { PageTransition } from "@/components/ui/PageTransition"
 import { BentoGrid } from "@/components/ui/BentoGrid"
 import { BentoItem } from "@/components/ui/BentoItem"
 import { ExternalLink, GithubIcon } from "lucide-react"
@@ -13,7 +12,7 @@ export function ProjectsPage() {
   }
 
   return (
-    <PageTransition>
+    <>
       <div>
         <h1 className="section-title">{projects.heading}</h1>
         <p className="section-subtitle">{projects.subheading}</p>
@@ -87,6 +86,6 @@ export function ProjectsPage() {
           })}
         </BentoGrid>
       </div>
-    </PageTransition>
+    </>
   )
 }

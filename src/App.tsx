@@ -1,11 +1,8 @@
 import { useState } from "react"
-import { Routes, Route, useLocation } from "react-router-dom"
-import { AnimatePresence } from "framer-motion"
+import { Routes, Route } from "react-router-dom"
 
 import { Layout } from "@/components/layout/Layout"
 import { Navigation } from "@/components/layout/Navigation"
-import { usePageBoundaryScroll } from "@/hooks/usePageBoundaryScroll"
-import { useNavigationSource } from "@/contexts/NavigationContext"
 import { HomePage } from "@/pages/HomePage"
 import { ResearchPage } from "@/pages/ResearchPage"
 import { PublicationsPage } from "@/pages/PublicationsPage"
@@ -14,40 +11,29 @@ import { ProjectsPage } from "@/pages/ProjectsPage"
 import { InfoPage } from "@/pages/InfoPage"
 
 function App() {
-  const location = useLocation()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const { resetSource } = useNavigationSource()
-
-  usePageBoundaryScroll({ enabled: false })
-
-  const handleExitComplete = () => {
-    window.scrollTo({ top: 0, behavior: "instant" })
-    resetSource()
-  }
 
   return (
     <>
       <Navigation onMenuClick={() => setMobileMenuOpen(true)} />
-      <AnimatePresence mode="wait" onExitComplete={handleExitComplete}>
-        <Routes location={location} key={location.pathname}>
-          <Route
-            path="/"
-            element={
-              <Layout
-                mobileMenuOpen={mobileMenuOpen}
-                onMobileMenuClose={() => setMobileMenuOpen(false)}
-              />
-            }
-          >
-            <Route index element={<HomePage />} />
-            <Route path="research" element={<ResearchPage />} />
-            <Route path="publications" element={<PublicationsPage />} />
-            <Route path="experience" element={<ExperiencePage />} />
-            <Route path="projects" element={<ProjectsPage />} />
-            <Route path="info" element={<InfoPage />} />
-          </Route>
-        </Routes>
-      </AnimatePresence>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Layout
+              mobileMenuOpen={mobileMenuOpen}
+              onMobileMenuClose={() => setMobileMenuOpen(false)}
+            />
+          }
+        >
+          <Route index element={<HomePage />} />
+          <Route path="research" element={<ResearchPage />} />
+          <Route path="publications" element={<PublicationsPage />} />
+          <Route path="experience" element={<ExperiencePage />} />
+          <Route path="projects" element={<ProjectsPage />} />
+          <Route path="info" element={<InfoPage />} />
+        </Route>
+      </Routes>
     </>
   )
 }
