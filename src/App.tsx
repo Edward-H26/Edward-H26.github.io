@@ -1,5 +1,5 @@
-import { useState } from "react"
-import { Routes, Route } from "react-router-dom"
+import { useState, useEffect } from "react"
+import { Routes, Route, useLocation } from "react-router-dom"
 
 import { Layout } from "@/components/layout/Layout"
 import { Navigation } from "@/components/layout/Navigation"
@@ -12,6 +12,11 @@ import { InfoPage } from "@/pages/InfoPage"
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
 
   return (
     <>
