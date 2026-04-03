@@ -1,11 +1,10 @@
-import { PageTransition } from "@/components/ui/PageTransition"
 import { AnnouncementBox } from "@/components/ui/AnnouncementBox"
 import { Badge } from "@/components/ui/Badge"
 import { RESEARCH_INTERESTS, ANNOUNCEMENT } from "@/data/content"
 
 export function HomePage() {
   return (
-    <PageTransition>
+    <>
       <div className="space-y-8">
         <section>
           <div className="mb-6">
@@ -71,6 +70,6 @@ export function HomePage() {
           <AnnouncementBox text={ANNOUNCEMENT.text} />
         </section>
       </div>
-    </PageTransition>
+    </>
   )
 }

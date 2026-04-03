@@ -1,4 +1,3 @@
-import { PageTransition } from "@/components/ui/PageTransition"
 import { Badge } from "@/components/ui/Badge"
 import { Card } from "@/components/ui/Card"
 import { BentoGrid } from "@/components/ui/BentoGrid"
@@ -13,7 +12,7 @@ export function InfoPage() {
   const educationCards = info.cards.filter((c) => c.title === "Education")
 
   return (
-    <PageTransition>
+    <>
       <div className="space-y-8">
         <div>
           <h1 className="section-title">{info.heading}</h1>
@@ -88,6 +87,6 @@ export function InfoPage() {
           </div>
         )}
       </div>
-    </PageTransition>
+    </>
   )
 }
