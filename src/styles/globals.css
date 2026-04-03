@@ -81,6 +81,7 @@
     backdrop-filter: blur(6px) saturate(180%);
     -webkit-backdrop-filter: blur(6px) saturate(180%);
     border-right: 1px solid rgba(229, 231, 235, 0.5);
+    contain: layout style;
   }
 
   .glass-menu {
@@ -367,6 +368,8 @@
     radial-gradient(ellipse 45% 45% at 50% 80%, rgba(236, 72, 153, 0.10), transparent);
   background-size: 200% 200%, 200% 200%, 200% 200%;
   animation: mesh-shift 20s ease-in-out infinite;
+  will-change: background-position;
+  contain: strict;
 }
 
 @keyframes mesh-shift {
