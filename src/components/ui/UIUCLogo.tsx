@@ -6,7 +6,7 @@ interface UIUCLogoProps {
 export function UIUCLogo({ size = 40, className = "" }: UIUCLogoProps) {
   return (
     <img
-      src="https://brand.illinois.edu/wp-content/uploads/2024/02/Block-I-orange-blue-background.png"
+      src="/images/uiuc-logo.jpeg"
       alt="University of Illinois Urbana-Champaign"
       width={size}
       height={size}

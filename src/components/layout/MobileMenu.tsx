@@ -1,18 +1,10 @@
 import { NavLink } from "react-router-dom"
 import { X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
-import { PROFILE } from "@/data/content"
-import { UIUCLogo } from "@/components/ui/UIUCLogo"
-import { ColumbiaLogo } from "@/components/ui/ColumbiaLogo"
-
-const NAV_ITEMS = [
-  { path: "/", label: "Home" },
-  { path: "/research", label: "Research" },
-  { path: "/experience", label: "Experience" },
-  { path: "/projects", label: "Projects" },
-  { path: "/publications", label: "Publications" },
-  { path: "/info", label: "Info" },
-]
+import { NAV_ITEMS, PROFILE } from "@/data/content"
+import { InstitutionLogos } from "@/components/ui/InstitutionLogos"
+import { ProfileAvatar } from "@/components/ui/ProfileAvatar"
+import { SocialLinks } from "@/components/ui/SocialLinks"
 
 interface MobileMenuProps {
   open: boolean
@@ -28,7 +20,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 md:hidden"
+            className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 lg:hidden"
             onClick={onClose}
           />
 
@@ -36,8 +28,8 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
-            transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed top-0 right-0 bottom-0 w-80 glass-menu z-50 md:hidden shadow-2xl"
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="fixed top-0 right-0 bottom-0 w-80 max-w-full glass-menu z-50 lg:hidden shadow-2xl overflow-y-auto"
           >
             <div className="flex items-center justify-between p-4 border-b border-gray-200/50">
               <span className="text-lg font-semibold text-gradient-subtle">
@@ -53,31 +45,27 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
             </div>
 
             <div className="p-4">
-              <div className="flex flex-col items-center mb-6">
+              <div className="flex flex-col items-center gap-3 mb-5">
                 <div className="relative">
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/20 to-primary/20 blur-lg" />
-                  <img
-                    src={PROFILE.photo}
-                    alt={PROFILE.name}
-                    className="relative w-24 h-24 rounded-full object-cover border-2 border-white/80 shadow-lg"
+                  <ProfileAvatar
+                    sizeClassName="w-24 h-24"
+                    frameClassName="relative border-2 border-white/80 shadow-lg"
+                    loading="eager"
                   />
                 </div>
-                <h2 className="mt-3 text-lg font-semibold text-gray-900">
+                <h2 className="text-lg font-semibold text-gray-900">
                   {PROFILE.name}
                 </h2>
                 <p className="text-sm text-gray-500 text-center">
                   {PROFILE.title}
                 </p>
-                <div className="flex flex-col gap-2 mt-1">
-                  <div className="flex items-center gap-2">
-                    <ColumbiaLogo size={24} className="flex-shrink-0" />
-                    <span className="text-sm text-gray-500">Columbia University</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <UIUCLogo size={24} className="flex-shrink-0" />
-                    <span className="text-sm text-gray-500">University of Illinois<br />Urbana-Champaign</span>
-                  </div>
-                </div>
+                <InstitutionLogos variant="mobile" />
+                <SocialLinks
+                  size={18}
+                  className="mt-1 flex justify-center gap-3"
+                  linkClassName="p-2.5 rounded-full bg-orange-100 text-gray-600 hover:bg-orange-200 transition-colors"
+                />
               </div>
 
               <nav className="space-y-1">

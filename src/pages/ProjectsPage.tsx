@@ -1,7 +1,10 @@
 import { BentoGrid } from "@/components/ui/BentoGrid"
 import { BentoItem } from "@/components/ui/BentoItem"
+import { ContentBullets } from "@/components/ui/ContentBullets"
+import { SectionHeader } from "@/components/ui/SectionHeader"
 import { ExternalLink, GithubIcon } from "lucide-react"
 import { SECTIONS } from "@/data/content"
+import { splitLinksByLabel } from "@/utils/content"
 
 export function ProjectsPage() {
   const projects = SECTIONS.projects
@@ -14,13 +17,11 @@ export function ProjectsPage() {
   return (
     <>
       <div>
-        <h1 className="section-title">{projects.heading}</h1>
-        <p className="section-subtitle">{projects.subheading}</p>
+        <SectionHeader heading={projects.heading} subheading={projects.subheading} />
 
         <BentoGrid className="lg:grid-cols-2">
           {projects.cards.map((project, index) => {
-            const githubLink = project.links?.find((l) => l.label.toLowerCase() === "github")
-            const otherLinks = project.links?.filter((l) => l.label.toLowerCase() !== "github") || []
+            const { primary: githubLink, secondary: otherLinks } = splitLinksByLabel(project.links, "github")
             const colSpan = getColSpan(index)
 
             return (
@@ -49,11 +50,10 @@ export function ProjectsPage() {
                     </div>
                   </div>
 
-                  {project.bullets.length > 0 && (
-                    <p className="text-sm text-gray-600 leading-relaxed">
-                      {index === 0 ? project.bullets.join(" ") : project.bullets[0]}
-                    </p>
-                  )}
+                  <ContentBullets
+                    bullets={project.bullets}
+                    className="space-y-2 text-sm text-gray-600 leading-relaxed"
+                  />
                 </div>
 
                 <div className="flex flex-wrap gap-2 mt-auto pt-4">
@@ -68,9 +68,9 @@ export function ProjectsPage() {
                       GitHub
                     </a>
                   )}
-                  {otherLinks.map((link, linkIndex) => (
+                  {otherLinks.map((link) => (
                     <a
-                      key={linkIndex}
+                      key={link.url}
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"

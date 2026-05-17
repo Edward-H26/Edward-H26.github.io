@@ -1,4 +1,5 @@
 import { Timeline } from "@/components/ui/Timeline"
+import { SectionHeader } from "@/components/ui/SectionHeader"
 import { SECTIONS } from "@/data/content"
 
 export function ExperiencePage() {
@@ -7,8 +8,7 @@ export function ExperiencePage() {
   return (
     <>
       <div>
-        <h1 className="section-title">{experience.heading}</h1>
-        <p className="section-subtitle">{experience.subheading}</p>
+        <SectionHeader heading={experience.heading} subheading={experience.subheading} />
         <Timeline items={experience.cards} />
       </div>
     </>

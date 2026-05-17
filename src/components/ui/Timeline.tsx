@@ -1,5 +1,7 @@
-import { ExternalLink } from "lucide-react"
 import type { ContentCard } from "@/data/content"
+import { ContentBullets } from "@/components/ui/ContentBullets"
+import { ContentLinks } from "@/components/ui/ContentLinks"
+import { isCurrentDateRange } from "@/utils/content"
 
 interface TimelineProps {
   items: ContentCard[]
@@ -12,7 +14,7 @@ export function Timeline({ items }: TimelineProps) {
 
       <div className="space-y-8">
         {items.map((item, index) => {
-          const isPresent = item.date?.includes("Present")
+          const isPresent = isCurrentDateRange(item.date)
 
           return (
             <div key={index} className="relative pl-12">
@@ -52,35 +54,9 @@ export function Timeline({ items }: TimelineProps) {
                   )}
                 </div>
 
-                {item.bullets.length > 0 && (
-                  <ul className="space-y-2 text-sm text-gray-600">
-                    {item.bullets.map((bullet, bulletIndex) => (
-                      <li key={bulletIndex} className="flex gap-2">
-                        <span className="text-accent-dark mt-1.5 flex-shrink-0">
-                          &bull;
-                        </span>
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                <ContentBullets bullets={item.bullets} />
 
-                {item.links && item.links.length > 0 && (
-                  <div className="flex flex-wrap gap-2 mt-4">
-                    {item.links.map((link, linkIndex) => (
-                      <a
-                        key={linkIndex}
-                        href={link.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="link-chip"
-                      >
-                        {link.label}
-                        <ExternalLink size={12} />
-                      </a>
-                    ))}
-                  </div>
-                )}
+                <ContentLinks links={item.links} />
               </div>
             </div>
           )
