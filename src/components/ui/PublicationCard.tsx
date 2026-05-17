@@ -1,4 +1,5 @@
 import type { ContentCard } from "@/data/content"
+import { getPublicationStatus } from "@/utils/content"
 
 interface PublicationCardProps {
   publication: ContentCard
@@ -6,17 +7,13 @@ interface PublicationCardProps {
 }
 
 export function PublicationCard({ publication, index }: PublicationCardProps) {
-  const isSubmitted = publication.bullets[0]?.toLowerCase().includes("submitted")
+  const status = getPublicationStatus(publication.bullets[0] ?? "")
 
   return (
     <div className="card">
       <div className="flex items-start gap-4">
         <div
-          className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold ${
-            isSubmitted
-              ? "bg-blue-100 text-blue-700"
-              : "bg-green-100 text-green-700"
-          }`}
+          className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold ${status.className}`}
         >
           {index + 1}
         </div>
@@ -27,13 +24,9 @@ export function PublicationCard({ publication, index }: PublicationCardProps) {
               {publication.title}
             </h3>
             <span
-              className={`text-xs px-2 py-0.5 rounded-full font-medium ${
-                isSubmitted
-                  ? "bg-blue-100 text-blue-700"
-                  : "bg-green-100 text-green-700"
-              }`}
+              className={`text-xs px-2 py-0.5 rounded-full font-medium ${status.className}`}
             >
-              {isSubmitted ? "Submitted" : "Published"}
+              {status.label}
             </span>
           </div>
 

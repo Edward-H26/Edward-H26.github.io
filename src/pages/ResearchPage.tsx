@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/Card"
+import { SectionHeader } from "@/components/ui/SectionHeader"
 import { SECTIONS } from "@/data/content"
 
 export function ResearchPage() {
@@ -7,8 +8,7 @@ export function ResearchPage() {
   return (
     <>
       <div>
-        <h1 className="section-title">{research.heading}</h1>
-        <p className="section-subtitle">{research.subheading}</p>
+        <SectionHeader heading={research.heading} subheading={research.subheading} />
 
         <div className="space-y-6">
           {research.cards.map((card, index) => (

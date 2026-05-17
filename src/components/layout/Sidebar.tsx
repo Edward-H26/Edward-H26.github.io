@@ -1,8 +1,7 @@
-import { Github, Linkedin, Mail } from "lucide-react"
 import { PROFILE } from "@/data/content"
-import { XLogo } from "@/components/ui/XLogo"
-import { UIUCLogo } from "@/components/ui/UIUCLogo"
-import { ColumbiaLogo } from "@/components/ui/ColumbiaLogo"
+import { InstitutionLogos } from "@/components/ui/InstitutionLogos"
+import { SocialLinks } from "@/components/ui/SocialLinks"
+import { ProfileAvatar } from "@/components/ui/ProfileAvatar"
 
 interface SidebarProps {
   className?: string
@@ -14,11 +13,10 @@ export function Sidebar({ className = "" }: SidebarProps) {
       <div className="flex flex-col items-center">
         <div className="relative">
           <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/20 to-primary/20 blur-xl animate-pulse-slow" />
-          <img
-            src={PROFILE.photo}
-            alt={PROFILE.name}
+          <ProfileAvatar
+            sizeClassName="w-40 h-40"
+            frameClassName="relative border-4 border-white/80 shadow-xl"
             loading="eager"
-            className="relative w-40 h-40 rounded-full object-cover border-4 border-white/80 shadow-xl"
           />
         </div>
 
@@ -30,58 +28,10 @@ export function Sidebar({ className = "" }: SidebarProps) {
           {PROFILE.title}
         </p>
 
-        <div className="text-sm text-gray-500 flex flex-col items-center mt-2 gap-4">
-          <div className="flex flex-col items-center">
-            <div className="w-[5.25rem] h-[5.25rem] bg-white rounded-lg flex items-center justify-center mb-1">
-              <ColumbiaLogo size={76} />
-            </div>
-            <span className="text-center">Columbia University</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="w-20 h-20 rounded-lg overflow-hidden mb-1">
-              <UIUCLogo size={80} />
-            </div>
-            <span className="text-center">University of Illinois<br />Urbana-Champaign</span>
-          </div>
-        </div>
+        <InstitutionLogos />
       </div>
 
-      <div className="flex justify-center gap-4 mt-8">
-        <a
-          href={PROFILE.social.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="p-2.5 rounded-full bg-orange-100 backdrop-blur-sm text-gray-600 hover:text-accent-dark hover:shadow-md hover:scale-110 transition-all duration-200"
-          aria-label="GitHub"
-        >
-          <Github size={20} />
-        </a>
-        <a
-          href={PROFILE.social.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="p-2.5 rounded-full bg-orange-100 backdrop-blur-sm text-gray-600 hover:text-accent-dark hover:shadow-md hover:scale-110 transition-all duration-200"
-          aria-label="LinkedIn"
-        >
-          <Linkedin size={20} />
-        </a>
-        <a
-          href={`mailto:${PROFILE.email}`}
-          className="p-2.5 rounded-full bg-orange-100 backdrop-blur-sm text-gray-600 hover:text-accent-dark hover:shadow-md hover:scale-110 transition-all duration-200"
-          aria-label="Email"
-        >
-          <Mail size={20} />
-        </a>
-        <a
-          href={PROFILE.social.x}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="p-2.5 rounded-full bg-orange-100 backdrop-blur-sm text-gray-600 hover:text-accent-dark hover:shadow-md hover:scale-110 transition-all duration-200"
-          aria-label="X"
-        >
-          <XLogo size={20} />
-        </a>
-      </div>
+      <SocialLinks className="flex justify-center gap-4 mt-8" />
     </aside>
   )
 }

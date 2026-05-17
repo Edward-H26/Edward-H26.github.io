@@ -2,21 +2,40 @@ import { Badge } from "@/components/ui/Badge"
 import { Card } from "@/components/ui/Card"
 import { BentoGrid } from "@/components/ui/BentoGrid"
 import { BentoItem } from "@/components/ui/BentoItem"
+import { ColumbiaLogo } from "@/components/ui/ColumbiaLogo"
+import { SectionHeader } from "@/components/ui/SectionHeader"
+import { UIUCLogo } from "@/components/ui/UIUCLogo"
 import { SECTIONS, SKILLS_CATEGORIES, PROFESSIONAL_SKILLS } from "@/data/content"
+import { getCardsByTitle, getFirstCardByTitle } from "@/utils/content"
+
+type EducationLogoProps = {
+  school: string
+}
+
+function EducationLogo({ school }: EducationLogoProps) {
+  if (school.includes("Columbia")) {
+    return <ColumbiaLogo size={72} className="h-[72px] w-[72px] rounded-lg" />
+  }
+
+  if (school.includes("Illinois")) {
+    return <UIUCLogo size={72} className="h-[72px] w-[72px] rounded-lg" />
+  }
+
+  return null
+}
 
 export function InfoPage() {
   const info = SECTIONS.info
 
-  const languagesCard = info.cards.find((c) => c.title === "Languages")
-  const certificationsCard = info.cards.find((c) => c.title === "Certifications and Honors")
-  const educationCards = info.cards.filter((c) => c.title === "Education")
+  const languagesCard = getFirstCardByTitle(info.cards, "Languages")
+  const certificationsCard = getFirstCardByTitle(info.cards, "Certifications and Honors")
+  const educationCards = getCardsByTitle(info.cards, "Education")
 
   return (
     <>
       <div className="space-y-8">
         <div>
-          <h1 className="section-title">{info.heading}</h1>
-          <p className="section-subtitle">{info.subheading}</p>
+          <SectionHeader heading={info.heading} subheading={info.subheading} />
         </div>
 
         <div>
@@ -24,11 +43,10 @@ export function InfoPage() {
             Technical Skills
           </h2>
           <BentoGrid className="lg:grid-cols-3 auto-rows-auto">
-            {Object.entries(SKILLS_CATEGORIES).map(([category, skills], categoryIndex) => (
+            {Object.entries(SKILLS_CATEGORIES).map(([category, skills]) => (
               <BentoItem
                 key={category}
                 className="!p-4"
-                colSpan={categoryIndex < 2 ? 1 : 1}
               >
                 <h3 className="text-sm font-semibold text-blue-800 mb-3">
                   {category}
@@ -71,18 +89,27 @@ export function InfoPage() {
               Education
             </h2>
             <div className="space-y-4">
-              {educationCards.map((eduCard, eduIndex) => (
-                <div key={eduIndex} className="card">
-                  <h3 className="text-lg font-semibold text-gray-900">
-                    {eduCard.bullets[0]}
-                  </h3>
-                  {eduCard.bullets.slice(1).map((line, index) => (
-                    <p key={index} className="text-sm text-gray-600 mt-1">
-                      {line}
-                    </p>
-                  ))}
-                </div>
-              ))}
+              {educationCards.map((eduCard, eduIndex) => {
+                return (
+                  <div key={eduIndex} className="card">
+                    <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
+                      <div className="flex h-[72px] w-[72px] flex-shrink-0 items-center justify-center rounded-xl bg-white shadow-sm ring-1 ring-gray-100">
+                        <EducationLogo school={eduCard.bullets[0]} />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-gray-900">
+                          {eduCard.bullets[0]}
+                        </h3>
+                        {eduCard.bullets.slice(1).map((line, index) => (
+                          <p key={index} className="text-sm text-gray-600 mt-1">
+                            {line}
+                          </p>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
           </div>
         )}

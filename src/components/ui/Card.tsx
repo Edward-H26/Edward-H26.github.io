@@ -1,12 +1,12 @@
-import { ExternalLink } from "lucide-react"
 import type { ContentCard } from "@/data/content"
+import { ContentBullets } from "@/components/ui/ContentBullets"
+import { ContentLinks } from "@/components/ui/ContentLinks"
 
 interface CardProps {
   card: ContentCard
-  variant?: "default" | "compact"
 }
 
-export function Card({ card, variant = "default" }: CardProps) {
+export function Card({ card }: CardProps) {
   return (
     <div className="card">
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
@@ -28,35 +28,9 @@ export function Card({ card, variant = "default" }: CardProps) {
         )}
       </div>
 
-      {variant === "default" && card.bullets.length > 0 && (
-        <ul className="space-y-2 text-sm text-gray-600">
-          {card.bullets.map((bullet, index) => (
-            <li key={index} className="flex gap-2">
-              <span className="text-accent-dark mt-1.5 flex-shrink-0">
-                &bull;
-              </span>
-              <span>{bullet}</span>
-            </li>
-          ))}
-        </ul>
-      )}
+      <ContentBullets bullets={card.bullets} />
 
-      {card.links && card.links.length > 0 && (
-        <div className="flex flex-wrap gap-2 mt-4">
-          {card.links.map((link, index) => (
-            <a
-              key={index}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link-chip"
-            >
-              {link.label}
-              <ExternalLink size={12} />
-            </a>
-          ))}
-        </div>
-      )}
+      <ContentLinks links={card.links} />
     </div>
   )
 }

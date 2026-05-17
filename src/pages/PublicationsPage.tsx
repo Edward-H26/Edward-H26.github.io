@@ -1,4 +1,5 @@
 import { PublicationCard } from "@/components/ui/PublicationCard"
+import { SectionHeader } from "@/components/ui/SectionHeader"
 import { SECTIONS } from "@/data/content"
 
 export function PublicationsPage() {
@@ -7,8 +8,7 @@ export function PublicationsPage() {
   return (
     <>
       <div>
-        <h1 className="section-title">{publications.heading}</h1>
-        <p className="section-subtitle">{publications.subheading}</p>
+        <SectionHeader heading={publications.heading} subheading={publications.subheading} />
 
         <div className="space-y-4">
           {publications.cards.map((publication, index) => (
