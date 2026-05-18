@@ -14,11 +14,11 @@ type EducationLogoProps = {
 
 function EducationLogo({ school }: EducationLogoProps) {
   if (school.includes("Columbia")) {
-    return <ColumbiaLogo size={72} className="h-[72px] w-[72px] rounded-lg" />
+    return <ColumbiaLogo size={80} className="h-20 w-20 rounded-lg" />
   }
 
   if (school.includes("Illinois")) {
-    return <UIUCLogo size={72} className="h-[72px] w-[72px] rounded-lg" />
+    return <UIUCLogo size={80} className="h-20 w-20 rounded-lg" />
   }
 
   return null
@@ -93,7 +93,7 @@ export function InfoPage() {
                 return (
                   <div key={eduIndex} className="card">
                     <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
-                      <div className="flex h-[72px] w-[72px] flex-shrink-0 items-center justify-center rounded-xl bg-white shadow-sm ring-1 ring-gray-100">
+                      <div className="flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-xl bg-white shadow-sm ring-1 ring-gray-100">
                         <EducationLogo school={eduCard.bullets[0]} />
                       </div>
                       <div>
