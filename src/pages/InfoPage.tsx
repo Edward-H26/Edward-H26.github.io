@@ -2,9 +2,8 @@ import { Badge } from "@/components/ui/Badge"
 import { Card } from "@/components/ui/Card"
 import { BentoGrid } from "@/components/ui/BentoGrid"
 import { BentoItem } from "@/components/ui/BentoItem"
-import { ColumbiaLogo } from "@/components/ui/ColumbiaLogo"
+import { InstitutionLogo } from "@/components/ui/InstitutionLogo"
 import { SectionHeader } from "@/components/ui/SectionHeader"
-import { UIUCLogo } from "@/components/ui/UIUCLogo"
 import { SECTIONS, SKILLS_CATEGORIES, PROFESSIONAL_SKILLS } from "@/data/content"
 import { getCardsByTitle, getFirstCardByTitle } from "@/utils/content"
 
@@ -13,15 +12,7 @@ type EducationLogoProps = {
 }
 
 function EducationLogo({ school }: EducationLogoProps) {
-  if (school.includes("Columbia")) {
-    return <ColumbiaLogo size={80} className="h-20 w-20 rounded-lg" />
-  }
-
-  if (school.includes("Illinois")) {
-    return <UIUCLogo size={80} className="h-20 w-20 rounded-lg" />
-  }
-
-  return null
+  return <InstitutionLogo school={school} />
 }
 
 export function InfoPage() {
@@ -92,10 +83,8 @@ export function InfoPage() {
               {educationCards.map((eduCard, eduIndex) => {
                 return (
                   <div key={eduIndex} className="card">
-                    <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
-                      <div className="flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-xl bg-white shadow-sm ring-1 ring-gray-100">
-                        <EducationLogo school={eduCard.bullets[0]} />
-                      </div>
+                    <div className="flex flex-col gap-3 sm:flex-row sm:items-start">
+                      <EducationLogo school={eduCard.bullets[0]} />
                       <div>
                         <h3 className="text-lg font-semibold text-gray-900">
                           {eduCard.bullets[0]}

@@ -45,25 +45,27 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
             </div>
 
             <div className="p-4">
-              <div className="flex flex-col items-center gap-3 mb-5">
-                <div className="relative">
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/20 to-primary/20 blur-lg" />
-                  <ProfileAvatar
-                    sizeClassName="w-24 h-24"
-                    frameClassName="relative border-2 border-white/80 shadow-lg"
-                    loading="eager"
-                  />
+              <div className="profile-stack flex flex-col items-center gap-5 mb-5">
+                <div className="profile-identity-group flex flex-col items-center gap-2">
+                  <div className="relative">
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/20 to-primary/20 blur-lg" />
+                    <ProfileAvatar
+                      sizeClassName="w-24 h-24"
+                      frameClassName="relative border-2 border-white/80 shadow-lg"
+                      loading="eager"
+                    />
+                  </div>
+                  <h2 className="text-lg font-semibold text-gray-900">
+                    {PROFILE.name}
+                  </h2>
+                  <p className="text-sm text-gray-500 text-center">
+                    {PROFILE.title}
+                  </p>
                 </div>
-                <h2 className="text-lg font-semibold text-gray-900">
-                  {PROFILE.name}
-                </h2>
-                <p className="text-sm text-gray-500 text-center">
-                  {PROFILE.title}
-                </p>
                 <InstitutionLogos variant="mobile" />
                 <SocialLinks
                   size={18}
-                  className="mt-1 flex justify-center gap-3"
+                  className="flex justify-center gap-3"
                   linkClassName="p-2.5 rounded-full bg-orange-100 text-gray-600 hover:bg-orange-200 transition-colors"
                 />
               </div>
