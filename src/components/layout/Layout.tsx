@@ -22,9 +22,9 @@ export function Layout({ mobileMenuOpen, onMobileMenuClose }: LayoutProps) {
       <MobileMenu open={mobileMenuOpen} onClose={onMobileMenuClose} />
 
       <div className="flex relative">
-        <Sidebar className="hidden lg:block" />
+        <Sidebar className="hidden xl:block" />
 
-        <main className="flex-1 lg:ml-72 pt-20 lg:pt-20">
+        <main className="flex-1 pt-20 xl:ml-72">
           <div className="max-w-4xl mx-auto px-6 pt-4 pb-24">
             <Outlet />
           </div>

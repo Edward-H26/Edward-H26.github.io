@@ -10,8 +10,8 @@ interface SidebarProps {
 export function Sidebar({ className = "" }: SidebarProps) {
   return (
     <aside className={`w-72 fixed left-0 top-16 h-[calc(100vh-4rem)] p-8 glass-sidebar overflow-y-auto ${className}`}>
-      <div className="profile-stack flex flex-col items-center gap-5">
-        <div className="profile-identity-group flex flex-col items-center gap-2">
+      <div className="profile-stack flex w-full flex-col items-center gap-6">
+        <div className="profile-identity-group flex w-full max-w-[13rem] flex-col items-center gap-4">
           <div className="relative">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/20 to-primary/20 blur-xl animate-pulse-slow" />
             <ProfileAvatar
@@ -21,18 +21,20 @@ export function Sidebar({ className = "" }: SidebarProps) {
             />
           </div>
 
-          <h1 className="text-xl font-semibold text-gray-900 text-center">
-            {PROFILE.name}
-          </h1>
+          <div className="flex flex-col items-center gap-1 text-center">
+            <h1 className="text-xl font-semibold leading-tight text-gray-900">
+              {PROFILE.name}
+            </h1>
 
-          <p className="text-sm text-gray-600 text-center">
-            {PROFILE.title}
-          </p>
+            <p className="text-sm leading-tight text-gray-600">
+              {PROFILE.title}
+            </p>
+          </div>
         </div>
 
         <InstitutionLogos />
 
-        <SocialLinks className="flex justify-center gap-4" />
+        <SocialLinks className="profile-social-group flex w-full max-w-[13rem] justify-center gap-4" />
       </div>
     </aside>
   )

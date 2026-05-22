@@ -22,7 +22,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
   return (
     <>
       <motion.header
-        className="fixed top-0 left-0 right-0 h-16 glass-nav z-50 hidden lg:block lg:pl-80"
+        className="fixed top-0 left-0 right-0 h-16 glass-nav z-50 hidden xl:block xl:pl-80"
         {...desktopMotionProps}
       >
         <div className="h-full max-w-4xl mx-auto px-6 flex items-center justify-between">
@@ -55,7 +55,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
         </div>
       </motion.header>
 
-      <header className="fixed top-0 left-0 right-0 glass-nav z-50 lg:hidden">
+      <header className="fixed top-0 left-0 right-0 glass-nav z-50 xl:hidden">
         <div className="px-4 py-3">
           <div className="flex items-center justify-between">
             <div className="relative flex-shrink-0">
