@@ -7,9 +7,9 @@ type InstitutionLogoProps = {
 }
 
 const LOGO_FRAME_CLASS =
-  "flex h-[72px] w-[72px] flex-shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-gray-100"
+  "flex h-[72px] w-[72px] translate-x-0.5 flex-shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-gray-100"
 
-const LOGO_IMAGE_CLASS = "h-[72px] w-[72px] rounded-xl"
+const LOGO_IMAGE_CLASS = "h-[72px] w-[72px] rounded-xl object-contain"
 
 export function InstitutionLogo({ school, className = "" }: InstitutionLogoProps) {
   const isColumbia = school.includes("Columbia")

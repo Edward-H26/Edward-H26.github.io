@@ -29,7 +29,7 @@ export function ProfileAvatar({
         decoding="async"
         draggable={false}
         className={cn(
-          "h-full w-full object-cover object-center select-none",
+          "block h-full w-full rounded-full object-cover object-center select-none",
           imageClassName,
         )}
       />

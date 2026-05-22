@@ -20,7 +20,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 lg:hidden"
+            className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 xl:hidden"
             onClick={onClose}
           />
 
@@ -29,7 +29,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="fixed top-0 right-0 bottom-0 w-80 max-w-full glass-menu z-50 lg:hidden shadow-2xl overflow-y-auto"
+            className="fixed top-0 right-0 bottom-0 w-80 max-w-full glass-menu z-50 xl:hidden shadow-2xl overflow-y-auto"
           >
             <div className="flex items-center justify-between p-4 border-b border-gray-200/50">
               <span className="text-lg font-semibold text-gradient-subtle">
@@ -45,8 +45,8 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
             </div>
 
             <div className="p-4">
-              <div className="profile-stack flex flex-col items-center gap-5 mb-5">
-                <div className="profile-identity-group flex flex-col items-center gap-2">
+              <div className="profile-stack mb-5 flex w-full flex-col items-center gap-6">
+                <div className="profile-identity-group flex w-full max-w-[13rem] flex-col items-center gap-4">
                   <div className="relative">
                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/20 to-primary/20 blur-lg" />
                     <ProfileAvatar
@@ -55,17 +55,19 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                       loading="eager"
                     />
                   </div>
-                  <h2 className="text-lg font-semibold text-gray-900">
-                    {PROFILE.name}
-                  </h2>
-                  <p className="text-sm text-gray-500 text-center">
-                    {PROFILE.title}
-                  </p>
+                  <div className="flex flex-col items-center gap-1 text-center">
+                    <h2 className="text-lg font-semibold leading-tight text-gray-900">
+                      {PROFILE.name}
+                    </h2>
+                    <p className="text-sm leading-tight text-gray-500">
+                      {PROFILE.title}
+                    </p>
+                  </div>
                 </div>
                 <InstitutionLogos variant="mobile" />
                 <SocialLinks
                   size={18}
-                  className="flex justify-center gap-3"
+                  className="profile-social-group flex w-full max-w-[13rem] justify-center gap-3"
                   linkClassName="p-2.5 rounded-full bg-orange-100 text-gray-600 hover:bg-orange-200 transition-colors"
                 />
               </div>

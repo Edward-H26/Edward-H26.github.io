@@ -33,7 +33,7 @@ export function InfoPage() {
           <h2 className="text-lg font-semibold text-primary mb-4">
             Technical Skills
           </h2>
-          <BentoGrid className="lg:grid-cols-3 auto-rows-auto">
+          <BentoGrid className="lg:grid-cols-2 xl:grid-cols-3 auto-rows-auto">
             {Object.entries(SKILLS_CATEGORIES).map(([category, skills]) => (
               <BentoItem
                 key={category}
@@ -83,7 +83,7 @@ export function InfoPage() {
               {educationCards.map((eduCard, eduIndex) => {
                 return (
                   <div key={eduIndex} className="card">
-                    <div className="flex flex-col gap-3 sm:flex-row sm:items-start">
+                    <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-7">
                       <EducationLogo school={eduCard.bullets[0]} />
                       <div>
                         <h3 className="text-lg font-semibold text-gray-900">
