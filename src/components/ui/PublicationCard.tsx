@@ -19,8 +19,8 @@ export function PublicationCard({ publication, index }: PublicationCardProps) {
         </div>
 
         <div className="flex-1">
-          <div className="flex items-center gap-2 mb-2">
-            <h3 className="text-lg font-semibold text-gray-900">
+          <div className="mb-2 flex flex-wrap items-start gap-2">
+            <h3 className="text-lg font-semibold leading-snug text-gray-900">
               {publication.title}
             </h3>
             <span

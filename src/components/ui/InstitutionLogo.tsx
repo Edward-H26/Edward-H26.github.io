@@ -24,7 +24,7 @@ export function InstitutionLogo({ school, className = "" }: InstitutionLogoProps
       {isColumbia ? (
         <ColumbiaLogo size={72} className={LOGO_IMAGE_CLASS} />
       ) : (
-        <UIUCLogo size={72} className={`${LOGO_IMAGE_CLASS} scale-[1.18]`} />
+        <UIUCLogo size={72} className={LOGO_IMAGE_CLASS} />
       )}
     </div>
   )
