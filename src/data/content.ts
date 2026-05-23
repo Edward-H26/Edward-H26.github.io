@@ -352,6 +352,7 @@ export const SECTIONS: Record<string, ContentSection> = {
           "BS in Data Science and Information Science",
           "Minors: Computer Science and Statistics",
           "Siebel School of Computing and Data Science",
+          "Core Courses: Intro to Generative AI for Hum, Applied Machine Learning, Computational Photography, Linear Algebra with Computational Applications, Modeling and Learning in Data Science, Statistics Programming Methods, Data Science Programming Methods, Calculus for Business, and Statistics and Probability",
           "2022.08 - 2026.05"
         ]
       }
