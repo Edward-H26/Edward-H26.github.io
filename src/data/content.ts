@@ -172,13 +172,13 @@ export const SECTIONS: Record<string, ContentSection> = {
         ]
       },
       {
-        title: "Context Under Budget",
+        title: "Context Under Budget: A Controlled Benchmark for Post-Retrieval Compression in Retrieval-Augmented Generation",
         bullets: [
           "[3] Tuan Minh Nguyen, Qiran Hu, Banruo Liu, Khoa D Doan, Kok-Seng Wong, Fan Lai. Context Under Budget: A Controlled Benchmark for Post-Retrieval Compression in Retrieval-Augmented Generation. Under Review at Conference on Empirical Methods in Natural Language Processing (EMNLP)."
         ]
       },
       {
-        title: "AlphaWiseFT",
+        title: "AlphaWiseFT: Adaptive Weight Interpolation for Continual Multimodal Representation Learning",
         bullets: [
           "[4] Sarthak Jain, Qiran Hu, Zhen Zhu, Yaoyao Liu. AlphaWiseFT: Adaptive Weight Interpolation for Continual Multimodal Representation Learning. Under Review at Transactions on Machine Learning Research (TMLR)."
         ]
@@ -328,7 +328,7 @@ export const SECTIONS: Record<string, ContentSection> = {
         bullets: [
           "Neo4j Certified Professional",
           "Neo4j Graph Data Science Certification",
-          "UIUC Dean's List - 2023 Spring, 2024 Fall",
+          "UIUC Dean's List - 2023 Spring, 2024 Fall, 2025 Spring, 2025 Fall, 2026 Spring",
           "UIUC James Scholar"
         ],
         links: [
@@ -363,7 +363,7 @@ export const SKILLS_CATEGORIES = {
   "Programming Languages": ["Python", "C++", "Java", "R", "Ruby", "Kotlin", "PHP"],
   "AI/ML Frameworks": ["PyTorch", "OpenCV", "LangChain", "LangGraph", "JAX", "TensorFlow", "LangSmith"],
   "Large Model Training": ["Distributed Training", "SFT", "CUDA", "PEFT", "HPC"],
-  "3D and Vision": ["Diffusion Models", "World Models", "Neural Rendering", "Depth Estimation", "3D-Aware Generation"],
+  "3D and Vision": ["Diffusion Models", "World Models", "3D Reconstruction", "Depth Estimation", "3D-Aware Generation"],
   "Multi-agent and Agentic AI": ["Agent Orchestration", "GraphRAG", "Long-Term Memory", "MCP", "Tool Calling", "Function Chaining"],
   "Full-stack Development": ["React.js", "Next.js", "Vue.js", "Angular.js", "Node.js", "TypeScript", "JavaScript", "HTML5", "Tailwind CSS"],
   "Databases": ["PostgreSQL", "Neo4j", "MongoDB"],
