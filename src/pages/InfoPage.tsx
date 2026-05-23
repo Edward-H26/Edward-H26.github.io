@@ -89,11 +89,22 @@ export function InfoPage() {
                         <h3 className="text-lg font-semibold text-gray-900">
                           {eduCard.bullets[0]}
                         </h3>
-                        {eduCard.bullets.slice(1).map((line, index) => (
-                          <p key={index} className="text-sm text-gray-600 mt-1">
-                            {line}
-                          </p>
-                        ))}
+	                        {eduCard.bullets.slice(1).map((line, index) => (
+	                          line.startsWith("Core Courses:") ? (
+	                            <details key={index} className="mt-2 text-sm text-gray-600">
+	                              <summary className="cursor-pointer font-medium text-gray-700">
+	                                Core Courses
+	                              </summary>
+	                              <p className="mt-1 leading-relaxed">
+	                                {line.replace("Core Courses: ", "")}
+	                              </p>
+	                            </details>
+	                          ) : (
+	                            <p key={index} className="text-sm text-gray-600 mt-1">
+	                              {line}
+	                            </p>
+	                          )
+	                        ))}
                       </div>
                     </div>
                   </div>
