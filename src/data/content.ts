@@ -162,19 +162,19 @@ export const SECTIONS: Record<string, ContentSection> = {
       {
         title: "AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation",
         bullets: [
-          "[1] Eric Ji, Qiran Hu, Wufei Ma, Sarthak Jain, Yingying Li, Minh N. Do, Yaoyao Liu. AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation. Under Review at European Conference on Computer Vision (ECCV)."
+          "[1] Eric Ji, Qiran Hu, Wufei Ma, Sarthak Jain, Yingying Li, Minh N. Do, Yaoyao Liu. AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation. Under Review."
         ]
       },
       {
         title: "Crowdsourced Open-Source Research: A Research Paradigm Probe",
         bullets: [
-          "[2] Hangyue Zhang, Qiran Hu, Ziyi Zhang, Yun Huang. Crowdsourced Open-Source Research: A Research Paradigm Probe. Under Review at ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW)."
+          "[2] Hangyue Zhang, Qiran Hu, Ziyi Zhang, Yun Huang. Crowdsourced Open-Source Research: A Research Paradigm Probe. Under Review."
         ]
       },
       {
         title: "Context Under Budget: A Controlled Benchmark for Post-Retrieval Compression in Retrieval-Augmented Generation",
         bullets: [
-          "[3] Tuan Minh Nguyen, Qiran Hu, Banruo Liu, Khoa D Doan, Kok-Seng Wong, Fan Lai. Context Under Budget: A Controlled Benchmark for Post-Retrieval Compression in Retrieval-Augmented Generation. Under Review at Conference on Empirical Methods in Natural Language Processing (EMNLP)."
+          "[3] Tuan Minh Nguyen, Qiran Hu, Banruo Liu, Khoa D Doan, Kok-Seng Wong, Fan Lai. Context Under Budget: A Controlled Benchmark for Post-Retrieval Compression in Retrieval-Augmented Generation. Under Review."
         ]
       },
       {
