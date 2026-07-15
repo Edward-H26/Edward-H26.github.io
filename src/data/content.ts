@@ -40,6 +40,7 @@ export const PROFILE = {
     github: "https://github.com/Edward-H26",
     linkedin: "https://www.linkedin.com/in/qiranhu/",
     x: "https://x.com/QiranHu",
+    scholar: "https://scholar.google.com/citations?user=4jv03f4AAAAJ&hl=en",
   },
 }
 
@@ -162,8 +163,12 @@ export const SECTIONS: Record<string, ContentSection> = {
       {
         title: "AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation",
         bullets: [
-          "[1] Eric Ji, Qiran Hu, Wufei Ma, Sarthak Jain, Yingying Li, Minh N. Do, Yaoyao Liu. AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation. Under Review."
-        ]
+          "[1] Eric Ji, Qiran Hu, Wufei Ma, Sarthak Jain, Yingying Li, Minh N. Do, Yaoyao Liu. AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation. ECCV 2026."
+        ],
+        links: [
+          { label: "arXiv", url: "https://arxiv.org/abs/2606.31204" },
+          { label: "Project", url: "https://ac3s.cvmlgroup.web.illinois.edu/" },
+        ],
       },
       {
         title: "Crowdsourced Open-Source Research: A Research Paradigm Probe",

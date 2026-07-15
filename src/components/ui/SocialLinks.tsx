@@ -1,6 +1,7 @@
 import { Github, Linkedin, Mail } from "lucide-react"
 import { PROFILE } from "@/data/content"
 import { XLogo } from "@/components/ui/XLogo"
+import { ScholarLogo } from "@/components/ui/ScholarLogo"
 
 type SocialLinksProps = {
   size?: number
@@ -51,6 +52,15 @@ export function SocialLinks({
         aria-label="X"
       >
         <XLogo size={size} />
+      </a>
+      <a
+        href={PROFILE.social.scholar}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={linkClassName}
+        aria-label="Google Scholar"
+      >
+        <ScholarLogo size={size} />
       </a>
     </div>
   )
