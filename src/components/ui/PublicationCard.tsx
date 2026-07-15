@@ -1,5 +1,19 @@
+import { Fragment } from "react"
 import type { ContentCard } from "@/data/content"
 import { getPublicationStatus } from "@/utils/content"
+import { ContentLinks } from "@/components/ui/ContentLinks"
+
+const OWNER_NAME = "Qiran Hu"
+
+function renderCitation(citation: string) {
+  const parts = citation.split(OWNER_NAME)
+  return parts.map((part, partIndex) => (
+    <Fragment key={partIndex}>
+      {part}
+      {partIndex < parts.length - 1 && <strong>{OWNER_NAME}</strong>}
+    </Fragment>
+  ))
+}
 
 interface PublicationCardProps {
   publication: ContentCard
@@ -32,9 +46,13 @@ export function PublicationCard({ publication, index }: PublicationCardProps) {
 
           {publication.bullets.map((citation, citationIndex) => (
             <p key={citationIndex} className="text-sm text-gray-600 leading-relaxed">
-              {citation}
+              {renderCitation(citation)}
             </p>
           ))}
+
+          {publication.links && publication.links.length > 0 && (
+            <ContentLinks links={publication.links} />
+          )}
         </div>
       </div>
     </div>
