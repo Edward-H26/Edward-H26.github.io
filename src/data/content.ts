@@ -112,40 +112,13 @@ export type NewsItem = {
 
 export const NEWS: NewsItem[] = [
   {
-    date: "August 2026",
-    segments: [
-      { text: "I started my M.S. in Data Science at " },
-      { text: "Columbia University", href: "https://www.columbia.edu/" },
-      { text: "." },
-    ],
-  },
-  {
     date: "June 2026",
     segments: [
       { text: "Our paper " },
       { text: "AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation", href: "https://arxiv.org/abs/2606.31204" },
-      { text: " is accepted to " },
-      { text: "ECCV 2026", href: "https://eccv.ecva.net/" },
+      { text: " is accepted to the " },
+      { text: "European Conference on Computer Vision (ECCV) 2026", href: "https://eccv.ecva.net/" },
       { text: "." },
-    ],
-  },
-  {
-    date: "May 2026",
-    segments: [
-      { text: "I graduated from the " },
-      { text: "University of Illinois Urbana-Champaign", href: "https://www.illinois.edu/" },
-      { text: " with a B.S. in Data Science and Information Science." },
-    ],
-  },
-  {
-    date: "April 2026",
-    segments: [
-      { text: "Our project was selected for the " },
-      {
-        text: "NVIDIA Academic Grant Program",
-        href: "https://ischool.illinois.edu/news-events/news/2026/04/liu-receives-support-ai-project-through-nvidia-academic-grant-program",
-      },
-      { text: " with 32,000 A100 GPU-hours." },
     ],
   },
 ]
@@ -208,7 +181,7 @@ export const SECTIONS: Record<string, ContentSection> = {
       {
         title: "AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation",
         bullets: [
-          "[1] Eric Ji, Qiran Hu, Wufei Ma, Sarthak Jain, Yingying Li, Minh N. Do, Yaoyao Liu. AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation. ECCV 2026."
+          "[1] Eric Ji, Qiran Hu, Wufei Ma, Sarthak Jain, Yingying Li, Minh N. Do, Yaoyao Liu. AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation. European Conference on Computer Vision (ECCV) 2026."
         ],
         links: [
           { label: "arXiv", url: "https://arxiv.org/abs/2606.31204" },
