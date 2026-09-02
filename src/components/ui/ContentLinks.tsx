@@ -1,9 +1,16 @@
-import { ExternalLink } from "lucide-react"
+import { CirclePlay, ExternalLink, FileText, Globe, type LucideIcon } from "lucide-react"
 import type { ContentLink } from "@/data/content"
 
 interface ContentLinksProps {
   links?: ContentLink[]
   className?: string
+}
+
+// Keyed by lowercase link label; matched links show this icon in place of the external-link arrow.
+const LINK_ICONS: Partial<Record<string, LucideIcon>> = {
+  arxiv: FileText,
+  project: Globe,
+  video: CirclePlay,
 }
 
 export function ContentLinks({
@@ -14,18 +21,22 @@ export function ContentLinks({
 
   return (
     <div className={className}>
-      {links.map((link) => (
-        <a
-          key={link.url}
-          href={link.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="link-chip"
-        >
-          {link.label}
-          <ExternalLink size={12} />
-        </a>
-      ))}
+      {links.map((link) => {
+        const Icon = LINK_ICONS[link.label.toLowerCase()]
+        return (
+          <a
+            key={link.url}
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-chip"
+          >
+            {Icon ? <Icon size={12} /> : null}
+            {link.label}
+            {Icon ? null : <ExternalLink size={12} />}
+          </a>
+        )
+      })}
     </div>
   )
 }
