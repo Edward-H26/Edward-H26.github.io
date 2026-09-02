@@ -34,7 +34,7 @@ export function Sidebar({ className = "" }: SidebarProps) {
 
         <InstitutionLogos />
 
-        <SocialLinks className="profile-social-group flex w-full max-w-[13rem] justify-center gap-4" />
+        <SocialLinks className="profile-social-group flex w-full max-w-[10rem] flex-wrap justify-center gap-4" />
       </div>
     </aside>
   )
