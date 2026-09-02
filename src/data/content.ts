@@ -35,7 +35,7 @@ export const PROFILE = {
   affiliation: "University of Illinois Urbana-Champaign",
   email: "qiranhu8@gmail.com",
   phone: "+1 (347)-957-9176",
-  photo: "/images/profile.png",
+  photo: "/images/profile-1024.jpg",
   social: {
     github: "https://github.com/Edward-H26",
     linkedin: "https://www.linkedin.com/in/qiranhu/",

@@ -7,6 +7,12 @@ import tseslint from "typescript-eslint"
 export default tseslint.config(
   { ignores: ["assets/**", "dist/**", "node_modules/**"] },
   js.configs.recommended,
+  {
+    files: ["scripts/**/*.mjs"],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
   ...tseslint.configs.recommended,
   {
     files: ["**/*.{ts,tsx}"],
