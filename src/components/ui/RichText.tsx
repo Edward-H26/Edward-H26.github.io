@@ -3,11 +3,14 @@ import { getSegmentKey } from "@/utils/content"
 
 interface RichTextProps {
   segments: BioSegment[]
+  inline?: boolean
 }
 
-export function RichText({ segments }: RichTextProps) {
+export function RichText({ segments, inline = false }: RichTextProps) {
+  const Wrapper = inline ? "span" : "p"
+
   return (
-    <p className="m-0">
+    <Wrapper className="m-0">
       {segments.map((segment, index) => (
         segment.href ? (
           <a
@@ -21,6 +24,6 @@ export function RichText({ segments }: RichTextProps) {
           <span key={getSegmentKey(segment, index)}>{segment.text}</span>
         )
       ))}
-    </p>
+    </Wrapper>
   )
 }

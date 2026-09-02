@@ -1,7 +1,7 @@
 import { AnnouncementBox } from "@/components/ui/AnnouncementBox"
 import { Badge } from "@/components/ui/Badge"
 import { RichText } from "@/components/ui/RichText"
-import { HOME_BIO, RESEARCH_INTERESTS, ANNOUNCEMENT } from "@/data/content"
+import { HOME_BIO, NEWS, RESEARCH_INTERESTS, ANNOUNCEMENT } from "@/data/content"
 
 export function HomePage() {
   return (
@@ -18,6 +18,18 @@ export function HomePage() {
               <RichText key={index} segments={segments} />
             ))}
           </div>
+        </section>
+
+        <section>
+          <h2 className="text-lg font-semibold text-gray-900 mb-3">News</h2>
+          <ul className="list-disc space-y-2 pl-5 text-gray-600 leading-relaxed">
+            {NEWS.map((item, index) => (
+              <li key={index}>
+                <span className="font-semibold text-gray-900">[{item.date}]</span>{" "}
+                <RichText segments={item.segments} inline />
+              </li>
+            ))}
+          </ul>
         </section>
 
         <section>
