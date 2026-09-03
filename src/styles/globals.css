@@ -6,8 +6,6 @@
   :root {
     --color-primary: #13294B;
     --color-accent: #FF5F05;
-    --color-accent-light: #FFF4E6;
-    --color-accent-text: #C84113;
   }
 
   html {
@@ -284,32 +282,6 @@
   transform: translateX(4px) rotate(15deg) scale(1.1);
 }
 
-@keyframes liquid-shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
-
-.liquid-glass-button.with-shimmer::before {
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.4) 50%,
-    transparent 100%
-  );
-  background-size: 200% 100%;
-  animation: liquid-shimmer 3s ease-in-out infinite;
-  opacity: 0.3;
-}
-
-.liquid-glass-button.with-shimmer:hover::before {
-  animation-duration: 1.5s;
-  opacity: 0.5;
-}
-
 @media (prefers-color-scheme: dark) {
   .liquid-glass-button {
     --glass-border: rgba(255, 255, 255, 0.2);
@@ -322,10 +294,6 @@
   .liquid-glass-button::after,
   .liquid-glass-icon {
     transition: none;
-  }
-
-  .liquid-glass-button.with-shimmer::before {
-    animation: none;
   }
 
   .liquid-glass-button:hover {

@@ -323,6 +323,9 @@ describe("index.html", () => {
     const html = readFileSync(path.join(ROOT, "index.html"), "utf8")
     assert.equal(normalize(extractBetween(html, HEAD_MARKERS)), normalize(buildHead(content, routes[0], routes)))
     assert.equal(normalize(extractBetween(html, BODY_MARKERS)), normalize(buildBody(content)))
+    assert.equal(readFileSync(path.join(ROOT, "public/robots.txt"), "utf8"), buildRobots())
+    assert.equal(readFileSync(path.join(ROOT, "public/sitemap.xml"), "utf8"), buildSitemap(routes))
+    assert.equal(readFileSync(path.join(ROOT, "public/llms.txt"), "utf8"), buildLlmsTxt(content, routes))
   })
 
   it("replaces only the block between markers and keeps them for the next run", () => {

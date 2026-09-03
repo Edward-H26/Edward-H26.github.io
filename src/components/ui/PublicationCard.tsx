@@ -1,6 +1,6 @@
 import { Fragment } from "react"
 import type { ContentCard } from "@/data/content"
-import { getPublicationStatus } from "@/utils/content"
+import { getPublicationStatus } from "@/utils/cards"
 import { ContentLinks } from "@/components/ui/ContentLinks"
 
 const OWNER_NAME = "Qiran Hu"

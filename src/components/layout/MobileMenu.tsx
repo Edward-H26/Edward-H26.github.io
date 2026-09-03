@@ -45,8 +45,8 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
             </div>
 
             <div className="p-4">
-              <div className="profile-stack mb-5 flex w-full flex-col items-center gap-6">
-                <div className="profile-identity-group flex w-full max-w-[13rem] flex-col items-center gap-4">
+              <div className="mb-5 flex w-full flex-col items-center gap-6">
+                <div className="flex w-full max-w-[13rem] flex-col items-center gap-4">
                   <div className="relative">
                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/20 to-primary/20 blur-lg" />
                     <ProfileAvatar
@@ -67,7 +67,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                 <InstitutionLogos variant="mobile" />
                 <SocialLinks
                   size={18}
-                  className="profile-social-group flex w-full max-w-[13rem] justify-center gap-3"
+                  className="flex w-full max-w-[13rem] justify-center gap-3"
                   linkClassName="p-2.5 rounded-full bg-orange-100 text-gray-600 hover:bg-orange-200 transition-colors"
                 />
               </div>

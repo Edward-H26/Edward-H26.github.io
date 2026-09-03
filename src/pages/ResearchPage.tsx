@@ -6,16 +6,14 @@ export function ResearchPage() {
   const research = SECTIONS.research
 
   return (
-    <>
-      <div>
-        <SectionHeader heading={research.heading} subheading={research.subheading} />
+    <div>
+      <SectionHeader heading={research.heading} subheading={research.subheading} />
 
-        <div className="space-y-6">
-          {research.cards.map((card, index) => (
-            <Card key={index} card={card} />
-          ))}
-        </div>
+      <div className="space-y-6">
+        {research.cards.map((card, index) => (
+          <Card key={index} card={card} />
+        ))}
       </div>
-    </>
+    </div>
   )
 }

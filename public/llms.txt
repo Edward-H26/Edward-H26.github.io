@@ -105,22 +105,22 @@ Data Analyst, 2024.08-2024.12, Champaign, IL
 - Leveraged complex institutional datasets to generate actionable insights by enhancing strategic planning processes and contributing to a 6.5% improvement in resource allocation for student success programs.
 - Designed and implemented comprehensive program evaluation frameworks for key educational initiatives by utilizing mixed-methods research to analyze effectiveness.
 
-### CS 107 Data Science Discovery, University of Illinois at Urbana-Champaign
+### CS 107 Data Science Discovery, University of Illinois Urbana-Champaign
 
-Teaching Assistant, 2023.08-Present, IL, United States
+Teaching Assistant, 2023.08-Present, Champaign, IL
 
 - Facilitated weekly in-person/online office hours and lab sections to provide technical assistance for over 2,000 students.
 - Authored instructional content for DISCOVERY's Guides explaining data science concepts through applied Python examples.
 - Designed advanced problem sets, exam questions, test suites, and autograder scripts for DISCOVERY's Mastery Platform.
 - Links: [Guides](https://discovery.cs.illinois.edu/guides/), [Mastery](https://mastery.cs.illinois.edu/)
 
-### Student Government, University of Illinois at Urbana-Champaign
+### Student Government, University of Illinois Urbana-Champaign
 
-iSchool Student Representative, 2022.09-2023.09, IL, United States
+iSchool Student Representative, 2022.09-2023.09, Champaign, IL
 
 - Supervised iSchool community forums to handle student concerns with adherence to predetermined guidelines.
-- Facilitated with the university and prospective students and parents during campus tours, answering questions, and providing insight.
-- Secured approval for program modifications to existing and new activities from students' feedback.
+- Assisted the university with campus tours for prospective students and parents, answering questions and providing insight.
+- Secured approval for changes to existing and new activities based on student feedback.
 
 ## Projects
 
@@ -132,7 +132,7 @@ Undergraduate Research Assistant, 2026.02-Present
 
 - Selected for the NVIDIA Academic Grant Program Award with 32,000 A100 GPU-hours allocated on the Brev cloud platform to advance multimodal generative models that continuously incorporate new knowledge across text, image, and 3D data without catastrophic forgetting of previously learned cross-modal alignment.
 - Scaled multimodal continual-learning experiments across audio, image, and text modalities through distributed training on the National Artificial Intelligence Research Resource (NAIRR), profiling throughput and memory trade-offs to enable post-hoc weight-space fusion.
-- Optimized parameter-efficient post-hoc fusion framework that learns to compose frozen checkpoints from different continual-learning strategies.
+- Optimized a parameter-efficient post-hoc fusion framework that learns to compose frozen checkpoints from different continual-learning strategies.
 - Links: [NVIDIA Grant](https://ischool.illinois.edu/news-events/news/2026/04/liu-receives-support-ai-project-through-nvidia-academic-grant-program)
 
 ### Multi-agent HCI Research Synthesis Engine
@@ -142,7 +142,6 @@ Systems Architect, 2025.11-Present
 - Architected an 8-agent orchestration system for HCI literature synthesis, implementing specialized agents of Planner, Researcher, Writer, Critic, SafetyGuardian, ReflexionEngine, LLMJudge, and Evaluation across a 12-step reasoning workflow, achieving 0.955 overall evaluation score, 0.925 on relevance, safety, and clarity.
 - Designed Model Context Protocol integration for standardized tool interfaces, enabling seamless connection between LLM agents and external data sources, including academic databases, code repositories, and document management systems.
 - Constructed parallel tool-calling infrastructure integrating Semantic Scholar API and Tavily web search with ThreadPoolExecutor, reducing query latency 40% (8.2s to 4.9s) and adding production-grade fallback handling for API failures.
-- Links: [Demo](https://salt-lab-human-ai-assignment-3-buildi-srcuistreamlit-app-zweknl.streamlit.app/)
 
 ### Node Optimized Orchestration Design for Educational Intelligence Architecture
 
@@ -195,7 +194,7 @@ Personal Information
 
 ### Education
 
-- University of Illinois at Urbana-Champaign, Champaign, IL
+- University of Illinois Urbana-Champaign, Champaign, IL
 - BS in Data Science and Information Science
 - Minors: Computer Science and Statistics
 - Siebel School of Computing and Data Science

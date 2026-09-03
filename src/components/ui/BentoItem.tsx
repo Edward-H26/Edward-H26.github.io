@@ -1,17 +1,15 @@
-import { cn } from "@/lib/utils"
+import { cn } from "@/utils/cn"
 
 interface BentoItemProps {
   children: React.ReactNode
   className?: string
-  colSpan?: 1 | 2 | 3 | 4
+  colSpan?: 1 | 2
   rowSpan?: 1 | 2
 }
 
 const colSpanClasses = {
   1: "",
   2: "md:col-span-2",
-  3: "md:col-span-2 lg:col-span-3",
-  4: "md:col-span-2 lg:col-span-4",
 }
 
 const rowSpanClasses = {

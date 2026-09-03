@@ -1,7 +1,7 @@
 import type { ContentCard } from "@/data/content"
 import { ContentBullets } from "@/components/ui/ContentBullets"
 import { ContentLinks } from "@/components/ui/ContentLinks"
-import { isCurrentDateRange } from "@/utils/content"
+import { isCurrentDateRange } from "@/utils/cards"
 
 interface TimelineProps {
   items: ContentCard[]
