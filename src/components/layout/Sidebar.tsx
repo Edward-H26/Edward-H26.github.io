@@ -10,8 +10,8 @@ interface SidebarProps {
 export function Sidebar({ className = "" }: SidebarProps) {
   return (
     <aside className={`w-72 fixed left-0 top-16 h-[calc(100vh-4rem)] p-8 glass-sidebar overflow-y-auto ${className}`}>
-      <div className="profile-stack flex w-full flex-col items-center gap-6">
-        <div className="profile-identity-group flex w-full max-w-[13rem] flex-col items-center gap-4">
+      <div className="flex w-full flex-col items-center gap-6">
+        <div className="flex w-full max-w-[13rem] flex-col items-center gap-4">
           <div className="relative">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/20 to-primary/20 blur-xl animate-pulse-slow" />
             <ProfileAvatar
@@ -34,7 +34,7 @@ export function Sidebar({ className = "" }: SidebarProps) {
 
         <InstitutionLogos />
 
-        <SocialLinks className="profile-social-group flex w-full max-w-[10rem] flex-wrap justify-center gap-4" />
+        <SocialLinks className="flex w-full max-w-[10rem] flex-wrap justify-center gap-4" />
       </div>
     </aside>
   )

@@ -6,16 +6,14 @@ export function PublicationsPage() {
   const publications = SECTIONS.publications
 
   return (
-    <>
-      <div>
-        <SectionHeader heading={publications.heading} subheading={publications.subheading} />
+    <div>
+      <SectionHeader heading={publications.heading} subheading={publications.subheading} />
 
-        <div className="space-y-4">
-          {publications.cards.map((publication, index) => (
-            <PublicationCard key={index} publication={publication} index={index} />
-          ))}
-        </div>
+      <div className="space-y-4">
+        {publications.cards.map((publication, index) => (
+          <PublicationCard key={index} publication={publication} index={index} />
+        ))}
       </div>
-    </>
+    </div>
   )
 }

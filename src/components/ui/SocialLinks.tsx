@@ -1,7 +1,7 @@
 import { Github, Linkedin, Mail } from "lucide-react"
 import { PROFILE } from "@/data/content"
-import { XLogo } from "@/components/ui/XLogo"
-import { ScholarLogo } from "@/components/ui/ScholarLogo"
+import { XLogo } from "@/components/logos/XLogo"
+import { ScholarLogo } from "@/components/logos/ScholarLogo"
 
 type SocialLinksProps = {
   size?: number

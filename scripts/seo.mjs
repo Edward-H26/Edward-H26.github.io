@@ -77,6 +77,13 @@ const segmentsToMarkdown = (segments) =>
 
 const slug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
 
+const cardMeta = (card) => [card.subtitle, card.date, card.location].filter(Boolean).join(", ")
+
+function splitName(name) {
+  const [givenName, ...rest] = name.split(" ")
+  return { givenName, familyName: rest.join(" ") }
+}
+
 export function routeUrl(routePath) {
   return routePath === "/" ? `${SITE_URL}/` : `${SITE_URL}${routePath}/`
 }
@@ -171,7 +178,7 @@ export function buildJsonLd(content, routes, route = routes[0]) {
   const { PROFILE, HOME_BIO, RESEARCH_INTERESTS, SECTIONS } = content
   const personId = `${SITE_URL}/#person`
   const websiteId = `${SITE_URL}/#website`
-  const [givenName, ...familyParts] = PROFILE.name.split(" ")
+  const { givenName, familyName } = splitName(PROFILE.name)
   const lab = SECTIONS.research.cards[0]
   const schools = SECTIONS.info.cards
     .filter((card) => card.title === "Education")
@@ -216,7 +223,7 @@ export function buildJsonLd(content, routes, route = routes[0]) {
         "@id": personId,
         name: PROFILE.name,
         givenName,
-        familyName: familyParts.join(" "),
+        familyName,
         jobTitle: PROFILE.title,
         description: HOME_BIO.map(segmentsToText).join(" "),
         email: `mailto:${PROFILE.email}`,
@@ -247,7 +254,7 @@ export function buildJsonLd(content, routes, route = routes[0]) {
 export function buildHead(content, route, routes) {
   const { PROFILE, RESEARCH_INTERESTS } = content
   const url = routeUrl(route.path)
-  const [givenName, ...familyParts] = PROFILE.name.split(" ")
+  const { givenName, familyName } = splitName(PROFILE.name)
   const handle = PROFILE.social.x ? `@${new URL(PROFILE.social.x).pathname.replace(/^\/+|\/+$/g, "")}` : ""
   const jsonLd = JSON.stringify(buildJsonLd(content, routes, route)).replace(/</g, "\\u003c")
   const isHome = route.path === "/"
@@ -271,7 +278,7 @@ export function buildHead(content, route, routes) {
     ...(isHome
       ? [
           `<meta property="profile:first_name" content="${escapeHtml(givenName)}" />`,
-          `<meta property="profile:last_name" content="${escapeHtml(familyParts.join(" "))}" />`
+          `<meta property="profile:last_name" content="${escapeHtml(familyName)}" />`
         ]
       : []),
     `<meta name="twitter:card" content="summary_large_image" />`,
@@ -286,7 +293,7 @@ export function buildHead(content, route, routes) {
 }
 
 function renderCard(card, id) {
-  const meta = [card.subtitle, card.date, card.location].filter(Boolean).join(", ")
+  const meta = cardMeta(card)
   const links = card.links?.length
     ? `<p>Links: ${card.links.map((link) => `<a href="${escapeHtml(link.url)}">${escapeHtml(link.label)}</a>`).join(", ")}</p>`
     : ""
@@ -413,7 +420,7 @@ export function buildLlmsTxt(content, routes) {
     lines.push(`## ${section.heading}`, ``)
     if (section.subheading) lines.push(section.subheading, ``)
     for (const card of section.cards) {
-      const meta = [card.subtitle, card.date, card.location].filter(Boolean).join(", ")
+      const meta = cardMeta(card)
       lines.push(`### ${card.title}`, ``)
       if (meta) lines.push(meta, ``)
       lines.push(...card.bullets.map((bullet) => `- ${bullet}`))

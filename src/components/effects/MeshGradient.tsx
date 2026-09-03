@@ -1,5 +1,5 @@
 import { useReducedMotion } from "@/hooks/useReducedMotion"
-import { cn } from "@/lib/utils"
+import { cn } from "@/utils/cn"
 
 export function MeshGradient() {
   const prefersReducedMotion = useReducedMotion()

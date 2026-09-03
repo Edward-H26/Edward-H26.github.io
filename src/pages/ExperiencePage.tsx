@@ -6,11 +6,9 @@ export function ExperiencePage() {
   const experience = SECTIONS.experience
 
   return (
-    <>
-      <div>
-        <SectionHeader heading={experience.heading} subheading={experience.subheading} />
-        <Timeline items={experience.cards} />
-      </div>
-    </>
+    <div>
+      <SectionHeader heading={experience.heading} subheading={experience.subheading} />
+      <Timeline items={experience.cards} />
+    </div>
   )
 }

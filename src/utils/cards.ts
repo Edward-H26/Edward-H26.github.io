@@ -1,6 +1,6 @@
 import type { BioSegment, ContentCard, ContentLink } from "@/data/content"
 
-export type PublicationStatus = {
+type PublicationStatus = {
   label: string
   className: string
 }

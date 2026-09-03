@@ -12,14 +12,14 @@ export type ContentCard = {
   links?: ContentLink[]
 }
 
-export type ContentSection = {
+type ContentSection = {
   id: string
   heading: string
   subheading?: string
   cards: ContentCard[]
 }
 
-export type NavItem = {
+type NavItem = {
   path: string
   label: string
 }
@@ -105,7 +105,7 @@ export const HOME_BIO: BioSegment[][] = [
   ],
 ]
 
-export type NewsItem = {
+type NewsItem = {
   date: string
   segments: BioSegment[]
 }
@@ -238,9 +238,9 @@ export const SECTIONS: Record<string, ContentSection> = {
         ]
       },
       {
-        title: "CS 107 Data Science Discovery, University of Illinois at Urbana-Champaign",
+        title: "CS 107 Data Science Discovery, University of Illinois Urbana-Champaign",
         subtitle: "Teaching Assistant",
-        location: "IL, United States",
+        location: "Champaign, IL",
         date: "2023.08-Present",
         bullets: [
           "Facilitated weekly in-person/online office hours and lab sections to provide technical assistance for over 2,000 students.",
@@ -253,14 +253,14 @@ export const SECTIONS: Record<string, ContentSection> = {
         ]
       },
       {
-        title: "Student Government, University of Illinois at Urbana-Champaign",
+        title: "Student Government, University of Illinois Urbana-Champaign",
         subtitle: "iSchool Student Representative",
-        location: "IL, United States",
+        location: "Champaign, IL",
         date: "2022.09-2023.09",
         bullets: [
           "Supervised iSchool community forums to handle student concerns with adherence to predetermined guidelines.",
-          "Facilitated with the university and prospective students and parents during campus tours, answering questions, and providing insight.",
-          "Secured approval for program modifications to existing and new activities from students' feedback."
+          "Assisted the university with campus tours for prospective students and parents, answering questions and providing insight.",
+          "Secured approval for changes to existing and new activities based on student feedback."
         ]
       }
     ]
@@ -277,7 +277,7 @@ export const SECTIONS: Record<string, ContentSection> = {
         bullets: [
           "Selected for the NVIDIA Academic Grant Program Award with 32,000 A100 GPU-hours allocated on the Brev cloud platform to advance multimodal generative models that continuously incorporate new knowledge across text, image, and 3D data without catastrophic forgetting of previously learned cross-modal alignment.",
           "Scaled multimodal continual-learning experiments across audio, image, and text modalities through distributed training on the National Artificial Intelligence Research Resource (NAIRR), profiling throughput and memory trade-offs to enable post-hoc weight-space fusion.",
-          "Optimized parameter-efficient post-hoc fusion framework that learns to compose frozen checkpoints from different continual-learning strategies."
+          "Optimized a parameter-efficient post-hoc fusion framework that learns to compose frozen checkpoints from different continual-learning strategies."
         ],
         links: [
           { label: "NVIDIA Grant", url: "https://ischool.illinois.edu/news-events/news/2026/04/liu-receives-support-ai-project-through-nvidia-academic-grant-program" }
@@ -291,9 +291,6 @@ export const SECTIONS: Record<string, ContentSection> = {
           "Architected an 8-agent orchestration system for HCI literature synthesis, implementing specialized agents of Planner, Researcher, Writer, Critic, SafetyGuardian, ReflexionEngine, LLMJudge, and Evaluation across a 12-step reasoning workflow, achieving 0.955 overall evaluation score, 0.925 on relevance, safety, and clarity.",
           "Designed Model Context Protocol integration for standardized tool interfaces, enabling seamless connection between LLM agents and external data sources, including academic databases, code repositories, and document management systems.",
           "Constructed parallel tool-calling infrastructure integrating Semantic Scholar API and Tavily web search with ThreadPoolExecutor, reducing query latency 40% (8.2s to 4.9s) and adding production-grade fallback handling for API failures."
-        ],
-        links: [
-          { label: "Demo", url: "https://salt-lab-human-ai-assignment-3-buildi-srcuistreamlit-app-zweknl.streamlit.app/" }
         ]
       },
       {
@@ -372,7 +369,7 @@ export const SECTIONS: Record<string, ContentSection> = {
       {
         title: "Education",
         bullets: [
-          "University of Illinois at Urbana-Champaign, Champaign, IL",
+          "University of Illinois Urbana-Champaign, Champaign, IL",
           "BS in Data Science and Information Science",
           "Minors: Computer Science and Statistics",
           "Siebel School of Computing and Data Science",

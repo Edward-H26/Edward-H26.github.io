@@ -1,17 +1,15 @@
 import { PROFILE } from "@/data/content"
-import { cn } from "@/lib/utils"
+import { cn } from "@/utils/cn"
 
 type ProfileAvatarProps = {
   sizeClassName: string
   frameClassName?: string
-  imageClassName?: string
   loading?: "eager" | "lazy"
 }
 
 export function ProfileAvatar({
   sizeClassName,
   frameClassName = "",
-  imageClassName = "",
   loading = "lazy",
 }: ProfileAvatarProps) {
   return (
@@ -28,10 +26,7 @@ export function ProfileAvatar({
         loading={loading}
         decoding="async"
         draggable={false}
-        className={cn(
-          "block h-full w-full rounded-full object-cover object-center select-none",
-          imageClassName,
-        )}
+        className="block h-full w-full rounded-full object-cover object-center select-none"
       />
     </div>
   )

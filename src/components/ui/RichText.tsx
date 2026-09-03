@@ -1,5 +1,5 @@
 import type { BioSegment } from "@/data/content"
-import { getSegmentKey } from "@/utils/content"
+import { getSegmentKey } from "@/utils/cards"
 
 interface RichTextProps {
   segments: BioSegment[]
