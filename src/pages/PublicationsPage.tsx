@@ -9,9 +9,9 @@ export function PublicationsPage() {
     <div>
       <SectionHeader heading={publications.heading} subheading={publications.subheading} />
 
-      <div className="space-y-4">
-        {publications.cards.map((publication, index) => (
-          <PublicationCard key={index} publication={publication} index={index} />
+      <div className="space-y-5">
+        {publications.cards.map((publication) => (
+          <PublicationCard key={publication.title} publication={publication} />
         ))}
       </div>
     </div>

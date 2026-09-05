@@ -178,10 +178,10 @@ describe("json-ld", () => {
     }
     const accepted = articles.find((article) => article.headline.startsWith("AC3S"))
     assert.match(accepted.publication.name, /ECCV/)
-    assert.equal(accepted.url, "https://arxiv.org/abs/2606.31204")
+    assert.equal(accepted.url, "https://arxiv.org/pdf/2606.31204")
     assert.deepEqual(
       accepted.subjectOf.map((page) => page.name),
-      ["Project", "Video"]
+      ["Project Page", "Video", "BibTeX"]
     )
   })
 
