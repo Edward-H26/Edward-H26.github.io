@@ -10,7 +10,64 @@ export type ContentCard = {
   date?: string
   bullets: string[]
   links?: ContentLink[]
+  image?: { src: string; alt: string }
+  badge?: string
+  authors?: string[]
+  venue?: string
+  note?: string
 }
+
+type Publication = Required<Pick<ContentCard, "title" | "authors" | "venue">> &
+  Pick<ContentCard, "badge" | "image" | "links" | "note">
+
+// The citation bullet feeds the SEO pages, llms.txt, and the tests, so it is derived from the
+// structured fields rather than written twice.
+function publication(entry: Publication, index: number): ContentCard {
+  return {
+    ...entry,
+    bullets: [`[${index + 1}] ${entry.authors.join(", ")}. ${entry.title}. ${entry.venue}.`],
+  }
+}
+
+const PUBLICATIONS: Publication[] = [
+  {
+    title: "AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation",
+    authors: ["Eric Ji", "Qiran Hu", "Wufei Ma", "Sarthak Jain", "Yingying Li", "Minh N. Do", "Yaoyao Liu"],
+    venue: "European Conference on Computer Vision (ECCV), 2026",
+    badge: "ECCV",
+    image: {
+      src: "/images/papers/ac3s.webp",
+      alt: "AC3S pipeline: visual prompt extractor, adaptive modulator, image generator, and multi-agent VLM",
+    },
+    links: [
+      { label: "PDF", url: "https://arxiv.org/pdf/2606.31204" },
+      { label: "Project Page", url: "https://ac3s.cvmlgroup.web.illinois.edu/" },
+      { label: "Video", url: "https://youtu.be/3jOJaT2a8iQ" },
+      { label: "BibTeX", url: "https://arxiv.org/bibtex/2606.31204" },
+    ],
+  },
+  {
+    title: "Crowdsourced Open-Source Research: A Research Paradigm Probe",
+    authors: ["Hangyue Zhang", "Qiran Hu", "Ziyi Zhang", "Yun Huang"],
+    venue: "Under Review",
+    badge: "Under Review",
+    image: { src: "/images/papers/crowdsourced.webp", alt: "Contributors feeding a shared open research record" },
+  },
+  {
+    title: "Context Under Budget: A Controlled Benchmark for Post-Retrieval Compression in Retrieval-Augmented Generation",
+    authors: ["Tuan Minh Nguyen", "Qiran Hu", "Banruo Liu", "Khoa D Doan", "Kok-Seng Wong", "Fan Lai"],
+    venue: "Under Review",
+    badge: "Under Review",
+    image: { src: "/images/papers/context-under-budget.webp", alt: "Retrieved documents compressed into a compact context for a model" },
+  },
+  {
+    title: "AlphaWiseFT: Adaptive Weight Interpolation for Continual Multimodal Representation Learning",
+    authors: ["Sarthak Jain", "Qiran Hu", "Zhen Zhu", "Yaoyao Liu"],
+    venue: "Under Review",
+    badge: "Under Review",
+    image: { src: "/images/papers/alphawiseft.webp", alt: "Two model checkpoints blended into one fused model" },
+  },
+]
 
 type ContentSection = {
   id: string
@@ -177,37 +234,7 @@ export const SECTIONS: Record<string, ContentSection> = {
     id: "publications",
     heading: "Publications",
     subheading: "Papers",
-    cards: [
-      {
-        title: "AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation",
-        bullets: [
-          "[1] Eric Ji, Qiran Hu, Wufei Ma, Sarthak Jain, Yingying Li, Minh N. Do, Yaoyao Liu. AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation. European Conference on Computer Vision (ECCV) 2026."
-        ],
-        links: [
-          { label: "arXiv", url: "https://arxiv.org/abs/2606.31204" },
-          { label: "Project", url: "https://ac3s.cvmlgroup.web.illinois.edu/" },
-          { label: "Video", url: "https://youtu.be/3jOJaT2a8iQ" },
-        ],
-      },
-      {
-        title: "Crowdsourced Open-Source Research: A Research Paradigm Probe",
-        bullets: [
-          "[2] Hangyue Zhang, Qiran Hu, Ziyi Zhang, Yun Huang. Crowdsourced Open-Source Research: A Research Paradigm Probe. Under Review."
-        ]
-      },
-      {
-        title: "Context Under Budget: A Controlled Benchmark for Post-Retrieval Compression in Retrieval-Augmented Generation",
-        bullets: [
-          "[3] Tuan Minh Nguyen, Qiran Hu, Banruo Liu, Khoa D Doan, Kok-Seng Wong, Fan Lai. Context Under Budget: A Controlled Benchmark for Post-Retrieval Compression in Retrieval-Augmented Generation. Under Review."
-        ]
-      },
-      {
-        title: "AlphaWiseFT: Adaptive Weight Interpolation for Continual Multimodal Representation Learning",
-        bullets: [
-          "[4] Sarthak Jain, Qiran Hu, Zhen Zhu, Yaoyao Liu. AlphaWiseFT: Adaptive Weight Interpolation for Continual Multimodal Representation Learning. Under Review."
-        ]
-      },
-    ]
+    cards: PUBLICATIONS.map(publication),
   },
   experience: {
     id: "experience",
