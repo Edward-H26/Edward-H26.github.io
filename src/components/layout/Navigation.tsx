@@ -45,12 +45,10 @@ export function Navigation({ onMenuClick }: NavigationProps) {
             href="https://edward-h26.github.io/PersonalWebsite/"
             target="_blank"
             rel="noopener noreferrer"
-            className={prefersReducedMotion ? "px-4 py-2 text-sm font-semibold rounded-full bg-accent text-white hover:bg-accent/90 transition-colors" : "px-4 py-2 text-sm font-semibold liquid-glass-button rounded-full"}
+            className="link-chip rounded-full px-4 py-2 font-semibold"
           >
-            <span className={prefersReducedMotion ? "flex items-center gap-2" : "liquid-glass-button-content"}>
-              <span>Explore My Journey</span>
-              <Sparkles size={14} className={prefersReducedMotion ? "text-primary" : "liquid-glass-icon"} />
-            </span>
+            Explore My Journey
+            <Sparkles size={14} strokeWidth={2.25} className="text-accent" />
           </a>
         </div>
       </motion.header>

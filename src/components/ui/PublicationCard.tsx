@@ -1,7 +1,7 @@
 import { Fragment } from "react"
-import { CirclePlay, FileText, Globe, Quote, type LucideIcon } from "lucide-react"
-import type { ContentCard, ContentLink } from "@/data/content"
+import type { ContentCard } from "@/data/content"
 import { PROFILE } from "@/data/content"
+import { LinkChip } from "@/components/ui/ContentLinks"
 
 // The venue acronym in parentheses is bold, as on the reference homepages.
 function renderVenue(venue: string) {
@@ -14,19 +14,6 @@ function renderVenue(venue: string) {
       <strong className="text-gray-700">{match[1]}</strong>
       {venue.slice(start + match[1].length)}
     </>
-  )
-}
-
-// Paper buttons are plain outlined pills, like an academic homepage, not the site's glass chips.
-const PAPER_ICONS: Partial<Record<string, LucideIcon>> = { pdf: FileText, "project page": Globe, video: CirclePlay, bibtex: Quote }
-
-function PaperLink({ link }: { link: ContentLink }) {
-  const Icon = PAPER_ICONS[link.label.toLowerCase()]
-  return (
-    <a href={link.url} target="_blank" rel="noopener noreferrer" className="paper-link">
-      {Icon ? <Icon size={13} /> : null}
-      {link.label}
-    </a>
   )
 }
 
@@ -95,7 +82,7 @@ export function PublicationCard({ publication }: PublicationCardProps) {
         {publication.links && publication.links.length > 0 && (
           <div className="mt-4 flex flex-wrap items-center gap-2">
             {publication.links.map((link) => (
-              <PaperLink key={link.url} link={link} />
+              <LinkChip key={link.url} link={link} />
             ))}
           </div>
         )}

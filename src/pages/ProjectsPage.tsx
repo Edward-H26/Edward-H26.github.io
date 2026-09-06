@@ -1,8 +1,8 @@
 import { BentoGrid } from "@/components/ui/BentoGrid"
 import { BentoItem } from "@/components/ui/BentoItem"
 import { ContentBullets } from "@/components/ui/ContentBullets"
+import { LinkChip } from "@/components/ui/ContentLinks"
 import { SectionHeader } from "@/components/ui/SectionHeader"
-import { ExternalLink, GithubIcon } from "lucide-react"
 import { SECTIONS } from "@/data/content"
 import { splitLinksByLabel } from "@/utils/cards"
 
@@ -49,28 +49,9 @@ export function ProjectsPage() {
               </div>
 
               <div className="flex flex-wrap gap-2 mt-auto pt-4">
-                {githubLink && (
-                  <a
-                    href={githubLink.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link-chip bg-gray-900 text-white hover:bg-gray-700"
-                  >
-                    <GithubIcon size={12} />
-                    GitHub
-                  </a>
-                )}
+                {githubLink && <LinkChip link={githubLink} />}
                 {otherLinks.map((link) => (
-                  <a
-                    key={link.url}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link-chip"
-                  >
-                    {link.label}
-                    <ExternalLink size={12} />
-                  </a>
+                  <LinkChip key={link.url} link={link} />
                 ))}
               </div>
             </BentoItem>
