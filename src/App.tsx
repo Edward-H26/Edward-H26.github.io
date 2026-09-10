@@ -8,6 +8,7 @@ import { ResearchPage } from "@/pages/ResearchPage"
 import { PublicationsPage } from "@/pages/PublicationsPage"
 import { ExperiencePage } from "@/pages/ExperiencePage"
 import { ProjectsPage } from "@/pages/ProjectsPage"
+import { SectionPage } from "@/pages/SectionPage"
 import { InfoPage } from "@/pages/InfoPage"
 
 function App() {
@@ -36,6 +37,8 @@ function App() {
           <Route path="publications" element={<PublicationsPage />} />
           <Route path="experience" element={<ExperiencePage />} />
           <Route path="projects" element={<ProjectsPage />} />
+          <Route path="teaching" element={<SectionPage id="teaching" />} />
+          <Route path="service" element={<SectionPage id="service" />} />
           <Route path="info" element={<InfoPage />} />
         </Route>
       </Routes>

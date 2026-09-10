@@ -31,14 +31,18 @@ function publication(entry: Publication, index: number): ContentCard {
 
 const PUBLICATIONS: Publication[] = [
   {
+    title: "SV4D 3.0: Single-Step 3D-Aware Diffusion for Multi-View-Consistent 4D Scene Generation",
+    authors: ["Qiran Hu", "Wei Cao", "Yaoyao Liu"],
+    venue: "Under Review",
+    badge: "Under Review",
+    image: { src: "/images/papers/sv4d.webp", alt: "One diffusion step turning noise into a scene that stays consistent across camera views over time" },
+  },
+  {
     title: "AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation",
     authors: ["Eric Ji", "Qiran Hu", "Wufei Ma", "Sarthak Jain", "Yingying Li", "Minh N. Do", "Yaoyao Liu"],
     venue: "European Conference on Computer Vision (ECCV), 2026",
     badge: "ECCV",
-    image: {
-      src: "/images/papers/ac3s.webp",
-      alt: "AC3S pipeline: visual prompt extractor, adaptive modulator, image generator, and multi-agent VLM",
-    },
+    image: { src: "/images/papers/ac3s.webp", alt: "AC3S pipeline: visual prompt extractor, adaptive modulator, image generator, and multi-agent VLM" },
     links: [
       { label: "PDF", url: "https://arxiv.org/pdf/2606.31204" },
       { label: "Project Page", url: "https://ac3s.cvmlgroup.web.illinois.edu/" },
@@ -47,25 +51,25 @@ const PUBLICATIONS: Publication[] = [
     ],
   },
   {
-    title: "Crowdsourced Open-Source Research: A Research Paradigm Probe",
-    authors: ["Hangyue Zhang", "Qiran Hu", "Ziyi Zhang", "Yun Huang"],
-    venue: "Under Review",
-    badge: "Under Review",
-    image: { src: "/images/papers/crowdsourced.webp", alt: "Contributors feeding a shared open research record" },
+    title: "REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving",
+    authors: ["Tuan Nguyen", "Qiran Hu", "Banruo Liu", "Khoa D. Doan", "Kok-Seng Wong", "Fan Lai"],
+    venue: "IEEE International Conference on Data Mining (ICDM), 2026",
+    badge: "ICDM",
+    image: { src: "/images/papers/reva.webp", alt: "Retrieved documents compressed into a compact context for a model" },
   },
   {
-    title: "Context Under Budget: A Controlled Benchmark for Post-Retrieval Compression in Retrieval-Augmented Generation",
-    authors: ["Tuan Minh Nguyen", "Qiran Hu", "Banruo Liu", "Khoa D Doan", "Kok-Seng Wong", "Fan Lai"],
+    title: "AISim: Using LLM-Simulation as Epistemic Scaffolds for Early Stage Qualitative Research Design",
+    authors: ["Hangyue Zhang", "Qiran Hu", "Ziyi Zhang", "Hyanghee Park", "Yun Huang"],
     venue: "Under Review",
     badge: "Under Review",
-    image: { src: "/images/papers/context-under-budget.webp", alt: "Retrieved documents compressed into a compact context for a model" },
+    image: { src: "/images/papers/aisim.webp", alt: "Simulated interview transcripts scaffolding an early-stage qualitative study design" },
   },
   {
-    title: "AlphaWiseFT: Adaptive Weight Interpolation for Continual Multimodal Representation Learning",
+    title: "AlphaWiSE: Adaptive Weight Interpolation for Continual Multimodal Representation Learning",
     authors: ["Sarthak Jain", "Qiran Hu", "Zhen Zhu", "Yaoyao Liu"],
     venue: "Under Review",
     badge: "Under Review",
-    image: { src: "/images/papers/alphawiseft.webp", alt: "Two model checkpoints blended into one fused model" },
+    image: { src: "/images/papers/alphawise.webp", alt: "Two model checkpoints blended into one fused model" },
   },
 ]
 
@@ -90,7 +94,7 @@ export const PROFILE = {
   name: "Qiran Hu",
   title: "Research Assistant",
   affiliation: "University of Illinois Urbana-Champaign",
-  email: "qiranhu8@gmail.com",
+  email: "qh2332@columbia.edu",
   phone: "+1 (347)-957-9176",
   photo: "/images/profile-1024.jpg",
   social: {
@@ -101,14 +105,23 @@ export const PROFILE = {
   },
 }
 
-export const NAV_ITEMS: NavItem[] = [
+// The navigation bar shows NAV_MAIN and tucks NAV_MORE behind a "More" menu. NAV_ITEMS is every
+// route in order, which is what the router, the mobile menu, and the SEO generator walk.
+export const NAV_MAIN: NavItem[] = [
   { path: "/", label: "Home" },
   { path: "/publications", label: "Publications" },
   { path: "/research", label: "Research" },
   { path: "/experience", label: "Experience" },
   { path: "/projects", label: "Projects" },
+  { path: "/teaching", label: "Teaching" },
+]
+
+export const NAV_MORE: NavItem[] = [
+  { path: "/service", label: "Service" },
   { path: "/info", label: "Info" },
 ]
+
+export const NAV_ITEMS: NavItem[] = [...NAV_MAIN, ...NAV_MORE]
 
 export const HOME_BIO: BioSegment[][] = [
   [
@@ -169,12 +182,32 @@ type NewsItem = {
 
 export const NEWS: NewsItem[] = [
   {
+    date: "August 2026",
+    segments: [
+      { text: "Our paper " },
+      { text: "REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving" },
+      { text: " is accepted to the " },
+      { text: "IEEE International Conference on Data Mining (ICDM) 2026", href: "https://www.datamining.org/" },
+      { text: "." },
+    ],
+  },
+  {
     date: "June 2026",
     segments: [
       { text: "Our paper " },
       { text: "AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation", href: "https://arxiv.org/abs/2606.31204" },
       { text: " is accepted to the " },
       { text: "European Conference on Computer Vision (ECCV) 2026", href: "https://eccv.ecva.net/" },
+      { text: "." },
+    ],
+  },
+  {
+    date: "February 2026",
+    segments: [
+      { text: "I am admitted to the M.S. in Data Science program at the " },
+      { text: "Fu Foundation School of Engineering and Applied Science", href: "https://www.engineering.columbia.edu/about" },
+      { text: " at " },
+      { text: "Columbia University", href: "https://www.columbia.edu/" },
       { text: "." },
     ],
   },
@@ -207,28 +240,43 @@ export const SECTIONS: Record<string, ContentSection> = {
       {
         title: "UIUC Computer Vision and Machine Learning Group",
         subtitle: "Undergraduate Research Assistant - Advised by Professor Yaoyao Liu",
+        location: "Champaign, IL",
+        date: "2025.05-Present",
         bullets: [
-          "Develop 3D-consistent generative models for world understanding and embodied AI, and implement diffusion-based approaches for spatially coherent scene synthesis with applications in interactive simulation.",
-          "Investigate real-time 3D reconstruction methods for interactive experiences and integrate neural rendering with depth estimation for embodied agent perception systems.",
-          "Train large-scale vision transformers on TB-level image datasets using a high-performance computing cluster through distributed training at the National Center for Supercomputing Applications (NCSA), optimizing spatial tokenization and enforcing multi-view consistency for 3D-aware diffusion-based scene generation."
+          "Architect adaptive conditioning methods for 3D-aware synthetic data generation to enhance world model understanding and embodied agent performance in interactive simulations with geometry-conditioned diffusion approaches, reducing FID by 32.8% and increasing pose accuracy by 4.2x on PASCAL3D+.",
+          "Conduct large-scale foundation model training across TB-level datasets on the National Center for Supercomputing Applications (NCSA) HPC clusters to enforce multi-view consistency with 4-bit NF4 quantization and low-level custom kernels, improving pose accuracy by 11.3% on PASCAL3D+ and reducing generation latency by 78.7% at p95.",
+          "Design camera-controlled novel view synthesis on video generation pipelines to improve real-time perception for SLAM, visual odometry, and 3D reconstruction, reducing LPIPS by 21.0% on GSO and FV4D by 52.0% on OmniObject3D.",
         ],
         links: [
-          { label: "Lab", url: "https://vision.ischool.illinois.edu/people/" }
-        ]
+          { label: "Lab", url: "https://vision.ischool.illinois.edu/people/" },
+        ],
       },
       {
-        title: "UIUC Social Computing System Lab",
-        subtitle: "Undergraduate Research Assistant - Advised by Professor Yun Huang",
+        title: "Multimodal Continual Learning Project",
+        subtitle: "Undergraduate Research Assistant",
+        location: "Champaign, IL",
+        date: "2026.02-Present",
         bullets: [
-          "Architect streaming video-language models with temporal transformer blocks for long-form video understanding beyond 30-minute sequences with competitive zero-shot accuracy.",
-          "Build joint audio-visual perception pipelines for human-centric social understanding, fusing facial action units, body pose dynamics, and acoustic prosody through cross-modal attention to predict social intent and conversational role in clinical sessions.",
-          "Design a context fluidity framework for personalized AI adaptation, advancing from static prompt engineering toward dynamic context engineering that models individual communication preferences and emotional states across conversation sessions.",
+          "Selected for the NVIDIA Academic Grant Program Award to improve multimodal foundation models in class-incremental learning across audio, image, and text without catastrophic forgetting and cross-modal alignment drift, increasing R@1 by 27.6% on AudioSet.",
+          "Advance post-hoc tensor-level weight-interpolation methods to improve multimodal retrieval through National Artificial Intelligence Research Resource (NAIRR) HPC clusters, reducing trainable parameters from 182M to 499 sigmoid-parameterized coefficients and increasing R@1 by 33.5% on AudioSet.",
+          "Improve checkpoint fusion pipelines that merge separately trained checkpoints into a single model with no additional inference time, increasing last-task accuracy by 40.9% on UrbanSound8K.",
         ],
         links: [
-          { label: "Lab", url: "https://socialcomputing.web.illinois.edu/" }
-        ]
-      }
-    ]
+          { label: "NVIDIA Grant", url: "https://ischool.illinois.edu/news-events/news/2026/04/liu-receives-support-ai-project-through-nvidia-academic-grant-program" },
+        ],
+      },
+      {
+        title: "Long-Form Video-Language and Audio-Visual Social Understanding",
+        subtitle: "Undergraduate Research Assistant, University of Illinois Urbana-Champaign",
+        location: "Champaign, IL",
+        date: "2025.12-2026.05",
+        bullets: [
+          "Trained streaming video-language models with temporal transformer blocks for long-form video understanding beyond 30-minute sequences, increasing zero-shot accuracy by 17.4%.",
+          "Designed context fluidity pipelines that fused facial action units, body pose, and prosody through cross-modal attention to infer social intent and conversational role from raw recordings, achieving 89.1% accuracy on speaker-role classification.",
+          "Built video annotation pipelines for long clinical sessions with automatic transcription and detailed labeling, achieving 90.0% accuracy on role-inversion recovery.",
+        ],
+      },
+    ],
   },
   publications: {
     id: "publications",
@@ -239,124 +287,145 @@ export const SECTIONS: Record<string, ContentSection> = {
   experience: {
     id: "experience",
     heading: "Experience",
-    subheading: "Professional and Leadership Experience",
+    subheading: "Professional Experience",
     cards: [
       {
-        title: "Computer Vision and Machine Learning Group",
-        subtitle: "Undergraduate Research Assistant",
+        title: "Memoria",
+        subtitle: "Founding Technical Lead",
         location: "Champaign, IL",
-        date: "2025.05-Present",
+        date: "2026.01-Present",
         bullets: [
-          "Designed a consistency-trajectory distillation framework that compresses multi-step 3D-aware diffusion teachers into single-step student samplers conditioned on 3D pose and depth.",
-          "Built a parameter-efficient continual-learning pipeline for billion-parameter large multimodal models, extending the partial-retraining methodology with Fisher-aware adapter routing.",
-          "Generalized weight-space interpolation from Euclidean linear combinations to Fisher-Rao geodesic interpolation across continual checkpoints.",
-          "Conducted experiments on real-time 3D reconstruction and visual-inertial odometry for embodied agent perception systems by evaluating spatial intelligence metrics for world model applications."
-        ]
+          "Build end-to-end agentic workflow deployments for medium-sized businesses to deliver customized MCP servers, sub-agents, and agent skills that automate manual handoffs across each client's systems, reducing delivery time by 4.0x compared to traditional approaches.",
+          "Improve self-evolving memory architectures for enterprise workflows to provide persistent per-user context without retraining, reducing token cost by 99.0%.",
+          "Build production logging, monitoring, and evaluation infrastructure for system performance, user behavior, and cost.",
+        ],
+        links: [
+          { label: "Website", url: "https://miramemoria.com/" },
+        ],
       },
       {
-        title: "UIUC Student Affairs, WRC Department",
+        title: "Two by Two Learning",
+        subtitle: "Full Stack Developer",
+        location: "Champaign, IL",
+        date: "2025.08-2026.08",
+        bullets: [
+          "Launched NOODEIA to help K-12 students who are falling behind grade level with multi-agent tutoring systems that plan, critique, and monitor each individual user with long-horizon memory through GraphRAG, increasing learner confidence by 2.4x in counterbalanced within-subjects studies.",
+          "Advanced recency-biased FIFO memory architecture with self-evolving long-term memory that retrieves contextually relevant interactions, reducing memory query latency by 3.6x compared to PostgreSQL.",
+          "Deployed complexity-aware model selection mechanisms across the planner, retrieval, solver, and critic stages that score each request and reserve frontier-tier inference for priority calls, reducing monthly serving cost by 89.9% compared to GPT-4o.",
+        ],
+        links: [
+          { label: "Website", url: "https://noodiea.onrender.com/" },
+        ],
+      },
+      {
+        title: "University of Illinois Urbana-Champaign Women's Resources Center",
         subtitle: "Data Analyst",
         location: "Champaign, IL",
         date: "2024.08-2024.12",
         bullets: [
-          "Conducted rigorous statistical analysis of student performance metrics and survey responses among 19,800 students and implemented a comprehensive data analysis framework for the program.",
-          "Leveraged complex institutional datasets to generate actionable insights by enhancing strategic planning processes and contributing to a 6.5% improvement in resource allocation for student success programs.",
-          "Designed and implemented comprehensive program evaluation frameworks for key educational initiatives by utilizing mixed-methods research to analyze effectiveness."
-        ]
-      },
-      {
-        title: "CS 107 Data Science Discovery, University of Illinois Urbana-Champaign",
-        subtitle: "Teaching Assistant",
-        location: "Champaign, IL",
-        date: "2023.08-Present",
-        bullets: [
-          "Facilitated weekly in-person/online office hours and lab sections to provide technical assistance for over 2,000 students.",
-          "Authored instructional content for DISCOVERY's Guides explaining data science concepts through applied Python examples.",
-          "Designed advanced problem sets, exam questions, test suites, and autograder scripts for DISCOVERY's Mastery Platform."
+          "Built paired pre/post analytics pipelines over survey data from 9,935 incoming students to measure seven learning outcomes for university-wide consent-education programs, increasing correct-response rates by 14.0% and reducing ambiguous responses by 61.9%.",
+          "Conducted A/B tests on two consent scenarios stratified across five gender-identity subgroups to locate where misconceptions persisted after the workshop, achieving 19.5% improvement on consent comprehension.",
+          "Proposed scenario-based learning modules for underrepresented subgroups by coding open-ended bystander responses into five-theme taxonomies, decreasing spread by 5.6x in direct-intervention rates.",
         ],
-        links: [
-          { label: "Guides", url: "https://discovery.cs.illinois.edu/guides/" },
-          { label: "Mastery", url: "https://mastery.cs.illinois.edu/" }
-        ]
       },
-      {
-        title: "Student Government, University of Illinois Urbana-Champaign",
-        subtitle: "iSchool Student Representative",
-        location: "Champaign, IL",
-        date: "2022.09-2023.09",
-        bullets: [
-          "Supervised iSchool community forums to handle student concerns with adherence to predetermined guidelines.",
-          "Assisted the university with campus tours for prospective students and parents, answering questions and providing insight.",
-          "Secured approval for changes to existing and new activities based on student feedback."
-        ]
-      }
-    ]
+    ],
   },
   projects: {
     id: "projects",
     heading: "Projects",
-    subheading: "Projects and Skills",
+    subheading: "Research Projects",
     cards: [
       {
-        title: "Multi-modal Generative Models for Large-scale Continual Learning",
+        title: "REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving",
         subtitle: "Undergraduate Research Assistant",
-        date: "2026.02-Present",
+        location: "Champaign, IL",
+        date: "2026.02-2026.09",
         bullets: [
-          "Selected for the NVIDIA Academic Grant Program Award with 32,000 A100 GPU-hours allocated on the Brev cloud platform to advance multimodal generative models that continuously incorporate new knowledge across text, image, and 3D data without catastrophic forgetting of previously learned cross-modal alignment.",
-          "Scaled multimodal continual-learning experiments across audio, image, and text modalities through distributed training on the National Artificial Intelligence Research Resource (NAIRR), profiling throughput and memory trade-offs to enable post-hoc weight-space fusion.",
-          "Optimized a parameter-efficient post-hoc fusion framework that learns to compose frozen checkpoints from different continual-learning strategies."
+          "Proposed attention-based scoring for post-retrieval RAG context compression to reuse the generator's own attention traces across queries with a document-keyed score store built offline, achieving a 92.0% cache hit rate on HotpotQA.",
+          "Developed word-unit scoring with original-order rendering for budgeted evidence materialization to preserve document structure under compression, increasing F1 by 13.2% on Natural Questions and reducing compression overhead by 96.7% compared to Selective Context.",
+          "Optimized the online path of score lookup, quota allocation, and budget repair for interactive RAG serving, reducing compression latency by 98.9% compared to EXIT and 99.7% compared to FaviComp.",
         ],
-        links: [
-          { label: "NVIDIA Grant", url: "https://ischool.illinois.edu/news-events/news/2026/04/liu-receives-support-ai-project-through-nvidia-academic-grant-program" }
-        ]
       },
       {
-        title: "Multi-agent HCI Research Synthesis Engine",
-        subtitle: "Systems Architect",
-        date: "2025.11-Present",
+        title: "Multi-agent Research Synthesis Engine",
+        subtitle: "Undergraduate Research Assistant",
+        location: "Champaign, IL",
+        date: "2025.11-2026.05",
         bullets: [
-          "Architected an 8-agent orchestration system for HCI literature synthesis, implementing specialized agents of Planner, Researcher, Writer, Critic, SafetyGuardian, ReflexionEngine, LLMJudge, and Evaluation across a 12-step reasoning workflow, achieving 0.955 overall evaluation score, 0.925 on relevance, safety, and clarity.",
-          "Designed Model Context Protocol integration for standardized tool interfaces, enabling seamless connection between LLM agents and external data sources, including academic databases, code repositories, and document management systems.",
-          "Constructed parallel tool-calling infrastructure integrating Semantic Scholar API and Tavily web search with ThreadPoolExecutor, reducing query latency 40% (8.2s to 4.9s) and adding production-grade fallback handling for API failures."
-        ]
-      },
-      {
-        title: "Node Optimized Orchestration Design for Educational Intelligence Architecture",
-        subtitle: "Full Stack Developer",
-        date: "2025.08-Present",
-        bullets: [
-          "Built a K-12 intelligent tutoring platform integrating multi-agent orchestration with memory-enhanced GraphRAG and designed an adaptive learning system that personalizes responses beyond static Q&A.",
-          "Implemented a self-evolving long-term memory module that retrieves contextually relevant prior interactions, addressing the recency bias of FIFO memory structures used in standard RAG systems.",
-          "Deployed to 2 partner institutions and iterated through 6 development cycles incorporating user feedback to refine interface design and response quality based on student engagement data."
+          "Orchestrated eight specialized agents across a 12-step workflow for automated literature synthesis to cover planning, retrieval, drafting, reflection, and safety review in a single loop with LLM-as-judge evaluation, achieving 95.5% accuracy on deep research pipelines.",
+          "Optimized Semantic Scholar and Tavily tool calls for multi-source literature retrieval to reduce latency on the critical path with a bounded thread pool and typed fallbacks, reducing query time by 40.2%.",
+          "Built Model Context Protocol servers for agent tool access to centralize governed tool integration behind one typed interface over academic databases, code repositories, and document stores, reducing integration latency by 87.5% across eight agents.",
         ],
         links: [
-          { label: "GitHub", url: "https://github.com/SALT-Lab-Human-AI/project-check-point-1-NOODEIA" }
-        ]
+          { label: "Project Page", url: "https://salt-lab-human-ai-assignment-3-buildi-srcuistreamlit-app-zweknl.streamlit.app/" },
+        ],
       },
       {
         title: "Realistic Neural Style Transfer Architecture",
-        subtitle: "Independent Researcher",
+        subtitle: "Undergraduate Research Assistant",
         date: "2025.01-2025.08",
         bullets: [
-          "Proposed a multi-scale neural style transfer architecture for transferring abstract art styles onto photographic content, combining VGG-based perceptual losses with edge-preserving structural constraints to retain global content geometry.",
-          "Reduced texture and chromatic distortion artifacts common in patch-based and single-layer loss formulations through a multi-layer Gram matrix loss with adaptive layer weighting."
+          "Architected style transfer frameworks for maintaining photorealistic results under highly abstract styles with VGG perceptual losses and edge-preserving constraints, improving SSIM by 77.0% and MS-SSIM by 49.0% compared to TensorFlow's NST.",
+          "Proposed multi-layer Gram matrix losses with adaptive layer weighting to suppress texture and chromatic artifacts, increasing SSIM by 4.4x and MS-SSIM by 6.4x compared to ChatGPT-4o.",
         ],
         links: [
-          { label: "GitHub", url: "https://github.com/Edward-H26/Realistic-Neural-Style-Transfer-Architecture" }
-        ]
+          { label: "GitHub", url: "https://github.com/Edward-H26/Realistic-Neural-Style-Transfer-Architecture" },
+        ],
       },
       {
-        title: "Anime Statistics and Analysis Platform",
-        subtitle: "Project Lead",
+        title: "Anime Statistics and Analysis Platform, ASAP",
+        subtitle: "Undergraduate Research Assistant",
         date: "2025.02-2025.06",
         bullets: [
-          "Built interactive analytics platform using anime data API for popularity trend visualization and predictive analysis of market opportunities."
+          "Deployed interactive R Shiny analytics platforms to surface anime popularity trends and market opportunities with live Jikan REST API data and predictive analysis on shinyapps.io.",
         ],
         links: [
-          { label: "GitHub", url: "https://github.com/Edward-H26/Anime-Statistics-and-Analysis-Platform-ASAP" }
-        ]
-      }
-    ]
+          { label: "GitHub", url: "https://github.com/Edward-H26/Anime-Statistics-and-Analysis-Platform-ASAP" },
+        ],
+      },
+    ],
+  },
+  teaching: {
+    id: "teaching",
+    heading: "Teaching",
+    subheading: "Courses and Mentoring",
+    cards: [
+      {
+        title: "CS 107 Data Science Discovery, University of Illinois Urbana-Champaign",
+        subtitle: "Teaching Assistant",
+        location: "Champaign, IL",
+        date: "2023.08-2026.05",
+        bullets: [
+          "Led weekly lab sections and office hours for in-person and online sessions, mentoring 1,200 students every semester through data science foundations in Python, statistical inference, data wrangling, and machine learning.",
+          "Authored DISCOVERY Guides on the course website for self-serve concept review to provide every cohort the same worked explanations with applied Python and statistics walkthroughs.",
+          "Designed problem sets, exam questions, test suites, and autograder scripts to deliver instant, consistent feedback to 1,200 students every semester on the course's mastery-learning platform.",
+        ],
+        links: [
+          { label: "Guides", url: "https://discovery.cs.illinois.edu/guides/" },
+          { label: "Mastery", url: "https://mastery.cs.illinois.edu/" },
+        ],
+      },
+    ],
+  },
+  service: {
+    id: "service",
+    heading: "Service",
+    subheading: "Open Source and Community",
+    cards: [
+      {
+        title: "OnePromptClaudeCode",
+        subtitle: "Lead Developer",
+        date: "2026.03-Present",
+        bullets: [
+          "Open-source OnePromptClaudeCode under the MIT License for agentic software development to replace manual configuration with 95 agent skills, 14 specialized sub-agents, 10 MCP servers, and policy guardrails in one agent harness spanning planning, tool execution, review, and shipping.",
+          "Design three-tier capability routers for the agent harness to optimize tokens, latency, and cost on every turn, with keyword matching and session-memory recall ahead of a 4.5 s model reasoning pass, resolving intent in 120 ms and running 37.5x faster than routing every prompt through the model.",
+          "Improve the agent harness runtime for secure agent execution with four lifecycle hooks that gate every tool call before it runs, applying pattern-based deny rules to destructive commands, a pinned reasoning environment, and idempotent install modes with timestamped backups, reducing router latency by 92.7%.",
+        ],
+        links: [
+          { label: "GitHub", url: "https://github.com/Edward-H26/OnePromptClaudeCode" },
+        ],
+      },
+    ],
   },
   info: {
     id: "info",
@@ -368,92 +437,100 @@ export const SECTIONS: Record<string, ContentSection> = {
         bullets: [
           "Chinese (Native)",
           "English (Native)",
-          "Spanish (Elementary)"
-        ]
+          "Spanish (Elementary)",
+        ],
       },
       {
         title: "Certifications and Honors",
         bullets: [
           "Neo4j Certified Professional",
           "Neo4j Graph Data Science Certification",
-          "UIUC Dean's List - 2023 Spring, 2024 Fall, 2025 Spring, 2025 Fall, 2026 Spring",
-          "UIUC James Scholar"
+          "UIUC Dean's List",
+          "UIUC James Scholar",
         ],
         links: [
           { label: "Neo4j Professional", url: "https://graphacademy.neo4j.com/c/2e386da7-2b30-4575-9fd0-b0b0918a6fe0/" },
-          { label: "Neo4j GDS", url: "https://graphacademy.neo4j.com/c/6559f827-9dca-4199-bc9d-8be10fd74891/" }
-        ]
+          { label: "Neo4j GDS", url: "https://graphacademy.neo4j.com/c/6559f827-9dca-4199-bc9d-8be10fd74891/" },
+        ],
       },
       {
         title: "Education",
         bullets: [
           "Columbia University, New York City, NY",
-          "MS in Data Science",
+          "M.S. in Data Science",
           "Fu Foundation School of Engineering and Applied Science",
-          "2026.08 - 2028.05"
-        ]
+          "Courses: High Performance Machine Learning",
+          "2026.08 - 2028.05",
+        ],
       },
       {
         title: "Education",
         bullets: [
           "University of Illinois Urbana-Champaign, Champaign, IL",
-          "BS in Data Science and Information Science",
+          "B.S. in Data Science and Information Science",
           "Minors: Computer Science and Statistics",
           "Siebel School of Computing and Data Science",
-          "2022.08 - 2026.05"
-        ]
-      }
-    ]
-  }
+          "Courses: Applied Machine Learning, Generative AI for Human-AI Collaboration, Advanced AI Web-App Development, Graph Databases, Data Visualization, Computational Photography, Linear Algebra with Computational Applications",
+          "2022.08 - 2026.05",
+        ],
+      },
+    ],
+  },
 }
 
 export const SKILLS_CATEGORIES = {
-  "Programming Languages": ["Python", "C++", "Java", "R", "Ruby", "Kotlin", "PHP"],
-  "AI/ML Frameworks": ["PyTorch", "OpenCV", "LangChain", "LangGraph", "JAX", "TensorFlow", "LangSmith"],
-  "Large Model Training": ["Distributed Training", "SFT", "CUDA", "PEFT", "HPC"],
-  "3D and Vision": ["Diffusion Models", "World Models", "3D Reconstruction", "Depth Estimation", "3D-Aware Generation"],
-  "Multi-agent and Agentic AI": ["Agent Orchestration", "GraphRAG", "Long-Term Memory", "MCP", "Tool Calling", "Function Chaining"],
-  "Full-stack Development": ["React.js", "Next.js", "Vue.js", "Angular.js", "Node.js", "TypeScript", "JavaScript", "HTML5", "Tailwind CSS"],
-  "Databases": ["PostgreSQL", "Neo4j", "MongoDB"],
-  "Infrastructure": ["Docker", "AWS", "Kubernetes", "Cloud DevOps"],
-  "Design and Office Tools": ["Figma", "Canva", "Microsoft Office Suite", "Adobe Creative Suite"],
-  "Other Tools": ["Unity", "SAS", "Arduino UNO"],
+  "Programming Languages": ["Python", "C++", "C", "Rust", "Go", "Java", "Swift", "Kotlin", "Ruby", "R"],
+  "AI/ML Frameworks": ["PyTorch", "CUDA", "JAX", "TensorFlow", "Triton", "TensorRT", "vLLM", "SGLang", "NeMo", "Megatron-LM", "LangGraph", "NCCL", "GPU/TPU/CPU Architecture"],
+  "Foundation Model Training": ["Pre-training", "Post-training", "Test-time Training", "Reinforcement Learning", "Continual Learning", "SFT", "RLHF", "RLAIF", "RLVF", "PPO", "DPO", "GRPO", "Reward Modeling", "Model Alignment", "Synthetic Data Generation", "Knowledge Distillation", "Quantization", "Context Compression", "Token Pruning", "Kernel Optimization", "LoRA", "QLoRA", "Distributed Training", "FSDP"],
+  "Computer Vision": ["World Models", "Diffusion Models", "Autoregressive Models", "Flow Matching", "3D/4D Generation", "Multi-View Geometry", "3D Reconstruction", "Novel View Synthesis", "Spatial Intelligence", "Visual-Inertial Odometry", "Depth Estimation", "NeRFs", "3D Gaussian Splatting", "OpenCV", "SLAM"],
+  "Agentic AI": ["Multi-Agent Orchestration", "Sub-Agent Parallelization", "Computer-Use Agents", "Agent Harness", "Policy Guardrails", "Context Engineering", "Prompt Caching", "MCP", "A2A", "Tool Calling", "Autonomous Workflows", "Long-Horizon Memory", "RAG"],
+  "Full-stack Development": ["React", "Vue", "Angular", "JavaScript", "TypeScript", "HTML5", "Tailwind CSS", "FastAPI"],
+  "Databases and Infrastructure": ["PostgreSQL", "Neo4j", "MongoDB", "Kafka", "Docker", "Kubernetes", "CI/CD", "AWS", "GCP", "Azure"],
+  "Design and Other Tools": ["Figma", "Canva", "Adobe Creative Suite", "Microsoft Office Suite", "Unity"],
 }
 
+// Highlighted on the Info page; every entry must also appear in SKILLS_CATEGORIES.
 export const PROFESSIONAL_SKILLS = [
   "Python",
   "C++",
-  "Java",
-  "R",
-  "Ruby",
+  "Rust",
+  "Go",
   "PyTorch",
-  "OpenCV",
-  "LangChain",
-  "LangGraph",
-  "Distributed Training",
-  "SFT",
   "CUDA",
-  "Diffusion Models",
+  "JAX",
+  "TensorFlow",
+  "Triton",
+  "vLLM",
+  "LangGraph",
+  "Continual Learning",
+  "RLHF",
+  "GRPO",
+  "Quantization",
+  "LoRA",
+  "Distributed Training",
+  "FSDP",
   "World Models",
-  "3D-Aware Generation",
-  "Agent Orchestration",
-  "GraphRAG",
-  "Long-Term Memory",
-  "React.js",
-  "Next.js",
-  "Vue.js",
-  "Angular.js",
-  "Node.js",
+  "Diffusion Models",
+  "Flow Matching",
+  "3D/4D Generation",
+  "Novel View Synthesis",
+  "Spatial Intelligence",
+  "3D Gaussian Splatting",
+  "SLAM",
+  "Multi-Agent Orchestration",
+  "Agent Harness",
+  "Context Engineering",
+  "MCP",
+  "Tool Calling",
+  "Long-Horizon Memory",
+  "RAG",
+  "React",
   "TypeScript",
-  "JavaScript",
-  "HTML5",
   "Tailwind CSS",
+  "FastAPI",
   "PostgreSQL",
   "Neo4j",
-  "MongoDB",
   "Docker",
+  "Kubernetes",
   "AWS",
-  "Figma",
-  "Canva",
-  "Unity",
 ]
