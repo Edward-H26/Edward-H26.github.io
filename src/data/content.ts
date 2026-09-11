@@ -35,7 +35,7 @@ const PUBLICATIONS: Publication[] = [
     authors: ["Qiran Hu", "Wei Cao", "Yaoyao Liu"],
     venue: "Under Review",
     badge: "Under Review",
-    image: { src: "/images/papers/sv4d.webp", alt: "One diffusion step turning noise into a scene that stays consistent across camera views over time" },
+    image: { src: "/images/papers/sv4d.webp", alt: "No public figure yet; this paper is under review" },
   },
   {
     title: "AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation",
@@ -44,7 +44,7 @@ const PUBLICATIONS: Publication[] = [
     badge: "ECCV",
     image: { src: "/images/papers/ac3s.webp", alt: "AC3S pipeline: visual prompt extractor, adaptive modulator, image generator, and multi-agent VLM" },
     links: [
-      { label: "PDF", url: "https://arxiv.org/pdf/2606.31204" },
+      { label: "arXiv", url: "https://arxiv.org/abs/2606.31204" },
       { label: "Project Page", url: "https://ac3s.cvmlgroup.web.illinois.edu/" },
       { label: "Video", url: "https://youtu.be/3jOJaT2a8iQ" },
       { label: "BibTeX", url: "https://arxiv.org/bibtex/2606.31204" },
@@ -57,7 +57,7 @@ const PUBLICATIONS: Publication[] = [
     badge: "ICDM",
     image: { src: "/images/papers/reva.webp", alt: "Three charts from the paper: online overhead per query across five compressors, F1 change over global truncation on four QA datasets, and the share of queries that re-access a stored document" },
     links: [
-      { label: "PDF", url: "https://arxiv.org/pdf/2609.11209" },
+      { label: "arXiv", url: "https://arxiv.org/abs/2609.11209" },
       { label: "BibTeX", url: "https://arxiv.org/bibtex/2609.11209" },
     ],
   },
@@ -66,14 +66,14 @@ const PUBLICATIONS: Publication[] = [
     authors: ["Hangyue Zhang", "Qiran Hu", "Ziyi Zhang", "Hyanghee Park", "Yun Huang"],
     venue: "Under Review",
     badge: "Under Review",
-    image: { src: "/images/papers/aisim.webp", alt: "Simulated interview transcripts scaffolding an early-stage qualitative study design" },
+    image: { src: "/images/papers/aisim.webp", alt: "No public figure yet; this paper is under review" },
   },
   {
     title: "AlphaWiSE: Adaptive Weight Interpolation for Continual Multimodal Representation Learning",
     authors: ["Sarthak Jain", "Qiran Hu", "Zhen Zhu", "Yaoyao Liu"],
     venue: "Under Review",
     badge: "Under Review",
-    image: { src: "/images/papers/alphawise.webp", alt: "Two model checkpoints blended into one fused model" },
+    image: { src: "/images/papers/alphawise.webp", alt: "No public figure yet; this paper is under review" },
   },
 ]
 
@@ -216,14 +216,6 @@ export const NEWS: NewsItem[] = [
       { text: "AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation", href: "https://arxiv.org/abs/2606.31204" },
       { text: " is accepted to the " },
       { text: "European Conference on Computer Vision (ECCV) 2026", href: "https://eccv.ecva.net/" },
-      { text: "." },
-    ],
-  },
-  {
-    date: "May 2026",
-    segments: [
-      { text: "I received my B.S. in Data Science and Information Science at the " },
-      { text: "University of Illinois Urbana-Champaign", href: "https://www.illinois.edu/" },
       { text: "." },
     ],
   },
@@ -486,6 +478,7 @@ export const SECTIONS: Record<string, ContentSection> = {
           "B.S. in Data Science and Information Science",
           "Minors: Computer Science and Statistics",
           "Siebel School of Computing and Data Science",
+          "Honors: Dean's List and James Scholar",
           "Courses: Applied Machine Learning, Generative AI for Human-AI Collaboration, Advanced AI Web-App Development, Graph Databases, Data Visualization, Computational Photography, Linear Algebra with Computational Applications",
           "2022.08 - 2026.05",
         ],

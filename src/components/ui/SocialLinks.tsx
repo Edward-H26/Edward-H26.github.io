@@ -17,51 +17,31 @@ export function SocialLinks({
   className = "flex justify-center gap-4",
   linkClassName = DEFAULT_LINK_CLASS,
 }: SocialLinksProps) {
+  const links = [
+    { label: "Google Scholar", href: PROFILE.social.scholar, Icon: ScholarLogo },
+    { label: "GitHub", href: PROFILE.social.github, Icon: Github },
+    { label: "LinkedIn", href: PROFILE.social.linkedin, Icon: Linkedin },
+    { label: "Email", href: `mailto:${PROFILE.email}`, Icon: Mail },
+    { label: "X", href: PROFILE.social.x, Icon: XLogo },
+  ]
+
   return (
     <div className={className}>
-      <a
-        href={PROFILE.social.linkedin}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={linkClassName}
-        aria-label="LinkedIn"
-      >
-        <Linkedin size={size} />
-      </a>
-      <a
-        href={PROFILE.social.scholar}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={linkClassName}
-        aria-label="Google Scholar"
-      >
-        <ScholarLogo size={size} />
-      </a>
-      <a
-        href={PROFILE.social.github}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={linkClassName}
-        aria-label="GitHub"
-      >
-        <Github size={size} />
-      </a>
-      <a
-        href={`mailto:${PROFILE.email}`}
-        className={linkClassName}
-        aria-label="Email"
-      >
-        <Mail size={size} />
-      </a>
-      <a
-        href={PROFILE.social.x}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={linkClassName}
-        aria-label="X"
-      >
-        <XLogo size={size} />
-      </a>
+      {links.map(({ label, href, Icon }) => {
+        const external = !href.startsWith("mailto:")
+        return (
+          <a
+            key={label}
+            href={href}
+            target={external ? "_blank" : undefined}
+            rel={external ? "noopener noreferrer" : undefined}
+            className={linkClassName}
+            aria-label={label}
+          >
+            <Icon size={size} />
+          </a>
+        )
+      })}
     </div>
   )
 }

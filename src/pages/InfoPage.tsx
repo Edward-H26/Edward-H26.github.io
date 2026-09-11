@@ -107,19 +107,6 @@ export function InfoPage() {
         </BentoGrid>
       </div>
 
-      {languagesCard && (
-        <div>
-          <h2 className="text-lg font-semibold text-primary mb-4">
-            Languages
-          </h2>
-          <div className="flex flex-wrap gap-2">
-            {languagesCard.bullets.map((lang, index) => (
-              <Badge key={index} variant="accent">{lang}</Badge>
-            ))}
-          </div>
-        </div>
-      )}
-
       {certificationsCard && (
         <Card card={certificationsCard} />
       )}
@@ -149,6 +136,19 @@ export function InfoPage() {
                 </div>
               )
             })}
+          </div>
+        </div>
+      )}
+
+      {languagesCard && (
+        <div>
+          <h2 className="text-lg font-semibold text-primary mb-4">
+            Languages
+          </h2>
+          <div className="flex flex-wrap gap-2">
+            {languagesCard.bullets.map((lang, index) => (
+              <Badge key={index} variant="accent">{lang}</Badge>
+            ))}
           </div>
         </div>
       )}
