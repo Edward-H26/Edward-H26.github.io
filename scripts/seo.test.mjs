@@ -181,7 +181,7 @@ describe("json-ld", () => {
     assert.equal(accepted.url, "https://arxiv.org/abs/2606.31204")
     assert.deepEqual(
       accepted.subjectOf.map((page) => page.name),
-      ["Project Page", "Video", "BibTeX"]
+      ["Code", "Video", "BibTeX"]
     )
   })
 
