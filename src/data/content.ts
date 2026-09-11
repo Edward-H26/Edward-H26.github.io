@@ -182,6 +182,16 @@ type NewsItem = {
 
 export const NEWS: NewsItem[] = [
   {
+    date: "September 2026",
+    segments: [
+      { text: "I am presenting our " },
+      { text: "AC3S", href: "https://eccv.ecva.net/virtual/2026/poster/5183" },
+      { text: " poster at " },
+      { text: "ECCV 2026", href: "https://eccv.ecva.net/Conferences/2026" },
+      { text: " in Malmö, Sweden, ExHall #107 on September 12." },
+    ],
+  },
+  {
     date: "August 2026",
     segments: [
       { text: "Our paper " },
