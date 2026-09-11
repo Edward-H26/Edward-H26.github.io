@@ -107,7 +107,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
             href="https://edward-h26.github.io/PersonalWebsite/"
             target="_blank"
             rel="noopener noreferrer"
-            className="link-chip rounded-full px-4 py-2 font-semibold"
+            className="link-chip shrink-0 whitespace-nowrap rounded-full"
           >
             Explore My Journey
             <Sparkles size={14} strokeWidth={2.25} className="text-accent" />
