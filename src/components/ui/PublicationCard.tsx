@@ -53,7 +53,7 @@ export function PublicationCard({ publication }: PublicationCardProps) {
   return (
     <article className="card flex flex-col gap-5 md:flex-row md:items-start md:gap-7">
       {thumbnail && (
-        <div className="w-full max-w-[360px] flex-shrink-0 md:w-[280px]">
+        <div className="w-full max-w-[380px] flex-shrink-0 md:w-[360px]">
           {primary ? (
             <a href={primary.url} target="_blank" rel="noopener noreferrer" aria-label={`${publication.title} (${primary.label})`}>
               {thumbnail}

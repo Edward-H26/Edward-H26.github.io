@@ -110,7 +110,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
             className="link-chip ml-auto shrink-0 whitespace-nowrap rounded-full"
           >
             Explore My Journey
-            <Sparkles size={14} strokeWidth={2.25} className="text-accent" />
+            <Sparkles size={13} strokeWidth={2.25} className="text-accent" />
           </a>
         </div>
       </motion.header>

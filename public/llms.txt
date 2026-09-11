@@ -192,8 +192,6 @@ Personal Information
 
 - Neo4j Certified Professional
 - Neo4j Graph Data Science Certification
-- UIUC Dean's List
-- UIUC James Scholar
 - Links: [Neo4j Professional](https://graphacademy.neo4j.com/c/2e386da7-2b30-4575-9fd0-b0b0918a6fe0/), [Neo4j GDS](https://graphacademy.neo4j.com/c/6559f827-9dca-4199-bc9d-8be10fd74891/)
 
 ### Education

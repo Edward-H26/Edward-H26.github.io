@@ -1,4 +1,4 @@
-import { CirclePlay, ExternalLink, FileText, Github, Globe, Quote, type LucideIcon } from "lucide-react"
+import { Braces, CirclePlay, ExternalLink, FileText, Github, Globe, type LucideIcon } from "lucide-react"
 import type { ContentLink } from "@/data/content"
 
 // Keyed by lowercase link label; matched links lead with this icon, others end with an external-link arrow.
@@ -7,7 +7,7 @@ const LINK_ICONS: Partial<Record<string, LucideIcon>> = {
   pdf: FileText,
   "project page": Globe,
   video: CirclePlay,
-  bibtex: Quote,
+  bibtex: Braces,
   code: Github,
   github: Github,
 }
