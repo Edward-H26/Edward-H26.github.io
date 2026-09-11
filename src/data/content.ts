@@ -114,11 +114,11 @@ export const NAV_MAIN: NavItem[] = [
   { path: "/experience", label: "Experience" },
   { path: "/projects", label: "Projects" },
   { path: "/teaching", label: "Teaching" },
+  { path: "/info", label: "Info" },
 ]
 
 export const NAV_MORE: NavItem[] = [
   { path: "/service", label: "Service" },
-  { path: "/info", label: "Info" },
 ]
 
 export const NAV_ITEMS: NavItem[] = [...NAV_MAIN, ...NAV_MORE]
@@ -224,21 +224,21 @@ export const NEWS: NewsItem[] = [
 ]
 
 export const RESEARCH_INTERESTS = [
-  "Agentic Systems and Tool Use",
-  "Multi Agent Architectures and Coordination",
-  "Multimodal Language Models",
-  "World Models for 3D Environments",
-  "Spatial Intelligence and 3D Reasoning",
-  "Generative Video and Audio Models",
-  "Embodied AI and Simulation",
-  "Human AI Interaction and Interface Prototyping",
-  "Evaluation and Safety for Agentic Systems",
-  "Alignment, Interpretability, and Model Behavior",
-  "Large Scale Training and Data Systems",
+  "3D and 4D Aware Generative Models",
+  "World Models and Spatial Intelligence",
+  "Novel View Synthesis and Multi View Geometry",
+  "Continual and Multimodal Representation Learning",
+  "Multi Agent Orchestration and Agent Harnesses",
+  "Long Horizon Agent Memory and Context Engineering",
+  "Context Efficient Retrieval Augmented Generation",
+  "Long Form Video Language and Audio Visual Understanding",
+  "Foundation Model Training and Post Training",
+  "Quantization, Kernel Optimization, and Efficient Inference",
+  "Human AI Interaction and Agent Evaluation",
 ]
 
 export const ANNOUNCEMENT = {
-  text: "I am actively looking for research collaborations in multimodal learning, 3D-aware generative modeling, and agentic AI systems. Feel free to reach out if you are interested in working together!",
+  text: "I am actively looking for research collaborations in 3D and 4D aware generative modeling, continual multimodal learning, and agentic AI systems with long-horizon memory. Feel free to reach out if you are interested in working together!",
 }
 
 export const SECTIONS: Record<string, ContentSection> = {
@@ -509,8 +509,8 @@ export const PROFESSIONAL_SKILLS = [
   "CUDA",
   "JAX",
   "TensorFlow",
-  "Triton",
   "vLLM",
+  "SGLang",
   "LangGraph",
   "Continual Learning",
   "RLHF",
@@ -542,5 +542,19 @@ export const PROFESSIONAL_SKILLS = [
   "Neo4j",
   "Docker",
   "Kubernetes",
-  "AWS",
+  "SFT",
+  "Test-time Training",
+  "Reinforcement Learning",
+  "Megatron-LM",
+  "NCCL",
+  "GPU/TPU/CPU Architecture",
+  "MongoDB",
+  "Kafka",
+  "Figma",
+  "Canva",
+  "JavaScript",
+  "HTML5",
+  "Context Compression",
+  "Token Pruning",
+  "Synthetic Data Generation",
 ]

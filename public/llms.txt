@@ -21,7 +21,7 @@ Previously, I received my B.S. in Data Science and Information Science with mino
 
 I am an applied AI researcher and full-stack software engineer creating new ways for people to interact with AI. I push the frontier of agentic experiences through rapid internal experiments. My research spans self-evolving multi-agent orchestration, dynamic context engineering for long-term memory, 3D-aware generative modeling, multimodal reasoning, and the next generation of human-AI interfaces.
 
-I am actively looking for research collaborations in multimodal learning, 3D-aware generative modeling, and agentic AI systems. Feel free to reach out if you are interested in working together!
+I am actively looking for research collaborations in 3D and 4D aware generative modeling, continual multimodal learning, and agentic AI systems with long-horizon memory. Feel free to reach out if you are interested in working together!
 
 ## News
 
@@ -32,17 +32,17 @@ I am actively looking for research collaborations in multimodal learning, 3D-awa
 
 ## Research Interests
 
-- Agentic Systems and Tool Use
-- Multi Agent Architectures and Coordination
-- Multimodal Language Models
-- World Models for 3D Environments
-- Spatial Intelligence and 3D Reasoning
-- Generative Video and Audio Models
-- Embodied AI and Simulation
-- Human AI Interaction and Interface Prototyping
-- Evaluation and Safety for Agentic Systems
-- Alignment, Interpretability, and Model Behavior
-- Large Scale Training and Data Systems
+- 3D and 4D Aware Generative Models
+- World Models and Spatial Intelligence
+- Novel View Synthesis and Multi View Geometry
+- Continual and Multimodal Representation Learning
+- Multi Agent Orchestration and Agent Harnesses
+- Long Horizon Agent Memory and Context Engineering
+- Context Efficient Retrieval Augmented Generation
+- Long Form Video Language and Audio Visual Understanding
+- Foundation Model Training and Post Training
+- Quantization, Kernel Optimization, and Efficient Inference
+- Human AI Interaction and Agent Evaluation
 
 ## Publications
 
@@ -178,19 +178,6 @@ Teaching Assistant, 2023.08-2026.05, Champaign, IL
 - Designed problem sets, exam questions, test suites, and autograder scripts to deliver instant, consistent feedback to 1,200 students every semester on the course's mastery-learning platform.
 - Links: [Guides](https://discovery.cs.illinois.edu/guides/), [Mastery](https://mastery.cs.illinois.edu/)
 
-## Service
-
-Open Source and Community
-
-### OnePromptClaudeCode
-
-Lead Developer, 2026.03-Present
-
-- Open-source OnePromptClaudeCode under the MIT License for agentic software development to replace manual configuration with 95 agent skills, 14 specialized sub-agents, 10 MCP servers, and policy guardrails in one agent harness spanning planning, tool execution, review, and shipping.
-- Design three-tier capability routers for the agent harness to optimize tokens, latency, and cost on every turn, with keyword matching and session-memory recall ahead of a 4.5 s model reasoning pass, resolving intent in 120 ms and running 37.5x faster than routing every prompt through the model.
-- Improve the agent harness runtime for secure agent execution with four lifecycle hooks that gate every tool call before it runs, applying pattern-based deny rules to destructive commands, a pinned reasoning environment, and idempotent install modes with timestamped backups, reducing router latency by 92.7%.
-- Links: [GitHub](https://github.com/Edward-H26/OnePromptClaudeCode)
-
 ## Info
 
 Personal Information
@@ -226,6 +213,19 @@ Personal Information
 - Courses: Applied Machine Learning, Generative AI for Human-AI Collaboration, Advanced AI Web-App Development, Graph Databases, Data Visualization, Computational Photography, Linear Algebra with Computational Applications
 - 2022.08 - 2026.05
 
+## Service
+
+Open Source and Community
+
+### OnePromptClaudeCode
+
+Lead Developer, 2026.03-Present
+
+- Open-source OnePromptClaudeCode under the MIT License for agentic software development to replace manual configuration with 95 agent skills, 14 specialized sub-agents, 10 MCP servers, and policy guardrails in one agent harness spanning planning, tool execution, review, and shipping.
+- Design three-tier capability routers for the agent harness to optimize tokens, latency, and cost on every turn, with keyword matching and session-memory recall ahead of a 4.5 s model reasoning pass, resolving intent in 120 ms and running 37.5x faster than routing every prompt through the model.
+- Improve the agent harness runtime for secure agent execution with four lifecycle hooks that gate every tool call before it runs, applying pattern-based deny rules to destructive commands, a pinned reasoning environment, and idempotent install modes with timestamped backups, reducing router latency by 92.7%.
+- Links: [GitHub](https://github.com/Edward-H26/OnePromptClaudeCode)
+
 ## Skills
 
 - **Programming Languages**: Python, C++, C, Rust, Go, Java, Swift, Kotlin, Ruby, R
@@ -245,5 +245,5 @@ Personal Information
 - [Experience | Qiran Hu](https://edward-h26.github.io/experience/): Experience of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: Memoria; Two by Two Learning; University of Illinois Urbana-Champaign…
 - [Projects | Qiran Hu](https://edward-h26.github.io/projects/): Projects of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: REVA: Reusable Evidence View Aggregation for Context-Efficient RAG…
 - [Teaching | Qiran Hu](https://edward-h26.github.io/teaching/): Teaching of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: CS 107 Data Science Discovery, University of Illinois Urbana-Champaign.
-- [Service | Qiran Hu](https://edward-h26.github.io/service/): Service of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: OnePromptClaudeCode.
 - [Info | Qiran Hu](https://edward-h26.github.io/info/): Info of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: Languages; Certifications and Honors; Education.
+- [Service | Qiran Hu](https://edward-h26.github.io/service/): Service of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: OnePromptClaudeCode.

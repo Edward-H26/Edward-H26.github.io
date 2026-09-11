@@ -1,3 +1,5 @@
+import { useState } from "react"
+import { ChevronDown } from "lucide-react"
 import { Badge } from "@/components/ui/Badge"
 import { Card } from "@/components/ui/Card"
 import { BentoGrid } from "@/components/ui/BentoGrid"
@@ -6,6 +8,44 @@ import { InstitutionLogo } from "@/components/ui/InstitutionLogo"
 import { SectionHeader } from "@/components/ui/SectionHeader"
 import { SECTIONS, SKILLS_CATEGORIES, PROFESSIONAL_SKILLS } from "@/data/content"
 import { getCardsByTitle, getFirstCardByTitle } from "@/utils/cards"
+
+// Highlighted skills lead each category; the sort is stable, so the rest keep their CV order.
+const strengthsFirst = (skills: readonly string[]) =>
+  [...skills].sort((a, b) => Number(PROFESSIONAL_SKILLS.includes(b)) - Number(PROFESSIONAL_SKILLS.includes(a)))
+
+// Long categories collapse to this many chips so every card starts at a similar height.
+const COLLAPSED_SKILLS = 13
+
+function SkillCategory({ category, skills }: { category: string; skills: readonly string[] }) {
+  const [expanded, setExpanded] = useState(false)
+  const ordered = strengthsFirst(skills)
+  const shown = expanded ? ordered : ordered.slice(0, COLLAPSED_SKILLS)
+  const hidden = ordered.length - shown.length
+
+  return (
+    <BentoItem className="!p-4">
+      <h3 className="text-sm font-semibold text-blue-800 mb-3">{category}</h3>
+      <div className="flex flex-wrap gap-1.5">
+        {shown.map((skill) => (
+          <Badge key={skill} variant={PROFESSIONAL_SKILLS.includes(skill) ? "pro" : "default"}>
+            {skill}
+          </Badge>
+        ))}
+      </div>
+      {(hidden > 0 || expanded) && (
+        <button
+          type="button"
+          onClick={() => setExpanded((wasExpanded) => !wasExpanded)}
+          aria-expanded={expanded}
+          className="mt-3 flex items-center gap-1 text-xs font-medium text-gray-500 transition-colors hover:text-accent-dark"
+        >
+          {expanded ? "Show less" : `${hidden} more`}
+          <ChevronDown size={14} className={`transition-transform duration-200 ${expanded ? "rotate-180" : ""}`} />
+        </button>
+      )}
+    </BentoItem>
+  )
+}
 
 export function InfoPage() {
   const info = SECTIONS.info
@@ -26,24 +66,7 @@ export function InfoPage() {
         </h2>
         <BentoGrid className="lg:grid-cols-2 xl:grid-cols-3 auto-rows-auto">
           {Object.entries(SKILLS_CATEGORIES).map(([category, skills]) => (
-            <BentoItem
-              key={category}
-              className="!p-4"
-            >
-              <h3 className="text-sm font-semibold text-blue-800 mb-3">
-                {category}
-              </h3>
-              <div className="flex flex-wrap gap-1.5">
-                {skills.map((skill, index) => (
-                  <Badge
-                    key={index}
-                    variant={PROFESSIONAL_SKILLS.includes(skill) ? "pro" : "default"}
-                  >
-                    {skill}
-                  </Badge>
-                ))}
-              </div>
-            </BentoItem>
+            <SkillCategory key={category} category={category} skills={skills} />
           ))}
         </BentoGrid>
       </div>
