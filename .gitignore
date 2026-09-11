@@ -26,3 +26,4 @@ npm-debug.log*
 
 # Original portrait, kept locally only (the site uses public/images/profile-1024.jpg)
 assets/profile.png
+.cache/
