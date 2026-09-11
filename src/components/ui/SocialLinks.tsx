@@ -20,15 +20,6 @@ export function SocialLinks({
   return (
     <div className={className}>
       <a
-        href={PROFILE.social.github}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={linkClassName}
-        aria-label="GitHub"
-      >
-        <Github size={size} />
-      </a>
-      <a
         href={PROFILE.social.linkedin}
         target="_blank"
         rel="noopener noreferrer"
@@ -36,6 +27,24 @@ export function SocialLinks({
         aria-label="LinkedIn"
       >
         <Linkedin size={size} />
+      </a>
+      <a
+        href={PROFILE.social.scholar}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={linkClassName}
+        aria-label="Google Scholar"
+      >
+        <ScholarLogo size={size} />
+      </a>
+      <a
+        href={PROFILE.social.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={linkClassName}
+        aria-label="GitHub"
+      >
+        <Github size={size} />
       </a>
       <a
         href={`mailto:${PROFILE.email}`}
@@ -52,15 +61,6 @@ export function SocialLinks({
         aria-label="X"
       >
         <XLogo size={size} />
-      </a>
-      <a
-        href={PROFILE.social.scholar}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={linkClassName}
-        aria-label="Google Scholar"
-      >
-        <ScholarLogo size={size} />
       </a>
     </div>
   )

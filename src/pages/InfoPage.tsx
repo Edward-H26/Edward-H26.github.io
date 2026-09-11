@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { ChevronDown } from "lucide-react"
 import { Badge } from "@/components/ui/Badge"
 import { Card } from "@/components/ui/Card"
@@ -13,33 +13,38 @@ import { getCardsByTitle, getFirstCardByTitle } from "@/utils/cards"
 const strengthsFirst = (skills: readonly string[]) =>
   [...skills].sort((a, b) => Number(PROFESSIONAL_SKILLS.includes(b)) - Number(PROFESSIONAL_SKILLS.includes(a)))
 
-// Long categories collapse to this many chips so every card starts at a similar height.
-const COLLAPSED_SKILLS = 13
+// Chip widths vary, so a collapsed category is capped by height rather than by count; that keeps
+// every card the same size no matter how long its skill names are.
+const COLLAPSED_HEIGHT = "max-h-60 overflow-hidden"
 
 function SkillCategory({ category, skills }: { category: string; skills: readonly string[] }) {
   const [expanded, setExpanded] = useState(false)
-  const ordered = strengthsFirst(skills)
-  const shown = expanded ? ordered : ordered.slice(0, COLLAPSED_SKILLS)
-  const hidden = ordered.length - shown.length
+  const [overflows, setOverflows] = useState(false)
+  const list = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const element = list.current
+    if (element) setOverflows(element.scrollHeight > element.clientHeight + 4)
+  }, [skills])
 
   return (
     <BentoItem className="!p-4">
       <h3 className="text-sm font-semibold text-blue-800 mb-3">{category}</h3>
-      <div className="flex flex-wrap gap-1.5">
-        {shown.map((skill) => (
+      <div ref={list} className={`flex flex-wrap gap-1.5 ${expanded ? "" : COLLAPSED_HEIGHT}`}>
+        {strengthsFirst(skills).map((skill) => (
           <Badge key={skill} variant={PROFESSIONAL_SKILLS.includes(skill) ? "pro" : "default"}>
             {skill}
           </Badge>
         ))}
       </div>
-      {(hidden > 0 || expanded) && (
+      {overflows && (
         <button
           type="button"
           onClick={() => setExpanded((wasExpanded) => !wasExpanded)}
           aria-expanded={expanded}
           className="mt-3 flex items-center gap-1 text-xs font-medium text-gray-500 transition-colors hover:text-accent-dark"
         >
-          {expanded ? "Show less" : `${hidden} more`}
+          {expanded ? "Show less" : "Show more"}
           <ChevronDown size={14} className={`transition-transform duration-200 ${expanded ? "rotate-180" : ""}`} />
         </button>
       )}

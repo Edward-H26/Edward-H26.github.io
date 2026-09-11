@@ -86,7 +86,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
         className="fixed top-0 left-0 right-0 h-16 glass-nav z-50 hidden xl:block xl:pl-80"
         {...desktopMotionProps}
       >
-        <div className="h-full max-w-4xl mx-auto px-6 flex items-center justify-between">
+        <div className="h-full max-w-5xl mx-auto px-6 flex items-center justify-between gap-8">
           <nav className="flex items-center gap-1">
             {NAV_MAIN.map((item) => (
               <NavLink
@@ -107,7 +107,7 @@ export function Navigation({ onMenuClick }: NavigationProps) {
             href="https://edward-h26.github.io/PersonalWebsite/"
             target="_blank"
             rel="noopener noreferrer"
-            className="link-chip shrink-0 whitespace-nowrap rounded-full"
+            className="link-chip ml-auto shrink-0 whitespace-nowrap rounded-full"
           >
             Explore My Journey
             <Sparkles size={14} strokeWidth={2.25} className="text-accent" />
