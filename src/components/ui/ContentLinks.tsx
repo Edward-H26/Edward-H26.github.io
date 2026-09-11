@@ -8,6 +8,7 @@ const LINK_ICONS: Partial<Record<string, LucideIcon>> = {
   "project page": Globe,
   video: CirclePlay,
   bibtex: Quote,
+  code: Github,
   github: Github,
 }
 
