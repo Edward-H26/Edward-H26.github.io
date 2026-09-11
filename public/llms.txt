@@ -28,7 +28,6 @@ I am actively looking for research collaborations in 3D and 4D aware generative 
 - **September 2026**: I presented our [AC3S poster](https://eccv.ecva.net/virtual/2026/poster/5183) at [ECCV 2026](https://eccv.ecva.net/Conferences/2026) in [Malmö, Sweden](https://eccv.ecva.net/Conferences/2026/Venues), [ExHall #107 on September 12](https://eccv.ecva.net/virtual/2026/poster/5183).
 - **August 2026**: Our paper [REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving](https://arxiv.org/abs/2609.11209) is accepted to the [IEEE International Conference on Data Mining (ICDM) 2026](https://www.datamining.org/).
 - **June 2026**: Our paper [AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation](https://arxiv.org/abs/2606.31204) is accepted to the [European Conference on Computer Vision (ECCV) 2026](https://eccv.ecva.net/).
-- **May 2026**: I received my B.S. in Data Science and Information Science at the [University of Illinois Urbana-Champaign](https://www.illinois.edu/).
 
 ## Research Interests
 
@@ -55,12 +54,12 @@ Papers
 ### AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation
 
 - [2] Eric Ji, Qiran Hu, Wufei Ma, Sarthak Jain, Yingying Li, Minh N. Do, Yaoyao Liu. AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation. European Conference on Computer Vision (ECCV), 2026.
-- Links: [PDF](https://arxiv.org/pdf/2606.31204), [Project Page](https://ac3s.cvmlgroup.web.illinois.edu/), [Video](https://youtu.be/3jOJaT2a8iQ), [BibTeX](https://arxiv.org/bibtex/2606.31204)
+- Links: [arXiv](https://arxiv.org/abs/2606.31204), [Project Page](https://ac3s.cvmlgroup.web.illinois.edu/), [Video](https://youtu.be/3jOJaT2a8iQ), [BibTeX](https://arxiv.org/bibtex/2606.31204)
 
 ### REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving
 
 - [3] Tuan Nguyen, Qiran Hu, Banruo Liu, Khoa D. Doan, Kok-Seng Wong, Fan Lai. REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving. IEEE International Conference on Data Mining (ICDM), 2026.
-- Links: [PDF](https://arxiv.org/pdf/2609.11209), [BibTeX](https://arxiv.org/bibtex/2609.11209)
+- Links: [arXiv](https://arxiv.org/abs/2609.11209), [BibTeX](https://arxiv.org/bibtex/2609.11209)
 
 ### AISim: Using LLM-Simulation as Epistemic Scaffolds for Early Stage Qualitative Research Design
 
@@ -211,6 +210,7 @@ Personal Information
 - B.S. in Data Science and Information Science
 - Minors: Computer Science and Statistics
 - Siebel School of Computing and Data Science
+- Honors: Dean's List and James Scholar
 - Courses: Applied Machine Learning, Generative AI for Human-AI Collaboration, Advanced AI Web-App Development, Graph Databases, Data Visualization, Computational Photography, Linear Algebra with Computational Applications
 - 2022.08 - 2026.05
 
