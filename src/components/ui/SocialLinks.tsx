@@ -1,7 +1,5 @@
-import { Github, Linkedin, Mail } from "lucide-react"
 import { PROFILE } from "@/data/content"
-import { XLogo } from "@/components/logos/XLogo"
-import { ScholarLogo } from "@/components/logos/ScholarLogo"
+import { EmailMark, GitHubMark, LinkedInMark, ScholarMark, XMark } from "@/components/logos/BrandIcons"
 
 type SocialLinksProps = {
   size?: number
@@ -18,11 +16,11 @@ export function SocialLinks({
   linkClassName = DEFAULT_LINK_CLASS,
 }: SocialLinksProps) {
   const links = [
-    { label: "Google Scholar", href: PROFILE.social.scholar, Icon: ScholarLogo },
-    { label: "GitHub", href: PROFILE.social.github, Icon: Github },
-    { label: "LinkedIn", href: PROFILE.social.linkedin, Icon: Linkedin },
-    { label: "Email", href: `mailto:${PROFILE.email}`, Icon: Mail },
-    { label: "X", href: PROFILE.social.x, Icon: XLogo },
+    { label: "Google Scholar", href: PROFILE.social.scholar, Icon: ScholarMark },
+    { label: "GitHub", href: PROFILE.social.github, Icon: GitHubMark },
+    { label: "LinkedIn", href: PROFILE.social.linkedin, Icon: LinkedInMark },
+    { label: "Email", href: `mailto:${PROFILE.email}`, Icon: EmailMark },
+    { label: "X", href: PROFILE.social.x, Icon: XMark },
   ]
 
   return (

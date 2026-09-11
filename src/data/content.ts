@@ -454,8 +454,6 @@ export const SECTIONS: Record<string, ContentSection> = {
         bullets: [
           "Neo4j Certified Professional",
           "Neo4j Graph Data Science Certification",
-          "UIUC Dean's List",
-          "UIUC James Scholar",
         ],
         links: [
           { label: "Neo4j Professional", url: "https://graphacademy.neo4j.com/c/2e386da7-2b30-4575-9fd0-b0b0918a6fe0/" },

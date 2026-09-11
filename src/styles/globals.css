@@ -156,6 +156,7 @@
   .paper-thumb {
     @apply relative m-0 overflow-hidden rounded-xl border border-primary/10 bg-white transition-all duration-200;
     aspect-ratio: 10 / 7;
+    container-type: inline-size;
     box-shadow:
       0 12px 28px -12px rgba(19, 41, 75, 0.45),
       inset 0 1px 0 rgba(255, 255, 255, 0.6);
@@ -173,7 +174,12 @@
   }
 
   .paper-badge {
-    @apply absolute left-2.5 top-2.5 rounded-lg px-3 py-1 text-[13px] font-bold tracking-[0.04em] text-white bg-primary;
+    @apply absolute rounded-lg font-bold tracking-[0.04em] text-white bg-primary;
+    /* Sized in card widths so the badge always lands inside the white band baked into the figure. */
+    left: 2.6cqw;
+    top: 2.4cqw;
+    padding: 0.22em 0.62em;
+    font-size: max(10px, 3.8cqw);
     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0) 55%);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
   }
