@@ -1,5 +1,5 @@
-import { useLayoutEffect, useRef, useState } from "react"
-import { motion, useScroll, useSpring, useTransform } from "framer-motion"
+import { useLayoutEffect, useRef, useState, type CSSProperties } from "react"
+import { motion, useMotionValueEvent, useScroll, useSpring, useTransform, useVelocity } from "framer-motion"
 import { Rocket } from "lucide-react"
 import type { ContentCard } from "@/data/content"
 import { ContentBullets } from "@/components/ui/ContentBullets"
@@ -12,62 +12,109 @@ interface TimelineProps {
   items: ContentCard[]
 }
 
-// The line is 2px wide at left 15px and the dots are 12px wide at left 10px, so both centre on x = 16px.
-const LINE_CLASS = "absolute left-[15px] top-2 bottom-2 w-0.5 bg-gray-200"
+// Each dot is 12px wide at left 10px and top 8px inside its item, so its centre sits 14px below the
+// item's top edge and 16px from the left, where the 2px line at left 15px also centres.
+const DOT_CENTER = 14
+const SPARKS = ["-7px", "6px", "-2px"]
 
 export function Timeline({ items }: TimelineProps) {
   const prefersReducedMotion = useReducedMotion()
   const containerRef = useRef<HTMLDivElement>(null)
   const lineRef = useRef<HTMLDivElement>(null)
-  const [lineHeight, setLineHeight] = useState(0)
+  const itemRefs = useRef<(HTMLDivElement | null)[]>([])
+  const [stops, setStops] = useState<number[]>([])
+  const [endFraction, setEndFraction] = useState(0.65)
+  const [passed, setPassed] = useState(0)
 
+  // Dot centres measured from the container top, re-measured whenever the cards or the page reflow.
+  // On a short page the last dot never reaches the viewport's 65% mark, so the end offset stretches
+  // down to wherever that dot sits when the page is scrolled to the bottom.
   useLayoutEffect(() => {
-    const line = lineRef.current
-    if (!line) return
-    const measure = () => setLineHeight(line.getBoundingClientRect().height)
+    const container = containerRef.current
+    if (!container) return
+    const measure = () => {
+      const centres = itemRefs.current.flatMap((item) => (item ? [item.offsetTop + DOT_CENTER] : []))
+      setStops((previous) => (previous.join() === centres.join() ? previous : centres))
+      if (centres.length === 0) return
+      const containerTop = container.getBoundingClientRect().top + window.scrollY
+      const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight)
+      const lastDotAtBottom = (containerTop + centres[centres.length - 1] - maxScroll) / window.innerHeight
+      setEndFraction(Math.round(Math.min(1, Math.max(0.65, lastDotAtBottom)) * 1000) / 1000)
+    }
     measure()
     const observer = new ResizeObserver(measure)
-    observer.observe(line)
-    return () => observer.disconnect()
-  }, [])
+    observer.observe(container)
+    observer.observe(document.body)
+    window.addEventListener("resize", measure)
+    return () => {
+      observer.disconnect()
+      window.removeEventListener("resize", measure)
+    }
+  }, [items.length])
 
-  // The rocket sits where the viewport's 65% mark crosses the timeline, like the Memoria pilot section.
-  const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start 0.65", "end 0.65"] })
+  const lineTop = stops[0] ?? 0
+  const lineHeight = stops.length > 1 ? stops[stops.length - 1] - stops[0] : 0
+
+  // The line runs from the first stop to the last one, so the rocket parks at the final dot instead
+  // of flying past it. Progress is where the viewport's 65% mark crosses that line, like the Memoria
+  // pilot section.
+  const { scrollYProgress } = useScroll({ target: lineRef, offset: ["start 0.65", `end ${endFraction}`] })
   const progress = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 })
-  const rocketY = useTransform(progress, [0, 1], [0, lineHeight])
+  const rocketTop = useTransform(progress, (value) => `${value * 100}%`)
+  const speed = useVelocity(progress)
+  const flameScale = useTransform(speed, (value) => 1 + Math.min(Math.abs(value) * 0.9, 1.1))
+
+  useMotionValueEvent(progress, "change", (value) => {
+    const rocketY = lineTop + value * lineHeight
+    setPassed(stops.filter((stop) => stop <= rocketY + 1).length)
+  })
+
+  const animated = !prefersReducedMotion && lineHeight > 0
 
   return (
     <div ref={containerRef} className="relative">
-      <div ref={lineRef} className={LINE_CLASS}>
-        {!prefersReducedMotion && (
-          <motion.div
-            className="absolute inset-x-0 top-0 h-full origin-top bg-gradient-to-b from-accent to-accent/60"
-            style={{ scaleY: progress }}
-          />
+      <div ref={lineRef} className="absolute left-[15px] w-0.5 bg-gray-200" style={{ top: lineTop, height: lineHeight }}>
+        {animated && (
+          <>
+            <motion.div
+              className="absolute inset-x-0 top-0 h-full origin-top bg-gradient-to-b from-accent to-accent/60 shadow-[0_0_8px_rgba(255,95,5,0.45)]"
+              style={{ scaleY: progress }}
+            />
+            <motion.div aria-hidden className="pointer-events-none absolute left-1/2 z-10" style={{ top: rocketTop, x: "-50%", y: "-50%" }}>
+              <span className="relative block h-8 w-8">
+                <span className="absolute inset-0 rounded-full bg-accent/30 blur-md" />
+                <motion.span className="rocket-flame" style={{ scaleY: flameScale }}>
+                  <span className="rocket-flame-core" />
+                </motion.span>
+                {SPARKS.map((dx, index) => (
+                  <span key={dx} className="rocket-spark" style={{ "--dx": dx, animationDelay: `${index * 0.3}s` } as CSSProperties} />
+                ))}
+                <Rocket className="absolute left-1/2 top-1/2 h-5 w-5 -translate-x-1/2 -translate-y-1/2 rotate-[135deg] text-accent" strokeWidth={2} fill="white" />
+              </span>
+            </motion.div>
+          </>
         )}
       </div>
-
-      {!prefersReducedMotion && (
-        <motion.div aria-hidden className="pointer-events-none absolute left-4 top-2 z-10" style={{ y: rocketY, x: "-50%" }}>
-          <span className="relative block -translate-y-1/2">
-            <span className="absolute left-1/2 -top-3 h-7 w-7 -translate-x-1/2 rounded-full bg-accent/35 blur-md" />
-            <Rocket className="relative h-5 w-5 rotate-[135deg] text-accent" strokeWidth={2} fill="white" />
-          </span>
-        </motion.div>
-      )}
 
       <div className="space-y-8">
         {items.map((item, index) => {
           const isPresent = isCurrentDateRange(item.date)
+          const lit = animated && index < passed
 
           return (
-            <div key={index} className="relative pl-12">
+            <div
+              key={index}
+              ref={(element) => {
+                itemRefs.current[index] = element
+              }}
+              className="relative pl-12"
+            >
               <div
-                className={`absolute left-2.5 top-2 w-3 h-3 rounded-full border-2 ${
-                  isPresent
-                    ? "bg-accent border-accent animate-pulse-slow"
-                    : "bg-white border-gray-300"
-                }`}
+                className={`absolute left-2.5 top-2 h-3 w-3 rounded-full border-2 transition-all duration-300 ${
+                  lit || isPresent
+                    ? "border-accent bg-accent shadow-[0_0_0_4px_rgba(255,95,5,0.18)]"
+                    : "border-gray-300 bg-white"
+                } ${isPresent ? "animate-pulse-slow" : ""}`}
               />
 
               <div className="card">
