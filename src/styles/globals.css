@@ -155,6 +155,8 @@
 
   .paper-thumb {
     @apply relative m-0 overflow-hidden rounded-xl border border-primary/10 bg-white transition-all duration-200;
+    /* Every paper gets the same 10:7 frame; the figure is centred inside it so the cards line up. */
+    aspect-ratio: 10 / 7;
     container-type: inline-size;
     box-shadow:
       0 12px 28px -12px rgba(19, 41, 75, 0.45),
@@ -162,7 +164,23 @@
   }
 
   .paper-thumb img {
-    @apply block h-auto w-full;
+    @apply block h-full w-full object-contain;
+  }
+
+  /* Timeline rocket: the exhaust flickers on its own and the outer flame scales with scroll speed. */
+  .rocket-flame {
+    @apply absolute left-1/2 top-0 h-5 w-2.5 origin-bottom -translate-x-1/2 -translate-y-full;
+  }
+
+  .rocket-flame-core {
+    @apply block h-full w-full origin-bottom rounded-full;
+    background: linear-gradient(to top, #ff5f05 0%, #ffb347 45%, rgba(255, 244, 230, 0) 100%);
+    animation: flame-flicker 0.28s ease-in-out infinite alternate;
+  }
+
+  .rocket-spark {
+    @apply absolute left-1/2 top-0 h-1 w-1 rounded-full bg-accent;
+    animation: spark-rise 0.9s ease-out infinite;
   }
 
   a:hover .paper-thumb {
@@ -240,3 +258,24 @@
   }
 }
 
+@keyframes flame-flicker {
+  from {
+    transform: scaleY(0.85) scaleX(1.05);
+    opacity: 0.85;
+  }
+  to {
+    transform: scaleY(1.2) scaleX(0.85);
+    opacity: 1;
+  }
+}
+
+@keyframes spark-rise {
+  from {
+    transform: translate(-50%, 0) scale(1);
+    opacity: 0.9;
+  }
+  to {
+    transform: translate(calc(-50% + var(--dx)), -22px) scale(0.2);
+    opacity: 0;
+  }
+}
