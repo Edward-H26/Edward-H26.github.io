@@ -311,9 +311,9 @@ export const SECTIONS: Record<string, ContentSection> = {
         location: "Champaign, IL",
         date: "2026.01-Present",
         bullets: [
-          "Lead end-to-end agentic workflow deployments across MCP servers, sub-agents, and agent skills, accelerating product delivery by 4.0x compared to traditional approaches.",
-          "Maintain production systems for deployed workflows through log reviews and result evaluations, saving 90.5% in serving cost.",
-          "Implement self-evolving memory and cost-aware model routing for enterprise workflows to keep persistent per-user context across sessions, saving 96.0% in token cost compared to GPT-4 Turbo.",
+          "Lead end-to-end agentic workflow deployments across MCP servers, sub-agents, and agent skills with multi-agent orchestration, permission-aware tool calling, and policy guardrails, accelerating product delivery by 4.0x compared to traditional approaches.",
+          "Manage production operations for deployed workflows with logging, evaluation harnesses, and monthly improvement cycles with client stakeholders, saving 90.5% in serving cost.",
+          "Optimize enterprise workflows with self-evolving per-user memory and cost-aware model routing across sessions, saving 96.0% in token cost compared to GPT-4 Turbo.",
         ],
         links: [
           { label: "Website", url: "https://miramemoria.com/" },
@@ -326,7 +326,7 @@ export const SECTIONS: Record<string, ContentSection> = {
         date: "2025.08-2026.08",
         bullets: [
           "Launched NOODEIA to help K-12 students falling behind grade level with multi-agent tutoring systems to plan, critique, and monitor each user with long-horizon memory, boosting user confidence by 2.4x in counterbalanced within-subjects studies.",
-          "Implemented self-evolving long-term memory architectures to replace recency-biased FIFO memory architectures by retrieving contextually relevant prior interactions, accelerating memory queries by 3.6x compared to PostgreSQL.",
+          "Designed self-evolving long-term memory architectures to replace recency-biased FIFO memory architectures by retrieving contextually relevant prior interactions, accelerating memory queries by 3.6x compared to PostgreSQL.",
           "Deployed complexity-aware model selection across planner, retrieval, solver, and critic stages to score each request and reserve frontier-tier inference for priority calls, eliminating 89.9% of monthly serving cost compared to GPT-4o.",
         ],
         links: [
