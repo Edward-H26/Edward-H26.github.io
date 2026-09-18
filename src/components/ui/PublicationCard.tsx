@@ -43,7 +43,7 @@ export function PublicationCard({ publication }: PublicationCardProps) {
   const primary = primaryLink(publication)
   const thumbnail = publication.image ? (
     <figure className="paper-thumb">
-      <img src={publication.image.src} alt={publication.image.alt} loading="lazy" width={1000} height={700} />
+      <img src={publication.image.src} alt={publication.image.alt} loading="lazy" width={publication.image.width ?? 1000} height={publication.image.height ?? 700} />
       {publication.badge && (
         <span className={publication.badge === "Under Review" ? "paper-badge paper-badge-muted" : "paper-badge"}>{publication.badge}</span>
       )}
@@ -53,7 +53,7 @@ export function PublicationCard({ publication }: PublicationCardProps) {
   return (
     <article className="card flex flex-col gap-5 md:flex-row md:items-start md:gap-7">
       {thumbnail && (
-        <div className="w-full max-w-[380px] flex-shrink-0 md:w-[360px]">
+        <div className="w-full flex-shrink-0 md:w-[360px]">
           {primary ? (
             <a href={primary.url} target="_blank" rel="noopener noreferrer" aria-label={`${publication.title} (${primary.label})`}>
               {thumbnail}

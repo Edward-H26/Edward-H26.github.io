@@ -1,6 +1,7 @@
 import type { ContentCard } from "@/data/content"
 import { ContentBullets } from "@/components/ui/ContentBullets"
 import { ContentLinks } from "@/components/ui/ContentLinks"
+import { DateRange } from "@/components/ui/DateRange"
 
 interface CardProps {
   card: ContentCard
@@ -23,7 +24,7 @@ export function Card({ card }: CardProps) {
         {(card.location || card.date) && (
           <div className="text-sm text-gray-500 text-right flex-shrink-0">
             {card.location && <div>{card.location}</div>}
-            {card.date && <div className="font-medium">{card.date}</div>}
+            {card.date && <DateRange date={card.date} className="block" />}
           </div>
         )}
       </div>

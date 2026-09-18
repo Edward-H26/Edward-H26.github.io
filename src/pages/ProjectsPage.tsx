@@ -2,6 +2,7 @@ import { BentoGrid } from "@/components/ui/BentoGrid"
 import { BentoItem } from "@/components/ui/BentoItem"
 import { ContentBullets } from "@/components/ui/ContentBullets"
 import { LinkChip } from "@/components/ui/ContentLinks"
+import { DateRange } from "@/components/ui/DateRange"
 import { SectionHeader } from "@/components/ui/SectionHeader"
 import { SECTIONS } from "@/data/content"
 import { splitLinksByLabel } from "@/utils/cards"
@@ -34,11 +35,7 @@ export function ProjectsPage() {
                         {project.subtitle}
                       </p>
                     )}
-                    {project.date && (
-                      <div className="text-xs text-gray-400 flex-shrink-0 bg-gray-100/80 px-2 py-1 rounded-full ml-auto">
-                        {project.date}
-                      </div>
-                    )}
+                    {project.date && <DateRange date={project.date} className="ml-auto flex-shrink-0" />}
                   </div>
                 </div>
 
