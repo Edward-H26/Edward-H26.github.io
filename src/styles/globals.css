@@ -155,7 +155,6 @@
 
   .paper-thumb {
     @apply relative m-0 overflow-hidden rounded-xl border border-primary/10 bg-white transition-all duration-200;
-    aspect-ratio: 10 / 7;
     container-type: inline-size;
     box-shadow:
       0 12px 28px -12px rgba(19, 41, 75, 0.45),
@@ -163,7 +162,7 @@
   }
 
   .paper-thumb img {
-    @apply block h-full w-full object-cover object-top;
+    @apply block h-auto w-full;
   }
 
   a:hover .paper-thumb {

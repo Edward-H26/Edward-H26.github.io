@@ -10,7 +10,7 @@ export type ContentCard = {
   date?: string
   bullets: string[]
   links?: ContentLink[]
-  image?: { src: string; alt: string }
+  image?: { src: string; alt: string; width?: number; height?: number }
   badge?: string
   authors?: string[]
   venue?: string
@@ -35,7 +35,7 @@ const PUBLICATIONS: Publication[] = [
     authors: ["Eric Ji", "Qiran Hu", "Wufei Ma", "Sarthak Jain", "Yingying Li", "Minh N. Do", "Yaoyao Liu"],
     venue: "European Conference on Computer Vision (ECCV), 2026",
     badge: "ECCV",
-    image: { src: "/images/papers/ac3s.webp", alt: "AC3S pipeline: visual prompt extractor, adaptive modulator, image generator, and multi-agent VLM" },
+    image: { src: "/images/papers/ac3s.webp", width: 779, height: 653, alt: "AC3S pipeline: visual prompt extractor, adaptive modulator, image generator, and multi-agent VLM" },
     links: [
       { label: "arXiv", url: "https://arxiv.org/abs/2606.31204" },
       { label: "Code", url: "https://ac3s.cvmlgroup.web.illinois.edu/" },
@@ -48,7 +48,7 @@ const PUBLICATIONS: Publication[] = [
     authors: ["Tuan Nguyen", "Qiran Hu", "Banruo Liu", "Khoa D. Doan", "Kok-Seng Wong", "Fan Lai"],
     venue: "IEEE International Conference on Data Mining (ICDM), 2026",
     badge: "ICDM",
-    image: { src: "/images/papers/reva.webp", alt: "Three charts from the paper: online overhead per query across five compressors, F1 change over global truncation on four QA datasets, and the share of queries that re-access a stored document" },
+    image: { src: "/images/papers/reva.webp", width: 1000, height: 554, alt: "Three charts from the paper: online overhead per query across five compressors, F1 change over global truncation on four QA datasets, and the share of queries that re-access a stored document" },
     links: [
       { label: "arXiv", url: "https://arxiv.org/abs/2609.11209" },
       { label: "Code", url: "https://github.com/UIUC-MLSys/REVA" },
@@ -196,10 +196,10 @@ export const NEWS: NewsItem[] = [
   {
     date: "September 2026",
     segments: [
-      { text: "I presented our " },
-      { text: "AC3S poster", href: "https://eccv.ecva.net/virtual/2026/poster/5183" },
-      { text: " at " },
-      { text: "ECCV 2026", href: "https://eccv.ecva.net/Conferences/2026" },
+      { text: "I am honored to present our poster " },
+      { text: "AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation", href: "https://eccv.ecva.net/virtual/2026/poster/5183" },
+      { text: " at the " },
+      { text: "European Conference on Computer Vision (ECCV) 2026", href: "https://eccv.ecva.net/Conferences/2026" },
       { text: " in " },
       { text: "Malmö, Sweden", href: "https://eccv.ecva.net/Conferences/2026/Venues" },
       { text: ", " },
