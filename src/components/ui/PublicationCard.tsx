@@ -3,16 +3,19 @@ import type { ContentCard } from "@/data/content"
 import { PROFILE } from "@/data/content"
 import { LinkChip } from "@/components/ui/ContentLinks"
 
-// The venue acronym in parentheses is bold, as on the reference homepages.
+// The venue acronym in parentheses is bold and a published venue closes with a period, as on the
+// reference homepages. Rows that read "Under Review" get neither.
 function renderVenue(venue: string) {
+  const tail = /\d$/.test(venue) ? "." : ""
   const match = venue.match(/\(([A-Za-z]+)\)/)
-  if (!match || match.index === undefined) return venue
+  if (!match || match.index === undefined) return venue + tail
   const start = match.index + 1
   return (
     <>
       {venue.slice(0, start)}
       <strong className="text-gray-700">{match[1]}</strong>
       {venue.slice(start + match[1].length)}
+      {tail}
     </>
   )
 }
@@ -24,7 +27,7 @@ function primaryLink(publication: ContentCard) {
 
 function Authors({ authors }: { authors: string[] }) {
   return (
-    <p className="mt-1.5 text-sm leading-relaxed text-gray-700">
+    <p className="mt-2 text-[15px] leading-relaxed text-gray-700">
       {authors.map((author, index) => (
         <Fragment key={author}>
           {index > 0 && ", "}
@@ -65,7 +68,7 @@ export function PublicationCard({ publication }: PublicationCardProps) {
       )}
 
       <div className="min-w-0 flex-1">
-        <h3 className="text-base font-semibold leading-snug text-primary md:text-lg">
+        <h3 className="text-lg font-semibold leading-snug text-primary md:text-xl">
           {primary ? (
             <a href={primary.url} target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent-dark hover:no-underline">
               {publication.title}
@@ -77,7 +80,7 @@ export function PublicationCard({ publication }: PublicationCardProps) {
 
         {publication.authors && <Authors authors={publication.authors} />}
 
-        {publication.venue && <p className="mt-1.5 text-sm italic text-gray-500">{renderVenue(publication.venue)}</p>}
+        {publication.venue && <p className="mt-2 text-[15px] italic text-gray-500">{renderVenue(publication.venue)}</p>}
 
         {publication.links && publication.links.length > 0 && (
           <div className="mt-4 flex flex-wrap items-center gap-2">

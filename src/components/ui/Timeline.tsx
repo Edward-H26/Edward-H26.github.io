@@ -25,6 +25,7 @@ export function Timeline({ items }: TimelineProps) {
   const [stops, setStops] = useState<number[]>([])
   const [endFraction, setEndFraction] = useState(0.65)
   const [passed, setPassed] = useState(0)
+  const [heading, setHeading] = useState<"down" | "up">("down")
 
   // Dot centres measured from the container top, re-measured whenever the cards or the page reflow.
   // On a short page the last dot never reaches the viewport's 65% mark, so the end offset stretches
@@ -64,6 +65,13 @@ export function Timeline({ items }: TimelineProps) {
   const speed = useVelocity(progress)
   const flameScale = useTransform(speed, (value) => 1 + Math.min(Math.abs(value) * 0.9, 1.1))
 
+  // The rocket turns around when the reader scrolls back up. The threshold ignores the spring's
+  // dying wobble, so a rocket at rest keeps the heading it arrived with.
+  useMotionValueEvent(speed, "change", (value) => {
+    if (value > 0.002) setHeading("down")
+    else if (value < -0.002) setHeading("up")
+  })
+
   useMotionValueEvent(progress, "change", (value) => {
     const rocketY = lineTop + value * lineHeight
     setPassed(stops.filter((stop) => stop <= rocketY + 1).length)
@@ -81,16 +89,23 @@ export function Timeline({ items }: TimelineProps) {
               style={{ scaleY: progress }}
             />
             <motion.div aria-hidden className="pointer-events-none absolute left-1/2 z-10" style={{ top: rocketTop, x: "-50%", y: "-50%" }}>
-              <span className="relative block h-8 w-8">
-                <span className="absolute inset-0 rounded-full bg-accent/30 blur-md" />
-                <motion.span className="rocket-flame" style={{ scaleY: flameScale }}>
+              {/* The nose points up inside this box and the exhaust hangs below it, so rotating the
+                  box by 180 degrees turns the whole rocket around without moving its centre. */}
+              <motion.span
+                className="relative block h-7 w-7"
+                animate={{ rotate: heading === "down" ? 180 : 0 }}
+                transition={{ type: "spring", stiffness: 240, damping: 20 }}
+              >
+                <span className="absolute inset-0 rounded-full bg-accent/25 blur-md" />
+                {/* x lives in the motion style because framer's transform replaces Tailwind's. */}
+                <motion.span className="rocket-flame" style={{ x: "-50%", scaleY: flameScale }}>
                   <span className="rocket-flame-core" />
                 </motion.span>
                 {SPARKS.map((dx, index) => (
                   <span key={dx} className="rocket-spark" style={{ "--dx": dx, animationDelay: `${index * 0.3}s` } as CSSProperties} />
                 ))}
-                <Rocket className="absolute left-1/2 top-1/2 h-5 w-5 -translate-x-1/2 -translate-y-1/2 rotate-[135deg] text-accent" strokeWidth={2} fill="white" />
-              </span>
+                <Rocket className="absolute left-1/2 top-1/2 h-[18px] w-[18px] -translate-x-1/2 -translate-y-1/2 -rotate-45 text-accent" strokeWidth={2} fill="white" />
+              </motion.span>
             </motion.div>
           </>
         )}
