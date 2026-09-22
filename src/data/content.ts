@@ -35,7 +35,7 @@ const PUBLICATIONS: Publication[] = [
     authors: ["Eric Ji", "Qiran Hu", "Wufei Ma", "Sarthak Jain", "Yingying Li", "Minh N. Do", "Yaoyao Liu"],
     venue: "European Conference on Computer Vision (ECCV), 2026",
     badge: "ECCV",
-    image: { src: "/images/papers/ac3s.webp", width: 779, height: 653, alt: "AC3S pipeline: visual prompt extractor, adaptive modulator, image generator, and multi-agent VLM" },
+    image: { src: "/images/papers/ac3s.webp", width: 1080, height: 756, alt: "AC3S pipeline: visual prompt extractor, adaptive modulator, image generator, and multi-agent VLM" },
     links: [
       { label: "arXiv", url: "https://arxiv.org/abs/2606.31204" },
       { label: "Code", url: "https://ac3s.cvmlgroup.web.illinois.edu/" },
@@ -48,7 +48,7 @@ const PUBLICATIONS: Publication[] = [
     authors: ["Tuan Nguyen", "Qiran Hu", "Banruo Liu", "Khoa D. Doan", "Kok-Seng Wong", "Fan Lai"],
     venue: "IEEE International Conference on Data Mining (ICDM), 2026",
     badge: "ICDM",
-    image: { src: "/images/papers/reva.webp", width: 1000, height: 554, alt: "Three charts from the paper: online overhead per query across five compressors, F1 change over global truncation on four QA datasets, and the share of queries that re-access a stored document" },
+    image: { src: "/images/papers/reva.webp", width: 1080, height: 756, alt: "Three charts from the paper: online overhead per query across five compressors, F1 change over global truncation on four QA datasets, and the share of queries that re-access a stored document" },
     links: [
       { label: "arXiv", url: "https://arxiv.org/abs/2609.11209" },
       { label: "Code", url: "https://github.com/UIUC-MLSys/REVA" },
@@ -60,28 +60,28 @@ const PUBLICATIONS: Publication[] = [
     authors: ["Tuan Nguyen", "Qiran Hu", "Dibyadeep Saha", "Banruo Liu", "Khoa D. Doan", "Kok-Seng Wong", "Fan Lai"],
     venue: "Under Review",
     badge: "Under Review",
-    image: { src: "/images/papers/acdn.webp", alt: "No public figure yet; this paper is under review" },
+    image: { src: "/images/papers/acdn.webp", width: 1080, height: 756, alt: "No public figure yet; this paper is under review" },
   },
   {
     title: "SV4D 3.0: Single-Step 3D-Aware Diffusion for Multi-View-Consistent 4D Scene Generation",
     authors: ["Qiran Hu", "Wei Cao", "Yaoyao Liu"],
     venue: "Under Review",
     badge: "Under Review",
-    image: { src: "/images/papers/sv4d.webp", alt: "No public figure yet; this paper is under review" },
+    image: { src: "/images/papers/sv4d.webp", width: 1080, height: 756, alt: "No public figure yet; this paper is under review" },
   },
   {
     title: "AISim: Using LLM-Simulation as Epistemic Scaffolds for Early Stage Qualitative Research Design",
     authors: ["Hangyue Zhang", "Qiran Hu", "Ziyi Zhang", "Hyanghee Park", "Yun Huang"],
     venue: "Under Review",
     badge: "Under Review",
-    image: { src: "/images/papers/aisim.webp", alt: "No public figure yet; this paper is under review" },
+    image: { src: "/images/papers/aisim.webp", width: 1080, height: 756, alt: "No public figure yet; this paper is under review" },
   },
   {
     title: "AlphaWiSE: Adaptive Weight Interpolation for Continual Multimodal Representation Learning",
     authors: ["Sarthak Jain", "Qiran Hu", "Zhen Zhu", "Yaoyao Liu"],
     venue: "Under Review",
     badge: "Under Review",
-    image: { src: "/images/papers/alphawise.webp", alt: "No public figure yet; this paper is under review" },
+    image: { src: "/images/papers/alphawise.webp", width: 1080, height: 756, alt: "No public figure yet; this paper is under review" },
   },
 ]
 
