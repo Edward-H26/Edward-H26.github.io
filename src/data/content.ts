@@ -196,6 +196,16 @@ export const NEWS: NewsItem[] = [
   {
     date: "September 2026",
     segments: [
+      { text: "I am honored to join " },
+      { text: "IBM Research", href: "https://research.ibm.com/" },
+      { text: " as a Research Intern advised by Dr. Dhaval Patel to work on Causal Diagnosis and Intervention Evaluation for " },
+      { text: "AssetOpsBench", href: "https://github.com/IBM/AssetOpsBench" },
+      { text: "." },
+    ],
+  },
+  {
+    date: "September 2026",
+    segments: [
       { text: "I am honored to present our poster " },
       { text: "AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation", href: "https://eccv.ecva.net/virtual/2026/poster/5183" },
       { text: " at the " },
@@ -255,7 +265,7 @@ export const SECTIONS: Record<string, ContentSection> = {
     cards: [
       {
         title: "UIUC Computer Vision and Machine Learning Group",
-        subtitle: "Undergraduate Research Assistant - Advised by Professor Yaoyao Liu",
+        subtitle: "Undergraduate Research Assistant (Advisor: Prof. Yaoyao Liu)",
         location: "Champaign, IL",
         date: "2025.05-Present",
         bullets: [
@@ -268,8 +278,8 @@ export const SECTIONS: Record<string, ContentSection> = {
         ],
       },
       {
-        title: "Multimodal Continual Learning Project",
-        subtitle: "Undergraduate Research Assistant",
+        title: "Multi-modal Generative Models for Continual Learning",
+        subtitle: "Undergraduate Research Assistant (Advisor: Prof. Yaoyao Liu)",
         location: "Champaign, IL",
         date: "2026.02-Present",
         bullets: [
@@ -283,7 +293,7 @@ export const SECTIONS: Record<string, ContentSection> = {
       },
       {
         title: "REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving",
-        subtitle: "Undergraduate Research Assistant, University of Illinois Urbana-Champaign",
+        subtitle: "Undergraduate Research Assistant, University of Illinois Urbana-Champaign (Advisor: Prof. Fan Lai)",
         location: "Champaign, IL",
         date: "2026.02-2026.09",
         bullets: [
@@ -305,6 +315,20 @@ export const SECTIONS: Record<string, ContentSection> = {
     heading: "Experience",
     subheading: "Professional Experience",
     cards: [
+      {
+        title: "IBM Research",
+        subtitle: "Research Intern (Advisor: Dr. Dhaval Patel)",
+        location: "New York, NY",
+        date: "2026.09-Present",
+        bullets: [
+          "Lead MCP server architecture for AssetOpsBench to give tool-using LLM agents typed access to failure-mode knowledge graphs, causal root-cause ranking, and intervention estimation with deterministic Neo4j queries and provenance on every result.",
+          "Create industrial fault-diagnosis RL environments for multi-step LLM agents over predictive-maintenance telemetry from 100 machines to benchmark evidence gathering and maintenance actions under hidden ground truth, look-alike faults, and incomplete observations.",
+          "Conduct controlled evaluations of four LLM agents under one model and action budget to identify latency bottlenecks in causal estimation, graph retrieval, MCP calls, and inference with PyTorch Profiler and Nsight on H100 GPUs.",
+        ],
+        links: [
+          { label: "AssetOpsBench", url: "https://github.com/IBM/AssetOpsBench" },
+        ],
+      },
       {
         title: "Memoria",
         subtitle: "Founding Technical Lead",
@@ -379,6 +403,7 @@ export const SECTIONS: Record<string, ContentSection> = {
       {
         title: "Realistic Neural Style Transfer Architecture",
         subtitle: "Undergraduate Research Assistant",
+        location: "Champaign, IL",
         date: "2025.01-2025.08",
         bullets: [
           "Proposed style transfer frameworks to maintain photorealistic results under highly abstract styles with VGG perceptual losses and edge-preserving constraints, improving SSIM by 77.0% and MS-SSIM by 49.0% compared to TensorFlow's NST.",
@@ -391,6 +416,7 @@ export const SECTIONS: Record<string, ContentSection> = {
       {
         title: "Anime Statistics and Analysis Platform, ASAP",
         subtitle: "Undergraduate Research Assistant",
+        location: "Champaign, IL",
         date: "2025.02-2025.06",
         bullets: [
           "Deployed interactive R Shiny analytics platforms to surface anime popularity trends and market opportunities with live Jikan REST API data and predictive analysis on shinyapps.io.",
@@ -431,6 +457,7 @@ export const SECTIONS: Record<string, ContentSection> = {
       {
         title: "OnePromptClaudeCode",
         subtitle: "Lead Developer",
+        location: "Champaign, IL",
         date: "2026.03-Present",
         bullets: [
           "Lead development of an MIT-licensed open-source agent harness for agentic software development, minimizing setup time by 99.5%.",

@@ -25,6 +25,7 @@ I am actively looking for research collaborations in 3D and 4D aware generative 
 
 ## News
 
+- **September 2026**: I am honored to join [IBM Research](https://research.ibm.com/) as a Research Intern advised by Dr. Dhaval Patel to work on Causal Diagnosis and Intervention Evaluation for [AssetOpsBench](https://github.com/IBM/AssetOpsBench).
 - **September 2026**: I am honored to present our poster [AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation](https://eccv.ecva.net/virtual/2026/poster/5183) at the [European Conference on Computer Vision (ECCV) 2026](https://eccv.ecva.net/Conferences/2026) in [Malmö, Sweden](https://eccv.ecva.net/Conferences/2026/Venues), [ExHall #107 on September 12](https://eccv.ecva.net/virtual/2026/poster/5183).
 - **August 2026**: Our paper [REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving](https://arxiv.org/abs/2609.11209) is accepted to the [IEEE International Conference on Data Mining (ICDM) 2026](https://www.datamining.org/).
 - **June 2026**: Our paper [AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation](https://arxiv.org/abs/2606.31204) is accepted to the [European Conference on Computer Vision (ECCV) 2026](https://eccv.ecva.net/).
@@ -79,16 +80,16 @@ Labs and Experience
 
 ### UIUC Computer Vision and Machine Learning Group
 
-Undergraduate Research Assistant - Advised by Professor Yaoyao Liu, 2025.05-Present, Champaign, IL
+Undergraduate Research Assistant (Advisor: Prof. Yaoyao Liu), 2025.05-Present, Champaign, IL
 
 - Develop adaptive conditioning methods for 3D-aware synthetic data generation to enhance world model understanding and embodied agent performance in interactive simulations with geometry-conditioned diffusion approaches, reducing FID by 32.8% on ImageNet and enhancing pose accuracy by 4.2x on PASCAL3D+.
 - Conduct large-scale foundation model training across TB-level datasets on National Center for Supercomputing Applications (NCSA) HPC clusters to enforce multi-view consistency with 4-bit NF4 quantization and low-level custom kernels, improving pose accuracy by 11.3% on PASCAL3D+ and reducing generation latency by 78.7% at p95.
 - Design camera-controlled novel view synthesis on video generation pipelines to advance real-time perception for SLAM, visual odometry, and 3D reconstruction, decreasing LPIPS by 21.0% on GSO and FV4D by 52.0% on OmniObject3D.
 - Links: [Lab](https://vision.ischool.illinois.edu/people/)
 
-### Multimodal Continual Learning Project
+### Multi-modal Generative Models for Continual Learning
 
-Undergraduate Research Assistant, 2026.02-Present, Champaign, IL
+Undergraduate Research Assistant (Advisor: Prof. Yaoyao Liu), 2026.02-Present, Champaign, IL
 
 - Selected for NVIDIA Academic Grant Program Award to streamline multimodal foundation models in class-incremental learning across audio, image, and text without catastrophic forgetting and cross-modal alignment drift, increasing R@1 by 27.6% on AudioSet.
 - Implement post-hoc tensor-level weight-interpolation methods for multimodal retrieval on National Artificial Intelligence Research Resource (NAIRR) HPC clusters, minimizing trainable parameters from 182M to 499 sigmoid-parameterized coefficients and increasing R@1 by 33.5% on AudioSet.
@@ -97,7 +98,7 @@ Undergraduate Research Assistant, 2026.02-Present, Champaign, IL
 
 ### REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving
 
-Undergraduate Research Assistant, University of Illinois Urbana-Champaign, 2026.02-2026.09, Champaign, IL
+Undergraduate Research Assistant, University of Illinois Urbana-Champaign (Advisor: Prof. Fan Lai), 2026.02-2026.09, Champaign, IL
 
 - Proposed attention-based scoring for post-retrieval RAG context compression to reuse generator attention traces across queries and update the system offline, achieving a 91.6% cache hit rate on HotpotQA.
 - Developed reusable evidence views to scale compression cost with unique documents rather than query volume, improving F1 by 13.2% on Natural Questions and decreasing online compression overhead by 6.1x at under 40 ms per request.
@@ -106,6 +107,15 @@ Undergraduate Research Assistant, University of Illinois Urbana-Champaign, 2026.
 ## Experience
 
 Professional Experience
+
+### IBM Research
+
+Research Intern (Advisor: Dr. Dhaval Patel), 2026.09-Present, New York, NY
+
+- Lead MCP server architecture for AssetOpsBench to give tool-using LLM agents typed access to failure-mode knowledge graphs, causal root-cause ranking, and intervention estimation with deterministic Neo4j queries and provenance on every result.
+- Create industrial fault-diagnosis RL environments for multi-step LLM agents over predictive-maintenance telemetry from 100 machines to benchmark evidence gathering and maintenance actions under hidden ground truth, look-alike faults, and incomplete observations.
+- Conduct controlled evaluations of four LLM agents under one model and action budget to identify latency bottlenecks in causal estimation, graph retrieval, MCP calls, and inference with PyTorch Profiler and Nsight on H100 GPUs.
+- Links: [AssetOpsBench](https://github.com/IBM/AssetOpsBench)
 
 ### Memoria
 
@@ -156,7 +166,7 @@ Undergraduate Research Assistant, 2025.11-2026.05, Champaign, IL
 
 ### Realistic Neural Style Transfer Architecture
 
-Undergraduate Research Assistant, 2025.01-2025.08
+Undergraduate Research Assistant, 2025.01-2025.08, Champaign, IL
 
 - Proposed style transfer frameworks to maintain photorealistic results under highly abstract styles with VGG perceptual losses and edge-preserving constraints, improving SSIM by 77.0% and MS-SSIM by 49.0% compared to TensorFlow's NST.
 - Proposed multi-layer Gram matrix losses with adaptive layer weighting to suppress texture and chromatic artifacts, boosting SSIM by 4.4x and MS-SSIM by 6.4x compared to ChatGPT-4o.
@@ -164,7 +174,7 @@ Undergraduate Research Assistant, 2025.01-2025.08
 
 ### Anime Statistics and Analysis Platform, ASAP
 
-Undergraduate Research Assistant, 2025.02-2025.06
+Undergraduate Research Assistant, 2025.02-2025.06, Champaign, IL
 
 - Deployed interactive R Shiny analytics platforms to surface anime popularity trends and market opportunities with live Jikan REST API data and predictive analysis on shinyapps.io.
 - Links: [GitHub](https://github.com/Edward-H26/Anime-Statistics-and-Analysis-Platform-ASAP)
@@ -222,7 +232,7 @@ Open Source and Community
 
 ### OnePromptClaudeCode
 
-Lead Developer, 2026.03-Present
+Lead Developer, 2026.03-Present, Champaign, IL
 
 - Lead development of an MIT-licensed open-source agent harness for agentic software development, minimizing setup time by 99.5%.
 - Design three-tier capability routers for the agent harness to optimize tokens, latency, and cost on every turn, with keyword matching and session-memory recall ahead of a 4.5 s model reasoning pass, resolving intent in 120 ms and running 37.5x faster than routing every prompt through the model.
@@ -244,8 +254,8 @@ Lead Developer, 2026.03-Present
 
 - [Qiran Hu | Research Assistant](https://edward-h26.github.io/): Qiran Hu, research assistant at the University of Illinois Urbana-Champaign working on multimodal learning, 3D-aware generative models, and multi-agent AI.
 - [Publications | Qiran Hu](https://edward-h26.github.io/publications/): Publications of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation;…
-- [Research | Qiran Hu](https://edward-h26.github.io/research/): Research of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: UIUC Computer Vision and Machine Learning Group; Multimodal Continual…
-- [Experience | Qiran Hu](https://edward-h26.github.io/experience/): Experience of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: Memoria; Two by Two Learning; WRC, University of Illinois…
+- [Research | Qiran Hu](https://edward-h26.github.io/research/): Research of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: UIUC Computer Vision and Machine Learning Group; Multi-modal Generative…
+- [Experience | Qiran Hu](https://edward-h26.github.io/experience/): Experience of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: IBM Research; Memoria; Two by Two Learning; WRC, University of Illinois…
 - [Projects | Qiran Hu](https://edward-h26.github.io/projects/): Projects of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: Long-Form Video-Language and Audio-Visual Social Understanding;…
 - [Teaching | Qiran Hu](https://edward-h26.github.io/teaching/): Teaching of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: CS 107 Data Science Discovery, University of Illinois Urbana-Champaign.
 - [Info | Qiran Hu](https://edward-h26.github.io/info/): Info of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: Languages; Certifications and Honors; Education.
