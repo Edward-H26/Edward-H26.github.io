@@ -281,11 +281,11 @@ export const SECTIONS: Record<string, ContentSection> = {
         title: "Multi-modal Generative Models for Continual Learning",
         subtitle: "Undergraduate Research Assistant (Advisor: Prof. Yaoyao Liu)",
         location: "Champaign, IL",
-        date: "2026.02-Present",
+        date: "2026.02-2026.08",
         bullets: [
-          "Selected for NVIDIA Academic Grant Program Award to streamline multimodal foundation models in class-incremental learning across audio, image, and text without catastrophic forgetting and cross-modal alignment drift, increasing R@1 by 27.6% on AudioSet.",
-          "Implement post-hoc tensor-level weight-interpolation methods for multimodal retrieval on National Artificial Intelligence Research Resource (NAIRR) HPC clusters, minimizing trainable parameters from 182M to 499 sigmoid-parameterized coefficients and increasing R@1 by 33.5% on AudioSet.",
-          "Optimize checkpoint fusion pipelines to compose frozen checkpoints into one deployable model with no additional inference time, boosting last-task accuracy by 40.9% on UrbanSound8K.",
+          "Selected for NVIDIA Academic Grant Program Award, AMD University Program, and Lambda Research Grant to streamline multimodal foundation models in class-incremental learning across audio, image, and text without catastrophic forgetting and cross-modal alignment drift, increasing R@1 by 27.6% on AudioSet.",
+          "Implemented post-hoc tensor-level weight-interpolation methods for multimodal retrieval on National Artificial Intelligence Research Resource (NAIRR) HPC clusters, minimizing trainable parameters from 182M to 499 sigmoid-parameterized coefficients and increasing R@1 by 33.5% on AudioSet.",
+          "Optimized checkpoint fusion pipelines to compose frozen checkpoints into one deployable model with no additional inference time, boosting last-task accuracy by 40.9% on UrbanSound8K.",
         ],
         links: [
           { label: "NVIDIA Grant", url: "https://ischool.illinois.edu/news-events/news/2026/04/liu-receives-support-ai-project-through-nvidia-academic-grant-program" },
@@ -295,7 +295,7 @@ export const SECTIONS: Record<string, ContentSection> = {
         title: "REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving",
         subtitle: "Undergraduate Research Assistant, University of Illinois Urbana-Champaign (Advisor: Prof. Fan Lai)",
         location: "Champaign, IL",
-        date: "2026.02-2026.09",
+        date: "2026.02-2026.06",
         bullets: [
           "Proposed attention-based scoring for post-retrieval RAG context compression to reuse generator attention traces across queries and update the system offline, achieving a 91.6% cache hit rate on HotpotQA.",
           "Developed reusable evidence views to scale compression cost with unique documents rather than query volume, improving F1 by 13.2% on Natural Questions and decreasing online compression overhead by 6.1x at under 40 ms per request.",
@@ -331,13 +331,13 @@ export const SECTIONS: Record<string, ContentSection> = {
       },
       {
         title: "Memoria",
-        subtitle: "Founding Technical Lead",
+        subtitle: "Technical Lead",
         location: "Champaign, IL",
-        date: "2026.01-Present",
+        date: "2026.01-2026.08",
         bullets: [
-          "Lead end-to-end agentic workflow deployments across MCP servers, sub-agents, and agent skills with multi-agent orchestration, permission-aware tool calling, and policy guardrails, accelerating product delivery by 4.0x compared to traditional approaches.",
-          "Manage production operations for deployed workflows with logging, evaluation harnesses, and monthly improvement cycles with client stakeholders, saving 90.5% in serving cost.",
-          "Optimize enterprise workflows with self-evolving per-user memory and cost-aware model routing across sessions, saving 96.0% in token cost compared to GPT-4 Turbo.",
+          "Led end-to-end agentic workflow deployments across MCP servers, sub-agents, and agent skills with multi-agent orchestration, permission-aware tool calling, and policy guardrails, accelerating product delivery by 4.0x compared to traditional approaches.",
+          "Managed production operations for deployed workflows with logging, evaluation harnesses, and monthly improvement cycles with client stakeholders, saving 90.5% in serving cost.",
+          "Optimized enterprise workflows with self-evolving per-user memory and cost-aware model routing across sessions, saving 96.0% in token cost compared to GPT-4 Turbo.",
         ],
         links: [
           { label: "Website", url: "https://miramemoria.com/" },
