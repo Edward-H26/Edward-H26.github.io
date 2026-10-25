@@ -1,6 +1,6 @@
 # Qiran Hu
 
-> Qiran Hu, M.S. student at Columbia University and research assistant at UIUC, working on multimodal learning, 3D-aware generative models, and multi-agent AI.
+> Qiran Hu, Columbia University M.S. student and University of Illinois Urbana-Champaign research assistant working on multimodal and 3D-aware generative AI.
 
 - Website: https://edward-h26.github.io/
 - Interactive 3D portfolio: https://edward-h26.github.io/PersonalWebsite/
@@ -13,9 +13,9 @@
 
 ## About
 
-I am a current M.S. student in [Fu Foundation School of Engineering and Applied Science](https://www.engineering.columbia.edu/about) at [Columbia University](https://www.columbia.edu/).
+I am a current M.S. student in [Fu Foundation School of Engineering and Applied Science](https://www.engineering.columbia.edu/) at [Columbia University](https://www.columbia.edu/).
 
-I am a research assistant in [Computer Vision and Machine Learning Group](https://vision.ischool.illinois.edu/index.html) at [University of Illinois Urbana-Champaign](https://www.illinois.edu/). I am also affiliated with the [National Center for Supercomputing Applications](https://www.ncsa.illinois.edu/) and [National Artificial Intelligence Research Resource Pilot](https://nairrpilot.org/).
+I am a research assistant in the [Computer Vision and Machine Learning Group](https://vision.ischool.illinois.edu/people/) at [University of Illinois Urbana-Champaign](https://www.illinois.edu/). I am also affiliated with the [National Center for Supercomputing Applications](https://www.ncsa.illinois.edu/) and [National Artificial Intelligence Research Resource Pilot](https://nairrpilot.org/).
 
 Previously, I received my B.S. in Data Science and Information Science with minors in Computer Science and Statistics at [University of Illinois Urbana-Champaign](https://www.illinois.edu/).
 
@@ -26,17 +26,17 @@ I am actively looking for research collaborations in 3D and 4D aware generative 
 ## News
 
 - **September 2026**: I am honored to join [IBM Research](https://research.ibm.com/) as a Research Intern advised by Dr. Dhaval Patel to work on Causal Diagnosis and Intervention Evaluation for [AssetOpsBench](https://github.com/IBM/AssetOpsBench).
-- **September 2026**: I am honored to present our poster [AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation](https://eccv.ecva.net/virtual/2026/poster/5183) at the [European Conference on Computer Vision (ECCV) 2026](https://eccv.ecva.net/Conferences/2026) in [Malmö, Sweden](https://eccv.ecva.net/Conferences/2026/Venues), [ExHall #107 on September 12](https://eccv.ecva.net/virtual/2026/poster/5183).
+- **September 2026**: I am honored to present our poster [AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation](https://arxiv.org/abs/2606.31204) at the [European Conference on Computer Vision (ECCV) 2026](https://eccv.ecva.net/Conferences/2026) in [Malmö, Sweden](https://eccv.ecva.net/Conferences/2026/Venues), ExHall #107 on September 12.
 - **August 2026**: Our paper [REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving](https://arxiv.org/abs/2609.11209) is accepted to the [IEEE International Conference on Data Mining (ICDM) 2026](https://www.datamining.org/).
-- **June 2026**: Our paper [AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation](https://arxiv.org/abs/2606.31204) is accepted to the [European Conference on Computer Vision (ECCV) 2026](https://eccv.ecva.net/).
+- **June 2026**: Our paper [AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation](https://arxiv.org/abs/2606.31204) is accepted to the [European Conference on Computer Vision (ECCV) 2026](https://eccv.ecva.net/Conferences/2026).
 
 ## Research Interests
 
 - 3D- and 4D-Aware Generative Models
 - World Models and Spatial Intelligence
-- Novel View Synthesis and Multi-View Geometry
+- Novel View Synthesis and Multi-view Geometry
 - Continual and Multimodal Representation Learning
-- Multi-Agent Orchestration and Agent Harnesses
+- Multi-agent Orchestration and Agent Harnesses
 - Long-Horizon Agent Memory and Context Engineering
 - Context-Efficient Retrieval-Augmented Generation
 - Long-Form Video-Language and Audio-Visual Understanding
@@ -50,46 +50,46 @@ Papers
 
 ### AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation
 
-- [1] Eric Ji, Qiran Hu, Wufei Ma, Sarthak Jain, Yingying Li, Minh N. Do, Yaoyao Liu. AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation. European Conference on Computer Vision (ECCV), 2026.
-- Links: [arXiv](https://arxiv.org/abs/2606.31204), [Code](https://ac3s.cvmlgroup.web.illinois.edu/), [Video](https://youtu.be/3jOJaT2a8iQ), [Poster](https://eccv.ecva.net/virtual/2026/poster/5183), [BibTeX](https://arxiv.org/bibtex/2606.31204)
+- [1] Eric Ji, Qiran Hu, Wufei Ma, Sarthak Jain, Yingying Li, Minh N. Do, Yaoyao Liu. AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation. European Conference on Computer Vision (ECCV) 2026.
+- Links: [arXiv](https://arxiv.org/abs/2606.31204), [Code](https://ac3s.cvmlgroup.web.illinois.edu/), [Video](https://youtu.be/3jOJaT2a8iQ), [BibTeX](https://arxiv.org/bibtex/2606.31204)
 
 ### REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving
 
-- [2] Tuan Nguyen, Qiran Hu, Banruo Liu, Khoa D. Doan, Kok-Seng Wong, Fan Lai. REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving. IEEE International Conference on Data Mining (ICDM), 2026.
+- [2] Tuan Nguyen, Qiran Hu, Banruo Liu, Khoa D. Doan, Kok-Seng Wong, Fan Lai. REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving. IEEE International Conference on Data Mining (ICDM) 2026.
 - Links: [arXiv](https://arxiv.org/abs/2609.11209), [Code](https://github.com/UIUC-MLSys/REVA), [BibTeX](https://arxiv.org/bibtex/2609.11209)
 
 ### ACDN: Agent-Aware Content Delivery Network
 
-- [3] Tuan Nguyen, Qiran Hu, Dibyadeep Saha, Banruo Liu, Khoa D. Doan, Kok-Seng Wong, Fan Lai. ACDN: Agent-Aware Content Delivery Network. Under Review.
+- [3] Tuan Nguyen, Qiran Hu, Dibyadeep Saha, Banruo Liu, Khoa D. Doan, Kok-Seng Wong, Fan Lai. ACDN: Agent-Aware Content Delivery Network. Under review.
 
 ### SV4D 3.0: Single-Step 3D-Aware Diffusion for Multi-View-Consistent 4D Scene Generation
 
-- [4] Qiran Hu, Wei Cao, Yaoyao Liu. SV4D 3.0: Single-Step 3D-Aware Diffusion for Multi-View-Consistent 4D Scene Generation. Under Review.
+- [4] Qiran Hu, Wei Cao, Yaoyao Liu. SV4D 3.0: Single-Step 3D-Aware Diffusion for Multi-View-Consistent 4D Scene Generation. Under review.
 
 ### AISim: Using LLM-Simulation as Epistemic Scaffolds for Early Stage Qualitative Research Design
 
-- [5] Hangyue Zhang, Qiran Hu, Ziyi Zhang, Hyanghee Park, Yun Huang. AISim: Using LLM-Simulation as Epistemic Scaffolds for Early Stage Qualitative Research Design. Under Review.
+- [5] Hangyue Zhang, Qiran Hu, Ziyi Zhang, Hyanghee Park, Yun Huang. AISim: Using LLM-Simulation as Epistemic Scaffolds for Early Stage Qualitative Research Design. Under review.
 
 ### AlphaWiSE: Adaptive Weight Interpolation for Continual Multimodal Representation Learning
 
-- [6] Sarthak Jain, Qiran Hu, Zhen Zhu, Yaoyao Liu. AlphaWiSE: Adaptive Weight Interpolation for Continual Multimodal Representation Learning. Under Review.
+- [6] Sarthak Jain, Qiran Hu, Zhen Zhu, Yaoyao Liu. AlphaWiSE: Adaptive Weight Interpolation for Continual Multimodal Representation Learning. Under review.
 
 ## Research
 
 Labs and Experience
 
-### UIUC Computer Vision and Machine Learning Group
+### Computer Vision and Machine Learning Group, University of Illinois Urbana-Champaign
 
-Undergraduate Research Assistant (Advisor: Prof. Yaoyao Liu), 2025.05-Present, Champaign, IL
+Undergraduate Research Assistant (Advisor: Prof. Yaoyao Liu), 2025.05 - Present, Champaign, IL
 
 - Develop adaptive conditioning methods for 3D-aware synthetic data generation to enhance world model understanding and embodied agent performance in interactive simulations with geometry-conditioned diffusion approaches, reducing FID by 32.8% on ImageNet and enhancing pose accuracy by 4.2x on PASCAL3D+.
 - Conduct large-scale foundation model training across TB-level datasets on National Center for Supercomputing Applications (NCSA) HPC clusters to enforce multi-view consistency with 4-bit NF4 quantization and low-level custom kernels, improving pose accuracy by 11.3% on PASCAL3D+ and reducing generation latency by 78.7% at p95.
 - Design camera-controlled novel view synthesis on video generation pipelines to advance real-time perception for SLAM, visual odometry, and 3D reconstruction, decreasing LPIPS by 21.0% on GSO and FV4D by 52.0% on OmniObject3D.
 - Links: [Lab](https://vision.ischool.illinois.edu/people/)
 
-### Multi-modal Generative Models for Continual Learning
+### Multi-modal Generative Models for Continual Learning, University of Illinois Urbana-Champaign
 
-Undergraduate Research Assistant (Advisor: Prof. Yaoyao Liu), 2026.02-2026.08, Champaign, IL
+Undergraduate Research Assistant (Advisor: Prof. Yaoyao Liu), 2026.02 - 2026.08, Champaign, IL
 
 - Selected for NVIDIA Academic Grant Program Award, AMD University Program, and Lambda Research Grant to streamline multimodal foundation models in class-incremental learning across audio, image, and text without catastrophic forgetting and cross-modal alignment drift, increasing R@1 by 27.6% on AudioSet.
 - Implemented post-hoc tensor-level weight-interpolation methods for multimodal retrieval on National Artificial Intelligence Research Resource (NAIRR) HPC clusters, minimizing trainable parameters from 182M to 499 sigmoid-parameterized coefficients and increasing R@1 by 33.5% on AudioSet.
@@ -98,11 +98,12 @@ Undergraduate Research Assistant (Advisor: Prof. Yaoyao Liu), 2026.02-2026.08, C
 
 ### REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving
 
-Undergraduate Research Assistant, University of Illinois Urbana-Champaign (Advisor: Prof. Fan Lai), 2026.02-2026.06, Champaign, IL
+Undergraduate Research Assistant, University of Illinois Urbana-Champaign (Advisor: Prof. Fan Lai), 2026.02 - 2026.06, Champaign, IL
 
 - Proposed attention-based scoring for post-retrieval RAG context compression to reuse generator attention traces across queries and update the system offline, achieving a 91.6% cache hit rate on HotpotQA.
 - Developed reusable evidence views to scale compression cost with unique documents rather than query volume, improving F1 by 13.2% on Natural Questions and decreasing online compression overhead by 6.1x at under 40 ms per request.
 - Optimized online serving to keep context compression off the GPU critical path for high-volume production RAG traffic under strict per-request latency targets, minimizing compression latency by 99.3% compared to EXIT and 99.8% compared to FaviComp.
+- Links: [IEEE ICDM 2026](https://arxiv.org/abs/2609.11209)
 
 ## Experience
 
@@ -110,7 +111,7 @@ Professional Experience
 
 ### IBM Research
 
-Research Intern (Advisor: Dr. Dhaval Patel), 2026.09-Present, New York, NY
+Research Intern (Advisor: Dr. Dhaval Patel), 2026.09 - Present, New York, NY
 
 - Lead MCP server architecture for AssetOpsBench to give tool-using LLM agents typed access to failure-mode knowledge graphs, causal root-cause ranking, and intervention estimation with deterministic Neo4j queries and provenance on every result.
 - Create industrial fault-diagnosis RL environments for multi-step LLM agents over predictive-maintenance telemetry from 100 machines to benchmark evidence gathering and maintenance actions under hidden ground truth, look-alike faults, and incomplete observations.
@@ -119,7 +120,7 @@ Research Intern (Advisor: Dr. Dhaval Patel), 2026.09-Present, New York, NY
 
 ### Memoria
 
-Technical Lead, 2026.01-2026.08, Champaign, IL
+Technical Lead, 2026.01 - 2026.08, Champaign, IL
 
 - Led end-to-end agentic workflow deployments across MCP servers, sub-agents, and agent skills with multi-agent orchestration, permission-aware tool calling, and policy guardrails, accelerating product delivery by 4.0x compared to traditional approaches.
 - Managed production operations for deployed workflows with logging, evaluation harnesses, and monthly improvement cycles with client stakeholders, saving 90.5% in serving cost.
@@ -128,7 +129,7 @@ Technical Lead, 2026.01-2026.08, Champaign, IL
 
 ### Two by Two Learning Center
 
-Full Stack Developer, 2025.08-2026.08, Champaign, IL
+Full Stack Developer, 2025.08 - 2026.08, Champaign, IL
 
 - Launched NOODEIA to help K-12 students falling behind grade level with multi-agent tutoring systems to plan, critique, and monitor each user with long-horizon memory, boosting user confidence by 2.4x in counterbalanced within-subjects studies.
 - Designed self-evolving long-term memory architectures to replace recency-biased FIFO memory architectures by retrieving contextually relevant prior interactions, accelerating memory queries by 3.6x compared to PostgreSQL.
@@ -137,7 +138,7 @@ Full Stack Developer, 2025.08-2026.08, Champaign, IL
 
 ### WRC, University of Illinois Urbana-Champaign
 
-Data Analyst, 2024.08-2024.12, Champaign, IL
+Data Analyst, 2024.08 - 2024.12, Champaign, IL
 
 - Built paired pre/post analytics pipelines over survey data from 9,935 incoming students to better allocate program resources in the upcoming years, increasing correct responses among the next cohort by 14.0% with 61.9% fewer ambiguous responses.
 - Conducted A/B tests on two consent scenarios stratified across five gender-identity subgroups to locate where misconceptions persisted after each workshop, increasing accuracy on consent comprehension by 19.5%.
@@ -149,7 +150,7 @@ Research Projects
 
 ### Long-Form Video-Language and Audio-Visual Social Understanding
 
-Undergraduate Research Assistant, University of Illinois Urbana-Champaign, 2025.12-2026.05, Champaign, IL
+Undergraduate Research Assistant, University of Illinois Urbana-Champaign, 2025.12 - 2026.05, Champaign, IL
 
 - Trained streaming video-language models with temporal transformer blocks for long-form video understanding beyond 30-minute sequences, boosting zero-shot accuracy by 17.4%.
 - Designed context fluidity pipelines to fuse facial action units, body pose, and prosody through cross-modal attention and infer social intent and conversational role from raw recordings, achieving 89.1% accuracy on speaker-role classification.
@@ -157,7 +158,7 @@ Undergraduate Research Assistant, University of Illinois Urbana-Champaign, 2025.
 
 ### Multi-agent Research Synthesis Engine
 
-Undergraduate Research Assistant, 2025.11-2026.05, Champaign, IL
+Undergraduate Research Assistant, 2025.11 - 2026.05, Champaign, IL
 
 - Orchestrated eight specialized agents across a 12-step workflow for automated literature synthesis to cover planning, retrieval, drafting, reflection, and safety review in a single loop with LLM-as-judge evaluation, achieving 95.5% accuracy on deep research pipelines.
 - Developed concurrent multi-source retrieval across Semantic Scholar and Tavily with production-grade fallback handling for API failures, minimizing query latency by 40.2%.
@@ -166,7 +167,7 @@ Undergraduate Research Assistant, 2025.11-2026.05, Champaign, IL
 
 ### Realistic Neural Style Transfer Architecture
 
-Undergraduate Research Assistant, 2025.01-2025.08, Champaign, IL
+Undergraduate Research Assistant, 2025.01 - 2025.08, Champaign, IL
 
 - Proposed style transfer frameworks to maintain photorealistic results under highly abstract styles with VGG perceptual losses and edge-preserving constraints, improving SSIM by 77.0% and MS-SSIM by 49.0% compared to TensorFlow's NST.
 - Proposed multi-layer Gram matrix losses with adaptive layer weighting to suppress texture and chromatic artifacts, boosting SSIM by 4.4x and MS-SSIM by 6.4x compared to ChatGPT-4o.
@@ -174,7 +175,7 @@ Undergraduate Research Assistant, 2025.01-2025.08, Champaign, IL
 
 ### Anime Statistics and Analysis Platform, ASAP
 
-Undergraduate Research Assistant, 2025.02-2025.06, Champaign, IL
+Undergraduate Research Assistant, 2025.02 - 2025.06, Champaign, IL
 
 - Deployed interactive R Shiny analytics platforms to surface anime popularity trends and market opportunities with live Jikan REST API data and predictive analysis on shinyapps.io.
 - Links: [GitHub](https://github.com/Edward-H26/Anime-Statistics-and-Analysis-Platform-ASAP)
@@ -185,7 +186,7 @@ Courses and Mentoring
 
 ### CS 107 Data Science Discovery, University of Illinois Urbana-Champaign
 
-Teaching Assistant, 2023.08-2026.05, Champaign, IL
+Teaching Assistant, 2023.08 - 2026.05, Champaign, IL
 
 - Led weekly lab sections and office hours for in-person and online sessions, mentoring 1,200 students every semester through data science foundations in Python, statistical inference, data wrangling, and machine learning.
 - Authored DISCOVERY Guides on the course website to provide detailed explanations with applied Python and statistics walkthroughs.
@@ -198,9 +199,9 @@ Personal Information
 
 ### Languages
 
-- Chinese (Native)
-- English (Native)
-- Spanish (Limited Working Proficiency)
+- Chinese (native)
+- English (native)
+- Spanish (limited working proficiency)
 
 ### Certifications and Honors
 
@@ -214,7 +215,7 @@ Personal Information
 - M.S. in Data Science
 - Fu Foundation School of Engineering and Applied Science
 - Courses: High Performance Machine Learning, Algorithms
-- 2026.08 - 2028.05
+- 2026.08 - Expected 2028.05
 
 ### Education
 
@@ -232,7 +233,7 @@ Open Source and Community
 
 ### OnePromptClaudeCode
 
-Lead Developer, 2026.03-Present, Champaign, IL
+Lead Developer, 2026.03 - Present, Champaign, IL
 
 - Lead development of an MIT-licensed open-source agent harness for agentic software development, minimizing setup time by 99.5%.
 - Design three-tier capability routers for the agent harness to optimize tokens, latency, and cost on every turn, with keyword matching and session-memory recall ahead of a 4.5 s model reasoning pass, resolving intent in 120 ms and running 37.5x faster than routing every prompt through the model.
@@ -242,19 +243,19 @@ Lead Developer, 2026.03-Present, Champaign, IL
 ## Skills
 
 - **Programming Languages**: Python, C++, C, Rust, Go, Java, Swift, Kotlin, Ruby, R
-- **AI/ML Frameworks**: PyTorch, CUDA, JAX, TensorFlow, Triton, TensorRT, vLLM, SGLang, NeMo, Megatron-LM, LangGraph, NCCL, GPU/TPU/CPU Architecture
-- **Foundation Model Training**: Pre-training, Post-training, Test-time Training, Reinforcement Learning, Continual Learning, SFT, RLHF, RLAIF, RLVF, PPO, DPO, GRPO, Reward Modeling, Model Alignment and Instruction Following, Synthetic Data Generation, Knowledge Distillation, Quantization, Context Compression, Token Pruning, Kernel Optimization, LoRA, QLoRA, Distributed Training, FSDP
-- **Computer Vision**: World Models, Diffusion Models, Autoregressive Models, Flow Matching, 3D/4D Image and Video Generation, Multi-View Geometry, 3D Reconstruction, Novel View Synthesis, Spatial Intelligence, Visual-Inertial Odometry, Depth Estimation, NeRFs, 3D Gaussian Splatting, OpenCV, SLAM
-- **Agentic AI**: Multi-Agent Orchestration, Sub-Agent Parallelization, Computer-Use Agents, Agent Harness, Policy Guardrails, Context Engineering, Prompt Caching, MCP, A2A, Tool Calling, Multi-Step Autonomous Workflows, Long-Horizon Agent Memory, RAG
+- **AI/ML Frameworks**: PyTorch, CUDA, JAX, TensorFlow, Triton, TensorRT, vLLM, SGLang, NeMo, Megatron-LM, LangGraph, NCCL, GPU/TPU/CPU architecture
+- **Foundation Model Training**: pre-training, post-training, test-time training, reinforcement learning, continual learning, SFT, RLHF, RLAIF, RLVF, PPO, DPO, GRPO, reward modeling, model alignment and instruction following, synthetic data generation, knowledge distillation, quantization, context compression, token pruning, kernel optimization, LoRA, QLoRA, distributed training, FSDP
+- **Computer Vision**: world models, diffusion models, autoregressive models, flow matching, 3D/4D image and video generation, multi-view geometry, 3D reconstruction, novel view synthesis, spatial intelligence, visual-inertial odometry, depth estimation, NeRFs, 3D Gaussian Splatting, OpenCV, SLAM
+- **Agentic AI**: multi-agent orchestration, sub-agent parallelization, computer-use agents, agent harness, policy guardrails, context engineering, prompt caching, MCP, A2A, tool calling, multi-step autonomous workflows, long-horizon agent memory, RAG
 - **Full-stack Development**: React, Vue, Angular, JavaScript, TypeScript, HTML5, Tailwind CSS, FastAPI
-- **Databases and Infrastructure**: PostgreSQL, Neo4j, MongoDB, Kafka, Docker, Kubernetes, CI/CD, AWS, GCP, Azure
+- **Databases and Infrastructure**: PostgreSQL, Neo4j, MongoDB, Kafka, Docker, Kubernetes, CI/CD, cloud platforms (AWS, GCP, Azure)
 - **Design and Other Tools**: Figma, Canva, Adobe Creative Suite, Microsoft Office Suite, Unity
 
 ## Pages
 
-- [Qiran Hu | Research Assistant](https://edward-h26.github.io/): Qiran Hu, M.S. student at Columbia University and research assistant at UIUC, working on multimodal learning, 3D-aware generative models, and multi-agent AI.
+- [Qiran Hu | Research Assistant](https://edward-h26.github.io/): Qiran Hu, Columbia University M.S. student and University of Illinois Urbana-Champaign research assistant working on multimodal and 3D-aware generative AI.
 - [Publications | Qiran Hu](https://edward-h26.github.io/publications/): Publications of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation;…
-- [Research | Qiran Hu](https://edward-h26.github.io/research/): Research of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: UIUC Computer Vision and Machine Learning Group; Multi-modal Generative…
+- [Research | Qiran Hu](https://edward-h26.github.io/research/): Research of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: Computer Vision and Machine Learning Group, University of Illinois…
 - [Experience | Qiran Hu](https://edward-h26.github.io/experience/): Experience of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: IBM Research; Memoria; Two by Two Learning Center; WRC, University of…
 - [Projects | Qiran Hu](https://edward-h26.github.io/projects/): Projects of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: Long-Form Video-Language and Audio-Visual Social Understanding;…
 - [Teaching | Qiran Hu](https://edward-h26.github.io/teaching/): Teaching of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: CS 107 Data Science Discovery, University of Illinois Urbana-Champaign.

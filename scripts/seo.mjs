@@ -11,7 +11,7 @@ export const SITE_URL = "https://edward-h26.github.io"
 export const SISTER_SITE_URL = "https://edward-h26.github.io/PersonalWebsite/"
 export const OG_IMAGE_URL = `${SITE_URL}/images/og-card.png`
 export const SITE_DESCRIPTION =
-  "Qiran Hu, M.S. student at Columbia University and research assistant at UIUC, working on multimodal learning, 3D-aware generative models, and multi-agent AI."
+  "Qiran Hu, Columbia University M.S. student and University of Illinois Urbana-Champaign research assistant working on multimodal and 3D-aware generative AI."
 export const HEAD_MARKERS = ["<!-- seo:head -->", "<!-- /seo:head -->"]
 export const BODY_MARKERS = ["<!-- seo:body -->", "<!-- /seo:body -->"]
 

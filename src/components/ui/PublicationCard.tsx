@@ -4,7 +4,7 @@ import { PROFILE } from "@/data/content"
 import { LinkChip } from "@/components/ui/ContentLinks"
 
 // The venue acronym in parentheses is bold and a published venue closes with a period, as on the
-// reference homepages. Rows that read "Under Review" get neither.
+// reference homepages. Rows that read "Under review" get neither.
 function renderVenue(venue: string) {
   const tail = /\d$/.test(venue) ? "." : ""
   const match = venue.match(/\(([A-Za-z]+)\)/)
@@ -48,7 +48,7 @@ export function PublicationCard({ publication }: PublicationCardProps) {
     <figure className="paper-thumb">
       <img src={publication.image.src} alt={publication.image.alt} loading="lazy" width={publication.image.width ?? 1000} height={publication.image.height ?? 700} />
       {publication.badge && (
-        <span className={publication.badge === "Under Review" ? "paper-badge paper-badge-muted" : "paper-badge"}>{publication.badge}</span>
+        <span className={publication.badge === "Under review" ? "paper-badge paper-badge-muted" : "paper-badge"}>{publication.badge}</span>
       )}
     </figure>
   ) : null
