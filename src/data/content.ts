@@ -35,11 +35,12 @@ const PUBLICATIONS: Publication[] = [
     authors: ["Eric Ji", "Qiran Hu", "Wufei Ma", "Sarthak Jain", "Yingying Li", "Minh N. Do", "Yaoyao Liu"],
     venue: "European Conference on Computer Vision (ECCV), 2026",
     badge: "ECCV",
-    image: { src: "/images/papers/ac3s.webp", width: 1080, height: 756, alt: "AC3S pipeline: visual prompt extractor, adaptive modulator, image generator, and multi-agent VLM" },
+    image: { src: "/images/papers/ac3s.webp", width: 1200, height: 675, alt: "AC3S pipeline: visual prompt extractor, adaptive modulator, image generator, and multi-agent VLM" },
     links: [
       { label: "arXiv", url: "https://arxiv.org/abs/2606.31204" },
       { label: "Code", url: "https://ac3s.cvmlgroup.web.illinois.edu/" },
       { label: "Video", url: "https://youtu.be/3jOJaT2a8iQ" },
+      { label: "Poster", url: "https://eccv.ecva.net/virtual/2026/poster/5183" },
       { label: "BibTeX", url: "https://arxiv.org/bibtex/2606.31204" },
     ],
   },
@@ -48,7 +49,7 @@ const PUBLICATIONS: Publication[] = [
     authors: ["Tuan Nguyen", "Qiran Hu", "Banruo Liu", "Khoa D. Doan", "Kok-Seng Wong", "Fan Lai"],
     venue: "IEEE International Conference on Data Mining (ICDM), 2026",
     badge: "ICDM",
-    image: { src: "/images/papers/reva.webp", width: 1080, height: 756, alt: "Three charts from the paper: online overhead per query across five compressors, F1 change over global truncation on four QA datasets, and the share of queries that re-access a stored document" },
+    image: { src: "/images/papers/reva.webp", width: 1200, height: 675, alt: "The REVA system: past requests leave reusable word scores in a word-score store, and a new request materializes per-document views from them" },
     links: [
       { label: "arXiv", url: "https://arxiv.org/abs/2609.11209" },
       { label: "Code", url: "https://github.com/UIUC-MLSys/REVA" },
@@ -60,28 +61,28 @@ const PUBLICATIONS: Publication[] = [
     authors: ["Tuan Nguyen", "Qiran Hu", "Dibyadeep Saha", "Banruo Liu", "Khoa D. Doan", "Kok-Seng Wong", "Fan Lai"],
     venue: "Under Review",
     badge: "Under Review",
-    image: { src: "/images/papers/acdn.webp", width: 1080, height: 756, alt: "No public figure yet; this paper is under review" },
+    image: { src: "/images/papers/acdn.webp", width: 1200, height: 675, alt: "No public figure yet; this paper is under review" },
   },
   {
     title: "SV4D 3.0: Single-Step 3D-Aware Diffusion for Multi-View-Consistent 4D Scene Generation",
     authors: ["Qiran Hu", "Wei Cao", "Yaoyao Liu"],
     venue: "Under Review",
     badge: "Under Review",
-    image: { src: "/images/papers/sv4d.webp", width: 1080, height: 756, alt: "No public figure yet; this paper is under review" },
+    image: { src: "/images/papers/sv4d.webp", width: 1200, height: 675, alt: "No public figure yet; this paper is under review" },
   },
   {
     title: "AISim: Using LLM-Simulation as Epistemic Scaffolds for Early Stage Qualitative Research Design",
     authors: ["Hangyue Zhang", "Qiran Hu", "Ziyi Zhang", "Hyanghee Park", "Yun Huang"],
     venue: "Under Review",
     badge: "Under Review",
-    image: { src: "/images/papers/aisim.webp", width: 1080, height: 756, alt: "No public figure yet; this paper is under review" },
+    image: { src: "/images/papers/aisim.webp", width: 1200, height: 675, alt: "No public figure yet; this paper is under review" },
   },
   {
     title: "AlphaWiSE: Adaptive Weight Interpolation for Continual Multimodal Representation Learning",
     authors: ["Sarthak Jain", "Qiran Hu", "Zhen Zhu", "Yaoyao Liu"],
     venue: "Under Review",
     badge: "Under Review",
-    image: { src: "/images/papers/alphawise.webp", width: 1080, height: 756, alt: "No public figure yet; this paper is under review" },
+    image: { src: "/images/papers/alphawise.webp", width: 1200, height: 675, alt: "No public figure yet; this paper is under review" },
   },
 ]
 
@@ -107,7 +108,7 @@ export const PROFILE = {
   title: "Research Assistant",
   affiliation: "University of Illinois Urbana-Champaign",
   email: "qh2332@columbia.edu",
-  phone: "+1 (347)-957-9176",
+  phone: "+1 (347) 957-9176",
   photo: "/images/profile-1024.jpg",
   social: {
     github: "https://github.com/Edward-H26",
@@ -137,7 +138,7 @@ export const NAV_ITEMS: NavItem[] = [...NAV_MAIN, ...NAV_MORE]
 
 export const HOME_BIO: BioSegment[][] = [
   [
-    { text: "I am a current student in " },
+    { text: "I am a current M.S. student in " },
     {
       text: "Fu Foundation School of Engineering and Applied Science",
       href: "https://www.engineering.columbia.edu/about",
@@ -240,17 +241,17 @@ export const NEWS: NewsItem[] = [
 ]
 
 export const RESEARCH_INTERESTS = [
-  "3D and 4D Aware Generative Models",
+  "3D- and 4D-Aware Generative Models",
   "World Models and Spatial Intelligence",
-  "Novel View Synthesis and Multi View Geometry",
+  "Novel View Synthesis and Multi-View Geometry",
   "Continual and Multimodal Representation Learning",
-  "Multi Agent Orchestration and Agent Harnesses",
-  "Long Horizon Agent Memory and Context Engineering",
-  "Context Efficient Retrieval Augmented Generation",
-  "Long Form Video Language and Audio Visual Understanding",
-  "Foundation Model Training and Post Training",
+  "Multi-Agent Orchestration and Agent Harnesses",
+  "Long-Horizon Agent Memory and Context Engineering",
+  "Context-Efficient Retrieval-Augmented Generation",
+  "Long-Form Video-Language and Audio-Visual Understanding",
+  "Foundation Model Training and Post-Training",
   "Quantization, Kernel Optimization, and Efficient Inference",
-  "Human AI Interaction and Agent Evaluation",
+  "Human-AI Interaction and Agent Evaluation",
 ]
 
 export const ANNOUNCEMENT = {
@@ -323,7 +324,7 @@ export const SECTIONS: Record<string, ContentSection> = {
         bullets: [
           "Lead MCP server architecture for AssetOpsBench to give tool-using LLM agents typed access to failure-mode knowledge graphs, causal root-cause ranking, and intervention estimation with deterministic Neo4j queries and provenance on every result.",
           "Create industrial fault-diagnosis RL environments for multi-step LLM agents over predictive-maintenance telemetry from 100 machines to benchmark evidence gathering and maintenance actions under hidden ground truth, look-alike faults, and incomplete observations.",
-          "Conduct controlled evaluations of four LLM agents under one model and action budget, raising Top-1 diagnosis accuracy by 88% over a Plan-Execute agent, and profile inference latency with PyTorch Profiler and Nsight on H100 GPUs.",
+          "Conduct controlled evaluations of four LLM agents under one model and action budget, raising Top-1 diagnosis accuracy by 88.0% over a Plan-Execute agent, and profile inference latency with PyTorch Profiler and Nsight on H100 GPUs.",
         ],
         links: [
           { label: "AssetOpsBench", url: "https://github.com/IBM/AssetOpsBench" },
@@ -344,7 +345,7 @@ export const SECTIONS: Record<string, ContentSection> = {
         ],
       },
       {
-        title: "Two by Two Learning",
+        title: "Two by Two Learning Center",
         subtitle: "Full Stack Developer",
         location: "Champaign, IL",
         date: "2025.08-2026.08",
@@ -480,7 +481,7 @@ export const SECTIONS: Record<string, ContentSection> = {
         bullets: [
           "Chinese (Native)",
           "English (Native)",
-          "Spanish (Elementary)",
+          "Spanish (Limited Working Proficiency)",
         ],
       },
       {
@@ -497,7 +498,7 @@ export const SECTIONS: Record<string, ContentSection> = {
       {
         title: "Education",
         bullets: [
-          "Columbia University, New York City, NY",
+          "Columbia University, New York, NY",
           "M.S. in Data Science",
           "Fu Foundation School of Engineering and Applied Science",
           "Courses: High Performance Machine Learning, Algorithms",

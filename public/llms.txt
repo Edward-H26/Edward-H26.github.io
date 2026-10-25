@@ -1,6 +1,6 @@
 # Qiran Hu
 
-> Qiran Hu, research assistant at the University of Illinois Urbana-Champaign working on multimodal learning, 3D-aware generative models, and multi-agent AI.
+> Qiran Hu, M.S. student at Columbia University and research assistant at UIUC, working on multimodal learning, 3D-aware generative models, and multi-agent AI.
 
 - Website: https://edward-h26.github.io/
 - Interactive 3D portfolio: https://edward-h26.github.io/PersonalWebsite/
@@ -9,11 +9,11 @@
 - X: https://x.com/QiranHu
 - Google Scholar: https://scholar.google.com/citations?user=4jv03f4AAAAJ&hl=en
 - Email: qh2332@columbia.edu
-- Phone: +1 (347)-957-9176
+- Phone: +1 (347) 957-9176
 
 ## About
 
-I am a current student in [Fu Foundation School of Engineering and Applied Science](https://www.engineering.columbia.edu/about) at [Columbia University](https://www.columbia.edu/).
+I am a current M.S. student in [Fu Foundation School of Engineering and Applied Science](https://www.engineering.columbia.edu/about) at [Columbia University](https://www.columbia.edu/).
 
 I am a research assistant in [Computer Vision and Machine Learning Group](https://vision.ischool.illinois.edu/index.html) at [University of Illinois Urbana-Champaign](https://www.illinois.edu/). I am also affiliated with the [National Center for Supercomputing Applications](https://www.ncsa.illinois.edu/) and [National Artificial Intelligence Research Resource Pilot](https://nairrpilot.org/).
 
@@ -32,17 +32,17 @@ I am actively looking for research collaborations in 3D and 4D aware generative 
 
 ## Research Interests
 
-- 3D and 4D Aware Generative Models
+- 3D- and 4D-Aware Generative Models
 - World Models and Spatial Intelligence
-- Novel View Synthesis and Multi View Geometry
+- Novel View Synthesis and Multi-View Geometry
 - Continual and Multimodal Representation Learning
-- Multi Agent Orchestration and Agent Harnesses
-- Long Horizon Agent Memory and Context Engineering
-- Context Efficient Retrieval Augmented Generation
-- Long Form Video Language and Audio Visual Understanding
-- Foundation Model Training and Post Training
+- Multi-Agent Orchestration and Agent Harnesses
+- Long-Horizon Agent Memory and Context Engineering
+- Context-Efficient Retrieval-Augmented Generation
+- Long-Form Video-Language and Audio-Visual Understanding
+- Foundation Model Training and Post-Training
 - Quantization, Kernel Optimization, and Efficient Inference
-- Human AI Interaction and Agent Evaluation
+- Human-AI Interaction and Agent Evaluation
 
 ## Publications
 
@@ -51,7 +51,7 @@ Papers
 ### AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation
 
 - [1] Eric Ji, Qiran Hu, Wufei Ma, Sarthak Jain, Yingying Li, Minh N. Do, Yaoyao Liu. AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation. European Conference on Computer Vision (ECCV), 2026.
-- Links: [arXiv](https://arxiv.org/abs/2606.31204), [Code](https://ac3s.cvmlgroup.web.illinois.edu/), [Video](https://youtu.be/3jOJaT2a8iQ), [BibTeX](https://arxiv.org/bibtex/2606.31204)
+- Links: [arXiv](https://arxiv.org/abs/2606.31204), [Code](https://ac3s.cvmlgroup.web.illinois.edu/), [Video](https://youtu.be/3jOJaT2a8iQ), [Poster](https://eccv.ecva.net/virtual/2026/poster/5183), [BibTeX](https://arxiv.org/bibtex/2606.31204)
 
 ### REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving
 
@@ -114,7 +114,7 @@ Research Intern (Advisor: Dr. Dhaval Patel), 2026.09-Present, New York, NY
 
 - Lead MCP server architecture for AssetOpsBench to give tool-using LLM agents typed access to failure-mode knowledge graphs, causal root-cause ranking, and intervention estimation with deterministic Neo4j queries and provenance on every result.
 - Create industrial fault-diagnosis RL environments for multi-step LLM agents over predictive-maintenance telemetry from 100 machines to benchmark evidence gathering and maintenance actions under hidden ground truth, look-alike faults, and incomplete observations.
-- Conduct controlled evaluations of four LLM agents under one model and action budget, raising Top-1 diagnosis accuracy by 88% over a Plan-Execute agent, and profile inference latency with PyTorch Profiler and Nsight on H100 GPUs.
+- Conduct controlled evaluations of four LLM agents under one model and action budget, raising Top-1 diagnosis accuracy by 88.0% over a Plan-Execute agent, and profile inference latency with PyTorch Profiler and Nsight on H100 GPUs.
 - Links: [AssetOpsBench](https://github.com/IBM/AssetOpsBench)
 
 ### Memoria
@@ -126,7 +126,7 @@ Technical Lead, 2026.01-2026.08, Champaign, IL
 - Optimized enterprise workflows with self-evolving per-user memory and cost-aware model routing across sessions, saving 96.0% in token cost compared to GPT-4 Turbo.
 - Links: [Website](https://miramemoria.com/)
 
-### Two by Two Learning
+### Two by Two Learning Center
 
 Full Stack Developer, 2025.08-2026.08, Champaign, IL
 
@@ -200,7 +200,7 @@ Personal Information
 
 - Chinese (Native)
 - English (Native)
-- Spanish (Elementary)
+- Spanish (Limited Working Proficiency)
 
 ### Certifications and Honors
 
@@ -210,7 +210,7 @@ Personal Information
 
 ### Education
 
-- Columbia University, New York City, NY
+- Columbia University, New York, NY
 - M.S. in Data Science
 - Fu Foundation School of Engineering and Applied Science
 - Courses: High Performance Machine Learning, Algorithms
@@ -252,10 +252,10 @@ Lead Developer, 2026.03-Present, Champaign, IL
 
 ## Pages
 
-- [Qiran Hu | Research Assistant](https://edward-h26.github.io/): Qiran Hu, research assistant at the University of Illinois Urbana-Champaign working on multimodal learning, 3D-aware generative models, and multi-agent AI.
+- [Qiran Hu | Research Assistant](https://edward-h26.github.io/): Qiran Hu, M.S. student at Columbia University and research assistant at UIUC, working on multimodal learning, 3D-aware generative models, and multi-agent AI.
 - [Publications | Qiran Hu](https://edward-h26.github.io/publications/): Publications of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation;…
 - [Research | Qiran Hu](https://edward-h26.github.io/research/): Research of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: UIUC Computer Vision and Machine Learning Group; Multi-modal Generative…
-- [Experience | Qiran Hu](https://edward-h26.github.io/experience/): Experience of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: IBM Research; Memoria; Two by Two Learning; WRC, University of Illinois…
+- [Experience | Qiran Hu](https://edward-h26.github.io/experience/): Experience of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: IBM Research; Memoria; Two by Two Learning Center; WRC, University of…
 - [Projects | Qiran Hu](https://edward-h26.github.io/projects/): Projects of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: Long-Form Video-Language and Audio-Visual Social Understanding;…
 - [Teaching | Qiran Hu](https://edward-h26.github.io/teaching/): Teaching of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: CS 107 Data Science Discovery, University of Illinois Urbana-Champaign.
 - [Info | Qiran Hu](https://edward-h26.github.io/info/): Info of Qiran Hu, Research Assistant at University of Illinois Urbana-Champaign: Languages; Certifications and Honors; Education.
