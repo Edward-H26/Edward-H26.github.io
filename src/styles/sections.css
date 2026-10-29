@@ -1,0 +1,21 @@
+/* Page text furniture: the announcement callout, section headings, and the gradient heading. */
+@layer components {
+  .announcement-box {
+    @apply border-l-4 border-accent bg-gradient-to-r from-accent-light/80 to-transparent p-4 rounded-r-lg;
+  }
+
+  .section-title {
+    @apply text-2xl font-semibold text-primary mb-2;
+  }
+
+  .section-subtitle {
+    @apply text-sm text-gray-500 mb-6;
+  }
+
+  .text-gradient-subtle {
+    background: linear-gradient(135deg, #13294b 0%, #c84113 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}

@@ -4,13 +4,13 @@ import { Routes, Route, useLocation } from "react-router-dom"
 import { Layout } from "@/components/layout/Layout"
 import { Navigation } from "@/components/layout/Navigation"
 import { HomePage } from "@/pages/HomePage"
-import { ResearchPage } from "@/pages/ResearchPage"
 import { PublicationsPage } from "@/pages/PublicationsPage"
 import { ExperiencePage } from "@/pages/ExperiencePage"
 import { ProjectsPage } from "@/pages/ProjectsPage"
 import { SectionPage } from "@/pages/SectionPage"
 import { InfoPage } from "@/pages/InfoPage"
 
+/** Routes of the site plus the mobile menu state shared by the header and the layout. */
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { pathname } = useLocation()
@@ -23,17 +23,9 @@ function App() {
     <>
       <Navigation onMenuClick={() => setMobileMenuOpen(true)} />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <Layout
-              mobileMenuOpen={mobileMenuOpen}
-              onMobileMenuClose={() => setMobileMenuOpen(false)}
-            />
-          }
-        >
+        <Route path="/" element={<Layout mobileMenuOpen={mobileMenuOpen} onMobileMenuClose={() => setMobileMenuOpen(false)} />}>
           <Route index element={<HomePage />} />
-          <Route path="research" element={<ResearchPage />} />
+          <Route path="research" element={<SectionPage id="research" />} />
           <Route path="publications" element={<PublicationsPage />} />
           <Route path="experience" element={<ExperiencePage />} />
           <Route path="projects" element={<ProjectsPage />} />

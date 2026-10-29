@@ -1,0 +1,5 @@
+/* Tailwind's three layers. They come first so every site rule below sits after the base reset and
+   before nothing it needs to beat; component classes are registered in the components layer. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

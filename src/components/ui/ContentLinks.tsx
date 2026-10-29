@@ -1,5 +1,5 @@
 import { Braces, CirclePlay, ExternalLink, FileText, Github, Globe, type LucideIcon } from "lucide-react"
-import type { ContentLink } from "@/data/content"
+import type { ContentLink } from "@/data"
 
 // Keyed by lowercase link label; matched links lead with this icon, others end with an external-link arrow.
 const LINK_ICONS: Partial<Record<string, LucideIcon>> = {
@@ -12,6 +12,7 @@ const LINK_ICONS: Partial<Record<string, LucideIcon>> = {
   github: Github,
 }
 
+/** External link pill with the icon of its label, or a trailing arrow for unknown labels. */
 export function LinkChip({ link }: { link: ContentLink }) {
   const Icon = LINK_ICONS[link.label.toLowerCase()]
   return (
@@ -24,14 +25,12 @@ export function LinkChip({ link }: { link: ContentLink }) {
 }
 
 interface ContentLinksProps {
-  links?: ContentLink[]
+  links?: readonly ContentLink[]
   className?: string
 }
 
-export function ContentLinks({
-  links,
-  className = "flex flex-wrap gap-2 mt-4",
-}: ContentLinksProps) {
+/** Row of LinkChip pills; renders nothing without links. */
+export function ContentLinks({ links, className = "flex flex-wrap gap-2 mt-4" }: ContentLinksProps) {
   if (!links || links.length === 0) return null
 
   return (

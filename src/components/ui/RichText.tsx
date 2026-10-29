@@ -1,17 +1,18 @@
-import type { BioSegment } from "@/data/content"
+import type { BioSegment } from "@/data"
 import { getSegmentKey } from "@/utils/cards"
 
 interface RichTextProps {
-  segments: BioSegment[]
+  segments: readonly BioSegment[]
   inline?: boolean
 }
 
+/** A paragraph, or an inline run, of text segments with links. */
 export function RichText({ segments, inline = false }: RichTextProps) {
   const Wrapper = inline ? "span" : "p"
 
   return (
     <Wrapper className="m-0">
-      {segments.map((segment, index) => (
+      {segments.map((segment, index) =>
         segment.href ? (
           <a
             key={getSegmentKey(segment, index)}
@@ -23,7 +24,7 @@ export function RichText({ segments, inline = false }: RichTextProps) {
         ) : (
           <span key={getSegmentKey(segment, index)}>{segment.text}</span>
         )
-      ))}
+      )}
     </Wrapper>
   )
 }

@@ -1,3 +1,4 @@
+/** Faint film grain over the whole page, drawn from an inline SVG noise filter. */
 export function GrainOverlay() {
   return (
     <div

@@ -1,16 +1,17 @@
 import { NavLink } from "react-router-dom"
 import { X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
-import { NAV_ITEMS, PROFILE } from "@/data/content"
-import { InstitutionLogos } from "@/components/ui/InstitutionLogos"
-import { ProfileAvatar } from "@/components/ui/ProfileAvatar"
-import { SocialLinks } from "@/components/ui/SocialLinks"
+import { NAV_ITEMS, PROFILE } from "@/data"
+import { InstitutionLogos } from "@/components/profile/InstitutionLogos"
+import { ProfileAvatar } from "@/components/profile/ProfileAvatar"
+import { SocialLinks } from "@/components/profile/SocialLinks"
 
 interface MobileMenuProps {
   open: boolean
   onClose: () => void
 }
 
+/** Slide-in menu for narrow screens with the profile block and every route. */
 export function MobileMenu({ open, onClose }: MobileMenuProps) {
   return (
     <AnimatePresence>
@@ -32,9 +33,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
             className="fixed top-0 right-0 bottom-0 w-80 max-w-full glass-menu z-50 xl:hidden shadow-2xl overflow-y-auto"
           >
             <div className="flex items-center justify-between p-4 border-b border-gray-200/50">
-              <span className="text-lg font-semibold text-gradient-subtle">
-                Menu
-              </span>
+              <span className="text-lg font-semibold text-gradient-subtle">Menu</span>
               <button
                 onClick={onClose}
                 className="p-2 rounded-lg text-gray-600 hover:bg-gray-100/80 transition-all duration-200"
@@ -49,19 +48,11 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                 <div className="flex w-full max-w-[13rem] flex-col items-center gap-4">
                   <div className="relative">
                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/20 to-primary/20 blur-lg" />
-                    <ProfileAvatar
-                      sizeClassName="w-24 h-24"
-                      frameClassName="relative border-2 border-white/80 shadow-lg"
-                      loading="eager"
-                    />
+                    <ProfileAvatar sizeClassName="w-24 h-24" frameClassName="relative border-2 border-white/80 shadow-lg" loading="eager" />
                   </div>
                   <div className="flex flex-col items-center gap-1 text-center">
-                    <h2 className="text-lg font-semibold leading-tight text-gray-900">
-                      {PROFILE.name}
-                    </h2>
-                    <p className="text-sm leading-tight text-gray-500">
-                      {PROFILE.title}
-                    </p>
+                    <h2 className="text-lg font-semibold leading-tight text-gray-900">{PROFILE.name}</h2>
+                    <p className="text-sm leading-tight text-gray-500">{PROFILE.title}</p>
                   </div>
                 </div>
                 <InstitutionLogos variant="mobile" />
@@ -86,9 +77,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                       onClick={onClose}
                       className={({ isActive }) =>
                         `block px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${
-                          isActive
-                            ? "bg-accent-light/80 text-accent-dark backdrop-blur-sm"
-                            : "text-gray-600 hover:bg-gray-100/80"
+                          isActive ? "bg-accent-light/80 text-accent-dark backdrop-blur-sm" : "text-gray-600 hover:bg-gray-100/80"
                         }`
                       }
                     >

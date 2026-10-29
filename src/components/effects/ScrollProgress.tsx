@@ -1,14 +1,12 @@
 import { motion, useScroll, useSpring } from "framer-motion"
 import { useReducedMotion } from "@/hooks/useReducedMotion"
+import { SCROLL_SPRING } from "@/utils/motion"
 
+/** Thin bar on the right edge that fills with the page's scroll progress; absent under reduced motion. */
 export function ScrollProgress() {
   const prefersReducedMotion = useReducedMotion()
   const { scrollYProgress } = useScroll()
-  const scaleY = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  })
+  const scaleY = useSpring(scrollYProgress, SCROLL_SPRING)
 
   if (prefersReducedMotion) {
     return null

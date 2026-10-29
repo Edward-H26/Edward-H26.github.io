@@ -1,0 +1,40 @@
+/* Timeline rocket: the exhaust sits at the tail, flickers on its own, and stretches with scroll
+   speed. It is inside the rotating box, so it swaps ends when the rocket turns around. */
+@layer components {
+  .rocket-flame {
+    @apply absolute left-1/2 top-full h-4 w-2 origin-top;
+  }
+
+  .rocket-flame-core {
+    @apply block h-full w-full origin-top rounded-full;
+    background: linear-gradient(to bottom, #ff5f05 0%, #ffb347 45%, rgba(255, 244, 230, 0) 100%);
+    animation: flame-flicker 0.28s ease-in-out infinite alternate;
+  }
+
+  .rocket-spark {
+    @apply absolute left-1/2 top-full h-1 w-1 rounded-full bg-accent;
+    animation: spark-trail 0.9s ease-out infinite;
+  }
+}
+
+@keyframes flame-flicker {
+  from {
+    transform: scaleY(0.85) scaleX(1.05);
+    opacity: 0.85;
+  }
+  to {
+    transform: scaleY(1.2) scaleX(0.85);
+    opacity: 1;
+  }
+}
+
+@keyframes spark-trail {
+  from {
+    transform: translate(-50%, 0) scale(1);
+    opacity: 0.9;
+  }
+  to {
+    transform: translate(calc(-50% + var(--dx)), 20px) scale(0.2);
+    opacity: 0;
+  }
+}

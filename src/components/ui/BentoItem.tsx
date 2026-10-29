@@ -17,12 +17,8 @@ const rowSpanClasses = {
   2: "row-span-2",
 }
 
-export function BentoItem({
-  children,
-  className,
-  colSpan = 1,
-  rowSpan = 1,
-}: BentoItemProps) {
+/** Grid card with a hover glow; colSpan and rowSpan let one item take a 2x2 slot. */
+export function BentoItem({ children, className, colSpan = 1, rowSpan = 1 }: BentoItemProps) {
   return (
     <div
       className={cn(

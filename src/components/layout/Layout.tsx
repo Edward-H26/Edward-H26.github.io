@@ -10,6 +10,7 @@ interface LayoutProps {
   onMobileMenuClose: () => void
 }
 
+/** Page frame: background effects, the mobile menu, the sidebar on wide screens, and the routed page. */
 export function Layout({ mobileMenuOpen, onMobileMenuClose }: LayoutProps) {
   return (
     <div className="min-h-screen bg-white/50 relative">

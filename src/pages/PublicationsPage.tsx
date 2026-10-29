@@ -1,7 +1,8 @@
-import { PublicationCard } from "@/components/ui/PublicationCard"
+import { PublicationCard } from "@/components/publications/PublicationCard"
 import { SectionHeader } from "@/components/ui/SectionHeader"
-import { SECTIONS } from "@/data/content"
+import { SECTIONS } from "@/data"
 
+/** Publications: one PublicationCard per paper, in citation order. */
 export function PublicationsPage() {
   const publications = SECTIONS.publications
 

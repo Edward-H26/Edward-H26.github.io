@@ -1,12 +1,13 @@
-import { PROFILE } from "@/data/content"
-import { InstitutionLogos } from "@/components/ui/InstitutionLogos"
-import { SocialLinks } from "@/components/ui/SocialLinks"
-import { ProfileAvatar } from "@/components/ui/ProfileAvatar"
+import { PROFILE } from "@/data"
+import { InstitutionLogos } from "@/components/profile/InstitutionLogos"
+import { SocialLinks } from "@/components/profile/SocialLinks"
+import { ProfileAvatar } from "@/components/profile/ProfileAvatar"
 
 interface SidebarProps {
   className?: string
 }
 
+/** Fixed profile column on wide screens: portrait, name, role, school logos, and social links. */
 export function Sidebar({ className = "" }: SidebarProps) {
   return (
     <aside className={`w-72 fixed left-0 top-16 h-[calc(100vh-4rem)] p-8 glass-sidebar overflow-y-auto ${className}`}>
@@ -14,21 +15,13 @@ export function Sidebar({ className = "" }: SidebarProps) {
         <div className="flex w-full max-w-[13rem] flex-col items-center gap-4">
           <div className="relative">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/20 to-primary/20 blur-xl animate-pulse-slow" />
-            <ProfileAvatar
-              sizeClassName="w-40 h-40"
-              frameClassName="relative border-4 border-white/80 shadow-xl"
-              loading="eager"
-            />
+            <ProfileAvatar sizeClassName="w-40 h-40" frameClassName="relative border-4 border-white/80 shadow-xl" loading="eager" />
           </div>
 
           <div className="flex flex-col items-center gap-1 text-center">
-            <h1 className="text-xl font-semibold leading-tight text-gray-900">
-              {PROFILE.name}
-            </h1>
+            <h1 className="text-xl font-semibold leading-tight text-gray-900">{PROFILE.name}</h1>
 
-            <p className="text-sm leading-tight text-gray-600">
-              {PROFILE.title}
-            </p>
+            <p className="text-sm leading-tight text-gray-600">{PROFILE.title}</p>
           </div>
         </div>
 

@@ -1,0 +1,50 @@
+/* App chrome: the frosted header, sidebar, and menu surfaces, and the header navigation links. */
+@layer components {
+  .glass-nav {
+    background: #ffffff;
+    border-bottom: 1px solid rgba(229, 231, 235, 0.8);
+    box-shadow:
+      0 4px 24px rgba(0, 0, 0, 0.06),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.03);
+  }
+
+  .glass-sidebar {
+    background: rgba(238, 240, 245, 0.92);
+    backdrop-filter: blur(6px) saturate(180%);
+    -webkit-backdrop-filter: blur(6px) saturate(180%);
+    border-right: 1px solid rgba(229, 231, 235, 0.5);
+    contain: layout style;
+  }
+
+  .glass-menu {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px) saturate(200%);
+    -webkit-backdrop-filter: blur(8px) saturate(200%);
+  }
+
+  .nav-link {
+    @apply relative px-3 py-2 text-sm font-medium text-gray-500 transition-all duration-300 no-underline hover:no-underline tracking-wide;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute bottom-0 left-1/2 w-0 h-px bg-primary rounded-full transition-all duration-300;
+    transform: translateX(-50%);
+  }
+
+  .nav-link:hover {
+    @apply text-primary;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .nav-link.active {
+    @apply text-primary font-semibold;
+  }
+
+  .nav-link.active::after {
+    @apply w-full;
+  }
+}

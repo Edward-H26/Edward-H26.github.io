@@ -4,9 +4,10 @@ import { ContentBullets } from "@/components/ui/ContentBullets"
 import { LinkChip } from "@/components/ui/ContentLinks"
 import { DateRange } from "@/components/ui/DateRange"
 import { SectionHeader } from "@/components/ui/SectionHeader"
-import { SECTIONS } from "@/data/content"
+import { SECTIONS } from "@/data"
 import { splitLinksByLabel } from "@/utils/cards"
 
+/** Projects: a grid of cards with the first project featured at double size and its GitHub link first. */
 export function ProjectsPage() {
   const projects = SECTIONS.projects
 
@@ -16,33 +17,20 @@ export function ProjectsPage() {
 
       <BentoGrid className="lg:grid-cols-2">
         {projects.cards.map((project, index) => {
+          const isFeatured = index === 0
           const { primary: githubLink, secondary: otherLinks } = splitLinksByLabel(project.links, "github")
           return (
-            <BentoItem
-              key={index}
-              colSpan={index === 0 ? 2 : 1}
-              rowSpan={index === 0 ? 2 : 1}
-              className="flex flex-col justify-between"
-            >
+            <BentoItem key={index} colSpan={isFeatured ? 2 : 1} rowSpan={isFeatured ? 2 : 1} className="flex flex-col justify-between">
               <div>
                 <div className="mb-3">
-                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h3>
+                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-primary transition-colors">{project.title}</h3>
                   <div className="flex items-center justify-between gap-4 mt-1">
-                    {project.subtitle && (
-                      <p className="text-sm text-gray-500">
-                        {project.subtitle}
-                      </p>
-                    )}
+                    {project.subtitle && <p className="text-sm text-gray-500">{project.subtitle}</p>}
                     {project.date && <DateRange date={project.date} className="ml-auto flex-shrink-0" />}
                   </div>
                 </div>
 
-                <ContentBullets
-                  bullets={project.bullets}
-                  className="space-y-2 text-sm text-gray-600 leading-relaxed"
-                />
+                <ContentBullets bullets={project.bullets} className="space-y-2 text-sm text-gray-600 leading-relaxed" />
               </div>
 
               <div className="flex flex-wrap gap-2 mt-auto pt-4">

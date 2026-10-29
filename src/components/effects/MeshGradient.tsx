@@ -1,6 +1,6 @@
 import { useReducedMotion } from "@/hooks/useReducedMotion"
-import { cn } from "@/utils/cn"
 
+/** Soft colour wash behind the page: drifting (see styles/effects.css) or, under reduced motion, still. */
 export function MeshGradient() {
   const prefersReducedMotion = useReducedMotion()
 
@@ -19,12 +19,5 @@ export function MeshGradient() {
     )
   }
 
-  return (
-    <div
-      className={cn(
-        "fixed inset-0 -z-10 pointer-events-none",
-        "mesh-gradient-animated"
-      )}
-    />
-  )
+  return <div className="fixed inset-0 -z-10 pointer-events-none mesh-gradient-animated" />
 }

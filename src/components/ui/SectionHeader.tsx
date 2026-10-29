@@ -3,6 +3,7 @@ interface SectionHeaderProps {
   subheading?: string
 }
 
+/** Page heading and optional subheading at the top of every section page. */
 export function SectionHeader({ heading, subheading }: SectionHeaderProps) {
   return (
     <>

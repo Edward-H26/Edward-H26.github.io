@@ -77,7 +77,10 @@ describe("parseCitation", () => {
 
   it("drops an et al. marker from author lists", () => {
     assert.deepEqual(parseCitation("[7] Qiran Hu et al. Short Paper. Workshop 2026.", "Short Paper").authors, ["Qiran Hu"])
-    assert.deepEqual(parseCitation("[8] Ann Lee, Qiran Hu, et al. Short Paper. Workshop 2026.", "Short Paper").authors, ["Ann Lee", "Qiran Hu"])
+    assert.deepEqual(parseCitation("[8] Ann Lee, Qiran Hu, et al. Short Paper. Workshop 2026.", "Short Paper").authors, [
+      "Ann Lee",
+      "Qiran Hu"
+    ])
     assert.deepEqual(parseCitation("[9] Ann Lee & Qiran Hu. Short Paper. Workshop 2026.", "Short Paper").authors, ["Ann Lee", "Qiran Hu"])
   })
 
@@ -135,7 +138,11 @@ describe("head", () => {
   })
 
   it("drops the Twitter handle tags when there is no X profile", () => {
-    const head = buildHead({ ...content, PROFILE: { ...content.PROFILE, social: { github: content.PROFILE.social.github } } }, routes[0], routes)
+    const head = buildHead(
+      { ...content, PROFILE: { ...content.PROFILE, social: { github: content.PROFILE.social.github } } },
+      routes[0],
+      routes
+    )
     assert.ok(!head.includes("twitter:site"))
     assert.ok(!head.includes("twitter:creator"))
     assert.ok(head.includes('<meta name="twitter:card"'))
@@ -187,7 +194,13 @@ describe("json-ld", () => {
 
   it("tolerates a publication card without a citation", () => {
     const graph = buildJsonLd(
-      { ...content, SECTIONS: { ...content.SECTIONS, publications: { id: "publications", heading: "Publications", cards: [{ title: "Draft", bullets: [] }] } } },
+      {
+        ...content,
+        SECTIONS: {
+          ...content.SECTIONS,
+          publications: { id: "publications", heading: "Publications", cards: [{ title: "Draft", bullets: [] }] }
+        }
+      },
       routes
     )["@graph"]
     const article = graph.find((node) => node["@type"] === "ScholarlyArticle")
@@ -343,7 +356,10 @@ describe("index.html", () => {
       `<html><head>\n    ${HEAD_MARKERS[0]}\n    home head\n    ${HEAD_MARKERS[1]}\n</head><body><div id="root">\n      ${BODY_MARKERS[0]}\n      home body\n      ${BODY_MARKERS[1]}\n</div></body></html>`
     )
     const written = writeRoutePages(dist, content)
-    assert.deepEqual(written, routes.slice(1).map((route) => route.path))
+    assert.deepEqual(
+      written,
+      routes.slice(1).map((route) => route.path)
+    )
     for (const route of routes.slice(1)) {
       const html = readFileSync(path.join(dist, route.path.slice(1), "index.html"), "utf8")
       assert.ok(html.includes(`<link rel="canonical" href="${routeUrl(route.path)}" />`))

@@ -7,6 +7,7 @@ type MarkProps = {
   className?: string
 }
 
+/** Google Scholar mark. */
 export function ScholarMark({ size = 20, className = "" }: MarkProps) {
   return (
     <svg viewBox="0 0 24 24" width={size} height={size} fill="currentColor" aria-hidden="true" focusable="false" className={className}>
@@ -15,6 +16,7 @@ export function ScholarMark({ size = 20, className = "" }: MarkProps) {
   )
 }
 
+/** Globe mark for a personal website. */
 export function WebsiteMark({ size = 20, className = "" }: MarkProps) {
   return (
     <svg viewBox="0 0 24 24" width={size} height={size} fill="currentColor" aria-hidden="true" focusable="false" className={className}>
@@ -23,6 +25,7 @@ export function WebsiteMark({ size = 20, className = "" }: MarkProps) {
   )
 }
 
+/** LinkedIn mark. */
 export function LinkedInMark({ size = 20, className = "" }: MarkProps) {
   return (
     <svg viewBox="0 0 24 24" width={size} height={size} fill="currentColor" aria-hidden="true" focusable="false" className={className}>
@@ -31,6 +34,7 @@ export function LinkedInMark({ size = 20, className = "" }: MarkProps) {
   )
 }
 
+/** GitHub mark. */
 export function GitHubMark({ size = 20, className = "" }: MarkProps) {
   return (
     <svg viewBox="0 0 24 24" width={size} height={size} fill="currentColor" aria-hidden="true" focusable="false" className={className}>
@@ -39,6 +43,7 @@ export function GitHubMark({ size = 20, className = "" }: MarkProps) {
   )
 }
 
+/** Filled envelope mark for email. */
 export function EmailMark({ size = 20, className = "" }: MarkProps) {
   return (
     <svg viewBox="0 0 24 24" width={size} height={size} fill="currentColor" aria-hidden="true" focusable="false" className={className}>
@@ -47,6 +52,7 @@ export function EmailMark({ size = 20, className = "" }: MarkProps) {
   )
 }
 
+/** X (formerly Twitter) mark. */
 export function XMark({ size = 20, className = "" }: MarkProps) {
   return (
     <svg viewBox="0 0 24 24" width={size} height={size} fill="currentColor" aria-hidden="true" focusable="false" className={className}>

@@ -1,4 +1,4 @@
-import { PROFILE } from "@/data/content"
+import { PROFILE } from "@/data"
 import { cn } from "@/utils/cn"
 
 type ProfileAvatarProps = {
@@ -7,19 +7,10 @@ type ProfileAvatarProps = {
   loading?: "eager" | "lazy"
 }
 
-export function ProfileAvatar({
-  sizeClassName,
-  frameClassName = "",
-  loading = "lazy",
-}: ProfileAvatarProps) {
+/** The round portrait from PROFILE.photo; the caller sets its size and frame classes. */
+export function ProfileAvatar({ sizeClassName, frameClassName = "", loading = "lazy" }: ProfileAvatarProps) {
   return (
-    <div
-      className={cn(
-        "relative overflow-hidden rounded-full bg-[#6a6766]",
-        sizeClassName,
-        frameClassName,
-      )}
-    >
+    <div className={cn("relative overflow-hidden rounded-full bg-[#6a6766]", sizeClassName, frameClassName)}>
       <img
         src={PROFILE.photo}
         alt={PROFILE.name}

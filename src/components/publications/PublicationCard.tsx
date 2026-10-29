@@ -1,7 +1,10 @@
 import { Fragment } from "react"
-import type { ContentCard } from "@/data/content"
-import { PROFILE } from "@/data/content"
+import type { ContentCard } from "@/data"
+import { PROFILE } from "@/data"
 import { LinkChip } from "@/components/ui/ContentLinks"
+
+// Intrinsic size reserved for a figure whose entry does not state one.
+const FIGURE_FALLBACK = { width: 1000, height: 700 }
 
 // The venue acronym in parentheses is bold and a published venue closes with a period, as on the
 // reference homepages. Rows that read "Under review" get neither.
@@ -20,12 +23,14 @@ function renderVenue(venue: string) {
   )
 }
 
+// The link the title and figure open: the paper itself, or else its project page.
 function primaryLink(publication: ContentCard) {
   const links = publication.links ?? []
   return links.find((link) => /arxiv|pdf/i.test(link.label)) ?? links.find((link) => /project/i.test(link.label))
 }
 
-function Authors({ authors }: { authors: string[] }) {
+/** Comma-separated author list with the site owner in bold. */
+function Authors({ authors }: { authors: readonly string[] }) {
   return (
     <p className="mt-2 text-[15px] leading-relaxed text-gray-700">
       {authors.map((author, index) => (
@@ -42,11 +47,18 @@ interface PublicationCardProps {
   publication: ContentCard
 }
 
+/** One paper: its figure with the venue badge, title, authors, venue, link chips, and an optional note. */
 export function PublicationCard({ publication }: PublicationCardProps) {
   const primary = primaryLink(publication)
   const thumbnail = publication.image ? (
     <figure className="paper-thumb">
-      <img src={publication.image.src} alt={publication.image.alt} loading="lazy" width={publication.image.width ?? 1000} height={publication.image.height ?? 700} />
+      <img
+        src={publication.image.src}
+        alt={publication.image.alt}
+        loading="lazy"
+        width={publication.image.width ?? FIGURE_FALLBACK.width}
+        height={publication.image.height ?? FIGURE_FALLBACK.height}
+      />
       {publication.badge && (
         <span className={publication.badge === "Under review" ? "paper-badge paper-badge-muted" : "paper-badge"}>{publication.badge}</span>
       )}
@@ -70,7 +82,12 @@ export function PublicationCard({ publication }: PublicationCardProps) {
       <div className="min-w-0 flex-1">
         <h3 className="text-lg font-semibold leading-snug text-primary md:text-xl">
           {primary ? (
-            <a href={primary.url} target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent-dark hover:no-underline">
+            <a
+              href={primary.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-accent-dark hover:no-underline"
+            >
               {publication.title}
             </a>
           ) : (

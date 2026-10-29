@@ -1,9 +1,9 @@
 import { Card } from "@/components/ui/Card"
 import { SectionHeader } from "@/components/ui/SectionHeader"
-import { SECTIONS } from "@/data/content"
+import { SECTIONS, type SectionId } from "@/data"
 
-// Renders any content section as a stack of cards, for the sections with no bespoke layout.
-export function SectionPage({ id }: { id: string }) {
+/** Renders any content section as a stack of cards, for the sections with no bespoke layout. */
+export function SectionPage({ id }: { id: SectionId }) {
   const section = SECTIONS[id]
 
   return (

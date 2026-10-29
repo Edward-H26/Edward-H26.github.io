@@ -1,0 +1,32 @@
+/* Document-wide defaults: brand colors, hidden scrollbar, body font, and link styling. */
+@layer base {
+  :root {
+    --color-primary: #13294b;
+    --color-accent: #ff5f05;
+  }
+
+  html {
+    scroll-behavior: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    @apply bg-white text-gray-900 transition-colors duration-300;
+    font-family: "Inter", system-ui, sans-serif;
+  }
+
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+}
