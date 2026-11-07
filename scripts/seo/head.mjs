@@ -5,7 +5,7 @@ import { escapeHtml, splitName } from "./text.mjs"
 
 // Styles the static profile for the moment before React mounts and for crawlers that never run it.
 const STATIC_STYLE = `.static-profile{font-family:Inter,system-ui,sans-serif;max-width:52rem;margin:0 auto;padding:2.5rem 1.25rem;line-height:1.6;color:#1f2937}
-.static-profile a{color:#13294b}
+.static-profile a{color:#1d4f91}
 .static-profile h1{font-size:2rem;margin:0 0 .25rem}
 .static-profile h2{font-size:1.4rem;margin:2rem 0 .5rem}
 .static-profile h3{font-size:1.05rem;margin:1.25rem 0 .25rem}

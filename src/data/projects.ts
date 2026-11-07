@@ -8,16 +8,18 @@ export const PROJECTS: ContentSection = {
   cards: [
     {
       title: "Long-Form Video-Language and Audio-Visual Social Understanding",
+      subtitle: "Undergraduate Research Assistant",
       location: "Champaign, IL",
       date: "2025.12 - 2026.05",
       bullets: [
-        "Trained streaming video-language models with temporal transformer blocks for long-form video understanding beyond 30-minute sequences, boosting zero-shot accuracy by 17.4% and cutting peak memory by 58.2% compared to full-sequence attention.",
-        "Proposed multimodal fusion pipelines to combine facial action units, body pose, and prosody through cross-modal attention and infer social intent and conversational role from raw recordings, achieving 89.1% accuracy on speaker-role classification over a 2,108-turn bootstrap.",
+        "Proposed memory-efficient streaming video-language models with temporal transformer blocks for long-form video understanding beyond 30-minute sequences, boosting zero-shot accuracy by 17.4% and cutting peak memory by 58.2% compared to full-sequence attention.",
+        "Developed multimodal fusion pipelines to combine facial action units, body pose, and prosody through cross-modal attention and infer social intent and conversational role from raw recordings, achieving 89.1% accuracy on speaker-role classification over a 2,108-turn bootstrap.",
         "Scaled end-to-end annotation pipelines for full-length clinical sessions with automatic transcription and labeling, processing recordings 1.4x to 1.7x faster than real time and increasing speaker-role inversion accuracy to 90.0%.",
       ],
     },
     {
       title: "Multi-agent Research Synthesis Engine",
+      subtitle: "Undergraduate Research Assistant",
       location: "Champaign, IL",
       date: "2025.11 - 2026.05",
       bullets: [
@@ -29,6 +31,7 @@ export const PROJECTS: ContentSection = {
     },
     {
       title: "Realistic Neural Style Transfer Architecture",
+      subtitle: "Undergraduate Research Assistant",
       location: "Champaign, IL",
       date: "2025.01 - 2025.08",
       bullets: [
@@ -40,6 +43,7 @@ export const PROJECTS: ContentSection = {
     },
     {
       title: "Anime Statistics and Analysis Platform, ASAP",
+      subtitle: "Undergraduate Research Assistant",
       location: "Champaign, IL",
       date: "2025.02 - 2025.06",
       bullets: [

@@ -28,7 +28,7 @@ export const INFO: ContentSection = {
         "M.S. in Data Science",
         "Fu Foundation School of Engineering and Applied Science",
         "Courses: High Performance Machine Learning, Algorithms, Continual Learning and Memory Models, Computer Systems",
-        "2026.08 - Expected 2028.05",
+        "2026.09 - Expected 2028.05",
       ],
     },
     {

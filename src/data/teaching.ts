@@ -7,7 +7,7 @@ export const TEACHING: ContentSection = {
   subheading: "Courses and Mentoring",
   cards: [
     {
-      title: "CS 107 Data Science Discovery, University of Illinois Urbana-Champaign",
+      title: "CS 107 Data Science Discovery",
       subtitle: "Teaching Assistant",
       location: "Champaign, IL",
       date: "2023.08 - 2026.05",
